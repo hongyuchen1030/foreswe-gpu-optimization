@@ -7,7 +7,7 @@ import pandas as pd
 
 ROOT = os.environ.get(
     "FSW_WEEKLY_ROOT",
-    "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512",
+    "/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/original_weekly",
 )
 DATA_DIR = os.environ.get("FSW_DATA_DIR", os.path.join(ROOT, "data"))
 RESULTS_ACTUAL_DIR = os.environ.get("FSW_RESULTS_ACTUAL", os.path.join(ROOT, "results", "actual"))

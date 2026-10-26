@@ -8,8 +8,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
-os.environ.setdefault("FSW_ORIG_REPO", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting")
-os.environ.setdefault("FSW_DOMAIN_ROOT", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km")
+os.environ.setdefault("FSW_ORIG_REPO", "/global/homes/h/hyvchen/foreswe-gpu-optimization")
+os.environ.setdefault("FSW_DOMAIN_ROOT", os.path.join(os.getenv("FSW_RUN_ROOT", "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/runs"), "D2_sierra_plus_500km"))
 os.environ.setdefault("FSW_DATA_DIR", os.path.join(os.environ["FSW_DOMAIN_ROOT"], "data_subset"))
 os.environ.setdefault("FSW_OUTPUTS", os.path.join(os.environ["FSW_DOMAIN_ROOT"], "outputs"))
 os.environ.setdefault("FSW_RESULTS_ACTUAL", os.path.join(os.environ["FSW_DOMAIN_ROOT"], "results", "actual"))

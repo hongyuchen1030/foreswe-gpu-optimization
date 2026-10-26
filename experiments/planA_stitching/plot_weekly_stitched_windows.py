@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-PROJECT_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
-OUTPUT_DIR = PROJECT_ROOT / "experiments" / "fig6_weekly_stitching"
-THIRDPARTY_ROOT = PROJECT_ROOT / "thirdparties" / "SWE-Forecasting"
+PROJECT_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
+OUTPUT_DIR = PROJECT_ROOT / "experiments" / "planA_stitching"
+THIRDPARTY_ROOT = PROJECT_ROOT
 WEEKLY_RESULTS_ROOT = Path(
     "/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/results"
 )

@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 
 
-REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
-FIGURES_DIR = REPO_ROOT / "experiments" / "foreswe_reproduction" / "figures"
+REPO_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
+FIGURES_DIR = REPO_ROOT / "experiments" / "original_daily" / "figures"
 WEEKLY_ACTUAL_DIR = Path(
     "/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/results/actual"
 )

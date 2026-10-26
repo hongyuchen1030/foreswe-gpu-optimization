@@ -8,19 +8,19 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --gpus-per-node=1
 #SBATCH --time=12:00:00
-#SBATCH --output=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/logs/%x_%j.out
-#SBATCH --error=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/logs/%x_%j.err
+#SBATCH --output=/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/original_daily/logs/%x_%j.out
+#SBATCH --error=/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/original_daily/logs/%x_%j.err
 
 set -euo pipefail
 
 module purge
 module load conda
 
-cd /global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting
+cd /global/homes/h/hyvchen/foreswe-gpu-optimization
 
 export FSW_REPO="$PWD"
 export FSW_ENV="$SCRATCH/conda_envs/foreswe_repro_att"
-export BASE_URL="$FSW_REPO"
+export BASE_URL="${FSW_RUN_ROOT:-/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/runs}/original_daily"  # create via scripts/make_run_dir.sh original_daily
 export PYTHONPATH="$FSW_REPO"
 export PYTHONUNBUFFERED=1
 export TMPDIR="$SCRATCH/tmp"
@@ -28,7 +28,7 @@ export TMPDIR="$SCRATCH/tmp"
 mkdir -p "$TMPDIR"
 mkdir -p "$FSW_REPO/checkpoints"
 mkdir -p "$FSW_REPO/outputs"
-mkdir -p /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/logs
+mkdir -p /global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/original_daily/logs
 
 echo "Job started at: $(date)"
 echo "Host: $(hostname)"

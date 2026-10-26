@@ -32,8 +32,8 @@ else:
 
 device = torch.device(dev)
 
-FSW_ORIG_REPO = os.getenv("FSW_ORIG_REPO", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting")
-FSW_DOMAIN_ROOT = os.getenv("FSW_DOMAIN_ROOT", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km")
+FSW_ORIG_REPO = os.getenv("FSW_ORIG_REPO", "/global/homes/h/hyvchen/foreswe-gpu-optimization")
+FSW_DOMAIN_ROOT = os.getenv("FSW_DOMAIN_ROOT", os.path.join(os.getenv("FSW_RUN_ROOT", "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/runs"), "D2_sierra_plus_500km"))
 FSW_DATA_DIR = os.getenv("FSW_DATA_DIR", os.path.join(FSW_DOMAIN_ROOT, "data_subset"))
 FSW_OUTPUTS = os.getenv("FSW_OUTPUTS", os.path.join(FSW_DOMAIN_ROOT, "outputs"))
 FSW_RESULTS_ACTUAL = os.getenv("FSW_RESULTS_ACTUAL", os.path.join(FSW_DOMAIN_ROOT, "results", "actual"))

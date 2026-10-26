@@ -13,16 +13,16 @@
 
 set -euo pipefail
 
-cd /global/homes/h/hyvchen/Snow-Predication-at-Sierra
+cd /global/homes/h/hyvchen/foreswe-gpu-optimization
 
 module purge
 module load conda
 
-export FSW_ORIG_REPO="/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting"
-export FSW_WEEKLY_ROOT="/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512"
-export FSW_RUNTIME_ROOT="/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512"
+export FSW_ORIG_REPO="/global/homes/h/hyvchen/foreswe-gpu-optimization"
+export FSW_WEEKLY_ROOT="/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/original_weekly"
+export FSW_RUNTIME_ROOT="${FSW_RUN_ROOT:-/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/runs}/weekly_reproduction_full512"
 export BASE_URL="$FSW_WEEKLY_ROOT"
-export FSW_DATA_DIR="$FSW_WEEKLY_ROOT/data"
+export FSW_DATA_DIR="$FSW_ORIG_REPO/data"
 export FSW_OUTPUTS="$FSW_RUNTIME_ROOT/outputs"
 export FSW_RESULTS_ACTUAL="$FSW_RUNTIME_ROOT/results/actual"
 export FSW_RESULTS_PREDICT="$FSW_RUNTIME_ROOT/results/predict"

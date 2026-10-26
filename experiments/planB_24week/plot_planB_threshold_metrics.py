@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-PLANB_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_planB_24week")
+PLANB_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/planB_24week")
 SUMMARY_CSV = PLANB_ROOT / "planB_pred_vs_actual_threshold_summary.csv"
 THRESHOLDS = [0.0, 50.0, 100.0]
 COLORS = {0.0: "#1f77b4", 50.0: "#ff7f0e", 100.0: "#2ca02c"}

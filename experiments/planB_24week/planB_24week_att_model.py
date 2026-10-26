@@ -14,11 +14,11 @@ import torch.nn as nn
 
 PLANB_ROOT = os.getenv(
     "FSW_PLANB_ROOT",
-    "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_planB_24week",
+    os.path.join(os.getenv("FSW_RUN_ROOT", "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/runs"), "planB_24week"),
 )
 ORIG_REPO_ROOT = os.getenv(
     "FSW_ORIG_REPO",
-    "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting",
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
 )
 FORE_SWE_DIR = os.path.join(ORIG_REPO_ROOT, "fore_swe")
 DATA_DIR = os.getenv("FSW_DATA_DIR", os.path.join(ORIG_REPO_ROOT, "data"))

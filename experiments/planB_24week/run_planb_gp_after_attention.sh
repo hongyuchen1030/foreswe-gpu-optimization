@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PLANB_ROOT="/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_planB_24week"
-REPO_ROOT="/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting"
+PLANB_ROOT="/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/planB_24week"
+REPO_ROOT="/global/homes/h/hyvchen/foreswe-gpu-optimization"
 ENV_PY="/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/bin/python"
 HF_CACHE="/pscratch/sd/h/hyvchen/foreswe_model_cache"
 TMPDIR_ROOT="/pscratch/sd/h/hyvchen/tmp"

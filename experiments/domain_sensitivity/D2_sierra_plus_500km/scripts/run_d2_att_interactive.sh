@@ -1,11 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
-cd /global/homes/h/hyvchen/Snow-Predication-at-Sierra
+cd /global/homes/h/hyvchen/foreswe-gpu-optimization
 
-export FSW_ORIG_REPO="/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting"
-export FSW_DOMAIN_ROOT="/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km"
-export FSW_RUNTIME_ROOT="/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km"
+export FSW_ORIG_REPO="/global/homes/h/hyvchen/foreswe-gpu-optimization"
+export FSW_DOMAIN_ROOT="${FSW_RUN_ROOT:-/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/runs}/D2_sierra_plus_500km"
+export FSW_RUNTIME_ROOT="${FSW_RUN_ROOT:-/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/runs}/D2_sierra_plus_500km"
 export FSW_DATA_DIR="$FSW_DOMAIN_ROOT/data_subset"
 export FSW_STATION_SUBSET_CSV="$FSW_DOMAIN_ROOT/station_subset.csv"
 export FSW_OUTPUTS="$FSW_RUNTIME_ROOT/outputs"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Default values
-base_url="/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting"         
+base_url="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 env_name="foreswe_att_env"
 requirements_file="requirement_files/foreswe_requirement.txt"
 

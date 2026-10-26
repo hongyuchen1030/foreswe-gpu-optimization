@@ -19,13 +19,13 @@ import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 
 
-REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
-THIRDPARTY_ROOT = REPO_ROOT / "thirdparties" / "SWE-Forecasting"
+REPO_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
+THIRDPARTY_ROOT = REPO_ROOT
 ACTUAL_DIR = THIRDPARTY_ROOT / "results" / "actual"
 PREDICT_DIR = Path(
     "/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting/results/predict"
 )
-FIGURE_DIR = REPO_ROOT / "experiments" / "foreswe_reproduction" / "figures"
+FIGURE_DIR = REPO_ROOT / "experiments" / "original_daily" / "figures"
 
 YEARS = [2014, 2015, 2016, 2017, 2018]
 EXPECTED_SHAPES = {

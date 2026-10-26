@@ -13,14 +13,14 @@ import pandas as pd
 PLANB_ROOT = Path(
     os.getenv(
         "FSW_PLANB_ROOT",
-        "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_planB_24week",
+        "/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/planB_24week",
     )
 )
-PROJECT_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
+PROJECT_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
 SIERRA_STATION_SOURCE = (
     PROJECT_ROOT
     / "experiments"
-    / "foreswe_domain_sensitivity"
+    / "domain_sensitivity"
     / "D2_sierra_plus_500km"
     / "station_subset.csv"
 )

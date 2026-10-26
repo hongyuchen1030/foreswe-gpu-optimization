@@ -10,12 +10,12 @@ import pandas as pd
 import torch
 
 
-REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
-THIRDPARTY_ROOT = REPO_ROOT / "thirdparties" / "SWE-Forecasting"
+REPO_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
+THIRDPARTY_ROOT = REPO_ROOT
 FORE_SWE_DIR = THIRDPARTY_ROOT / "fore_swe"
 WEEKLY_ROOT = Path("/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512")
-PLANB_ROOT = REPO_ROOT / "experiments" / "foreswe_planB_24week"
-OUT_DIR = REPO_ROOT / "experiments" / "foreswe_bias_diagnosis"
+PLANB_ROOT = REPO_ROOT / "experiments" / "planB_24week"
+OUT_DIR = REPO_ROOT / "experiments" / "bias_diagnosis"
 
 sys.path.insert(0, str(FORE_SWE_DIR))
 os.environ["BASE_URL"] = str(THIRDPARTY_ROOT)

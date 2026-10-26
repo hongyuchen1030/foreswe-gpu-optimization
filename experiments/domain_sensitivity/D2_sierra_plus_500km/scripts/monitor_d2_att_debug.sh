@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SESSION_NAME="${1:-d2_att_debug}"
-FSW_RUNTIME_ROOT="/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km"
+FSW_RUNTIME_ROOT="${FSW_RUN_ROOT:-/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/runs}/D2_sierra_plus_500km"
 MAIN_LOG="$FSW_RUNTIME_ROOT/logs/d2_att_interactive_debug.log"
 TRAIN_LOG="$FSW_RUNTIME_ROOT/outputs/forecasting_modified_daily_att_tr_act_loss.txt"
 HEARTBEAT="$FSW_RUNTIME_ROOT/logs/d2_att_interactive_debug_heartbeat.log"

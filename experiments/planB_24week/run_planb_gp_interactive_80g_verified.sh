@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PLANB_ROOT="/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_planB_24week"
+PLANB_ROOT="/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/planB_24week"
 ENV_PY="/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/bin/python"
 LOG_PATH="${PLANB_ROOT}/outputs/planB_24week_gp_interactive_80g_verified.log"
 

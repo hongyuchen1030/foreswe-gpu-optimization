@@ -9,12 +9,12 @@ import numpy as np
 import pandas as pd
 
 
-PROJECT_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
-OUTPUT_DIR = PROJECT_ROOT / "experiments" / "fig6_weekly_stitching"
+PROJECT_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
+OUTPUT_DIR = PROJECT_ROOT / "experiments" / "planA_stitching"
 SIERRA_STATION_SOURCE = (
     PROJECT_ROOT
     / "experiments"
-    / "foreswe_domain_sensitivity"
+    / "domain_sensitivity"
     / "D2_sierra_plus_500km"
     / "station_subset.csv"
 )

@@ -7,11 +7,11 @@ import pandas as pd
 
 PLANB_ROOT = os.getenv(
     "FSW_PLANB_ROOT",
-    "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_planB_24week",
+    "/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/planB_24week",
 )
 ORIG_REPO_ROOT = os.getenv(
     "FSW_ORIG_REPO",
-    "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting",
+    "/global/homes/h/hyvchen/foreswe-gpu-optimization",
 )
 DATA_DIR = os.getenv("FSW_DATA_DIR", os.path.join(ORIG_REPO_ROOT, "data"))
 

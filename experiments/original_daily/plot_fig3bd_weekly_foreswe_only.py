@@ -10,9 +10,9 @@ import pandas as pd
 matplotlib.use("Agg")
 
 
-REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
-FIGURES_DIR = REPO_ROOT / "experiments" / "foreswe_reproduction" / "figures"
-METADATA_PATH = REPO_ROOT / "thirdparties" / "SWE-Forecasting" / "data" / "snotel_location_info_2.csv"
+REPO_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
+FIGURES_DIR = REPO_ROOT / "experiments" / "original_daily" / "figures"
+METADATA_PATH = REPO_ROOT / "data" / "snotel_location_info_2.csv"
 
 WEEKLY_ACTUAL_DIR = Path(
     "/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/results/actual"

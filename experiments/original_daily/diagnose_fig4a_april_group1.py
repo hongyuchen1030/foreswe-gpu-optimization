@@ -24,8 +24,8 @@ from foreswe_grouping_utils import (
 )
 
 
-REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
-REPORT_PATH = REPO_ROOT / "experiments" / "foreswe_reproduction" / "FIG4A_APRIL_GROUP1_DIAGNOSTIC.md"
+REPO_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
+REPORT_PATH = REPO_ROOT / "experiments" / "original_daily" / "FIG4A_APRIL_GROUP1_DIAGNOSTIC.md"
 CSV_PATH = FIGURE_DIR / "fig4a_april_group1_diagnostic.csv"
 
 MIN_ACTUAL_SWE_MM = 1.0

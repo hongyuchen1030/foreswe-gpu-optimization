@@ -29,12 +29,12 @@ from foreswe_grouping_utils import (
 )
 
 
-REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
+REPO_ROOT = Path("/global/homes/h/hyvchen/foreswe-gpu-optimization")
 MIN_ACTUAL_SWE_MM = 1.0
 OUTPUT_PNG = FIGURE_DIR / "reproduced_fig4a_daily_relative_bias_station_mean_aggregation.png"
 OUTPUT_PDF = FIGURE_DIR / "reproduced_fig4a_daily_relative_bias_station_mean_aggregation.pdf"
 OUTPUT_CSV = FIGURE_DIR / "reproduced_fig4a_bias_summary_station_mean_aggregation.csv"
-OUTPUT_REPORT = REPO_ROOT / "experiments" / "foreswe_reproduction" / "FIG4A_STATION_MEAN_AGGREGATION_COMPARISON.md"
+OUTPUT_REPORT = REPO_ROOT / "experiments" / "original_daily" / "FIG4A_STATION_MEAN_AGGREGATION_COMPARISON.md"
 
 
 def make_plot(plot_values: dict[tuple[int, str, int], list[np.ndarray]]) -> None:

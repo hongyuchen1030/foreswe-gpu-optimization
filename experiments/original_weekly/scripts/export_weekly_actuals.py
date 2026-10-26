@@ -11,7 +11,7 @@ if SCRIPT_DIR not in sys.path:
 
 ROOT = os.environ.setdefault(
     "FSW_WEEKLY_ROOT",
-    "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512",
+    "/global/homes/h/hyvchen/foreswe-gpu-optimization/experiments/original_weekly",
 )
 os.environ.setdefault("BASE_URL", ROOT)
 os.environ.setdefault("FSW_DATA_DIR", os.path.join(ROOT, "data"))

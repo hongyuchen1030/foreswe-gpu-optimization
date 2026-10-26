@@ -205,3 +205,21 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ---- foreswe-gpu-optimization additions -------------------------------------
+# Large artifacts live on pscratch ($FSW_SCRATCH_ROOT); see docs/migration/.
+*.pt
+*.pth
+*.nsys-rep
+*.qdrep
+*.sqlite
+*.ncu-rep
+torch_trace_*.json
+runs/
+external/
+cache/
+# opt-in read-only links created by scripts/link_legacy_results.sh
+results/actual/20*_*.pkl
+results/predict/20*_*.pkl
+# upstream example placeholders stay tracked
+!checkpoints/example_checkpoint.pt
