@@ -1,0 +1,31 @@
+D2 station count: 264
+Sierra eval stations included: 43 / 43
+State counts:
+- CA: 25
+- ID: 48
+- MT: 14
+- NV: 23
+- OR: 67
+- UT: 63
+- WA: 13
+- WY: 11
+Latitude range: 37.4863 to 46.8100
+Longitude range: -123.3731 to -110.1862
+Distance to Sierra stations (km): min 0.000, median 344.004, max 498.428
+Data subset shapes:
+- snotel_location_info_2.csv: (264, 36)
+- all_stations_day_length.csv: (10305, 265)
+- precipitation_info.csv: (10592, 265)
+- rain_info.csv: (10305, 265)
+- rmax_info.csv: (10592, 265)
+- rmin_info.csv: (10592, 265)
+- snow_info.csv: (10305, 265)
+- sph_info.csv: (10592, 265)
+- srad_info.csv: (10592, 265)
+- swe_values.csv: (10592, 265)
+- tb_19_info.csv: (10592, 265)
+- tb_37_info.csv: (10588, 265)
+- tb_diff_info.csv: (10588, 265)
+- tmax_info.csv: (10592, 265)
+- tmin_info.csv: (10592, 265)
+- windspeed_info.csv: (10592, 265)

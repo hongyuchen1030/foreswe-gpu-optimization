@@ -1,0 +1,100 @@
+[2026-05-21T19:57:31Z] status=stalled session_exists=yes
+
+[2026-05-21T20:07:31Z] status=running session_exists=yes
+[main tail]
+ [11.72933116  7.60737839  7.55063518 ...  1.59256717  2.35436102
+   0.        ]]
+Angularities shape (512, 512)
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[train tail]
+Length:512
+=================================================
+Epoch Number: 1 => Batch number :1800 , loss value : 61545.6640625 
+Length:512
+=================================================
+
+[2026-05-21T20:17:31Z] status=running session_exists=yes
+[main tail]
+ [11.72933116  7.60737839  7.55063518 ...  1.59256717  2.35436102
+   0.        ]]
+Angularities shape (512, 512)
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[train tail]
+Length:512
+=================================================
+Epoch Number: 2 => Batch number :1800 , loss value : 54097.0390625 
+Length:512
+=================================================
+
+[2026-05-21T20:27:31Z] status=running session_exists=yes
+[main tail]
+ [11.72933116  7.60737839  7.55063518 ...  1.59256717  2.35436102
+   0.        ]]
+Angularities shape (512, 512)
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[train tail]
+Length:512
+=================================================
+Epoch Number: 3 => Batch number :1800 , loss value : 7685.3994140625 
+Length:512
+=================================================
+
+[2026-05-21T20:37:31Z] status=running session_exists=yes
+[main tail]
+ [11.72933116  7.60737839  7.55063518 ...  1.59256717  2.35436102
+   0.        ]]
+Angularities shape (512, 512)
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[train tail]
+Length:512
+=================================================
+Epoch Number: 4 => Batch number :1700 , loss value : 2447.227783203125 
+Length:512
+=================================================
+
+[2026-05-21T20:47:31Z] status=running session_exists=yes
+[main tail]
+ [11.72933116  7.60737839  7.55063518 ...  1.59256717  2.35436102
+   0.        ]]
+Angularities shape (512, 512)
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[train tail]
+Length:512
+=================================================
+Epoch Number: 5 => Batch number :1600 , loss value : 6523.3525390625 
+Length:512
+=================================================
+
+[2026-05-21T20:57:31Z] status=running session_exists=yes
+[main tail]
+ [11.72933116  7.60737839  7.55063518 ...  1.59256717  2.35436102
+   0.        ]]
+Angularities shape (512, 512)
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[train tail]
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1600 , loss value : 6148.26953125 
+Length:512
+=================================================
+
+[2026-05-21T21:07:31Z] status=running session_exists=yes
+[main tail]
+Angularities shape (512, 512)
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/scripts/forecasting_att_weekly_model.py:459: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(weekly_checkpoint_path)
+[train tail]
+Length:512
+=================================================
+Epoch Number: 6 => Avg loss value : 6970.32444206018 
+Time Elapsed: 3641.9790630340576
+Training Epoch Losses: [118268.76829697956, 67671.81706685745, 14812.944266520442, 7505.003602246265, 6819.613815738255, 6970.32444206018]
+

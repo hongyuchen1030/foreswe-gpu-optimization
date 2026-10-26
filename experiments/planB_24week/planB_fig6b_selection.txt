@@ -1,0 +1,7 @@
+selected_year=2017
+stitched_comparison_year=2016
+full_station=239
+full_station_name=Leavitt Lake
+sierra43_station=239
+sierra43_station_name=Leavitt Lake
+display_weeks=9..32

@@ -1,0 +1,30 @@
+Unloading the cpe module is insufficient to restore the system defaults.
+Please run 'source
+/opt/cray/pe/cpe/25.09/restore_lmod_system_defaults.[csh|sh]'. 
+ 
+Sourcing the above script is not necessary if swapping the cpe module with a
+different version. 
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+fore_swe/forecasting_att_daily_model.py:380: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load("{}/checkpoints/forecasting_modified_daily_att_climax_model_gp_act.pt".format(baseUrl))
+fore_swe/forecasting_att_daily_model.py:429: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load("{}/checkpoints/forecasting_modified_daily_att_climax_model_gp_act.pt".format(baseUrl))
+fore_swe/forecasting_att_daily_model.py:457: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_daily_input = torch.tensor(instance_daily_input).to(device=device,dtype=torch.float32)
+fore_swe/forecasting_att_daily_model.py:458: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_monthly_input = torch.tensor(instance_monthly_input).to(device=device,dtype=torch.float32)
+fore_swe/forecasting_att_daily_model.py:459: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_yearly_input = torch.tensor(instance_yearly_input).to(device=device,dtype=torch.float32)
+fore_swe/forecasting_att_daily_model.py:507: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_daily_input = torch.tensor(instance_daily_input).to(device=device,dtype=torch.float32)
+fore_swe/forecasting_att_daily_model.py:508: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_monthly_input = torch.tensor(instance_monthly_input).to(device=device,dtype=torch.float32)
+fore_swe/forecasting_att_daily_model.py:509: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_yearly_input = torch.tensor(instance_yearly_input).to(device=device,dtype=torch.float32)
+fore_swe/forecasting_att_daily_model.py:571: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_daily_input = torch.tensor(instance_daily_input).to(device=device,dtype=torch.float32)
+fore_swe/forecasting_att_daily_model.py:572: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_monthly_input = torch.tensor(instance_monthly_input).to(device=device,dtype=torch.float32)
+fore_swe/forecasting_att_daily_model.py:573: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  instance_yearly_input = torch.tensor(instance_yearly_input).to(device=device,dtype=torch.float32)

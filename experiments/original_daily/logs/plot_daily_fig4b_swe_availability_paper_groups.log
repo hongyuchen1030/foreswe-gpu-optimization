@@ -1,0 +1,103 @@
+/tmp/tmpnoyxrvr2: line 51: ERROR:: command not found
+/tmp/tmpnoyxrvr2: line 52: ERROR:: command not found
+/tmp/tmpnoyxrvr2: line 84: ERROR:: command not found
+/tmp/tmpnoyxrvr2: line 85: ERROR:: command not found
+/tmp/tmpnoyxrvr2: line 51: ERROR:: command not found
+/tmp/tmpnoyxrvr2: line 52: ERROR:: command not found
+Training water years used for grouping: 1991 to 2014
+Paper-style group counts: {1: 154, 2: 153, 3: 153, 4: 52}
+Month sample counts by group:
+   month   group  n_samples
+   April Group 1      23100
+   April Group 2      22950
+   April Group 3      22950
+   April Group 4       7800
+February Group 1      21714
+February Group 2      21573
+February Group 3      21573
+February Group 4       7332
+   March Group 1      23870
+   March Group 2      23715
+   March Group 3      23715
+   March Group 4       8060
+     May Group 1      23100
+     May Group 2      22950
+     May Group 3      22950
+     May Group 4       7800
+Median actual/predicted SWE by group and month:
+   month   group  variable  median_swe
+   April Group 1    Actual   61.976001
+   April Group 1 Predicted   57.270042
+   April Group 2    Actual  271.780002
+   April Group 2 Predicted  256.567909
+   April Group 3    Actual  541.527997
+   April Group 3 Predicted  540.100155
+   April Group 4    Actual  980.694006
+   April Group 4 Predicted  993.398166
+February Group 1    Actual  158.242000
+February Group 1 Predicted  149.516633
+February Group 2    Actual  261.112000
+February Group 2 Predicted  257.024887
+February Group 3    Actual  411.987994
+February Group 3 Predicted  411.395957
+February Group 4    Actual  702.817993
+February Group 4 Predicted  703.338986
+   March Group 1    Actual  181.356001
+   March Group 1 Predicted  164.778995
+   March Group 2    Actual  330.200003
+   March Group 2 Predicted  317.464743
+   March Group 3    Actual  529.844012
+   March Group 3 Predicted  526.824882
+   March Group 4    Actual  900.430005
+   March Group 4 Predicted  903.772266
+     May Group 1    Actual    0.000000
+     May Group 1 Predicted    2.541272
+     May Group 2    Actual   39.624000
+     May Group 2 Predicted   38.680602
+     May Group 3    Actual  292.100006
+     May Group 3 Predicted  296.171291
+     May Group 4    Actual  664.717972
+     May Group 4 Predicted  690.008574
+April Group 1 median actual SWE: 61.97600116729736
+April Group 1 median predicted SWE: 57.270041568825604
+April Group 1 median predicted - actual SWE: -4.7059595984717575
+April Group 3 median actual/predicted SWE: 541.5279968261718 540.1001551726418 difference -1.4278416535299812
+May Group 3 median actual/predicted SWE: 292.1000057220459 296.17129136756273 difference 4.071285645516809
+April Group 4 median actual/predicted SWE: 980.6940063476562 993.3981657568231 difference 12.704159409166891
+May Group 4 median actual/predicted SWE: 664.7179718017578 690.0085737018852 difference 25.2906019001274
+May Groups 3/4 median SWE by horizon:
+  group  horizon  median_actual_swe  median_predicted_swe  pred_minus_actual
+Group 3        1         292.100006            296.171291           4.071286
+Group 4        1         664.717972            690.008574          25.290602
+Group 3        2         277.113999            297.643193          20.529194
+Group 4        2         645.160001            688.113110          42.953110
+Group 3        3         262.128001            298.640592          36.512592
+Group 4        3         626.110007            690.660856          64.550849
+Group 3        4         244.348001            294.828233          50.480232
+Group 4        4         601.979982            690.067161          88.087179
+Group 3        5         229.362003            295.940527          66.578524
+Group 4        5         578.612010            692.480582         113.868572
+Group 3        6         212.852000            295.979720          83.127721
+Group 4        6         556.006007            691.647689         135.641683
+Group 3        7         200.151996            296.647652          96.495656
+Group 4        7         533.907982            690.731586         156.823604
+Group 3        8         187.705998            295.604100         107.898102
+Group 4        8         511.810000            691.190536         179.380536
+Group 3        9         175.768002            295.894768         120.126766
+Group 4        9         489.965997            685.022038         195.056041
+Group 3       10         164.592003            293.565575         128.973572
+Group 4       10         471.169989            691.165656         219.995667
+Saved grouping CSV: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/paper_style_station_groups.csv
+Saved figure PNG: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4b_daily_swe_availability_paper_groups.png
+Saved figure PDF: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4b_daily_swe_availability_paper_groups.pdf
+Saved summary CSV: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4b_swe_summary_paper_groups.csv
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error

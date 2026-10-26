@@ -1,0 +1,66 @@
+GPU is running.
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  training_inputs = torch.load('{}/forecasting_modified_daily_att_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py:63: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  training_outputs = torch.load('{}/forecasting_modified_daily_att_outputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py:65: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  test_inputs_1 = torch.load('{}/daily_test1_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py:66: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  test_inputs_2 = torch.load('{}/daily_test2_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py:67: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  test_inputs_3 = torch.load('{}/daily_test3_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py:68: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  test_inputs_4 = torch.load('{}/daily_test4_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py:69: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  test_inputs_5 = torch.load('{}/daily_test5_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+Training input shape (148565, 8)
+Test shape (181, 43, 8)
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/data_subset
+Active output directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs
+Active actual results directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual
+Active predict results directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/predict
+N_STATIONS 43
+Loss value is : 49550964.247404754 in epoch:0 and batch:0
+Traceback (most recent call last):
+  File "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py", line 179, in <module>
+    train()
+  File "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py", line 173, in train
+    output = model(x_batch)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/gpytorch/models/approximate_gp.py", line 114, in __call__
+    return self.variational_strategy(inputs, prior=prior, **kwargs)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/gpytorch/variational/lmc_variational_strategy.py", line 197, in __call__
+    latent_dist = self.base_variational_strategy(x, prior=prior, **kwargs)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/gpytorch/variational/variational_strategy.py", line 272, in __call__
+    return super().__call__(x, prior=prior, **kwargs)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/gpytorch/variational/_variational_strategy.py", line 347, in __call__
+    return super().__call__(
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/gpytorch/module.py", line 31, in __call__
+    outputs = self.forward(*inputs, **kwargs)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/gpytorch/variational/variational_strategy.py", line 232, in forward
+    MatmulLinearOperator(interp_term.transpose(-1, -2), middle_term @ interp_term),
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/operators/_linear_operator.py", line 2905, in __matmul__
+    return self.matmul(other)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/operators/_linear_operator.py", line 1839, in matmul
+    return Matmul.apply(self.representation_tree(), other, *self.representation())
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/autograd/function.py", line 574, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/functions/_matmul.py", line 21, in forward
+    res = linear_op._matmul(rhs)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/operators/sum_linear_operator.py", line 50, in _matmul
+    return sum(linear_op._matmul(rhs) for linear_op in self.linear_ops)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/operators/sum_linear_operator.py", line 50, in <genexpr>
+    return sum(linear_op._matmul(rhs) for linear_op in self.linear_ops)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/operators/root_linear_operator.py", line 71, in _matmul
+    return self.root._matmul(self.root._t_matmul(rhs))
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/operators/triangular_linear_operator.py", line 108, in _matmul
+    return self._tensor.matmul(rhs)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/operators/_linear_operator.py", line 1839, in matmul
+    return Matmul.apply(self.representation_tree(), other, *self.representation())
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/autograd/function.py", line 574, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/functions/_matmul.py", line 21, in forward
+    res = linear_op._matmul(rhs)
+  File "/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/linear_operator/operators/dense_linear_operator.py", line 65, in _matmul
+    return torch.matmul(self.tensor, rhs)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.36 GiB. GPU 0 has a total capacity of 39.49 GiB of which 321.31 MiB is free. Including non-PyTorch memory, this process has 39.17 GiB memory in use. Of the allocated memory 36.98 GiB is allocated by PyTorch, and 1.66 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR conda.cli.main_run:execute(127): `conda run python -u /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py` failed. (See above for error)

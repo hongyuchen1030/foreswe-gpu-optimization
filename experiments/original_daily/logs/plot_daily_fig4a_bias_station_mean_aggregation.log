@@ -1,0 +1,58 @@
+/tmp/tmprtc6q_sq: line 51: ERROR:: command not found
+/tmp/tmprtc6q_sq: line 52: ERROR:: command not found
+/tmp/tmprtc6q_sq: line 84: ERROR:: command not found
+/tmp/tmprtc6q_sq: line 85: ERROR:: command not found
+/tmp/tmprtc6q_sq: line 51: ERROR:: command not found
+/tmp/tmprtc6q_sq: line 52: ERROR:: command not found
+Station counts by paper-style group: {1: 154, 2: 153, 3: 153, 4: 52}
+Minimum actual SWE threshold (mm): 1.0
+Month assignment: target date = origin_date + horizon_days
+Aggregation: station-level monthly mean bias
+2014: actual (181, 512, 10), pred (181, 512, 10), origin start 2014-12-01, origin end 2015-05-30
+2015: actual (182, 512, 10), pred (182, 512, 10), origin start 2015-12-01, origin end 2016-05-30
+2016: actual (180, 512, 10), pred (180, 512, 10), origin start 2016-12-01, origin end 2017-05-30
+2017: actual (181, 512, 10), pred (181, 512, 10), origin start 2017-12-01, origin end 2018-05-30
+2018: actual (181, 512, 10), pred (181, 512, 10), origin start 2018-12-01, origin end 2019-05-30
+
+April Group 1 pooled vs station-level mean aggregation:
+ year  horizon  pooled_n_samples  pooled_mean_bias  pooled_median_bias  station_n  station_mean_bias  station_median_bias
+ 2014        1              1766         18.938680           -4.942796        112          35.041307             5.669660
+ 2014        3              1766         33.725955            1.151454        112          41.758273            17.337046
+ 2014        5              1766         51.594429            2.513034        112          63.642063            28.978828
+ 2014        7              1766         86.169860           12.507725        112         111.374146            57.289093
+ 2014       10              1766        114.324173           18.904621        112         148.804476            80.673169
+ 2015        1              2490         -5.830867          -10.697958        125          -2.602582            -8.423293
+ 2015        3              2490         15.745528           -1.706821        125          23.103910             9.479613
+ 2015        5              2490         27.358456           -1.711988        125          34.078254            16.059076
+ 2015        7              2490         52.239466            4.722614        125          66.816360            31.915148
+ 2015       10              2490         73.304379            7.232340        125          95.374421            49.300883
+ 2016        1              2966          3.645559           -5.528367        130          18.306536            -3.354480
+ 2016        3              2966         18.071122           -0.446659        130          32.962645             4.826063
+ 2016        5              2966         30.200727            0.010361        130          52.290852            10.496812
+ 2016        7              2966         49.660854            3.918234        130          81.987676            20.523550
+ 2016       10              2966         69.789318            6.354135        130         108.829170            33.767073
+ 2017        1              2594         -6.012840           -7.547532        119          -2.500206            -5.629045
+ 2017        3              2594         15.290375           -3.045433        119          25.567055             4.297335
+ 2017        5              2594         22.358974           -5.379921        119          40.291918             7.396731
+ 2017        7              2594         46.591682           -2.801123        119          85.237527            21.240832
+ 2017       10              2594         54.762376           -4.710118        119         100.931438            24.181973
+ 2018        1              3556         -6.588200           -8.239882        142          -5.693333            -6.939994
+ 2018        3              3556         16.636167           -1.163968        142          28.196815            12.058931
+ 2018        5              3556         28.659093           -1.495606        142          49.424217            21.786246
+ 2018        7              3556         53.728434            3.115958        142          92.211016            38.448648
+ 2018       10              3556         70.224060            2.802632        142         115.832931            47.690973
+
+Saved figure PNG: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_daily_relative_bias_station_mean_aggregation.png
+Saved figure PDF: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_daily_relative_bias_station_mean_aggregation.pdf
+Saved summary CSV: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_bias_summary_station_mean_aggregation.csv
+Saved report: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/FIG4A_STATION_MEAN_AGGREGATION_COMPARISON.md
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error

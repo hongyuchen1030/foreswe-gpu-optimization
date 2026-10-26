@@ -1,0 +1,2 @@
+Time Elapsed: 17.43824005126953
+Training Epoch Losses: []

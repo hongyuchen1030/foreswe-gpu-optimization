@@ -1,0 +1,47 @@
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+GPU is running.
+Active weekly root /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/data
+Active outputs directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/outputs
+Active results actual directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/results/actual
+Active results predict directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/results/predict
+Active checkpoints directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/checkpoints
+Weekly forecasting horizons days [7, 14, 21, 28]
+Weekly forecasting window 4
+Weekly forecasting step size 7
+N_STATIONS 512
+Distances [[   0.          529.64020963 1418.92893243 ...  987.27634831
+   936.94417175 1198.26592292]
+ [ 529.64020963    0.         1337.17046949 ...  593.93340603
+   417.95708483 1376.12118824]
+ [1418.92893243 1337.17046949    0.         ...  915.36356831
+  1290.93570199  657.84273521]
+ ...
+ [ 987.27634831  593.93340603  915.36356831 ...    0.
+   381.58469902 1226.973236  ]
+ [ 936.94417175  417.95708483 1290.93570199 ...  381.58469902
+     0.         1524.52928694]
+ [1198.26592292 1376.12118824  657.84273521 ... 1226.973236
+  1524.52928694    0.        ]]
+Distances shape (512, 512)
+Angularities [[ 0.          4.12195278 19.27996634 ... 13.32189833  9.37497014
+  11.72933116]
+ [ 4.12195278  0.         15.15801356 ...  9.19994555  5.25301736
+   7.60737839]
+ [19.27996634 15.15801356  0.         ...  5.95806801  9.9049962
+   7.55063518]
+ ...
+ [13.32189833  9.19994555  5.95806801 ...  0.          3.94692819
+   1.59256717]
+ [ 9.37497014  5.25301736  9.9049962  ...  3.94692819  0.
+   2.35436102]
+ [11.72933116  7.60737839  7.55063518 ...  1.59256717  2.35436102
+   0.        ]]
+Angularities shape (512, 512)
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/scripts/forecasting_att_weekly_model.py:409: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(weekly_checkpoint_path)
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/scripts/forecasting_att_weekly_model.py:459: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(weekly_checkpoint_path)

@@ -1,0 +1,49 @@
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/data_subset
+Active output directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/outputs
+Active station subset CSV /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/station_subset.csv
+Expected station count from station_subset.csv 264
+Sierra eval station count 43
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/data_subset
+Metadata shape (264, 36)
+SWE CSV shape (10592, 265)
+N_STATIONS 264
+Distances [[  0.         529.64020963 457.07422723 ... 840.43527036 488.78290396
+  476.74320457]
+ [529.64020963   0.         161.5186004  ... 573.84420017 397.1327873
+   76.98175221]
+ [457.07422723 161.5186004    0.         ... 722.87936964 491.87035241
+   87.54015547]
+ ...
+ [840.43527036 573.84420017 722.87936964 ...   0.         353.54311496
+  636.78980816]
+ [488.78290396 397.1327873  491.87035241 ... 353.54311496   0.
+  423.938537  ]
+ [476.74320457  76.98175221  87.54015547 ... 636.78980816 423.938537
+    0.        ]]
+Distances shape (264, 264)
+Angularities [[ 0.          4.12195278  1.73957457 ... 11.83394851  6.71665645
+   3.00594217]
+ [ 4.12195278  0.          2.3823782  ...  7.71199573  2.59470367
+   1.11601061]
+ [ 1.73957457  2.3823782   0.         ... 10.09437394  4.97708188
+   1.26636759]
+ ...
+ [11.83394851  7.71199573 10.09437394 ...  0.          5.11729206
+   8.82800634]
+ [ 6.71665645  2.59470367  4.97708188 ...  5.11729206  0.
+   3.71071429]
+ [ 3.00594217  1.11601061  1.26636759 ...  8.82800634  3.71071429
+   0.        ]]
+Angularities shape (264, 264)
+N_STATIONS 264
+Metadata shape (264, 36)
+SWE CSV shape (10305, 265)
+Model input shape (10305, 264, 19)
+Model output shape (10305, 264, 1)
+Distance matrix shape (264, 264)
+Angularity matrix shape (264, 264)
+Deterministic subset test station count 53
+Deterministic subset test station indices [1, 16, 17, 21, 22, 25, 27, 39, 43, 48, 51, 56, 58, 68, 69, 81, 84, 85, 86, 88, 109, 110, 111, 113, 114, 124, 136, 142, 148, 154, 155, 162, 164, 168, 173, 176, 177, 179, 186, 203, 204, 211, 213, 221, 228, 232, 238, 239, 242, 248, 249, 254, 256]
+Domain daily input shape check passed.

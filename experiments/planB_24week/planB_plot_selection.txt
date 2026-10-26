@@ -1,0 +1,4 @@
+selected_year=2017
+selected_station=329
+selected_station_name=Paradise
+display_weeks=8..31

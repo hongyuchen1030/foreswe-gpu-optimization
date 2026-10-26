@@ -1,0 +1,198 @@
+{
+ "variant": "weekly4",
+ "source": "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting/fore_swe/forecasting_att_weekly_model.py",
+ "env": {
+  "host": "nid001185",
+  "slurm_job_id": "60333179",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_total_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "matmul_allow_tf32": false,
+  "cudnn_allow_tf32": true,
+  "precision": "fp32 (no autocast)",
+  "driver": "580.178.04"
+ },
+ "method": {
+  "timing": "torch.cuda.Event per region + perf_counter wall with cuda.synchronize around each step",
+  "warmup": 3,
+  "iters": 10,
+  "batch": "1 issue date x 512 stations (production batch)",
+  "data": "synthetic, production shapes; model_inputs resident on GPU as in production"
+ },
+ "model": {
+  "model_init_s": 2.7541837319731712,
+  "params_total": 627615500,
+  "params_crossvar_encoder_layers_never_called": 201597000,
+  "param_mem_gib": 2.3380499333143234
+ },
+ "infer": {
+  "prep_ms": {
+   "mean": 6.787753582000732,
+   "median": 6.764143943786621,
+   "p10": 6.7333760261535645,
+   "p90": 6.8798911571502686,
+   "min": 6.722720146179199,
+   "max": 6.9653120040893555,
+   "n": 10
+  },
+  "fwd_ms": {
+   "mean": 39.13347244262695,
+   "median": 39.14603233337402,
+   "p10": 39.12183151245117,
+   "p90": 39.164801025390624,
+   "min": 38.981632232666016,
+   "max": 39.17488098144531,
+   "n": 10
+  },
+  "d2h_ms": {
+   "mean": 0.07722880020737648,
+   "median": 0.07719999924302101,
+   "p10": 0.076374401897192,
+   "p90": 0.0783391997218132,
+   "min": 0.07427199929952621,
+   "max": 0.07923199981451035,
+   "n": 10
+  },
+  "step_wall_ms": {
+   "mean": 46.02438439615071,
+   "median": 46.0127160185948,
+   "p10": 45.98826602450572,
+   "p90": 46.05790830682963,
+   "min": 45.98788794828579,
+   "max": 46.125132008455694,
+   "n": 10
+  },
+  "fwd_back_to_back_ms_per_iter": 38.33993835449219,
+  "peak_allocated_gib": 3.1257214546203613,
+  "peak_reserved_gib": 3.50390625,
+  "static_allocated_gib_before": 2.735107421875,
+  "d2h_bytes_per_step": 32768,
+  "h2d_bytes_per_step": 2097152,
+  "season_forwards_per_year": 188,
+  "season_latency_s_per_year_est": 8.650390611495823,
+  "shapes": {
+   "daily": [
+    30,
+    512,
+    19
+   ],
+   "weekly": [
+    30,
+    512,
+    19
+   ],
+   "yearly": [
+    5,
+    512,
+    19
+   ],
+   "prompts": [
+    1,
+    512,
+    1536
+   ],
+   "distances": [
+    512,
+    512
+   ],
+   "output": [
+    1,
+    512,
+    4
+   ],
+   "representation": [
+    1,
+    512,
+    8
+   ]
+  }
+ },
+ "train": {
+  "prep_ms": {
+   "mean": 7.61657600402832,
+   "median": 7.504271984100342,
+   "p10": 7.419871997833252,
+   "p90": 7.707404708862304,
+   "min": 7.241024017333984,
+   "max": 8.951680183410645,
+   "n": 10
+  },
+  "fwd_ms": {
+   "mean": 39.67520294189453,
+   "median": 39.58203125,
+   "p10": 39.56489028930664,
+   "p90": 39.697042083740236,
+   "min": 39.55244827270508,
+   "max": 40.511966705322266,
+   "n": 10
+  },
+  "loss_item_ms": {
+   "mean": 0.034000000543892385,
+   "median": 0.03369600139558315,
+   "p10": 0.030179199390113355,
+   "p90": 0.03844160139560699,
+   "min": 0.029632000252604485,
+   "max": 0.04371200129389763,
+   "n": 10
+  },
+  "zero_grad_ms": {
+   "mean": 0.47200959622859956,
+   "median": 0.45236799120903015,
+   "p10": 0.44013439416885375,
+   "p90": 0.48274880349636073,
+   "min": 0.43702399730682373,
+   "max": 0.6653119921684265,
+   "n": 10
+  },
+  "bwd_ms": {
+   "mean": 72.67036743164063,
+   "median": 72.66371154785156,
+   "p10": 72.65213775634766,
+   "p90": 72.70988082885742,
+   "min": 72.64073944091797,
+   "max": 72.7147216796875,
+   "n": 10
+  },
+  "opt_ms": {
+   "mean": 27.017875289916994,
+   "median": 27.017807960510254,
+   "p10": 26.99811534881592,
+   "p90": 27.0363431930542,
+   "min": 26.984895706176758,
+   "max": 27.053823471069336,
+   "n": 10
+  },
+  "step_gpu_ms": {
+   "mean": 147.48603363037108,
+   "median": 147.27057647705078,
+   "p10": 147.14583892822264,
+   "p90": 148.53808135986327,
+   "min": 146.93431091308594,
+   "max": 148.70626831054688,
+   "n": 10
+  },
+  "step_wall_ms": {
+   "mean": 147.51169150113128,
+   "median": 147.29335601441562,
+   "p10": 147.17529588961042,
+   "p90": 148.5600551997777,
+   "min": 146.95634302916005,
+   "max": 148.7418839824386,
+   "n": 10
+  },
+  "peak_allocated_gib": 9.105138778686523,
+  "peak_reserved_gib": 9.541015625,
+  "after_first_step": {
+   "allocated_gib": 7.5180816650390625,
+   "peak_allocated_gib": 9.10513687133789
+  },
+  "params_with_optimizer_state": 426018500,
+  "param_tensors_with_optimizer_state": 271,
+  "optimizer_impl": "AdamW default (foreach when CUDA)"
+ }
+}

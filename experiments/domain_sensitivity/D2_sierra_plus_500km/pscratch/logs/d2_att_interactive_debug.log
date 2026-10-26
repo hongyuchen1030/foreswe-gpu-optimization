@@ -1,0 +1,52 @@
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+GPU is running.
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/data_subset
+Metadata shape (264, 36)
+SWE CSV shape (10592, 265)
+N_STATIONS 264
+Distances [[  0.         529.64020963 457.07422723 ... 840.43527036 488.78290396
+  476.74320457]
+ [529.64020963   0.         161.5186004  ... 573.84420017 397.1327873
+   76.98175221]
+ [457.07422723 161.5186004    0.         ... 722.87936964 491.87035241
+   87.54015547]
+ ...
+ [840.43527036 573.84420017 722.87936964 ...   0.         353.54311496
+  636.78980816]
+ [488.78290396 397.1327873  491.87035241 ... 353.54311496   0.
+  423.938537  ]
+ [476.74320457  76.98175221  87.54015547 ... 636.78980816 423.938537
+    0.        ]]
+Distances shape (264, 264)
+Angularities [[ 0.          4.12195278  1.73957457 ... 11.83394851  6.71665645
+   3.00594217]
+ [ 4.12195278  0.          2.3823782  ...  7.71199573  2.59470367
+   1.11601061]
+ [ 1.73957457  2.3823782   0.         ... 10.09437394  4.97708188
+   1.26636759]
+ ...
+ [11.83394851  7.71199573 10.09437394 ...  0.          5.11729206
+   8.82800634]
+ [ 6.71665645  2.59470367  4.97708188 ...  5.11729206  0.
+   3.71071429]
+ [ 3.00594217  1.11601061  1.26636759 ...  8.82800634  3.71071429
+   0.        ]]
+Angularities shape (264, 264)
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/data_subset
+Active output directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/outputs
+Active actual results directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/results/actual
+Active checkpoints directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/checkpoints
+Subset station split mode deterministic 20 percent sample from subset because test_indices=[] was passed
+N_STATIONS 264
+Metadata shape (264, 36)
+SWE CSV shape (10305, 265)
+Model input shape (10305, 264, 19)
+Model output shape (10305, 264, 1)
+Distance matrix shape (264, 264)
+Angularity matrix shape (264, 264)
+Subset test station count 53
+/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/scripts/forecasting_att_daily_model.py:461: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load("{}/forecasting_modified_daily_att_climax_model_gp_act.pt".format(FSW_CHECKPOINTS))

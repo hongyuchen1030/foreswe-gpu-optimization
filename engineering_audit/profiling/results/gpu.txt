@@ -1,0 +1,2 @@
+name, memory.total [MiB], driver_version, clocks.max.sm [MHz]
+NVIDIA A100-SXM4-40GB, 40960 MiB, 580.178.04, 1410 MHz

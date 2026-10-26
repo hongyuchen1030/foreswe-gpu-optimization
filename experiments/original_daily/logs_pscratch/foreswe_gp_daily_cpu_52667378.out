@@ -1,0 +1,12 @@
+Job started at: Thu May  7 11:31:34 PM PDT 2026
+Host: nid004688
+SLURM_JOB_ID=52667378
+FSW_REPO=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting
+FSW_ENV=/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att
+FSW_RUN_ROOT=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction
+FSW_OUTPUTS=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/outputs
+FSW_CHECKPOINTS=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/checkpoints
+CUDA_VISIBLE_DEVICES=unset
+cuda available False
+device count 0
+CPU is running.

@@ -1,0 +1,11 @@
+name,shape
+original_attention_train_actual,"(3437, 512, 4)"
+original_attention_train_pred,"(3437, 512, 4)"
+original_gp_test_actual,"(905, 512, 4)"
+original_gp_test_mean,"(905, 512, 4)"
+planb_attention_train_actual,"(3297, 512, 24)"
+planb_attention_train_pred,"(3297, 512, 24)"
+planb_attention_test_actual,"(5, 512, 24)"
+planb_attention_test_pred,"(5, 512, 24)"
+planb_gp_test_actual,"(5, 512, 24)"
+planb_gp_test_mean,"(5, 512, 24)"

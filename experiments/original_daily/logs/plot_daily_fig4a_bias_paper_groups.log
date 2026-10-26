@@ -1,0 +1,85 @@
+/tmp/tmpjnj1hhde: line 51: ERROR:: command not found
+/tmp/tmpjnj1hhde: line 52: ERROR:: command not found
+/tmp/tmpjnj1hhde: line 84: ERROR:: command not found
+/tmp/tmpjnj1hhde: line 85: ERROR:: command not found
+/tmp/tmpjnj1hhde: line 51: ERROR:: command not found
+/tmp/tmpjnj1hhde: line 52: ERROR:: command not found
+Metadata shape: (512, 30)
+Metadata columns: ['station_index', 'Station', 'Station.Id', 'State.Code', 'State.Name', 'Network.Co', 'Network.Na', 'Elevation', 'Latitude', 'Longitude', 'County.Nam', 'County.Cod', 'Start.Date', 'End.Date', 'Aspect_tif', 'Slope_tif1', 'join_lat', 'join_lon', 'distance', 'Station Name', 'Southness', 'Lancover_code', 'Landcover_detail', 'Koppen_code_ID', 'Koppen_code_name', 'KoppenClass', 'elevation prompt', 'southness prompt', 'koppen prompt', 'landcover prompt']
+Station count: 512
+Station order consistent with arrays: True
+SWE missing values: 0
+SWE negative values: 0
+SWE zero values: 2453575
+Training water years used for grouping: 1991 to 2014
+Paper-style percentile cuts p30/p60/p90 (mm): [332.031, 511.493, 912.336]
+Paper-style group counts: {1: 154, 2: 153, 3: 153, 4: 52}
+Paper-style group SWE ranges:
+Group 1: min 46.355 max 331.047
+Group 2: min 334.328 max 511.175
+Group 3: min 511.704 max 896.620
+Group 4: min 914.082 max 2062.903
+Plain-average-SWE vs paper-style confusion table:
+ plain_average_swe_group  paper_style_group  count
+                       1                  1    125
+                       1                  2      3
+                       2                  1     29
+                       2                  2     98
+                       2                  3      1
+                       3                  2     52
+                       3                  3     76
+                       4                  3     76
+                       4                  4     52
+Minimum actual SWE threshold (mm): 1.0
+2014: actual (181, 512, 10), pred (181, 512, 10), start 2014-12-01, end 2015-05-30
+2014 month window counts: {'February': 28, 'March': 31, 'April': 30, 'May': 30}
+2015: actual (182, 512, 10), pred (182, 512, 10), start 2015-12-01, end 2016-05-30
+2015 month window counts: {'February': 29, 'March': 31, 'April': 30, 'May': 30}
+2016: actual (180, 512, 10), pred (180, 512, 10), start 2016-12-01, end 2017-05-30
+2016 month window counts: {'February': 28, 'March': 31, 'April': 30, 'May': 30}
+2017: actual (181, 512, 10), pred (181, 512, 10), start 2017-12-01, end 2018-05-30
+2017 month window counts: {'February': 28, 'March': 31, 'April': 30, 'May': 30}
+2018: actual (181, 512, 10), pred (181, 512, 10), start 2018-12-01, end 2019-05-30
+2018 month window counts: {'February': 28, 'March': 31, 'April': 30, 'May': 30}
+April Group 1 mean/median bias by horizon with paper-style grouping:
+ year  horizon  n_samples  mean_bias  median_bias
+ 2014        1       1714  19.198460    -5.098664
+ 2014        3       1599  36.263280     0.155934
+ 2014        5       1482  52.785482     1.319788
+ 2014        7       1375  88.689738    11.295464
+ 2014       10       1233 136.780173    23.808927
+ 2015        1       2438  -5.953167   -11.059349
+ 2015        3       2320  15.854900    -1.466550
+ 2015        5       2191  29.924609    -0.782397
+ 2015        7       2054  58.085464     9.143969
+ 2015       10       1886  93.286316    14.343650
+ 2016        1       2921   4.000400    -5.656799
+ 2016        3       2822  19.888843    -0.554882
+ 2016        5       2699  34.676857     0.568607
+ 2016        7       2577  58.508604     6.317171
+ 2016       10       2370 101.000208    13.590996
+ 2017        1       2535  -5.737567    -7.459817
+ 2017        3       2445  14.571958    -2.647764
+ 2017        5       2341  23.925132    -3.330168
+ 2017        7       2212  58.982125     2.952487
+ 2017       10       2011 100.522555     7.981129
+ 2018        1       3504  -6.369363    -8.376054
+ 2018        3       3387  17.685910    -0.896889
+ 2018        5       3249  34.772927    -0.045212
+ 2018        7       3091  70.644263     7.244680
+ 2018       10       2882 105.902201    11.477296
+Saved grouping CSV: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/paper_style_station_groups.csv
+Saved confusion CSV: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/grouping_plain_average_swe_vs_paper_style_confusion.csv
+Saved figure PNG: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_daily_relative_bias_paper_groups.png
+Saved figure PDF: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_daily_relative_bias_paper_groups.pdf
+Saved summary CSV: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_bias_summary_paper_groups.csv
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error

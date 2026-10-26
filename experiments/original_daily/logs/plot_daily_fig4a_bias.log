@@ -1,0 +1,29 @@
+/tmp/tmpylvq6lj9: line 51: ERROR:: command not found
+/tmp/tmpylvq6lj9: line 52: ERROR:: command not found
+/tmp/tmpylvq6lj9: line 84: ERROR:: command not found
+/tmp/tmpylvq6lj9: line 85: ERROR:: command not found
+/tmp/tmpylvq6lj9: line 51: ERROR:: command not found
+/tmp/tmpylvq6lj9: line 52: ERROR:: command not found
+Metadata CSV shape: (512, 29)
+Metadata CSV columns: ['Station', 'Station.Id', 'State.Code', 'State.Name', 'Network.Co', 'Network.Na', 'Elevation', 'Latitude', 'Longitude', 'County.Nam', 'County.Cod', 'Start.Date', 'End.Date', 'Aspect_tif', 'Slope_tif1', 'join_lat', 'join_lon', 'distance', 'Station Name', 'Southness', 'Lancover_code', 'Landcover_detail', 'Koppen_code_ID', 'Koppen_code_name', 'KoppenClass', 'elevation prompt', 'southness prompt', 'koppen prompt', 'landcover prompt']
+Group percentile cuts (avg annual max SWE mm): ['304.673', '431.749', '648.716']
+Group counts: {1: 128, 2: 128, 3: 128, 4: 128}
+Minimum actual SWE threshold (mm): 1.0
+2014: actual shape (181, 512, 10), pred shape (181, 512, 10), start 2014-12-01, end 2015-05-30
+2015: actual shape (182, 512, 10), pred shape (182, 512, 10), start 2015-12-01, end 2016-05-30
+2016: actual shape (180, 512, 10), pred shape (180, 512, 10), start 2016-12-01, end 2017-05-30
+2017: actual shape (181, 512, 10), pred shape (181, 512, 10), start 2017-12-01, end 2018-05-30
+2018: actual shape (181, 512, 10), pred shape (181, 512, 10), start 2018-12-01, end 2019-05-30
+Saved plot PNG: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_daily_relative_bias.png
+Saved plot PDF: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_daily_relative_bias.pdf
+Saved summary CSV: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4a_bias_summary.csv
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error

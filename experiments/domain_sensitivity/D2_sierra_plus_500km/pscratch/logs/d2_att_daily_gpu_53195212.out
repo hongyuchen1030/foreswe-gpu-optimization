@@ -1,0 +1,94 @@
+Job started at: Tue May 19 08:59:54 PM PDT 2026
+Host: nid003572
+SLURM_JOB_ID=53195212
+CUDA_VISIBLE_DEVICES before srun=0,1,2,3
+FSW_DOMAIN_ROOT=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km
+FSW_RUNTIME_ROOT=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km
+FSW_DATA_DIR=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/data_subset
+FSW_STATION_SUBSET_CSV=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/station_subset.csv
+Checking GPU on allocated node:
+Tue May 19 20:59:54 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.105.08             Driver Version: 580.105.08     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:03:00.0 Off |                    0 |
+| N/A   30C    P0             55W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-40GB          On  |   00000000:41:00.0 Off |                    0 |
+| N/A   28C    P0             51W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-40GB          On  |   00000000:82:00.0 Off |                    0 |
+| N/A   30C    P0             53W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-40GB          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   28C    P0             53W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking PyTorch CUDA visibility before srun:
+torch 2.4.1+cu121
+cuda available True
+device count 4
+NVIDIA A100-SXM4-40GB
+Starting D2 ForeSWE attention training on standard 40GB GPU first:
+GPU is running.
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/data_subset
+Metadata shape (264, 36)
+SWE CSV shape (10592, 265)
+N_STATIONS 264
+Distances [[  0.         529.64020963 457.07422723 ... 840.43527036 488.78290396
+  476.74320457]
+ [529.64020963   0.         161.5186004  ... 573.84420017 397.1327873
+   76.98175221]
+ [457.07422723 161.5186004    0.         ... 722.87936964 491.87035241
+   87.54015547]
+ ...
+ [840.43527036 573.84420017 722.87936964 ...   0.         353.54311496
+  636.78980816]
+ [488.78290396 397.1327873  491.87035241 ... 353.54311496   0.
+  423.938537  ]
+ [476.74320457  76.98175221  87.54015547 ... 636.78980816 423.938537
+    0.        ]]
+Distances shape (264, 264)
+Angularities [[ 0.          4.12195278  1.73957457 ... 11.83394851  6.71665645
+   3.00594217]
+ [ 4.12195278  0.          2.3823782  ...  7.71199573  2.59470367
+   1.11601061]
+ [ 1.73957457  2.3823782   0.         ... 10.09437394  4.97708188
+   1.26636759]
+ ...
+ [11.83394851  7.71199573 10.09437394 ...  0.          5.11729206
+   8.82800634]
+ [ 6.71665645  2.59470367  4.97708188 ...  5.11729206  0.
+   3.71071429]
+ [ 3.00594217  1.11601061  1.26636759 ...  8.82800634  3.71071429
+   0.        ]]
+Angularities shape (264, 264)
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/data_subset
+Active output directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/outputs
+Active actual results directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/results/actual
+Active checkpoints directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_domain_sensitivity/D2_sierra_plus_500km/checkpoints
+Subset station split mode deterministic 20 percent sample from subset because test_indices=[] was passed
+N_STATIONS 264
+Metadata shape (264, 36)
+SWE CSV shape (10305, 265)
+Model input shape (10305, 264, 19)
+Model output shape (10305, 264, 1)
+Distance matrix shape (264, 264)
+Angularity matrix shape (264, 264)
+Subset test station count 53
+Job finished at: Tue May 19 09:45:34 PM PDT 2026

@@ -1,0 +1,115 @@
+{
+ "variant": "planB24",
+ "source": "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_planB_24week/planB_24week_att_model.py",
+ "env": {
+  "host": "nid200505",
+  "slurm_job_id": "60333598",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_total_mem_gib": 79.249755859375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "matmul_allow_tf32": false,
+  "cudnn_allow_tf32": true,
+  "precision": "fp32 (no autocast)",
+  "driver": "580.178.04"
+ },
+ "method": {
+  "timing": "torch.cuda.Event per region + perf_counter wall with cuda.synchronize around each step",
+  "warmup": 1,
+  "iters": 1,
+  "batch": "1 issue date x 512 stations (production batch)",
+  "data": "synthetic, production shapes; model_inputs resident on GPU as in production"
+ },
+ "model": {
+  "model_init_s": 2.7852222400251776,
+  "params_total": 627615680,
+  "params_crossvar_encoder_layers_never_called": 201597000,
+  "param_mem_gib": 2.338050603866577
+ },
+ "infer": {
+  "prep_ms": {
+   "mean": 28.684383392333984,
+   "median": 28.684383392333984,
+   "p10": 28.684383392333984,
+   "p90": 28.684383392333984,
+   "min": 28.684383392333984,
+   "max": 28.684383392333984,
+   "n": 1
+  },
+  "fwd_ms": {
+   "mean": 69.30534362792969,
+   "median": 69.30534362792969,
+   "p10": 69.30534362792969,
+   "p90": 69.30534362792969,
+   "min": 69.30534362792969,
+   "max": 69.30534362792969,
+   "n": 1
+  },
+  "d2h_ms": {
+   "mean": 0.22819200158119202,
+   "median": 0.22819200158119202,
+   "p10": 0.22819200158119202,
+   "p90": 0.22819200158119202,
+   "min": 0.22819200158119202,
+   "max": 0.22819200158119202,
+   "n": 1
+  },
+  "step_wall_ms": {
+   "mean": 98.29808201175183,
+   "median": 98.29808201175183,
+   "p10": 98.29808201175183,
+   "p90": 98.29808201175183,
+   "min": 98.29808201175183,
+   "max": 98.29808201175183,
+   "n": 1
+  },
+  "fwd_back_to_back_ms_per_iter": 62.46092987060547,
+  "peak_allocated_gib": 3.125798225402832,
+  "peak_reserved_gib": 3.50390625,
+  "static_allocated_gib_before": 2.735107898712158,
+  "d2h_bytes_per_step": 114688,
+  "h2d_bytes_per_step": 2097152,
+  "season_forwards_per_year": 1,
+  "season_latency_s_per_year_est": 0.09829808201175183,
+  "shapes": {
+   "daily": [
+    30,
+    512,
+    19
+   ],
+   "weekly": [
+    30,
+    512,
+    19
+   ],
+   "yearly": [
+    5,
+    512,
+    19
+   ],
+   "prompts": [
+    1,
+    512,
+    1536
+   ],
+   "distances": [
+    512,
+    512
+   ],
+   "output": [
+    1,
+    512,
+    24
+   ],
+   "representation": [
+    1,
+    512,
+    8
+   ]
+  }
+ }
+}

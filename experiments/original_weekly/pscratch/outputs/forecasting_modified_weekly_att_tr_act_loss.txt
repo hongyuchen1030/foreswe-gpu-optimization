@@ -1,0 +1,110 @@
+Training log path: /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/outputs/forecasting_modified_weekly_att_tr_act_loss.txt
+Weekly checkpoint path: /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_weekly_reproduction_full512/checkpoints/forecasting_modified_weekly_att_climax_model_gp_act.pt
+Forecast horizons days: [7, 14, 21, 28]
+Station count: 512
+Resuming from checkpoint epoch 6
+Epoch Number: 6 => Batch number :100 , loss value : 2433.67578125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :200 , loss value : 10131.30859375 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :300 , loss value : 8775.619140625 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :400 , loss value : 5362.09375 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :500 , loss value : 13343.751953125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :600 , loss value : 8113.92236328125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :700 , loss value : 23886.142578125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :800 , loss value : 3259.285888671875 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :900 , loss value : 3744.53955078125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1000 , loss value : 3423.69921875 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1100 , loss value : 6121.5869140625 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1200 , loss value : 6575.408203125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1300 , loss value : 2894.072265625 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1400 , loss value : 7962.28759765625 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1500 , loss value : 2195.6904296875 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1600 , loss value : 6081.24609375 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1700 , loss value : 1953.56298828125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1800 , loss value : 5585.0986328125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :1900 , loss value : 3541.28369140625 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2000 , loss value : 4913.6142578125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2100 , loss value : 5294.611328125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2200 , loss value : 5523.435546875 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2300 , loss value : 8068.0849609375 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2400 , loss value : 4639.5927734375 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2500 , loss value : 20278.73046875 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2600 , loss value : 3088.47705078125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2700 , loss value : 11839.9833984375 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2800 , loss value : 6999.611328125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :2900 , loss value : 1711.8961181640625 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :3000 , loss value : 7370.1474609375 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :3100 , loss value : 3586.4853515625 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :3200 , loss value : 7852.51318359375 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :3300 , loss value : 2893.2939453125 
+Length:512
+=================================================
+Epoch Number: 6 => Batch number :3400 , loss value : 8720.00390625 
+Length:512
+=================================================
+Epoch Number: 6 => Avg loss value : 6566.403363926798 
+Time Elapsed: 602.0299236774445
+Training Epoch Losses: [6566.403363926798]

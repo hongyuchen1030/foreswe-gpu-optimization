@@ -1,0 +1,8 @@
+# large profiler artifacts live on pscratch, never in git
+*.nsys-rep
+*.sqlite
+*.qdrep
+*.ncu-rep
+torch_trace_*.json
+ncu_*_infer.csv
+__pycache__/

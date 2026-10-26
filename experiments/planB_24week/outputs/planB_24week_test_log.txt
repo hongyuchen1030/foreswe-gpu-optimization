@@ -1,0 +1,6 @@
+Plan B test log path: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_planB_24week/outputs/planB_24week_test_log.txt
+Year 2015 issue_date 2015-02-01 issue_index 8511 actual_shape (1, 512, 24) pred_shape (1, 512, 24)
+Year 2016 issue_date 2016-02-01 issue_index 8876 actual_shape (1, 512, 24) pred_shape (1, 512, 24)
+Year 2017 issue_date 2017-02-01 issue_index 9241 actual_shape (1, 512, 24) pred_shape (1, 512, 24)
+Year 2018 issue_date 2018-02-01 issue_index 9606 actual_shape (1, 512, 24) pred_shape (1, 512, 24)
+Year 2019 issue_date 2019-02-01 issue_index 9971 actual_shape (1, 512, 24) pred_shape (1, 512, 24)

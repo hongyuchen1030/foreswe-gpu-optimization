@@ -1,0 +1,1009 @@
+Test Set 1
+Batch number :1 , loss : 319.8573303222656
+Batch number :2 , loss : 261.96710205078125
+Batch number :3 , loss : 214.84988403320312
+Batch number :4 , loss : 162.676025390625
+Batch number :5 , loss : 147.61306762695312
+Batch number :6 , loss : 175.6179962158203
+Batch number :7 , loss : 199.38821411132812
+Batch number :8 , loss : 229.14512634277344
+Batch number :9 , loss : 275.4616394042969
+Batch number :10 , loss : 348.1234130859375
+Batch number :11 , loss : 494.33197021484375
+Batch number :12 , loss : 636.8541870117188
+Batch number :13 , loss : 883.9225463867188
+Batch number :14 , loss : 1103.319580078125
+Batch number :15 , loss : 1434.832763671875
+Batch number :16 , loss : 1853.0615234375
+Batch number :17 , loss : 2233.926025390625
+Batch number :18 , loss : 2664.186279296875
+Batch number :19 , loss : 2908.74853515625
+Batch number :20 , loss : 2577.509765625
+Batch number :21 , loss : 1669.22021484375
+Batch number :22 , loss : 1126.177734375
+Batch number :23 , loss : 967.3101196289062
+Batch number :24 , loss : 926.1449584960938
+Batch number :25 , loss : 743.7737426757812
+Batch number :26 , loss : 685.0244750976562
+Batch number :27 , loss : 623.9951782226562
+Batch number :28 , loss : 406.3533630371094
+Batch number :29 , loss : 319.54833984375
+Batch number :30 , loss : 330.0849609375
+Batch number :31 , loss : 342.4615173339844
+Batch number :32 , loss : 349.92523193359375
+Batch number :33 , loss : 363.58673095703125
+Batch number :34 , loss : 392.67425537109375
+Batch number :35 , loss : 342.16455078125
+Batch number :36 , loss : 257.08599853515625
+Batch number :37 , loss : 254.86842346191406
+Batch number :38 , loss : 293.52410888671875
+Batch number :39 , loss : 350.9327087402344
+Batch number :40 , loss : 424.6147766113281
+Batch number :41 , loss : 501.69744873046875
+Batch number :42 , loss : 543.6541137695312
+Batch number :43 , loss : 475.82489013671875
+Batch number :44 , loss : 422.0976867675781
+Batch number :45 , loss : 432.4552001953125
+Batch number :46 , loss : 400.8840026855469
+Batch number :47 , loss : 311.123779296875
+Batch number :48 , loss : 163.86305236816406
+Batch number :49 , loss : 147.66680908203125
+Batch number :50 , loss : 160.53451538085938
+Batch number :51 , loss : 192.45603942871094
+Batch number :52 , loss : 210.2044219970703
+Batch number :53 , loss : 220.56838989257812
+Batch number :54 , loss : 243.7133331298828
+Batch number :55 , loss : 261.9997253417969
+Batch number :56 , loss : 308.9435119628906
+Batch number :57 , loss : 386.0387878417969
+Batch number :58 , loss : 423.3714904785156
+Batch number :59 , loss : 477.1805419921875
+Batch number :60 , loss : 561.9402465820312
+Batch number :61 , loss : 668.8789672851562
+Batch number :62 , loss : 839.8770751953125
+Batch number :63 , loss : 977.4158935546875
+Batch number :64 , loss : 1077.5574951171875
+Batch number :65 , loss : 1055.545654296875
+Batch number :66 , loss : 1036.406982421875
+Batch number :67 , loss : 1113.763427734375
+Batch number :68 , loss : 1040.517822265625
+Batch number :69 , loss : 539.656005859375
+Batch number :70 , loss : 261.9933166503906
+Batch number :71 , loss : 174.22227478027344
+Batch number :72 , loss : 160.48672485351562
+Batch number :73 , loss : 165.33151245117188
+Batch number :74 , loss : 171.14663696289062
+Batch number :75 , loss : 178.1300048828125
+Batch number :76 , loss : 195.9098358154297
+Batch number :77 , loss : 212.82118225097656
+Batch number :78 , loss : 232.1263427734375
+Batch number :79 , loss : 254.44479370117188
+Batch number :80 , loss : 303.7984313964844
+Batch number :81 , loss : 382.1866149902344
+Batch number :82 , loss : 498.3309326171875
+Batch number :83 , loss : 678.3792114257812
+Batch number :84 , loss : 937.6761474609375
+Batch number :85 , loss : 1040.533203125
+Batch number :86 , loss : 1190.2711181640625
+Batch number :87 , loss : 1375.4124755859375
+Batch number :88 , loss : 1453.6512451171875
+Batch number :89 , loss : 1492.24853515625
+Batch number :90 , loss : 1323.17333984375
+Batch number :91 , loss : 1063.462646484375
+Batch number :92 , loss : 773.6559448242188
+Batch number :93 , loss : 542.4962158203125
+Batch number :94 , loss : 420.60235595703125
+Batch number :95 , loss : 391.60040283203125
+Batch number :96 , loss : 374.2904052734375
+Batch number :97 , loss : 361.41961669921875
+Batch number :98 , loss : 363.9584655761719
+Batch number :99 , loss : 380.2264099121094
+Batch number :100 , loss : 421.2951354980469
+Batch number :101 , loss : 488.2662048339844
+Batch number :102 , loss : 550.0693969726562
+Batch number :103 , loss : 636.0667724609375
+Batch number :104 , loss : 596.5618286132812
+Batch number :105 , loss : 562.924072265625
+Batch number :106 , loss : 551.415771484375
+Batch number :107 , loss : 578.5121459960938
+Batch number :108 , loss : 649.5764770507812
+Batch number :109 , loss : 698.11962890625
+Batch number :110 , loss : 731.4373168945312
+Batch number :111 , loss : 767.389404296875
+Batch number :112 , loss : 804.9471435546875
+Batch number :113 , loss : 767.197509765625
+Batch number :114 , loss : 515.2861938476562
+Batch number :115 , loss : 461.8639221191406
+Batch number :116 , loss : 500.00341796875
+Batch number :117 , loss : 547.2669677734375
+Batch number :118 , loss : 596.3301391601562
+Batch number :119 , loss : 612.3409423828125
+Batch number :120 , loss : 736.3082275390625
+Batch number :121 , loss : 944.0910034179688
+Batch number :122 , loss : 1126.4930419921875
+Batch number :123 , loss : 1132.027099609375
+Batch number :124 , loss : 1121.462158203125
+Batch number :125 , loss : 1154.7366943359375
+Batch number :126 , loss : 1174.30322265625
+Batch number :127 , loss : 1267.17578125
+Batch number :128 , loss : 1196.079345703125
+Batch number :129 , loss : 1120.1639404296875
+Batch number :130 , loss : 1040.8621826171875
+Batch number :131 , loss : 938.1043701171875
+Batch number :132 , loss : 840.7324829101562
+Batch number :133 , loss : 735.610595703125
+Batch number :134 , loss : 690.8645629882812
+Batch number :135 , loss : 730.5555419921875
+Batch number :136 , loss : 638.7943115234375
+Batch number :137 , loss : 684.8630981445312
+Batch number :138 , loss : 762.1544799804688
+Batch number :139 , loss : 734.2047119140625
+Batch number :140 , loss : 694.0595703125
+Batch number :141 , loss : 614.5439453125
+Batch number :142 , loss : 562.3168334960938
+Batch number :143 , loss : 571.3888549804688
+Batch number :144 , loss : 606.4888305664062
+Batch number :145 , loss : 613.2717895507812
+Batch number :146 , loss : 617.6396484375
+Batch number :147 , loss : 831.907958984375
+Batch number :148 , loss : 1145.00244140625
+Batch number :149 , loss : 1328.04248046875
+Batch number :150 , loss : 1205.0716552734375
+Batch number :151 , loss : 882.6755981445312
+Batch number :152 , loss : 706.0772705078125
+Batch number :153 , loss : 515.64599609375
+Batch number :154 , loss : 412.9899597167969
+Batch number :155 , loss : 393.239501953125
+Batch number :156 , loss : 408.2098388671875
+Batch number :157 , loss : 454.3653259277344
+Batch number :158 , loss : 508.18524169921875
+Batch number :159 , loss : 541.293701171875
+Batch number :160 , loss : 466.5890197753906
+Batch number :161 , loss : 409.1971740722656
+Batch number :162 , loss : 447.68414306640625
+Batch number :163 , loss : 500.3607482910156
+Batch number :164 , loss : 608.6170654296875
+Batch number :165 , loss : 764.78125
+Batch number :166 , loss : 831.451904296875
+Batch number :167 , loss : 779.2945556640625
+Batch number :168 , loss : 635.4544677734375
+Batch number :169 , loss : 621.865966796875
+Batch number :170 , loss : 561.5557861328125
+Batch number :171 , loss : 505.8582763671875
+Batch number :172 , loss : 413.72894287109375
+Batch number :173 , loss : 393.3804931640625
+Batch number :174 , loss : 396.868408203125
+Batch number :175 , loss : 407.41326904296875
+Batch number :176 , loss : 433.2010803222656
+Batch number :177 , loss : 419.2176208496094
+Batch number :178 , loss : 414.3297424316406
+Batch number :179 , loss : 397.41802978515625
+Batch number :180 , loss : 402.9084167480469
+Batch number :181 , loss : 344.85479736328125
+Loss in day :1 , loss : 319.8573303222656
+Loss in day :11 , loss : 494.3319396972656
+Loss in day :21 , loss : 1669.219970703125
+Loss in day :31 , loss : 342.46148681640625
+Loss in day :41 , loss : 501.6973876953125
+Loss in day :51 , loss : 192.45602416992188
+Loss in day :61 , loss : 668.8790283203125
+Loss in day :71 , loss : 174.22227478027344
+Loss in day :81 , loss : 382.1866149902344
+Loss in day :91 , loss : 1063.462646484375
+Loss in day :101 , loss : 488.26617431640625
+Loss in day :111 , loss : 767.3893432617188
+Loss in day :121 , loss : 944.091064453125
+Loss in day :131 , loss : 938.1043090820312
+Loss in day :141 , loss : 614.5439453125
+Loss in day :151 , loss : 882.6756591796875
+Loss in day :161 , loss : 409.1971435546875
+Loss in day :171 , loss : 505.85821533203125
+Loss in day :181 , loss : 344.8547668457031
+================================================
+Test Set 2
+Batch number :1 , loss : 863.4749145507812
+Batch number :2 , loss : 1054.7589111328125
+Batch number :3 , loss : 1352.3359375
+Batch number :4 , loss : 1736.174072265625
+Batch number :5 , loss : 2061.745361328125
+Batch number :6 , loss : 2344.810791015625
+Batch number :7 , loss : 2353.091796875
+Batch number :8 , loss : 2818.999267578125
+Batch number :9 , loss : 3971.791015625
+Batch number :10 , loss : 4160.6416015625
+Batch number :11 , loss : 3950.76904296875
+Batch number :12 , loss : 4071.57470703125
+Batch number :13 , loss : 3725.41064453125
+Batch number :14 , loss : 3707.6552734375
+Batch number :15 , loss : 4617.4091796875
+Batch number :16 , loss : 5497.98486328125
+Batch number :17 , loss : 5352.82763671875
+Batch number :18 , loss : 5282.73291015625
+Batch number :19 , loss : 5428.39404296875
+Batch number :20 , loss : 5278.36083984375
+Batch number :21 , loss : 3484.389404296875
+Batch number :22 , loss : 1380.349853515625
+Batch number :23 , loss : 505.58270263671875
+Batch number :24 , loss : 262.59454345703125
+Batch number :25 , loss : 239.42691040039062
+Batch number :26 , loss : 245.2096405029297
+Batch number :27 , loss : 274.59527587890625
+Batch number :28 , loss : 310.381591796875
+Batch number :29 , loss : 356.6643371582031
+Batch number :30 , loss : 399.5584716796875
+Batch number :31 , loss : 444.0307312011719
+Batch number :32 , loss : 476.0288391113281
+Batch number :33 , loss : 509.190185546875
+Batch number :34 , loss : 552.3359985351562
+Batch number :35 , loss : 612.679931640625
+Batch number :36 , loss : 672.5453491210938
+Batch number :37 , loss : 713.9812622070312
+Batch number :38 , loss : 900.27099609375
+Batch number :39 , loss : 1145.3642578125
+Batch number :40 , loss : 1374.3077392578125
+Batch number :41 , loss : 1745.8135986328125
+Batch number :42 , loss : 2187.36669921875
+Batch number :43 , loss : 2439.970947265625
+Batch number :44 , loss : 2410.002197265625
+Batch number :45 , loss : 2251.578857421875
+Batch number :46 , loss : 2081.16845703125
+Batch number :47 , loss : 1791.4423828125
+Batch number :48 , loss : 1386.985595703125
+Batch number :49 , loss : 1081.7008056640625
+Batch number :50 , loss : 791.9354858398438
+Batch number :51 , loss : 815.4326782226562
+Batch number :52 , loss : 987.255126953125
+Batch number :53 , loss : 1136.726318359375
+Batch number :54 , loss : 1178.2049560546875
+Batch number :55 , loss : 1180.8546142578125
+Batch number :56 , loss : 1207.63916015625
+Batch number :57 , loss : 1366.3519287109375
+Batch number :58 , loss : 1519.628173828125
+Batch number :59 , loss : 1555.609619140625
+Batch number :60 , loss : 1291.531005859375
+Batch number :61 , loss : 956.4893188476562
+Batch number :62 , loss : 656.5858764648438
+Batch number :63 , loss : 510.79327392578125
+Batch number :64 , loss : 468.2798156738281
+Batch number :65 , loss : 410.1719665527344
+Batch number :66 , loss : 403.43536376953125
+Batch number :67 , loss : 552.8471069335938
+Batch number :68 , loss : 673.648193359375
+Batch number :69 , loss : 768.9761352539062
+Batch number :70 , loss : 846.6417846679688
+Batch number :71 , loss : 943.23681640625
+Batch number :72 , loss : 1053.3421630859375
+Batch number :73 , loss : 1175.43603515625
+Batch number :74 , loss : 1226.875244140625
+Batch number :75 , loss : 1319.4483642578125
+Batch number :76 , loss : 1209.4556884765625
+Batch number :77 , loss : 1061.701416015625
+Batch number :78 , loss : 1023.7017822265625
+Batch number :79 , loss : 1037.1492919921875
+Batch number :80 , loss : 673.3419799804688
+Batch number :81 , loss : 507.01239013671875
+Batch number :82 , loss : 509.21075439453125
+Batch number :83 , loss : 529.8241577148438
+Batch number :84 , loss : 563.8947143554688
+Batch number :85 , loss : 590.77587890625
+Batch number :86 , loss : 640.196044921875
+Batch number :87 , loss : 725.0467529296875
+Batch number :88 , loss : 830.73193359375
+Batch number :89 , loss : 925.4458618164062
+Batch number :90 , loss : 995.7560424804688
+Batch number :91 , loss : 1125.6636962890625
+Batch number :92 , loss : 1231.284423828125
+Batch number :93 , loss : 1405.4031982421875
+Batch number :94 , loss : 1662.8310546875
+Batch number :95 , loss : 2309.163330078125
+Batch number :96 , loss : 2967.119873046875
+Batch number :97 , loss : 3188.90576171875
+Batch number :98 , loss : 3660.09326171875
+Batch number :99 , loss : 3909.089111328125
+Batch number :100 , loss : 3929.425048828125
+Batch number :101 , loss : 3696.002197265625
+Batch number :102 , loss : 3706.509765625
+Batch number :103 , loss : 3500.547607421875
+Batch number :104 , loss : 2760.30810546875
+Batch number :105 , loss : 1810.1678466796875
+Batch number :106 , loss : 1387.911376953125
+Batch number :107 , loss : 1317.9498291015625
+Batch number :108 , loss : 1348.630859375
+Batch number :109 , loss : 1524.8753662109375
+Batch number :110 , loss : 1812.650390625
+Batch number :111 , loss : 2188.374755859375
+Batch number :112 , loss : 2435.04931640625
+Batch number :113 , loss : 2500.714111328125
+Batch number :114 , loss : 2267.68798828125
+Batch number :115 , loss : 2131.272216796875
+Batch number :116 , loss : 1970.59814453125
+Batch number :117 , loss : 1944.0281982421875
+Batch number :118 , loss : 1759.8067626953125
+Batch number :119 , loss : 1528.1546630859375
+Batch number :120 , loss : 1162.40380859375
+Batch number :121 , loss : 1254.9876708984375
+Batch number :122 , loss : 1588.7481689453125
+Batch number :123 , loss : 1962.9224853515625
+Batch number :124 , loss : 2178.420166015625
+Batch number :125 , loss : 2196.6220703125
+Batch number :126 , loss : 2191.109130859375
+Batch number :127 , loss : 2236.707275390625
+Batch number :128 , loss : 2410.130126953125
+Batch number :129 , loss : 2415.46484375
+Batch number :130 , loss : 1914.377685546875
+Batch number :131 , loss : 1384.118408203125
+Batch number :132 , loss : 1020.3241577148438
+Batch number :133 , loss : 879.6297607421875
+Batch number :134 , loss : 918.3159790039062
+Batch number :135 , loss : 1050.394775390625
+Batch number :136 , loss : 1268.8291015625
+Batch number :137 , loss : 1686.9976806640625
+Batch number :138 , loss : 2184.0615234375
+Batch number :139 , loss : 2442.520751953125
+Batch number :140 , loss : 2429.05908203125
+Batch number :141 , loss : 2112.887939453125
+Batch number :142 , loss : 1855.2354736328125
+Batch number :143 , loss : 1958.782958984375
+Batch number :144 , loss : 2533.25244140625
+Batch number :145 , loss : 3111.57470703125
+Batch number :146 , loss : 2654.448974609375
+Batch number :147 , loss : 2300.284912109375
+Batch number :148 , loss : 1894.5545654296875
+Batch number :149 , loss : 1799.509033203125
+Batch number :150 , loss : 1970.8204345703125
+Batch number :151 , loss : 2370.4150390625
+Batch number :152 , loss : 2908.23974609375
+Batch number :153 , loss : 3336.054443359375
+Batch number :154 , loss : 3501.29541015625
+Batch number :155 , loss : 3366.555419921875
+Batch number :156 , loss : 3239.03564453125
+Batch number :157 , loss : 3162.69873046875
+Batch number :158 , loss : 3208.80224609375
+Batch number :159 , loss : 3262.661376953125
+Batch number :160 , loss : 3115.6650390625
+Batch number :161 , loss : 2993.64697265625
+Batch number :162 , loss : 2844.483642578125
+Batch number :163 , loss : 2861.729736328125
+Batch number :164 , loss : 2628.042236328125
+Batch number :165 , loss : 1812.0635986328125
+Batch number :166 , loss : 1152.235595703125
+Batch number :167 , loss : 933.76318359375
+Batch number :168 , loss : 727.9432373046875
+Batch number :169 , loss : 586.6212768554688
+Batch number :170 , loss : 517.8480224609375
+Batch number :171 , loss : 596.7440795898438
+Batch number :172 , loss : 613.40234375
+Batch number :173 , loss : 581.6478881835938
+Batch number :174 , loss : 605.0587768554688
+Batch number :175 , loss : 766.0045166015625
+Batch number :176 , loss : 908.1151733398438
+Batch number :177 , loss : 1094.8289794921875
+Batch number :178 , loss : 1490.547607421875
+Batch number :179 , loss : 1842.9254150390625
+Batch number :180 , loss : 2280.66650390625
+Batch number :181 , loss : 2525.625732421875
+Batch number :182 , loss : 2727.712158203125
+Loss in day :1 , loss : 863.474853515625
+Loss in day :11 , loss : 3950.768798828125
+Loss in day :21 , loss : 3484.389404296875
+Loss in day :31 , loss : 444.0306701660156
+Loss in day :41 , loss : 1745.8135986328125
+Loss in day :51 , loss : 815.4326171875
+Loss in day :61 , loss : 956.4891967773438
+Loss in day :71 , loss : 943.23681640625
+Loss in day :81 , loss : 507.0123291015625
+Loss in day :91 , loss : 1125.663818359375
+Loss in day :101 , loss : 3696.002197265625
+Loss in day :111 , loss : 2188.375
+Loss in day :121 , loss : 1254.9876708984375
+Loss in day :131 , loss : 1384.118408203125
+Loss in day :141 , loss : 2112.887939453125
+Loss in day :151 , loss : 2370.414794921875
+Loss in day :161 , loss : 2993.64697265625
+Loss in day :171 , loss : 596.7440795898438
+Loss in day :181 , loss : 2525.6259765625
+================================================
+Test Set 3
+Batch number :1 , loss : 1287.764404296875
+Batch number :2 , loss : 1773.5399169921875
+Batch number :3 , loss : 2293.29296875
+Batch number :4 , loss : 2375.9599609375
+Batch number :5 , loss : 2431.232177734375
+Batch number :6 , loss : 3028.06884765625
+Batch number :7 , loss : 3882.66748046875
+Batch number :8 , loss : 4227.345703125
+Batch number :9 , loss : 3701.96630859375
+Batch number :10 , loss : 2628.365234375
+Batch number :11 , loss : 1841.019287109375
+Batch number :12 , loss : 1767.368896484375
+Batch number :13 , loss : 1857.5223388671875
+Batch number :14 , loss : 1751.1871337890625
+Batch number :15 , loss : 1408.653564453125
+Batch number :16 , loss : 898.0628662109375
+Batch number :17 , loss : 832.1215209960938
+Batch number :18 , loss : 1116.430908203125
+Batch number :19 , loss : 1159.212158203125
+Batch number :20 , loss : 1096.125244140625
+Batch number :21 , loss : 1199.2164306640625
+Batch number :22 , loss : 1400.763916015625
+Batch number :23 , loss : 1388.0167236328125
+Batch number :24 , loss : 1191.5208740234375
+Batch number :25 , loss : 1379.154541015625
+Batch number :26 , loss : 1702.677978515625
+Batch number :27 , loss : 1773.04150390625
+Batch number :28 , loss : 2075.9423828125
+Batch number :29 , loss : 2989.21630859375
+Batch number :30 , loss : 4471.81298828125
+Batch number :31 , loss : 6686.7978515625
+Batch number :32 , loss : 8829.0107421875
+Batch number :33 , loss : 9706.306640625
+Batch number :34 , loss : 8937.525390625
+Batch number :35 , loss : 7968.689453125
+Batch number :36 , loss : 8749.775390625
+Batch number :37 , loss : 8413.0966796875
+Batch number :38 , loss : 6988.955078125
+Batch number :39 , loss : 4078.03857421875
+Batch number :40 , loss : 2010.090576171875
+Batch number :41 , loss : 1185.0628662109375
+Batch number :42 , loss : 1255.1634521484375
+Batch number :43 , loss : 1700.6590576171875
+Batch number :44 , loss : 2392.107421875
+Batch number :45 , loss : 3050.763916015625
+Batch number :46 , loss : 3634.28515625
+Batch number :47 , loss : 4126.61962890625
+Batch number :48 , loss : 4026.54931640625
+Batch number :49 , loss : 3270.8974609375
+Batch number :50 , loss : 2506.448486328125
+Batch number :51 , loss : 1924.767822265625
+Batch number :52 , loss : 1175.9456787109375
+Batch number :53 , loss : 630.3139038085938
+Batch number :54 , loss : 569.6836547851562
+Batch number :55 , loss : 681.6162719726562
+Batch number :56 , loss : 898.9618530273438
+Batch number :57 , loss : 1208.24755859375
+Batch number :58 , loss : 1767.6912841796875
+Batch number :59 , loss : 2542.45068359375
+Batch number :60 , loss : 3553.81298828125
+Batch number :61 , loss : 4576.7939453125
+Batch number :62 , loss : 5685.0908203125
+Batch number :63 , loss : 6914.44384765625
+Batch number :64 , loss : 7502.619140625
+Batch number :65 , loss : 6367.65380859375
+Batch number :66 , loss : 5201.96337890625
+Batch number :67 , loss : 4148.580078125
+Batch number :68 , loss : 3063.691650390625
+Batch number :69 , loss : 2138.82470703125
+Batch number :70 , loss : 1856.5374755859375
+Batch number :71 , loss : 1403.265625
+Batch number :72 , loss : 1933.28125
+Batch number :73 , loss : 2811.766357421875
+Batch number :74 , loss : 3719.305419921875
+Batch number :75 , loss : 4559.3662109375
+Batch number :76 , loss : 5178.849609375
+Batch number :77 , loss : 5464.55224609375
+Batch number :78 , loss : 5776.06591796875
+Batch number :79 , loss : 5619.21337890625
+Batch number :80 , loss : 5171.8818359375
+Batch number :81 , loss : 3705.110107421875
+Batch number :82 , loss : 2516.835693359375
+Batch number :83 , loss : 2253.671875
+Batch number :84 , loss : 2292.002197265625
+Batch number :85 , loss : 2605.559814453125
+Batch number :86 , loss : 3089.87890625
+Batch number :87 , loss : 3535.69970703125
+Batch number :88 , loss : 3904.718994140625
+Batch number :89 , loss : 4157.421875
+Batch number :90 , loss : 4251.50634765625
+Batch number :91 , loss : 4255.8232421875
+Batch number :92 , loss : 4046.223876953125
+Batch number :93 , loss : 3411.486328125
+Batch number :94 , loss : 2738.5595703125
+Batch number :95 , loss : 2286.708984375
+Batch number :96 , loss : 1857.52197265625
+Batch number :97 , loss : 1778.887939453125
+Batch number :98 , loss : 2166.201416015625
+Batch number :99 , loss : 2344.349609375
+Batch number :100 , loss : 2184.526611328125
+Batch number :101 , loss : 2468.72509765625
+Batch number :102 , loss : 2710.974609375
+Batch number :103 , loss : 2971.68212890625
+Batch number :104 , loss : 2819.239501953125
+Batch number :105 , loss : 2714.1083984375
+Batch number :106 , loss : 2497.28759765625
+Batch number :107 , loss : 2513.563232421875
+Batch number :108 , loss : 2542.54443359375
+Batch number :109 , loss : 2747.41845703125
+Batch number :110 , loss : 3133.916748046875
+Batch number :111 , loss : 3637.173583984375
+Batch number :112 , loss : 3637.853515625
+Batch number :113 , loss : 3145.423095703125
+Batch number :114 , loss : 2906.252685546875
+Batch number :115 , loss : 2532.378662109375
+Batch number :116 , loss : 2053.62158203125
+Batch number :117 , loss : 1798.7318115234375
+Batch number :118 , loss : 1856.325439453125
+Batch number :119 , loss : 2151.71142578125
+Batch number :120 , loss : 2011.1331787109375
+Batch number :121 , loss : 2083.382080078125
+Batch number :122 , loss : 2173.986328125
+Batch number :123 , loss : 2300.279296875
+Batch number :124 , loss : 2458.927978515625
+Batch number :125 , loss : 2622.35400390625
+Batch number :126 , loss : 2877.64111328125
+Batch number :127 , loss : 2662.354248046875
+Batch number :128 , loss : 2729.024658203125
+Batch number :129 , loss : 2594.136474609375
+Batch number :130 , loss : 2569.683837890625
+Batch number :131 , loss : 2558.876220703125
+Batch number :132 , loss : 2600.709228515625
+Batch number :133 , loss : 2392.891845703125
+Batch number :134 , loss : 2082.810302734375
+Batch number :135 , loss : 1984.877685546875
+Batch number :136 , loss : 2084.447265625
+Batch number :137 , loss : 2311.135986328125
+Batch number :138 , loss : 2610.739501953125
+Batch number :139 , loss : 2868.7294921875
+Batch number :140 , loss : 3056.708251953125
+Batch number :141 , loss : 3314.39208984375
+Batch number :142 , loss : 3463.02490234375
+Batch number :143 , loss : 3639.198486328125
+Batch number :144 , loss : 3650.129638671875
+Batch number :145 , loss : 3165.50048828125
+Batch number :146 , loss : 2945.20947265625
+Batch number :147 , loss : 3057.450439453125
+Batch number :148 , loss : 3536.233642578125
+Batch number :149 , loss : 4671.4970703125
+Batch number :150 , loss : 6057.6240234375
+Batch number :151 , loss : 7246.20458984375
+Batch number :152 , loss : 8262.927734375
+Batch number :153 , loss : 8619.6572265625
+Batch number :154 , loss : 8338.583984375
+Batch number :155 , loss : 7221.6240234375
+Batch number :156 , loss : 5691.74560546875
+Batch number :157 , loss : 5182.36376953125
+Batch number :158 , loss : 4359.82275390625
+Batch number :159 , loss : 3825.139892578125
+Batch number :160 , loss : 3151.154052734375
+Batch number :161 , loss : 2507.993896484375
+Batch number :162 , loss : 1943.6693115234375
+Batch number :163 , loss : 1620.4310302734375
+Batch number :164 , loss : 1671.4522705078125
+Batch number :165 , loss : 2057.119140625
+Batch number :166 , loss : 2939.28759765625
+Batch number :167 , loss : 4202.36083984375
+Batch number :168 , loss : 5763.72314453125
+Batch number :169 , loss : 7203.365234375
+Batch number :170 , loss : 8382.279296875
+Batch number :171 , loss : 9304.3154296875
+Batch number :172 , loss : 9969.845703125
+Batch number :173 , loss : 9760.5419921875
+Batch number :174 , loss : 8754.0078125
+Batch number :175 , loss : 8405.1650390625
+Batch number :176 , loss : 8905.251953125
+Batch number :177 , loss : 9771.6806640625
+Batch number :178 , loss : 10361.2265625
+Batch number :179 , loss : 10160.24609375
+Batch number :180 , loss : 9552.15625
+Loss in day :1 , loss : 1287.764404296875
+Loss in day :11 , loss : 1841.01904296875
+Loss in day :21 , loss : 1199.21630859375
+Loss in day :31 , loss : 6686.796875
+Loss in day :41 , loss : 1185.0628662109375
+Loss in day :51 , loss : 1924.7677001953125
+Loss in day :61 , loss : 4576.7939453125
+Loss in day :71 , loss : 1403.2655029296875
+Loss in day :81 , loss : 3705.109619140625
+Loss in day :91 , loss : 4255.8232421875
+Loss in day :101 , loss : 2468.724853515625
+Loss in day :111 , loss : 3637.17333984375
+Loss in day :121 , loss : 2083.382080078125
+Loss in day :131 , loss : 2558.8759765625
+Loss in day :141 , loss : 3314.391845703125
+Loss in day :151 , loss : 7246.205078125
+Loss in day :161 , loss : 2507.993896484375
+Loss in day :171 , loss : 9304.314453125
+================================================
+Test Set 4
+Batch number :1 , loss : 295.0182800292969
+Batch number :2 , loss : 240.83262634277344
+Batch number :3 , loss : 124.60308074951172
+Batch number :4 , loss : 88.19627380371094
+Batch number :5 , loss : 87.65193176269531
+Batch number :6 , loss : 91.50262451171875
+Batch number :7 , loss : 93.19866180419922
+Batch number :8 , loss : 100.27957153320312
+Batch number :9 , loss : 113.56793212890625
+Batch number :10 , loss : 150.90805053710938
+Batch number :11 , loss : 204.19517517089844
+Batch number :12 , loss : 248.0789794921875
+Batch number :13 , loss : 324.02044677734375
+Batch number :14 , loss : 410.9410095214844
+Batch number :15 , loss : 515.7785034179688
+Batch number :16 , loss : 648.7634887695312
+Batch number :17 , loss : 728.0560302734375
+Batch number :18 , loss : 818.8244018554688
+Batch number :19 , loss : 797.6744995117188
+Batch number :20 , loss : 715.942626953125
+Batch number :21 , loss : 738.7410278320312
+Batch number :22 , loss : 680.0166015625
+Batch number :23 , loss : 540.1138916015625
+Batch number :24 , loss : 385.17828369140625
+Batch number :25 , loss : 314.8189392089844
+Batch number :26 , loss : 297.29766845703125
+Batch number :27 , loss : 288.4420166015625
+Batch number :28 , loss : 244.2528839111328
+Batch number :29 , loss : 211.54446411132812
+Batch number :30 , loss : 155.80718994140625
+Batch number :31 , loss : 191.98704528808594
+Batch number :32 , loss : 257.5426330566406
+Batch number :33 , loss : 416.2572326660156
+Batch number :34 , loss : 577.64697265625
+Batch number :35 , loss : 733.2794799804688
+Batch number :36 , loss : 851.7003784179688
+Batch number :37 , loss : 863.8920288085938
+Batch number :38 , loss : 860.755126953125
+Batch number :39 , loss : 901.6057739257812
+Batch number :40 , loss : 800.3394775390625
+Batch number :41 , loss : 574.0425415039062
+Batch number :42 , loss : 391.7737121582031
+Batch number :43 , loss : 350.2100830078125
+Batch number :44 , loss : 452.07623291015625
+Batch number :45 , loss : 655.25244140625
+Batch number :46 , loss : 932.0565185546875
+Batch number :47 , loss : 1291.341796875
+Batch number :48 , loss : 1677.9210205078125
+Batch number :49 , loss : 1966.242431640625
+Batch number :50 , loss : 2036.1212158203125
+Batch number :51 , loss : 1992.9022216796875
+Batch number :52 , loss : 1857.9749755859375
+Batch number :53 , loss : 1751.0255126953125
+Batch number :54 , loss : 1515.8011474609375
+Batch number :55 , loss : 1221.4453125
+Batch number :56 , loss : 951.6550903320312
+Batch number :57 , loss : 730.3807983398438
+Batch number :58 , loss : 593.8206787109375
+Batch number :59 , loss : 544.9970703125
+Batch number :60 , loss : 523.405517578125
+Batch number :61 , loss : 561.8555297851562
+Batch number :62 , loss : 612.3388671875
+Batch number :63 , loss : 692.939697265625
+Batch number :64 , loss : 691.2161254882812
+Batch number :65 , loss : 500.4629821777344
+Batch number :66 , loss : 379.1001281738281
+Batch number :67 , loss : 382.23480224609375
+Batch number :68 , loss : 435.388916015625
+Batch number :69 , loss : 536.9776000976562
+Batch number :70 , loss : 719.0609741210938
+Batch number :71 , loss : 1025.2449951171875
+Batch number :72 , loss : 1318.5126953125
+Batch number :73 , loss : 1588.5557861328125
+Batch number :74 , loss : 1893.2698974609375
+Batch number :75 , loss : 2129.248046875
+Batch number :76 , loss : 2173.676513671875
+Batch number :77 , loss : 2186.89990234375
+Batch number :78 , loss : 2441.922607421875
+Batch number :79 , loss : 2429.2548828125
+Batch number :80 , loss : 2259.802734375
+Batch number :81 , loss : 2286.6787109375
+Batch number :82 , loss : 2712.92041015625
+Batch number :83 , loss : 3361.962890625
+Batch number :84 , loss : 3909.490234375
+Batch number :85 , loss : 4450.2626953125
+Batch number :86 , loss : 4499.328125
+Batch number :87 , loss : 3936.921142578125
+Batch number :88 , loss : 3495.4775390625
+Batch number :89 , loss : 3639.087158203125
+Batch number :90 , loss : 3648.528076171875
+Batch number :91 , loss : 3044.359375
+Batch number :92 , loss : 2048.96240234375
+Batch number :93 , loss : 1695.0467529296875
+Batch number :94 , loss : 1577.9146728515625
+Batch number :95 , loss : 1627.260986328125
+Batch number :96 , loss : 1868.0020751953125
+Batch number :97 , loss : 2333.021484375
+Batch number :98 , loss : 2923.342529296875
+Batch number :99 , loss : 3472.20654296875
+Batch number :100 , loss : 4100.9736328125
+Batch number :101 , loss : 4698.26513671875
+Batch number :102 , loss : 5417.126953125
+Batch number :103 , loss : 6422.4453125
+Batch number :104 , loss : 6752.70166015625
+Batch number :105 , loss : 6441.93505859375
+Batch number :106 , loss : 6009.01513671875
+Batch number :107 , loss : 5565.95361328125
+Batch number :108 , loss : 5554.5478515625
+Batch number :109 , loss : 5620.6171875
+Batch number :110 , loss : 5570.37158203125
+Batch number :111 , loss : 5344.76123046875
+Batch number :112 , loss : 3861.7822265625
+Batch number :113 , loss : 2833.18896484375
+Batch number :114 , loss : 2227.502197265625
+Batch number :115 , loss : 2006.1597900390625
+Batch number :116 , loss : 1853.2540283203125
+Batch number :117 , loss : 1809.1163330078125
+Batch number :118 , loss : 1739.8856201171875
+Batch number :119 , loss : 1715.55126953125
+Batch number :120 , loss : 1841.16748046875
+Batch number :121 , loss : 1964.5277099609375
+Batch number :122 , loss : 1923.240478515625
+Batch number :123 , loss : 1842.1214599609375
+Batch number :124 , loss : 1812.3443603515625
+Batch number :125 , loss : 1918.976318359375
+Batch number :126 , loss : 2076.859375
+Batch number :127 , loss : 2092.709716796875
+Batch number :128 , loss : 2350.384033203125
+Batch number :129 , loss : 2426.80322265625
+Batch number :130 , loss : 2553.59375
+Batch number :131 , loss : 2757.78369140625
+Batch number :132 , loss : 3028.291015625
+Batch number :133 , loss : 2819.193115234375
+Batch number :134 , loss : 2044.277099609375
+Batch number :135 , loss : 1482.7176513671875
+Batch number :136 , loss : 1203.173583984375
+Batch number :137 , loss : 984.2433471679688
+Batch number :138 , loss : 991.4459228515625
+Batch number :139 , loss : 1265.6705322265625
+Batch number :140 , loss : 1753.872314453125
+Batch number :141 , loss : 2321.731689453125
+Batch number :142 , loss : 2579.107666015625
+Batch number :143 , loss : 2520.26904296875
+Batch number :144 , loss : 2213.941650390625
+Batch number :145 , loss : 2093.273193359375
+Batch number :146 , loss : 1866.0994873046875
+Batch number :147 , loss : 1522.68310546875
+Batch number :148 , loss : 1299.34033203125
+Batch number :149 , loss : 1204.98046875
+Batch number :150 , loss : 1330.11083984375
+Batch number :151 , loss : 1756.5821533203125
+Batch number :152 , loss : 2289.93798828125
+Batch number :153 , loss : 2923.9072265625
+Batch number :154 , loss : 3334.69775390625
+Batch number :155 , loss : 3403.3212890625
+Batch number :156 , loss : 3201.1669921875
+Batch number :157 , loss : 2969.10888671875
+Batch number :158 , loss : 2613.009033203125
+Batch number :159 , loss : 2164.08154296875
+Batch number :160 , loss : 1904.1053466796875
+Batch number :161 , loss : 1885.4031982421875
+Batch number :162 , loss : 2066.6025390625
+Batch number :163 , loss : 2183.477783203125
+Batch number :164 , loss : 2162.10791015625
+Batch number :165 , loss : 2095.482666015625
+Batch number :166 , loss : 1899.98291015625
+Batch number :167 , loss : 1779.5439453125
+Batch number :168 , loss : 1749.465576171875
+Batch number :169 , loss : 1837.2791748046875
+Batch number :170 , loss : 2047.7122802734375
+Batch number :171 , loss : 2149.91259765625
+Batch number :172 , loss : 2165.21484375
+Batch number :173 , loss : 2052.3603515625
+Batch number :174 , loss : 1929.55126953125
+Batch number :175 , loss : 1810.1395263671875
+Batch number :176 , loss : 1459.3411865234375
+Batch number :177 , loss : 1237.972900390625
+Batch number :178 , loss : 1230.443115234375
+Batch number :179 , loss : 1140.7908935546875
+Batch number :180 , loss : 1143.2843017578125
+Batch number :181 , loss : 1156.297119140625
+Loss in day :1 , loss : 295.0182800292969
+Loss in day :11 , loss : 204.19515991210938
+Loss in day :21 , loss : 738.7410278320312
+Loss in day :31 , loss : 191.98704528808594
+Loss in day :41 , loss : 574.0426025390625
+Loss in day :51 , loss : 1992.9022216796875
+Loss in day :61 , loss : 561.85546875
+Loss in day :71 , loss : 1025.244873046875
+Loss in day :81 , loss : 2286.6787109375
+Loss in day :91 , loss : 3044.359375
+Loss in day :101 , loss : 4698.26513671875
+Loss in day :111 , loss : 5344.76123046875
+Loss in day :121 , loss : 1964.527587890625
+Loss in day :131 , loss : 2757.78369140625
+Loss in day :141 , loss : 2321.7314453125
+Loss in day :151 , loss : 1756.582275390625
+Loss in day :161 , loss : 1885.4031982421875
+Loss in day :171 , loss : 2149.912841796875
+Loss in day :181 , loss : 1156.296875
+================================================
+Test Set 5
+Batch number :1 , loss : 175.45892333984375
+Batch number :2 , loss : 119.86754608154297
+Batch number :3 , loss : 153.65565490722656
+Batch number :4 , loss : 212.4868621826172
+Batch number :5 , loss : 287.8691711425781
+Batch number :6 , loss : 389.3939514160156
+Batch number :7 , loss : 468.36273193359375
+Batch number :8 , loss : 589.1238403320312
+Batch number :9 , loss : 698.2424926757812
+Batch number :10 , loss : 818.5816040039062
+Batch number :11 , loss : 765.0053100585938
+Batch number :12 , loss : 626.8280029296875
+Batch number :13 , loss : 614.2146606445312
+Batch number :14 , loss : 723.9353637695312
+Batch number :15 , loss : 871.2350463867188
+Batch number :16 , loss : 1002.6218872070312
+Batch number :17 , loss : 1110.4888916015625
+Batch number :18 , loss : 917.6090698242188
+Batch number :19 , loss : 861.2954711914062
+Batch number :20 , loss : 896.6024780273438
+Batch number :21 , loss : 1000.3172607421875
+Batch number :22 , loss : 1104.6234130859375
+Batch number :23 , loss : 955.779052734375
+Batch number :24 , loss : 633.9130249023438
+Batch number :25 , loss : 541.291259765625
+Batch number :26 , loss : 453.1131286621094
+Batch number :27 , loss : 368.36737060546875
+Batch number :28 , loss : 448.95245361328125
+Batch number :29 , loss : 586.9049072265625
+Batch number :30 , loss : 657.0133666992188
+Batch number :31 , loss : 824.1928100585938
+Batch number :32 , loss : 979.1993408203125
+Batch number :33 , loss : 1126.146240234375
+Batch number :34 , loss : 1304.852294921875
+Batch number :35 , loss : 1437.252685546875
+Batch number :36 , loss : 1363.83251953125
+Batch number :37 , loss : 829.28466796875
+Batch number :38 , loss : 450.7485656738281
+Batch number :39 , loss : 696.0911254882812
+Batch number :40 , loss : 1059.1787109375
+Batch number :41 , loss : 1406.0601806640625
+Batch number :42 , loss : 1967.532958984375
+Batch number :43 , loss : 2607.318603515625
+Batch number :44 , loss : 3320.141357421875
+Batch number :45 , loss : 4057.448486328125
+Batch number :46 , loss : 4218.54248046875
+Batch number :47 , loss : 3549.60693359375
+Batch number :48 , loss : 2254.108642578125
+Batch number :49 , loss : 1248.296630859375
+Batch number :50 , loss : 892.572265625
+Batch number :51 , loss : 553.6060791015625
+Batch number :52 , loss : 376.9195251464844
+Batch number :53 , loss : 234.42710876464844
+Batch number :54 , loss : 198.05157470703125
+Batch number :55 , loss : 274.033935546875
+Batch number :56 , loss : 497.5333251953125
+Batch number :57 , loss : 985.563720703125
+Batch number :58 , loss : 1644.6180419921875
+Batch number :59 , loss : 2278.526611328125
+Batch number :60 , loss : 2883.2333984375
+Batch number :61 , loss : 3521.053466796875
+Batch number :62 , loss : 4459.72802734375
+Batch number :63 , loss : 5506.47802734375
+Batch number :64 , loss : 5666.0576171875
+Batch number :65 , loss : 4792.484375
+Batch number :66 , loss : 4182.1826171875
+Batch number :67 , loss : 4483.61962890625
+Batch number :68 , loss : 5449.79736328125
+Batch number :69 , loss : 6948.57177734375
+Batch number :70 , loss : 8082.99560546875
+Batch number :71 , loss : 8078.98046875
+Batch number :72 , loss : 7771.953125
+Batch number :73 , loss : 6958.95751953125
+Batch number :74 , loss : 6222.31787109375
+Batch number :75 , loss : 4289.6259765625
+Batch number :76 , loss : 2677.545654296875
+Batch number :77 , loss : 2398.9619140625
+Batch number :78 , loss : 2564.462646484375
+Batch number :79 , loss : 3097.998046875
+Batch number :80 , loss : 4069.633056640625
+Batch number :81 , loss : 4858.21630859375
+Batch number :82 , loss : 5228.8564453125
+Batch number :83 , loss : 5894.83349609375
+Batch number :84 , loss : 6722.4130859375
+Batch number :85 , loss : 6893.5478515625
+Batch number :86 , loss : 7206.986328125
+Batch number :87 , loss : 5772.86669921875
+Batch number :88 , loss : 4400.49609375
+Batch number :89 , loss : 4030.34130859375
+Batch number :90 , loss : 3736.414306640625
+Batch number :91 , loss : 3740.814697265625
+Batch number :92 , loss : 3746.74609375
+Batch number :93 , loss : 3762.642822265625
+Batch number :94 , loss : 3946.560546875
+Batch number :95 , loss : 4026.4306640625
+Batch number :96 , loss : 3502.6943359375
+Batch number :97 , loss : 2865.705810546875
+Batch number :98 , loss : 2460.357177734375
+Batch number :99 , loss : 2193.8017578125
+Batch number :100 , loss : 2070.823974609375
+Batch number :101 , loss : 1935.9244384765625
+Batch number :102 , loss : 1655.471923828125
+Batch number :103 , loss : 1364.8748779296875
+Batch number :104 , loss : 1295.1068115234375
+Batch number :105 , loss : 1387.4583740234375
+Batch number :106 , loss : 1542.0994873046875
+Batch number :107 , loss : 1666.031494140625
+Batch number :108 , loss : 1851.010009765625
+Batch number :109 , loss : 2090.62353515625
+Batch number :110 , loss : 2338.781494140625
+Batch number :111 , loss : 2460.216552734375
+Batch number :112 , loss : 2422.9287109375
+Batch number :113 , loss : 2305.990234375
+Batch number :114 , loss : 2105.2080078125
+Batch number :115 , loss : 1921.536376953125
+Batch number :116 , loss : 1855.6700439453125
+Batch number :117 , loss : 1755.8663330078125
+Batch number :118 , loss : 1661.7384033203125
+Batch number :119 , loss : 1539.59375
+Batch number :120 , loss : 1613.3038330078125
+Batch number :121 , loss : 1804.3907470703125
+Batch number :122 , loss : 2033.4295654296875
+Batch number :123 , loss : 2288.893310546875
+Batch number :124 , loss : 2403.405029296875
+Batch number :125 , loss : 2675.525390625
+Batch number :126 , loss : 3031.567138671875
+Batch number :127 , loss : 3280.201416015625
+Batch number :128 , loss : 3497.281005859375
+Batch number :129 , loss : 3734.602294921875
+Batch number :130 , loss : 3916.10791015625
+Batch number :131 , loss : 3028.2490234375
+Batch number :132 , loss : 2039.8787841796875
+Batch number :133 , loss : 1629.7685546875
+Batch number :134 , loss : 1605.76513671875
+Batch number :135 , loss : 1700.98388671875
+Batch number :136 , loss : 2064.350830078125
+Batch number :137 , loss : 2787.21630859375
+Batch number :138 , loss : 3679.445068359375
+Batch number :139 , loss : 4585.46728515625
+Batch number :140 , loss : 4876.19287109375
+Batch number :141 , loss : 4568.4697265625
+Batch number :142 , loss : 4380.765625
+Batch number :143 , loss : 4414.58642578125
+Batch number :144 , loss : 4257.5849609375
+Batch number :145 , loss : 3639.561279296875
+Batch number :146 , loss : 2969.8154296875
+Batch number :147 , loss : 2237.967529296875
+Batch number :148 , loss : 1980.3028564453125
+Batch number :149 , loss : 1963.461181640625
+Batch number :150 , loss : 2171.703857421875
+Batch number :151 , loss : 2302.04736328125
+Batch number :152 , loss : 2828.768798828125
+Batch number :153 , loss : 3629.70947265625
+Batch number :154 , loss : 4241.94482421875
+Batch number :155 , loss : 4511.85546875
+Batch number :156 , loss : 4478.52783203125
+Batch number :157 , loss : 4361.97021484375
+Batch number :158 , loss : 4248.89794921875
+Batch number :159 , loss : 4115.1748046875
+Batch number :160 , loss : 3908.3212890625
+Batch number :161 , loss : 3685.0537109375
+Batch number :162 , loss : 3213.104248046875
+Batch number :163 , loss : 2342.028564453125
+Batch number :164 , loss : 1616.678955078125
+Batch number :165 , loss : 1485.8590087890625
+Batch number :166 , loss : 2064.851318359375
+Batch number :167 , loss : 2886.156982421875
+Batch number :168 , loss : 3158.34326171875
+Batch number :169 , loss : 3028.009521484375
+Batch number :170 , loss : 2820.27734375
+Batch number :171 , loss : 2508.38037109375
+Batch number :172 , loss : 2417.008056640625
+Batch number :173 , loss : 2098.07666015625
+Batch number :174 , loss : 1878.641845703125
+Batch number :175 , loss : 1825.648681640625
+Batch number :176 , loss : 2062.84765625
+Batch number :177 , loss : 2637.922607421875
+Batch number :178 , loss : 3160.46240234375
+Batch number :179 , loss : 3878.932861328125
+Batch number :180 , loss : 4508.56005859375
+Batch number :181 , loss : 5019.0390625
+Loss in day :1 , loss : 175.45892333984375
+Loss in day :11 , loss : 765.0052490234375
+Loss in day :21 , loss : 1000.3171997070312
+Loss in day :31 , loss : 824.1927490234375
+Loss in day :41 , loss : 1406.06005859375
+Loss in day :51 , loss : 553.6060180664062
+Loss in day :61 , loss : 3521.05322265625
+Loss in day :71 , loss : 8078.9794921875
+Loss in day :81 , loss : 4858.2158203125
+Loss in day :91 , loss : 3740.81494140625
+Loss in day :101 , loss : 1935.92431640625
+Loss in day :111 , loss : 2460.21630859375
+Loss in day :121 , loss : 1804.390625
+Loss in day :131 , loss : 3028.249267578125
+Loss in day :141 , loss : 4568.4697265625
+Loss in day :151 , loss : 2302.04736328125
+Loss in day :161 , loss : 3685.0537109375
+Loss in day :171 , loss : 2508.38037109375
+Loss in day :181 , loss : 5019.0390625
+================================================

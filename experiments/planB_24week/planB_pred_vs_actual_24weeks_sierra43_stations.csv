@@ -1,0 +1,44 @@
+domain_name,domain_station_index,original_station_index,is_sierra_eval_station,Station.Id,Station,Station Name,Latitude,Longitude,normalized_longitude,Elevation,min_distance_to_sierra_km,State
+D2_sierra_plus_500km,0,0,True,301,Adin Mtn,Adin Mtn,41.23583,-120.79192,-120.79192,6190,0.0,CA
+D2_sierra_plus_500km,17,33,True,337,Big Creek Sum,Big Creek Sum,39.29148,-117.11506,-117.11506,8685,0.0,NV
+D2_sierra_plus_500km,20,36,True,340,Big Meadow,Big Meadow,39.455,-119.9422,-119.9422,8235,0.0,NV
+D2_sierra_plus_500km,21,37,True,341,Big Red Mountain,Big Red Mountain,42.05257,-122.85487,-122.85487,6050,0.0,OR
+D2_sierra_plus_500km,22,39,True,344,Billie Creek Divide,Billie Creek Divide,42.40717,-122.26617,-122.26617,5280,0.0,OR
+D2_sierra_plus_500km,26,49,True,356,Blue Lakes,Blue Lakes,38.608,-119.92437,-119.92437,8067,0.0,CA
+D2_sierra_plus_500km,35,63,True,373,Buckskin Lower,Buckskin Lower,41.75067,-117.53182,-117.53182,6930,0.0,NV
+D2_sierra_plus_500km,40,78,True,391,Cedar Pass,Cedar Pass,41.58233,-120.3025,-120.3025,7030,0.0,CA
+D2_sierra_plus_500km,55,110,True,428,Css Lab,Css Lab,39.32565,-120.36807,-120.36807,6894,0.0,CA
+D2_sierra_plus_500km,65,125,True,445,Disaster Peak,Disaster Peak,41.96737,-118.18934,-118.18934,6260,0.0,NV
+D2_sierra_plus_500km,66,126,True,446,Dismal Swamp,Dismal Swamp,41.99127,-120.18033,-120.18033,7360,0.0,CA
+D2_sierra_plus_500km,72,139,True,462,Ebbetts Pass,Ebbetts Pass,38.5497,-119.80468,-119.80468,8661,0.0,CA
+D2_sierra_plus_500km,73,140,True,463,Echo Peak,Echo Peak,38.849,-120.0795,-120.0795,7653,0.0,CA
+D2_sierra_plus_500km,77,149,True,473,Fallen Leaf,Fallen Leaf,38.93403,-120.0545,-120.0545,6242,0.0,CA
+D2_sierra_plus_500km,80,152,True,476,Fawn Creek,Fawn Creek,41.82098,-116.10153,-116.10153,7031,0.0,NV
+D2_sierra_plus_500km,82,155,True,479,Fish Lk,Fish Lk,42.3801,-122.34943,-122.34943,4660,0.0,OR
+D2_sierra_plus_500km,84,159,True,483,Fourmile Lake,Fourmile Lake,42.43933,-122.2288,-122.2288,5970,0.0,OR
+D2_sierra_plus_500km,93,174,True,498,Granite Peak,Granite Peak,41.67032,-117.56668,-117.56668,8503,0.0,NV
+D2_sierra_plus_500km,98,183,True,508,Hagans Meadow,Hagans Meadow,38.8519,-119.9374,-119.9374,7742,0.0,CA
+D2_sierra_plus_500km,102,192,True,518,Heavenly Valley,Heavenly Valley,38.92431,-119.91641,-119.91641,8534,0.0,CA
+D2_sierra_plus_500km,112,210,True,539,Independence Camp,Independence Camp,39.45269,-120.29367,-120.29367,6980,0.0,CA
+D2_sierra_plus_500km,113,211,True,540,Independence Creek,Independence Creek,39.49001,-120.28226,-120.28226,6436,0.0,CA
+D2_sierra_plus_500km,114,212,True,541,Independence Lake,Independence Lake,39.42752,-120.31342,-120.31342,8338,0.0,CA
+D2_sierra_plus_500km,118,217,True,548,Jack Creek Upper,Jack Creek Upper,41.54675,-116.00517,-116.00517,7377,0.0,NV
+D2_sierra_plus_500km,128,234,True,569,Lamance Creek,Lamance Creek,41.51542,-117.63197,-117.63197,6395,0.0,NV
+D2_sierra_plus_500km,130,238,True,573,Laurel Draw,Laurel Draw,41.77637,-116.02957,-116.02957,6682,0.0,NV
+D2_sierra_plus_500km,131,239,True,574,Leavitt Lake,Leavitt Lake,38.27594,-119.61281,-119.61281,9604,0.0,CA
+D2_sierra_plus_500km,132,240,True,575,Leavitt Meadows,Leavitt Meadows,38.30367,-119.55111,-119.55111,7198,0.0,CA
+D2_sierra_plus_500km,138,251,True,587,Lobdell Lake,Lobdell Lake,38.43745,-119.36572,-119.36572,9249,0.0,CA
+D2_sierra_plus_500km,150,275,True,615,Marlette Lake,Marlette Lake,39.16395,-119.89672,-119.89672,7884,0.0,NV
+D2_sierra_plus_500km,157,291,True,633,Monitor Pass,Monitor Pass,38.6683,-119.6087,-119.6087,8306,0.0,CA
+D2_sierra_plus_500km,167,308,True,652,Mt Rose Ski Area,Mt Rose Ski Area,39.31573,-119.89473,-119.89473,8801,0.0,NV
+D2_sierra_plus_500km,183,346,True,697,Poison Flat,Poison Flat,38.50576,-119.62624,-119.62624,7736,0.0,CA
+D2_sierra_plus_500km,186,354,True,706,Quartz Mountain,Quartz Mountain,42.31923,-120.82533,-120.82533,5720,0.0,OR
+D2_sierra_plus_500km,194,373,True,724,Rubicon 2,Rubicon #2,38.99927,-120.13139,-120.13139,7619,0.0,CA
+D2_sierra_plus_500km,217,414,True,771,Sonora Pass,Sonora Pass,38.31021,-119.6003,-119.6003,8770,0.0,CA
+D2_sierra_plus_500km,221,420,True,778,Spratt Creek,Spratt Creek,38.66627,-119.81741,-119.81741,6063,0.0,CA
+D2_sierra_plus_500km,227,433,True,794,Strawberry,Strawberry,42.12587,-120.8361,-120.8361,5770,0.0,OR
+D2_sierra_plus_500km,233,445,True,809,Tahoe City Cross,Tahoe City Cross,39.17162,-120.15362,-120.15362,6797,0.0,CA
+D2_sierra_plus_500km,235,447,True,811,Taylor Canyon,Taylor Canyon,41.2287,-116.0293,-116.0293,6325,0.0,NV
+D2_sierra_plus_500km,247,470,True,834,Truckee 2,Truckee #2,39.30087,-120.18407,-120.18407,6509,0.0,CA
+D2_sierra_plus_500km,252,482,True,846,Virginia Lakes Ridge,Virginia Lakes Ridge,38.07298,-119.23433,-119.23433,9400,0.0,CA
+D2_sierra_plus_500km,253,484,True,848,Ward Creek 3,Ward Creek #3,39.13545,-120.21865,-120.21865,6745,0.0,CA

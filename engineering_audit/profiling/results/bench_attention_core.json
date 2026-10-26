@@ -1,0 +1,30 @@
+{
+ "core_fwd_ms": 0.4819481658935547,
+ "mha_fwd_ms": 2.8634130859375,
+ "layer_fwd_ms": 3.7911468505859376,
+ "core_fwd_bwd_ms": 1.537308807373047,
+ "layer_fwd_bwd_ms": 11.374296875,
+ "score_tensor_mib": 16.0,
+ "core_fwd_peak_extra_mib": 56.0,
+ "core_share_of_layer_fwd_pct": 12.712463665686482,
+ "core_share_of_layer_fwd_bwd_pct": 13.515638146846301,
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "torch": "2.6.0",
+ "shapes": {
+  "q": [
+   1,
+   16,
+   512,
+   192
+  ],
+  "x": [
+   1,
+   512,
+   3072
+  ],
+  "dist": [
+   512,
+   512
+  ]
+ }
+}

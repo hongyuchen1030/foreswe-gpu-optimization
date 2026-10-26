@@ -1,0 +1,200 @@
+Job started at: Thu May 14 09:40:00 PM PDT 2026
+Host: nid008601
+SLURM_JOB_ID=52976727
+CUDA_VISIBLE_DEVICES before srun=0,1,2,3
+FSW_ORIG_REPO=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting
+FSW_HOME_SIERRA_ROOT=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station
+FSW_SIERRA_ROOT=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station
+FSW_DATA_DIR=/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/data_subset
+FSW_OUTPUTS=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs
+FSW_RESULTS_ACTUAL=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual
+FSW_RESULTS_PREDICT=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/predict
+FSW_CHECKPOINTS=/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/checkpoints
+FSW_ENV=/pscratch/sd/h/hyvchen/conda_envs/foreswe_repro_att
+Checking required Sierra GP input files:
+-rw-rw----+ 1 hyvchen hyvchen 24K May 13 16:08 /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/data_subset/snotel_location_info_2.csv
+-rw-rw---- 1 hyvchen hyvchen 5.7M May 14 13:11 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/forecasting_modified_daily_att_inputs_for_gp_act.pt
+-rw-rw---- 1 hyvchen hyvchen 6.8M May 14 13:11 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/forecasting_modified_daily_att_outputs_for_gp_act.pt
+-rw-rw---- 1 hyvchen hyvchen 6.8M May 14 13:11 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/forecasting_modified_daily_att_predicted_outputs_for_gp_act.pt
+-rw-rw---- 1 hyvchen hyvchen 317K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/daily_test1_inputs_for_gp_act.pt
+-rw-rw---- 1 hyvchen hyvchen 320K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/daily_test2_inputs_for_gp_act.pt
+-rw-rw---- 1 hyvchen hyvchen 316K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/daily_test3_inputs_for_gp_act.pt
+-rw-rw---- 1 hyvchen hyvchen 318K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/daily_test4_inputs_for_gp_act.pt
+-rw-rw---- 1 hyvchen hyvchen 317K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/daily_test5_inputs_for_gp_act.pt
+-rw-rw---- 1 hyvchen hyvchen 305K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual/2014_daily_window_actual.pkl
+-rw-rw---- 1 hyvchen hyvchen 306K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual/2015_daily_window_actual.pkl
+-rw-rw---- 1 hyvchen hyvchen 303K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual/2016_daily_window_actual.pkl
+-rw-rw---- 1 hyvchen hyvchen 305K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual/2017_daily_window_actual.pkl
+-rw-rw---- 1 hyvchen hyvchen 305K May 14 13:12 /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual/2018_daily_window_actual.pkl
+Checking GPU on allocated node:
+index, name, memory.total [MiB], memory.free [MiB]
+0, NVIDIA A100-SXM4-80GB, 81920 MiB, 81153 MiB
+1, NVIDIA A100-SXM4-80GB, 81920 MiB, 81153 MiB
+2, NVIDIA A100-SXM4-80GB, 81920 MiB, 81153 MiB
+3, NVIDIA A100-SXM4-80GB, 81920 MiB, 81153 MiB
+Checking PyTorch CUDA visibility before srun:
+torch 2.4.1+cu121
+cuda available True
+device count 4
+NVIDIA A100-SXM4-80GB
+Checking PyTorch CUDA visibility inside srun:
+CUDA_VISIBLE_DEVICES inside srun= 0
+torch 2.4.1+cu121
+cuda available True
+device count 1
+NVIDIA A100-SXM4-80GB
+Starting Sierra ForeSWE daily GP head on 80GB GPU:
+GPU is running.
+Training input shape (148565, 8)
+Test shape (181, 43, 8)
+Active data directory /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/data_subset
+Active output directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs
+Active actual results directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual
+Active predict results directory /pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/predict
+N_STATIONS 43
+Loss value is : 49550964.247404754 in epoch:0 and batch:0
+Loss value is : 1602832069.6560748 in epoch:0 and batch:1
+Loss value is : 22551939400.029774 in epoch:0 and batch:2
+Loss value is : 11774875574.625208 in epoch:0 and batch:3
+Loss value is : 7407815200.2794485 in epoch:0 and batch:4
+Loss value is : 3282040050.2107716 in epoch:0 and batch:5
+Loss value is : 337769479.17482114 in epoch:0 and batch:6
+Loss value is : 12242762.782999005 in epoch:0 and batch:7
+Loss value is : 16611880.692741435 in epoch:0 and batch:8
+Loss value is : 10570255.488940192 in epoch:0 and batch:9
+Loss value is : 7615386.796514258 in epoch:0 and batch:10
+Loss value is : 5997916.98656468 in epoch:0 and batch:11
+Loss value is : 4799231.462894016 in epoch:0 and batch:12
+Loss value is : 3522743.0378607404 in epoch:0 and batch:13
+Loss value is : 2903016.707198496 in epoch:0 and batch:14
+Loss value is : 2386015.2435105057 in epoch:0 and batch:15
+Loss value is : 2068113.1794450867 in epoch:0 and batch:16
+Loss value is : 1924158.314449698 in epoch:0 and batch:17
+Loss value is : 1765972.158409622 in epoch:0 and batch:18
+Loss value is : 1618583.440739435 in epoch:0 and batch:19
+Loss value is : 1475850.2485964715 in epoch:0 and batch:20
+Loss value is : 1329678.8312347336 in epoch:0 and batch:21
+Loss value is : 1210476.526692069 in epoch:0 and batch:22
+Loss value is : 1080391.1013451577 in epoch:0 and batch:23
+Loss value is : 1001721.4406983012 in epoch:0 and batch:24
+Loss value is : 941866.8346874143 in epoch:0 and batch:25
+Loss value is : 894537.054112654 in epoch:0 and batch:26
+Loss value is : 772436.9882309396 in epoch:0 and batch:27
+Loss value is : 767745.9348275812 in epoch:0 and batch:28
+Loss value is : 667259.5381134369 in epoch:1 and batch:0
+Loss value is : 634790.9135386389 in epoch:1 and batch:1
+Loss value is : 602893.7282318915 in epoch:1 and batch:2
+Loss value is : 506120.53889880906 in epoch:1 and batch:3
+Loss value is : 471197.1480306472 in epoch:1 and batch:4
+Loss value is : 472211.07641531556 in epoch:1 and batch:5
+Loss value is : 445424.00239599106 in epoch:1 and batch:6
+Loss value is : 406159.739260255 in epoch:1 and batch:7
+Loss value is : 394375.87497082155 in epoch:1 and batch:8
+Loss value is : 382283.8029090246 in epoch:1 and batch:9
+Loss value is : 351973.35041899903 in epoch:1 and batch:10
+Loss value is : 341369.04276982904 in epoch:1 and batch:11
+Loss value is : 354933.77599336224 in epoch:1 and batch:12
+Loss value is : 326437.99608258775 in epoch:1 and batch:13
+Loss value is : 333859.92658241687 in epoch:1 and batch:14
+Loss value is : 305528.5888315813 in epoch:1 and batch:15
+Loss value is : 312186.7317339179 in epoch:1 and batch:16
+Loss value is : 302150.10992822394 in epoch:1 and batch:17
+Loss value is : 277249.21535327425 in epoch:1 and batch:18
+Loss value is : 284780.89163919736 in epoch:1 and batch:19
+Loss value is : 290916.9365936093 in epoch:1 and batch:20
+Loss value is : 276869.88356726285 in epoch:1 and batch:21
+Loss value is : 270049.30147151434 in epoch:1 and batch:22
+Loss value is : 279120.086632802 in epoch:1 and batch:23
+Loss value is : 277435.7285283145 in epoch:1 and batch:24
+Loss value is : 257036.8689857076 in epoch:1 and batch:25
+Loss value is : 247854.98105091864 in epoch:1 and batch:26
+Loss value is : 252494.36954028832 in epoch:1 and batch:27
+Loss value is : 241372.61428109606 in epoch:1 and batch:28
+Loss value is : 244074.1341238246 in epoch:2 and batch:0
+Loss value is : 244052.76187951892 in epoch:2 and batch:1
+Loss value is : 238440.86304912512 in epoch:2 and batch:2
+Loss value is : 238125.22328588873 in epoch:2 and batch:3
+Loss value is : 227864.7237846658 in epoch:2 and batch:4
+Loss value is : 236453.65727866077 in epoch:2 and batch:5
+Loss value is : 232038.83969646072 in epoch:2 and batch:6
+Loss value is : 218882.31666260224 in epoch:2 and batch:7
+Loss value is : 232112.99879184001 in epoch:2 and batch:8
+Loss value is : 235104.83734737377 in epoch:2 and batch:9
+Loss value is : 227560.23737982922 in epoch:2 and batch:10
+Loss value is : 229605.6016276809 in epoch:2 and batch:11
+Loss value is : 220773.30073152046 in epoch:2 and batch:12
+Loss value is : 213058.08490729134 in epoch:2 and batch:13
+Loss value is : 213010.07332001554 in epoch:2 and batch:14
+Loss value is : 218882.4183876821 in epoch:2 and batch:15
+Loss value is : 221546.39864195013 in epoch:2 and batch:16
+Loss value is : 213306.40540990123 in epoch:2 and batch:17
+Loss value is : 224805.41056284105 in epoch:2 and batch:18
+Loss value is : 214153.04332629064 in epoch:2 and batch:19
+Loss value is : 221132.9734230305 in epoch:2 and batch:20
+Loss value is : 218497.63048338666 in epoch:2 and batch:21
+Loss value is : 228646.94477256594 in epoch:2 and batch:22
+Loss value is : 221894.53313026248 in epoch:2 and batch:23
+Loss value is : 213148.86924990578 in epoch:2 and batch:24
+Loss value is : 210588.661831765 in epoch:2 and batch:25
+Loss value is : 213470.71128055983 in epoch:2 and batch:26
+Loss value is : 215669.1581357817 in epoch:2 and batch:27
+Loss value is : 195205.24898833624 in epoch:2 and batch:28
+Loss value is : 212447.81596695812 in epoch:3 and batch:0
+Loss value is : 203571.42893911392 in epoch:3 and batch:1
+Loss value is : 208896.59530834854 in epoch:3 and batch:2
+Loss value is : 202485.97395286692 in epoch:3 and batch:3
+Loss value is : 217210.42922106976 in epoch:3 and batch:4
+Loss value is : 202318.7183232739 in epoch:3 and batch:5
+Loss value is : 208885.40998910172 in epoch:3 and batch:6
+Loss value is : 222025.1565710751 in epoch:3 and batch:7
+Loss value is : 201959.25551152986 in epoch:3 and batch:8
+Loss value is : 212772.73627041845 in epoch:3 and batch:9
+Loss value is : 203602.99635454448 in epoch:3 and batch:10
+Loss value is : 204488.9059563901 in epoch:3 and batch:11
+Loss value is : 206522.9592578424 in epoch:3 and batch:12
+Loss value is : 212554.35956579036 in epoch:3 and batch:13
+Loss value is : 210525.45637309106 in epoch:3 and batch:14
+Loss value is : 197128.98312460302 in epoch:3 and batch:15
+Loss value is : 201334.3603843485 in epoch:3 and batch:16
+Loss value is : 199562.36066388836 in epoch:3 and batch:17
+Loss value is : 201667.3221566107 in epoch:3 and batch:18
+Loss value is : 204275.85841509237 in epoch:3 and batch:19
+Loss value is : 203256.2595027492 in epoch:3 and batch:20
+Loss value is : 204267.26530730457 in epoch:3 and batch:21
+Loss value is : 206603.18630937143 in epoch:3 and batch:22
+Loss value is : 207375.7562051826 in epoch:3 and batch:23
+Loss value is : 206518.48984860943 in epoch:3 and batch:24
+Loss value is : 196311.17859984783 in epoch:3 and batch:25
+Loss value is : 211991.37766767558 in epoch:3 and batch:26
+Loss value is : 218027.58818563406 in epoch:3 and batch:27
+Loss value is : 198435.4495090774 in epoch:3 and batch:28
+Loss value is : 203613.68495180193 in epoch:4 and batch:0
+Loss value is : 209373.22018536105 in epoch:4 and batch:1
+Loss value is : 194584.84947045954 in epoch:4 and batch:2
+Loss value is : 208073.47603036425 in epoch:4 and batch:3
+Loss value is : 200524.75601967218 in epoch:4 and batch:4
+Loss value is : 192174.31071401158 in epoch:4 and batch:5
+Loss value is : 198087.82656723313 in epoch:4 and batch:6
+Loss value is : 200105.8036332254 in epoch:4 and batch:7
+Loss value is : 202355.8000986103 in epoch:4 and batch:8
+Loss value is : 195990.01214888805 in epoch:4 and batch:9
+Loss value is : 190321.19179087869 in epoch:4 and batch:10
+Loss value is : 190373.68447257762 in epoch:4 and batch:11
+Loss value is : 192944.91775692024 in epoch:4 and batch:12
+Loss value is : 195441.6657909267 in epoch:4 and batch:13
+Loss value is : 187026.3436051024 in epoch:4 and batch:14
+Loss value is : 202082.97475382307 in epoch:4 and batch:15
+Loss value is : 200569.10237517272 in epoch:4 and batch:16
+Loss value is : 200031.30116372535 in epoch:4 and batch:17
+Loss value is : 196673.17352439446 in epoch:4 and batch:18
+Loss value is : 198933.52617538226 in epoch:4 and batch:19
+Loss value is : 194464.83974989215 in epoch:4 and batch:20
+Loss value is : 196018.62907351818 in epoch:4 and batch:21
+Loss value is : 192876.79459431898 in epoch:4 and batch:22
+Loss value is : 196206.91562099688 in epoch:4 and batch:23
+Loss value is : 194934.48827973683 in epoch:4 and batch:24
+Loss value is : 186970.69648412848 in epoch:4 and batch:25
+Loss value is : 196020.18416629342 in epoch:4 and batch:26
+Loss value is : 188495.47448585418 in epoch:4 and batch:27
+Loss value is : 194200.41355360858 in epoch:4 and batch:28
+Job finished at: Thu May 14 09:47:26 PM PDT 2026

@@ -1,0 +1,62 @@
+{
+ "trace": "/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/foreswe_gpu_profiling_v1/torch_trace_planB24_infer.json",
+ "steps": 3,
+ "gpu_ms_per_step": 40.766948,
+ "launches_per_step": 393.0,
+ "categories": [
+  {
+   "category": "GEMM fp32 (sgemm/gemv)",
+   "ms_per_step": 35.0907136666667,
+   "launches_per_step": 131.0,
+   "pct": 86.07638145162767
+  },
+  {
+   "category": "index gather (model_inputs[:, loc, :])",
+   "ms_per_step": 2.548080333333333,
+   "launches_per_step": 8.0,
+   "pct": 6.2503583376742675
+  },
+  {
+   "category": "other elementwise",
+   "ms_per_step": 1.8294106666666685,
+   "launches_per_step": 139.0,
+   "pct": 4.487484975982673
+  },
+  {
+   "category": "copy / contiguous / to()",
+   "ms_per_step": 0.5516226666666664,
+   "launches_per_step": 55.0,
+   "pct": 1.3531124936472223
+  },
+  {
+   "category": "softmax fwd/bwd",
+   "ms_per_step": 0.28933233333333336,
+   "launches_per_step": 19.0,
+   "pct": 0.7097228208825772
+  },
+  {
+   "category": "layer_norm fwd/bwd",
+   "ms_per_step": 0.18875533333333328,
+   "launches_per_step": 16.0,
+   "pct": 0.46301070497927216
+  },
+  {
+   "category": "concat/stack",
+   "ms_per_step": 0.13317233333333334,
+   "launches_per_step": 4.0,
+   "pct": 0.32666741040642366
+  },
+  {
+   "category": "memcpy/memset",
+   "ms_per_step": 0.11268266666666667,
+   "launches_per_step": 17.0,
+   "pct": 0.2764069232424921
+  },
+  {
+   "category": "reductions (sum/mean)",
+   "ms_per_step": 0.023177999999999997,
+   "launches_per_step": 4.0,
+   "pct": 0.05685488155748132
+  }
+ ]
+}

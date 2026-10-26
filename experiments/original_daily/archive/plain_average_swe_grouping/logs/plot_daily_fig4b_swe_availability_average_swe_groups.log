@@ -1,0 +1,103 @@
+/tmp/tmp9znn16n9: line 51: ERROR:: command not found
+/tmp/tmp9znn16n9: line 52: ERROR:: command not found
+/tmp/tmp9znn16n9: line 84: ERROR:: command not found
+/tmp/tmp9znn16n9: line 85: ERROR:: command not found
+/tmp/tmp9znn16n9: line 51: ERROR:: command not found
+/tmp/tmp9znn16n9: line 52: ERROR:: command not found
+Average SWE group counts: {1: 128, 2: 128, 3: 128, 4: 128}
+Month sample counts by group (1-day horizon):
+   month   group  n_samples
+   April Group 1      19200
+   April Group 2      19200
+   April Group 3      19200
+   April Group 4      19200
+February Group 1      18048
+February Group 2      18048
+February Group 3      18048
+February Group 4      18048
+   March Group 1      19840
+   March Group 2      19840
+   March Group 3      19840
+   March Group 4      19840
+     May Group 1      19200
+     May Group 2      19200
+     May Group 3      19200
+     May Group 4      19200
+Median actual/predicted SWE by group and month (1-day horizon):
+   month   group  variable  median_swe
+   April Group 1    Actual   30.987999
+   April Group 1 Predicted   31.098108
+   April Group 2    Actual  229.615994
+   April Group 2 Predicted  213.789679
+   April Group 3    Actual  406.908005
+   April Group 3 Predicted  398.599628
+   April Group 4    Actual  741.171997
+   April Group 4 Predicted  745.645607
+February Group 1    Actual  143.256000
+February Group 1 Predicted  135.462453
+February Group 2    Actual  240.792001
+February Group 2 Predicted  235.777904
+February Group 3    Actual  327.659998
+February Group 3 Predicted  325.035669
+February Group 4    Actual  551.688007
+February Group 4 Predicted  552.766360
+   March Group 1    Actual  151.384000
+   March Group 1 Predicted  134.731485
+   March Group 2    Actual  298.704001
+   March Group 2 Predicted  284.694520
+   March Group 3    Actual  416.559991
+   March Group 3 Predicted  410.039375
+   March Group 4    Actual  707.898010
+   March Group 4 Predicted  707.519042
+     May Group 1    Actual    0.000000
+     May Group 1 Predicted    2.541272
+     May Group 2    Actual   12.192000
+     May Group 2 Predicted   15.029284
+     May Group 3    Actual  174.243999
+     May Group 3 Predicted  174.152679
+     May Group 4    Actual  492.252010
+     May Group 4 Predicted  505.074069
+April Group 1 median actual SWE: 30.987998962402344
+April Group 1 median predicted SWE: 31.098107828812353
+April Group 1 median predicted - actual SWE: 0.11010886641000894
+April Group 3 median actual/predicted SWE: 406.9080047607422 398.59962808592564 difference -8.308376674816543
+May Group 3 median actual/predicted SWE: 174.24399909973144 174.15267853634325 difference -0.09132056338819439
+April Group 4 median actual/predicted SWE: 741.1719970703125 745.6456069084767 difference 4.47360983816418
+May Group 4 median actual/predicted SWE: 492.2520095825195 505.074068944453 difference 12.822059361933498
+May Groups 3/4 median SWE by horizon:
+  group  horizon  median_actual_swe  median_predicted_swe  pred_minus_actual
+Group 3        1         174.243999            174.152679          -0.091321
+Group 4        1         492.252010            505.074069          12.822059
+Group 3        2         164.592003            176.260092          11.668090
+Group 4        2         475.995990            505.430668          29.434678
+Group 3        3         156.463995            176.750781          20.286785
+Group 4        3         459.740002            506.869167          47.129165
+Group 3        4         148.336005            172.808074          24.472070
+Group 4        4         442.213997            503.708673          61.494677
+Group 3        5         139.699995            174.350427          34.650432
+Group 4        5         424.434004            505.160665          80.726660
+Group 3        6         128.270001            173.905679          45.635678
+Group 4        6         406.907993            505.319453          98.411461
+Group 3        7         118.363997            175.429780          57.065784
+Group 4        7         389.127992            505.490770         116.362778
+Group 3        8         107.696004            174.955465          67.259461
+Group 4        8         369.315997            504.434984         135.118987
+Group 3        9          97.027999            173.779433          76.751434
+Group 4        9         350.266003            502.739961         152.473958
+Group 3       10          88.392001            172.066458          83.674457
+Group 4       10         331.216000            502.483398         171.267397
+Saved figure PNG: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4b_daily_swe_availability_average_swe_groups.png
+Saved figure PDF: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4b_daily_swe_availability_average_swe_groups.pdf
+Saved all-horizon PNG: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4b_daily_swe_availability_average_swe_groups_all_horizons.png
+Saved all-horizon PDF: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4b_daily_swe_availability_average_swe_groups_all_horizons.pdf
+Saved summary CSV: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_reproduction/figures/reproduced_fig4b_swe_summary_average_swe_groups.csv
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
+    ERROR: auth.munge: Failed to encode MUNGE. Socket communication error
