@@ -1,0 +1,23 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-14T23:24:50.623Z
+*** Begin Patch
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/.gitignore
+@@
+ # local experiments
+ outputs/
+ logs/
++checkpoints/
++results/
++
++# Sierra ForeSWE runtime artifacts
++experiments/foreswe_sierra_station/outputs/
++experiments/foreswe_sierra_station/results/
++experiments/foreswe_sierra_station/checkpoints/
++experiments/foreswe_sierra_station/logs/
++experiments/foreswe_sierra_station/*_home_pre_scratch_*/
++experiments/foreswe_sierra_station/**/*.pt
++experiments/foreswe_sierra_station/**/*.pkl
+ 
+ # Python
+ __pycache__/
+ *.pyc
+*** End Patch

@@ -1,0 +1,100 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-15T21:45:13.085Z
+*** Begin Patch
+*** Add File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/plot_sierra_station_map.py
++#!/usr/bin/env python3
++"""Plot the 43 Sierra / near-Sierra SNOTEL station locations."""
++
++from __future__ import annotations
++
++import os
++from pathlib import Path
++
++import pandas as pd
++
++os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
++os.environ.setdefault("XDG_CACHE_HOME", "/tmp")
++
++import matplotlib.pyplot as plt
++from matplotlib.patches import Rectangle
++
++
++REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
++SIERRA_ROOT = REPO_ROOT / "experiments" / "foreswe_sierra_station"
++DATA_PATH = SIERRA_ROOT / "data_subset" / "snotel_location_info_2.csv"
++FIGURE_DIR = SIERRA_ROOT / "figures"
++PNG_PATH = FIGURE_DIR / "sierra_station_locations_map.png"
++PDF_PATH = FIGURE_DIR / "sierra_station_locations_map.pdf"
++
++BOX_LAT_MIN = 34.5
++BOX_LAT_MAX = 42.5
++BOX_LON_MIN = -124.0
++BOX_LON_MAX = -116.0
++
++
++def main() -> None:
++    FIGURE_DIR.mkdir(parents=True, exist_ok=True)
++
++    df = pd.read_csv(DATA_PATH)
++    counts = df["State.Code"].value_counts().sort_index()
++
++    fig, (ax_us, ax_zoom) = plt.subplots(1, 2, figsize=(14, 6), constrained_layout=True)
++
++    # Continental US context view
++    ax_us.scatter(df["Longitude"], df["Latitude"], s=40, color="#D64F4F", edgecolor="black", linewidth=0.4, alpha=0.9)
++    ax_us.add_patch(
++        Rectangle(
++            (BOX_LON_MIN, BOX_LAT_MIN),
++            BOX_LON_MAX - BOX_LON_MIN,
++            BOX_LAT_MAX - BOX_LAT_MIN,
++            fill=False,
++            edgecolor="#2C6E91",
++            linewidth=1.6,
++            linestyle="--",
++        )
++    )
++    ax_us.set_xlim(-126, -66)
++    ax_us.set_ylim(24, 50)
++    ax_us.set_xlabel("Longitude")
++    ax_us.set_ylabel("Latitude")
++    ax_us.set_title("Sierra Subset Stations in Western U.S. Context")
++    ax_us.grid(True, alpha=0.25)
++
++    # Zoomed Sierra view
++    ax_zoom.scatter(df["Longitude"], df["Latitude"], s=55, color="#D64F4F", edgecolor="black", linewidth=0.45, alpha=0.95)
++    ax_zoom.set_xlim(BOX_LON_MIN, BOX_LON_MAX)
++    ax_zoom.set_ylim(BOX_LAT_MIN, BOX_LAT_MAX)
++    ax_zoom.set_xlabel("Longitude")
++    ax_zoom.set_ylabel("Latitude")
++    ax_zoom.set_title("Zoomed Sierra / Near-Sierra Station View")
++    ax_zoom.grid(True, alpha=0.25)
++
++    state_summary = ", ".join(f"{state}={count}" for state, count in counts.items())
++    fig.suptitle(
++        "Sierra / Near-Sierra SNOTEL Subset (43 Stations)\n"
++        f"State counts: {state_summary}",
++        fontsize=14,
++    )
++
++    fig.savefig(PNG_PATH, dpi=300, bbox_inches="tight")
++    fig.savefig(PDF_PATH, bbox_inches="tight")
++    plt.close(fig)
++
++    print("Saved PNG:", PNG_PATH)
++    print("Saved PDF:", PDF_PATH)
++    print("State counts:", counts.to_dict())
++
++
++if __name__ == "__main__":
++    main()
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/SIERRA_THREEWAY_FIG4B_NOTE.md
+@@
+ This note explains how the three-way Sierra Figure 4b plot was generated and what it shows.
++
++## Where the 43 stations are
++
++The map below shows where the 43 Sierra / near-Sierra SNOTEL stations are located. The left panel gives western U.S. context, and the right panel zooms into the Sierra / near-Sierra subset region.
++
++![Sierra station map](./figures/sierra_station_locations_map.png)
+ 
+ ## Output figure
+*** End Patch

@@ -1,0 +1,13 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-15T21:51:48.019Z
+*** Begin Patch
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/plot_sierra_station_map.py
+@@
+-    inset = inset_axes(ax, width="26%", height="26%", loc="lower right", borderpad=1.0, axes_class=type(ax), axes_kwargs={"projection": proj})
++    inset = inset_axes(ax, width="38%", height="38%", loc="lower right", borderpad=0.8, axes_class=type(ax), axes_kwargs={"projection": proj})
+     inset.stock_img()
+-    inset.set_extent([-125, -66, 24, 50], crs=proj)
++    inset.set_extent([-126, -100, 30, 50], crs=proj)
+@@
+-    inset.set_title("CONUS context", fontsize=9, pad=3)
++    inset.set_title("Western U.S. context", fontsize=10, pad=3)
+*** End Patch

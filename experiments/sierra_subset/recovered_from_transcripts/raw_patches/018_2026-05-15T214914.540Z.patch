@@ -1,0 +1,36 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-15T21:49:14.540Z
+*** Begin Patch
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/plot_sierra_station_map.py
+@@
+-import cartopy.feature as cfeature
+-
+-
+ REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
+@@
+-
+-
+-def add_base_features(ax: plt.Axes) -> None:
+-    ax.add_feature(cfeature.LAND.with_scale("50m"), facecolor="#F3F1E7", edgecolor="none")
+-    ax.add_feature(cfeature.OCEAN.with_scale("50m"), facecolor="#CFE8F7", edgecolor="none")
+-    ax.add_feature(cfeature.LAKES.with_scale("50m"), facecolor="#CFE8F7", edgecolor="none")
+-    ax.add_feature(cfeature.RIVERS.with_scale("50m"), edgecolor="#B5D4E8", linewidth=0.3)
+-    ax.add_feature(cfeature.COASTLINE.with_scale("50m"), edgecolor="#555555", linewidth=0.7)
+-    ax.add_feature(cfeature.BORDERS.with_scale("50m"), edgecolor="#777777", linewidth=0.5)
+-    ax.add_feature(cfeature.STATES.with_scale("50m"), edgecolor="#7A7A7A", linewidth=0.5, facecolor="none")
+-
+-
+ def main() -> None:
+@@
+     fig = plt.figure(figsize=(12, 8))
+     proj = ccrs.PlateCarree()
+     ax = plt.axes(projection=proj)
+ 
+-    add_base_features(ax)
++    ax.stock_img()
+     ax.set_extent([-126.5, -114.0, 33.0, 44.5], crs=proj)
+@@
+     inset = inset_axes(ax, width="26%", height="26%", loc="lower right", borderpad=1.0, axes_class=type(ax), axes_kwargs={"projection": proj})
+-    add_base_features(inset)
++    inset.stock_img()
+     inset.set_extent([-125, -66, 24, 50], crs=proj)
+*** End Patch

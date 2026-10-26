@@ -1,0 +1,25 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-13T23:13:40.317Z
+*** Begin Patch
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/extended_dl_forecasting.py
+@@
+ import math
+ 
+ import random
+ 
++FSW_SIERRA_ROOT = os.getenv("FSW_SIERRA_ROOT", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station")
++FSW_HF_CACHE = os.getenv("FSW_HF_CACHE", os.path.join(FSW_SIERRA_ROOT, ".cache", "huggingface"))
++os.environ.setdefault("HF_HOME", FSW_HF_CACHE)
++os.environ.setdefault("TRANSFORMERS_CACHE", os.path.join(FSW_HF_CACHE, "transformers"))
++os.makedirs(os.environ["HF_HOME"], exist_ok=True)
++os.makedirs(os.environ["TRANSFORMERS_CACHE"], exist_ok=True)
++
+ from sklearn.preprocessing import OneHotEncoder
+ from sklearn.metrics.pairwise import haversine_distances
+ 
+ from sentence_transformers import SentenceTransformer
+ 
+ FSW_ORIG_REPO = os.getenv("FSW_ORIG_REPO", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting")
+-FSW_SIERRA_ROOT = os.getenv("FSW_SIERRA_ROOT", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station")
+ FSW_DATA_DIR = os.getenv("FSW_DATA_DIR", os.path.join(FSW_SIERRA_ROOT, "data_subset"))
+ FSW_EXPECTED_STATIONS = int(os.getenv("FSW_EXPECTED_STATIONS", "43"))
+*** End Patch

@@ -1,0 +1,33 @@
+patches found: 24
+files reconstructed: 15
+
+2026-05-13T22:56:11.075Z add    SIERRA_SUBSET_ADAPTATION_PLAN.md ok
+2026-05-13T23:10:15.722Z base   scripts/extended_dl_forecasting.py <- fore_swe/extended_dl_forecasting.py
+2026-05-13T23:10:15.722Z update scripts/extended_dl_forecasting.py ok
+2026-05-13T23:11:00.900Z base   scripts/forecasting_att_daily_model.py <- fore_swe/forecasting_att_daily_model.py
+2026-05-13T23:11:00.900Z update scripts/forecasting_att_daily_model.py ok
+2026-05-13T23:11:56.583Z base   scripts/forecasting_daily_gp_model.py <- fore_swe/forecasting_daily_gp_model.py
+2026-05-13T23:11:56.583Z update scripts/forecasting_daily_gp_model.py ok
+2026-05-13T23:12:18.433Z add    scripts/check_sierra_daily_inputs.py ok
+2026-05-13T23:13:40.317Z update scripts/extended_dl_forecasting.py ok
+2026-05-13T23:14:38.846Z add    SIERRA_DAILY_IMPLEMENTATION_SUMMARY.md ok
+2026-05-14T00:10:26.944Z add    SIERRA_DAILY_IMPLEMENTATION_SUMMARY.md ok
+2026-05-15T03:19:00.466Z add    slurm/run_sierra_daily_gp_gpu80.sbatch ok
+2026-05-15T20:05:41.487Z add    slurm/run_sierra_daily_gp_gpu80.sbatch ok
+2026-05-15T20:24:03.013Z add    scripts/foreswe_sierra_grouping_utils.py ok
+2026-05-15T20:24:03.013Z add    scripts/plot_sierra_fig4a_bias_paper_groups.py ok
+2026-05-15T20:24:03.013Z add    scripts/plot_sierra_fig4b_swe_availability_paper_groups.py ok
+2026-05-15T21:40:03.034Z add    scripts/plot_sierra_fig4b_threeway_paper_groups.py ok
+2026-05-15T21:42:15.216Z add    SIERRA_THREEWAY_FIG4B_NOTE.md ok
+2026-05-15T21:43:53.386Z update SIERRA_THREEWAY_FIG4B_NOTE.md ok
+2026-05-15T21:44:03.567Z update SIERRA_THREEWAY_FIG4B_NOTE.md FAILED (context not found)
+2026-05-15T21:45:13.085Z add    scripts/plot_sierra_station_map.py ok
+2026-05-15T21:45:13.085Z update SIERRA_THREEWAY_FIG4B_NOTE.md ok
+2026-05-15T21:48:34.778Z delete scripts/plot_sierra_station_map.py
+2026-05-15T21:48:34.778Z add    scripts/plot_sierra_station_map.py ok
+2026-05-15T21:49:14.540Z update scripts/plot_sierra_station_map.py ok
+2026-05-15T21:51:48.019Z update scripts/plot_sierra_station_map.py ok
+2026-05-15T21:54:20.643Z update scripts/plot_sierra_station_map.py ok
+2026-05-16T00:42:10.662Z add    scripts/plot_sierra_fig4b_allstation_scatter_paper_groups.py ok
+2026-05-16T00:50:39.791Z add    scripts/plot_sierra_fig4b_allstation_pred_vs_actual_scatter_paper_groups.py ok
+2026-05-19T16:26:26.748Z add    scripts/plot_sierra_fig4b_allstation_pred_vs_actual_scatter_paper_groups.py ok

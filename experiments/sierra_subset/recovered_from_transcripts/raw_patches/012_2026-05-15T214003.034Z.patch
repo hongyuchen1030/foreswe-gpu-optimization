@@ -1,0 +1,243 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-15T21:40:03.034Z
+*** Begin Patch
+*** Add File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/plot_sierra_fig4b_threeway_paper_groups.py
++#!/usr/bin/env python3
++"""Create Sierra-only Figure 4(b)-style SWE availability plot with three boxplots per group/month."""
++
++from __future__ import annotations
++
++import math
++import os
++from pathlib import Path
++
++import joblib
++import numpy as np
++import pandas as pd
++
++os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
++os.environ.setdefault("XDG_CACHE_HOME", "/tmp")
++
++import matplotlib.pyplot as plt
++
++from foreswe_sierra_grouping_utils import (
++    FIGURE_DIR,
++    MONTH_NUMBERS,
++    MONTHS,
++    SIERRA_HOME_ROOT,
++    TRAINING_WATER_YEAR_END,
++    TRAINING_WATER_YEAR_START,
++    YEARS,
++    get_test_dates_by_year,
++    load_metadata,
++    load_year_arrays,
++    save_paper_grouping_artifacts,
++)
++
++
++ALL_STATION_PREDICT_DIR = Path(
++    "/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting/results/predict"
++)
++ALL_STATION_METADATA = (
++    Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
++    / "thirdparties"
++    / "SWE-Forecasting"
++    / "data"
++    / "snotel_location_info_2.csv"
++)
++OUTPUT_PNG = FIGURE_DIR / "sierra_fig4b_daily_swe_availability_threeway_paper_groups.png"
++OUTPUT_PDF = FIGURE_DIR / "sierra_fig4b_daily_swe_availability_threeway_paper_groups.pdf"
++OUTPUT_CSV = FIGURE_DIR / "sierra_fig4b_swe_summary_threeway_paper_groups.csv"
++ALIGNMENT_CSV = FIGURE_DIR / "sierra_all_station_prediction_alignment_check.csv"
++GROUP_YLIMS = {1: (0, 700), 2: (0, 900), 3: (0, 1600), 4: (0, 3200)}
++SERIES_ORDER = ["Actual", "Predicted All-Stations", "Predicted Sierra-Only"]
++SERIES_COLORS = {
++    "Actual": "#4C78A8",
++    "Predicted All-Stations": "#72B7B2",
++    "Predicted Sierra-Only": "#E45756",
++}
++
++
++def load_all_station_prediction_subset(year: int, subset_metadata: pd.DataFrame) -> np.ndarray:
++    pred = np.asarray(joblib.load(ALL_STATION_PREDICT_DIR / f"{year}_daily_gp_window_predict.pkl"))
++    if pred.ndim != 3 or pred.shape[2] != 10:
++        raise ValueError(f"Unexpected all-station prediction shape for {year}: {pred.shape}")
++
++    if "original_station_index" not in subset_metadata.columns:
++        raise ValueError("Sierra subset metadata is missing original_station_index")
++
++    subset_indices = subset_metadata["original_station_index"].to_numpy(dtype=int)
++    subset_pred = pred[:, subset_indices, :]
++
++    if subset_pred.shape[1] != len(subset_metadata):
++        raise ValueError(
++            f"Subsetted all-station prediction has wrong station dimension for {year}: {subset_pred.shape}"
++        )
++
++    return subset_pred
++
++
++def export_alignment_check(subset_metadata: pd.DataFrame) -> pd.DataFrame:
++    all_meta = pd.read_csv(ALL_STATION_METADATA).reset_index().rename(columns={"index": "original_station_index"})
++    alignment = subset_metadata[
++        ["subset_station_index", "original_station_index", "Station.Id", "Station Name"]
++    ].merge(
++        all_meta[["original_station_index", "Station.Id", "Station Name"]],
++        on="original_station_index",
++        how="left",
++        suffixes=("_sierra", "_all_station"),
++        validate="one_to_one",
++    )
++    alignment["station_id_match"] = alignment["Station.Id_sierra"] == alignment["Station.Id_all_station"]
++    alignment["station_name_match"] = alignment["Station Name_sierra"] == alignment["Station Name_all_station"]
++
++    if not alignment["station_id_match"].all() or not alignment["station_name_match"].all():
++        mismatches = alignment[~alignment["station_id_match"] | ~alignment["station_name_match"]]
++        raise ValueError(f"Found Sierra/all-station metadata mismatches:\n{mismatches.to_string(index=False)}")
++
++    alignment.to_csv(ALIGNMENT_CSV, index=False)
++    return alignment
++
++
++def make_plot(values: dict[tuple[int, str, str], list[np.ndarray]]) -> None:
++    fig, axes = plt.subplots(4, 1, figsize=(15, 16), sharex=True)
++    month_centers = np.arange(len(MONTHS)) * 4.0
++    offsets = [-0.8, 0.0, 0.8]
++
++    for idx, group in enumerate([1, 2, 3, 4]):
++        ax = axes[idx]
++
++        legend_handles = []
++        for series_idx, series_name in enumerate(SERIES_ORDER):
++            series_data = [np.concatenate(values[(group, month, series_name)]) for month in MONTHS]
++            positions = month_centers + offsets[series_idx]
++            bp = ax.boxplot(
++                series_data,
++                positions=positions,
++                widths=0.6,
++                patch_artist=True,
++                showfliers=False,
++            )
++
++            for patch in bp["boxes"]:
++                patch.set_facecolor(SERIES_COLORS[series_name])
++                patch.set_alpha(0.78)
++            for median in bp["medians"]:
++                median.set_color("black")
++                median.set_linewidth(1.1)
++
++            legend_handles.append(bp["boxes"][0])
++
++        ax.set_ylim(*GROUP_YLIMS[group])
++        ax.set_ylabel(f"Group {group}\nSWE (mm)", fontsize=11)
++        ax.grid(axis="y", alpha=0.2)
++        if idx == 0:
++            ax.legend(legend_handles, SERIES_ORDER, loc="upper left")
++
++    axes[-1].set_xticks(month_centers)
++    axes[-1].set_xticklabels(["Feb", "Mar", "Apr", "May"], fontsize=11)
++    axes[-1].set_xlabel("Month", fontsize=12)
++    fig.suptitle("Sierra ForeSWE: Daily SWE by Month and Paper-Style Group\nActual vs All-Station vs Sierra-Only Predictions", fontsize=15)
++    fig.tight_layout(rect=[0, 0, 1, 0.97])
++    fig.savefig(OUTPUT_PNG, dpi=300, bbox_inches="tight")
++    fig.savefig(OUTPUT_PDF, bbox_inches="tight")
++    plt.close(fig)
++
++
++def main() -> None:
++    FIGURE_DIR.mkdir(parents=True, exist_ok=True)
++
++    grouping = save_paper_grouping_artifacts()
++    paper_df = grouping["paper_df"]
++    group_masks = {group: paper_df["paper_group"].to_numpy(dtype=int) == group for group in [1, 2, 3, 4]}
++    test_dates_by_year = get_test_dates_by_year()
++    subset_metadata = load_metadata()
++    alignment = export_alignment_check(subset_metadata)
++
++    print("Training water years used for grouping:", TRAINING_WATER_YEAR_START, "to", TRAINING_WATER_YEAR_END)
++    print("Paper-style group counts:", paper_df["paper_group"].value_counts().sort_index().to_dict())
++    print("All-station to Sierra alignment rows:", len(alignment))
++    print("All alignment checks passed:", bool(alignment["station_id_match"].all() and alignment["station_name_match"].all()))
++    print("All-station predict directory:", ALL_STATION_PREDICT_DIR)
++
++    values = {
++        (group, month, variable): []
++        for group in [1, 2, 3, 4]
++        for month in MONTHS
++        for variable in SERIES_ORDER
++    }
++    summary_rows: list[dict[str, float | int | str]] = []
++
++    for year in YEARS:
++        actual_sierra, pred_sierra = load_year_arrays(year)
++        pred_all_subset = load_all_station_prediction_subset(year, subset_metadata)
++        dates = test_dates_by_year[year]
++
++        if actual_sierra.shape != pred_sierra.shape or actual_sierra.shape != pred_all_subset.shape:
++            raise ValueError(
++                f"Shape mismatch for {year}: actual {actual_sierra.shape}, "
++                f"sierra pred {pred_sierra.shape}, all-station subset pred {pred_all_subset.shape}"
++            )
++
++        actual_use = actual_sierra[:, :, 0]
++        pred_all_use = pred_all_subset[:, :, 0]
++        pred_sierra_use = pred_sierra[:, :, 0]
++
++        for month in MONTHS:
++            month_mask = dates.month == MONTH_NUMBERS[month]
++            for group in [1, 2, 3, 4]:
++                station_mask = group_masks[group]
++                series_arrays = {
++                    "Actual": actual_use[month_mask][:, station_mask].reshape(-1),
++                    "Predicted All-Stations": pred_all_use[month_mask][:, station_mask].reshape(-1),
++                    "Predicted Sierra-Only": pred_sierra_use[month_mask][:, station_mask].reshape(-1),
++                }
++
++                for variable, arr in series_arrays.items():
++                    arr = arr[np.isfinite(arr)]
++                    values[(group, month, variable)].append(arr)
++                    summary_rows.append(
++                        {
++                            "year": year,
++                            "month": month,
++                            "group": f"Group {group}",
++                            "variable": variable,
++                            "n_samples": int(arr.size),
++                            "mean_swe": float(np.mean(arr)) if arr.size else math.nan,
++                            "median_swe": float(np.median(arr)) if arr.size else math.nan,
++                            "q25_swe": float(np.percentile(arr, 25)) if arr.size else math.nan,
++                            "q75_swe": float(np.percentile(arr, 75)) if arr.size else math.nan,
++                            "min_swe": float(np.min(arr)) if arr.size else math.nan,
++                            "max_swe": float(np.max(arr)) if arr.size else math.nan,
++                        }
++                    )
++
++    make_plot(values)
++    summary_df = pd.DataFrame(summary_rows)
++    summary_df.to_csv(OUTPUT_CSV, index=False)
++
++    month_group_counts = (
++        summary_df[summary_df["variable"] == "Actual"]
++        .groupby(["month", "group"])["n_samples"]
++        .sum()
++        .reset_index()
++    )
++    print("Month sample counts by group:")
++    print(month_group_counts.to_string(index=False))
++
++    median_table = (
++        summary_df.groupby(["month", "group", "variable"])["median_swe"]
++        .mean()
++        .reset_index()
++    )
++    print("Median SWE by group and month:")
++    print(median_table.to_string(index=False))
++
++    print("Saved alignment CSV:", ALIGNMENT_CSV)
++    print("Saved figure PNG:", OUTPUT_PNG)
++    print("Saved figure PDF:", OUTPUT_PDF)
++    print("Saved summary CSV:", OUTPUT_CSV)
++
++
++if __name__ == "__main__":
++    main()
+*** End Patch

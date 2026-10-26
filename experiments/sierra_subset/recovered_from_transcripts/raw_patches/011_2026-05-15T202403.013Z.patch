@@ -1,0 +1,526 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-15T20:24:03.013Z
+*** Begin Patch
+*** Add File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/foreswe_sierra_grouping_utils.py
++#!/usr/bin/env python3
++"""Shared helpers for Sierra-only ForeSWE Figure 4 style plots."""
++
++from __future__ import annotations
++
++import os
++import sys
++from pathlib import Path
++
++import joblib
++import numpy as np
++import pandas as pd
++
++
++REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
++THIRDPARTY_ROOT = REPO_ROOT / "thirdparties" / "SWE-Forecasting"
++SIERRA_HOME_ROOT = Path(
++    os.getenv(
++        "FSW_HOME_SIERRA_ROOT",
++        str(REPO_ROOT / "experiments" / "foreswe_sierra_station"),
++    )
++)
++SIERRA_RUNTIME_ROOT = Path(
++    os.getenv(
++        "FSW_SIERRA_ROOT",
++        "/pscratch/sd/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station",
++    )
++)
++SIERRA_DATA_DIR = Path(os.getenv("FSW_DATA_DIR", str(SIERRA_HOME_ROOT / "data_subset")))
++ACTUAL_DIR = Path(os.getenv("FSW_RESULTS_ACTUAL", str(SIERRA_RUNTIME_ROOT / "results" / "actual")))
++PREDICT_DIR = Path(os.getenv("FSW_RESULTS_PREDICT", str(SIERRA_RUNTIME_ROOT / "results" / "predict")))
++FIGURE_DIR = SIERRA_HOME_ROOT / "figures"
++DIAGNOSTICS_DIR = SIERRA_HOME_ROOT / "diagnostics"
++
++YEARS = [2014, 2015, 2016, 2017, 2018]
++TRAINING_WATER_YEAR_START = 1991
++TRAINING_WATER_YEAR_END = 2014
++EXPECTED_STATION_COUNT = 43
++EXPECTED_SHAPES = {
++    2014: (181, 43, 10),
++    2015: (182, 43, 10),
++    2016: (180, 43, 10),
++    2017: (181, 43, 10),
++    2018: (181, 43, 10),
++}
++MONTHS = ["February", "March", "April", "May"]
++MONTH_NUMBERS = {"February": 2, "March": 3, "April": 4, "May": 5}
++HORIZON_LABELS = [1, 3, 5, 7, 10]
++HORIZON_INDICES = [0, 2, 4, 6, 9]
++
++
++def load_metadata() -> pd.DataFrame:
++    metadata = pd.read_csv(SIERRA_DATA_DIR / "snotel_location_info_2.csv").reset_index()
++    metadata = metadata.rename(columns={"index": "subset_station_index"})
++    if len(metadata) != EXPECTED_STATION_COUNT:
++        raise ValueError(f"Expected {EXPECTED_STATION_COUNT} Sierra stations, found {len(metadata)}")
++    return metadata
++
++
++def load_swe_wide() -> tuple[pd.DataFrame, list[str]]:
++    swe_df = pd.read_csv(SIERRA_DATA_DIR / "swe_values.csv")
++    station_cols = [col for col in swe_df.columns if col != "Date"]
++    swe_df[station_cols] = swe_df[station_cols].apply(pd.to_numeric, errors="coerce")
++    if len(station_cols) != EXPECTED_STATION_COUNT:
++        raise ValueError(f"Expected {EXPECTED_STATION_COUNT} station columns in Sierra SWE CSV, found {len(station_cols)}")
++    return swe_df, station_cols
++
++
++def inspect_source_data() -> dict[str, object]:
++    metadata = load_metadata()
++    swe_df, station_cols = load_swe_wide()
++    exact_order_match = metadata["Station Name"].tolist() == station_cols
++    numeric_values = swe_df[station_cols].to_numpy()
++    return {
++        "metadata_shape": metadata.shape,
++        "metadata_columns": metadata.columns.tolist(),
++        "swe_shape": swe_df.shape,
++        "station_count": len(station_cols),
++        "station_order_matches": exact_order_match,
++        "nan_count": int(np.isnan(numeric_values).sum()),
++        "negative_count": int((numeric_values < 0).sum()),
++        "zero_count": int((numeric_values == 0).sum()),
++        "date_min": swe_df["Date"].iloc[0],
++        "date_max": swe_df["Date"].iloc[-1],
++    }
++
++
++def _assign_percentile_groups(values: np.ndarray, percentiles: list[float]) -> tuple[np.ndarray, np.ndarray]:
++    percentile_cuts = np.percentile(values, percentiles)
++    labels = np.digitize(values, percentile_cuts, right=True) + 1
++    return labels.astype(int), percentile_cuts
++
++
++def load_plain_average_swe_groups() -> tuple[np.ndarray, pd.DataFrame]:
++    metadata = load_metadata()
++    swe_df, station_cols = load_swe_wide()
++    average_swe = swe_df[station_cols].mean(axis=0, skipna=True).to_numpy(dtype=float)
++    groups, percentile_cuts = _assign_percentile_groups(average_swe, [25, 50, 75])
++
++    group_df = metadata.copy()
++    group_df["station_name_from_swe"] = station_cols
++    group_df["average_swe"] = average_swe
++    group_df["average_swe_group"] = groups
++    group_df["average_swe_q25_q50_q75_mm"] = ",".join(f"{cut:.3f}" for cut in percentile_cuts)
++    return groups, group_df
++
++
++def load_paper_style_groups() -> tuple[np.ndarray, pd.DataFrame]:
++    metadata = load_metadata()
++    swe_df, station_cols = load_swe_wide()
++    dates = pd.to_datetime(swe_df["Date"])
++    water_year = np.where(dates.dt.month >= 10, dates.dt.year + 1, dates.dt.year)
++
++    swe_df = swe_df.copy()
++    swe_df["water_year"] = water_year
++    training = swe_df[swe_df["water_year"].between(TRAINING_WATER_YEAR_START, TRAINING_WATER_YEAR_END)]
++    yearly_max = training.groupby("water_year")[station_cols].max()
++    averaged_yearly_max_swe = yearly_max.mean(axis=0).to_numpy(dtype=float)
++
++    groups, percentile_cuts = _assign_percentile_groups(averaged_yearly_max_swe, [30, 60, 90])
++
++    group_df = metadata.copy()
++    group_df["station_name_from_swe"] = station_cols
++    group_df["averaged_yearly_max_swe"] = averaged_yearly_max_swe
++    group_df["paper_group"] = groups
++    group_df["paper_group_p30_p60_p90_mm"] = ",".join(f"{cut:.3f}" for cut in percentile_cuts)
++    return groups, group_df
++
++
++def save_paper_grouping_artifacts() -> dict[str, object]:
++    FIGURE_DIR.mkdir(parents=True, exist_ok=True)
++
++    paper_groups, paper_df = load_paper_style_groups()
++    plain_groups, plain_df = load_plain_average_swe_groups()
++
++    original_index_col = "original_station_index" if "original_station_index" in paper_df.columns else None
++
++    export_columns = ["subset_station_index"]
++    if original_index_col:
++        export_columns.append(original_index_col)
++    export_columns.extend(
++        [
++            "Station.Id",
++            "Station Name",
++            "Latitude",
++            "Longitude",
++            "Elevation",
++            "averaged_yearly_max_swe",
++            "paper_group",
++        ]
++    )
++
++    group_export = paper_df[export_columns].copy()
++    group_export = group_export.rename(
++        columns={
++            "Station.Id": "station_id",
++            "Station Name": "station_name",
++            "averaged_yearly_max_swe": "averaged_max_swe",
++            "paper_group": "paper_style_group",
++        }
++    )
++    group_export.to_csv(FIGURE_DIR / "sierra_paper_style_station_groups.csv", index=False)
++
++    confusion = (
++        pd.DataFrame({"plain_average_swe_group": plain_groups, "paper_style_group": paper_groups})
++        .groupby(["plain_average_swe_group", "paper_style_group"])
++        .size()
++        .reset_index(name="count")
++        .sort_values(["plain_average_swe_group", "paper_style_group"])
++    )
++    confusion.to_csv(FIGURE_DIR / "sierra_grouping_plain_average_swe_vs_paper_style_confusion.csv", index=False)
++
++    comparison_df = paper_df[
++        ["subset_station_index", "Station Name", "averaged_yearly_max_swe", "paper_group"]
++    ].merge(
++        plain_df[["subset_station_index", "average_swe", "average_swe_group"]],
++        on="subset_station_index",
++        how="left",
++        validate="one_to_one",
++    )
++
++    return {
++        "paper_groups": paper_groups,
++        "paper_df": paper_df,
++        "plain_groups": plain_groups,
++        "plain_df": plain_df,
++        "comparison_df": comparison_df,
++        "confusion_df": confusion,
++    }
++
++
++def get_test_dates_by_year() -> dict[int, pd.DatetimeIndex]:
++    if str(SIERRA_HOME_ROOT / "scripts") not in sys.path:
++        sys.path.insert(0, str(SIERRA_HOME_ROOT / "scripts"))
++
++    import extended_dl_forecasting as DL
++
++    dataloader = DL.DataLoader(test_indices=[], temp_window=7)
++    dataloader.cleanDataJunk()
++    dataloader.normalizeData()
++    dataloader.addDayInfo()
++    dataloader.prepareInputsAndOutputs()
++    dataloader.completeInputsAndOutputs()
++
++    all_dates = np.array(dataloader.all_dates)
++    return {
++        year: pd.DatetimeIndex(pd.to_datetime(all_dates[indices]))
++        for year, indices in zip(YEARS, dataloader.getTestingDataIndices())
++    }
++
++
++def load_year_arrays(year: int) -> tuple[np.ndarray, np.ndarray]:
++    actual = np.asarray(joblib.load(ACTUAL_DIR / f"{year}_daily_window_actual.pkl"))
++    pred = np.asarray(joblib.load(PREDICT_DIR / f"{year}_daily_gp_window_predict.pkl"))
++    if actual.shape != pred.shape:
++        raise ValueError(f"Shape mismatch for {year}: actual {actual.shape} vs pred {pred.shape}")
++    if actual.shape != EXPECTED_SHAPES[year]:
++        raise ValueError(f"Unexpected Sierra shape for {year}: got {actual.shape}, expected {EXPECTED_SHAPES[year]}")
++    return actual, pred
+*** Add File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/plot_sierra_fig4a_bias_paper_groups.py
++#!/usr/bin/env python3
++"""Create Sierra-only Figure 4(a)-style daily relative bias plot using paper-style groups."""
++
++from __future__ import annotations
++
++import math
++import os
++
++import numpy as np
++import pandas as pd
++
++os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
++os.environ.setdefault("XDG_CACHE_HOME", "/tmp")
++
++import matplotlib.patches as mpatches
++import matplotlib.pyplot as plt
++
++from foreswe_sierra_grouping_utils import (
++    FIGURE_DIR,
++    HORIZON_INDICES,
++    HORIZON_LABELS,
++    MONTH_NUMBERS,
++    MONTHS,
++    TRAINING_WATER_YEAR_END,
++    TRAINING_WATER_YEAR_START,
++    YEARS,
++    get_test_dates_by_year,
++    inspect_source_data,
++    load_year_arrays,
++    save_paper_grouping_artifacts,
++)
++
++
++MIN_ACTUAL_SWE_MM = 1.0
++OUTPUT_PNG = FIGURE_DIR / "sierra_fig4a_daily_relative_bias_paper_groups.png"
++OUTPUT_PDF = FIGURE_DIR / "sierra_fig4a_daily_relative_bias_paper_groups.pdf"
++OUTPUT_CSV = FIGURE_DIR / "sierra_fig4a_bias_summary_paper_groups.csv"
++
++
++def make_plot(plot_values: dict[tuple[int, str, int], list[np.ndarray]]) -> None:
++    fig, axes = plt.subplots(4, 4, figsize=(16, 14), sharey=True)
++    colors = ["#4C78A8", "#72B7B2", "#F2CF5B", "#E45756", "#B279A2"]
++
++    for row_idx, group in enumerate([1, 2, 3, 4]):
++        for col_idx, month in enumerate(MONTHS):
++            ax = axes[row_idx, col_idx]
++            ax.axhline(0.0, color="black", linewidth=1.0, linestyle="--", alpha=0.7)
++
++            blocked_panel = month == "May" and group in (1, 2)
++            if blocked_panel:
++                rect = mpatches.Rectangle(
++                    (0, 0), 1, 1, transform=ax.transAxes, facecolor="#E6E6E6",
++                    edgecolor="#666666", hatch="///", linewidth=1.0, zorder=0
++                )
++                ax.add_patch(rect)
++                ax.text(0.5, 0.5, "Snow-free", ha="center", va="center", fontsize=10, color="#444444", transform=ax.transAxes)
++            else:
++                data = [np.concatenate(plot_values[(group, month, horizon)]) for horizon in HORIZON_LABELS]
++                bp = ax.boxplot(data, labels=[str(h) for h in HORIZON_LABELS], patch_artist=True, showfliers=False, widths=0.65)
++                for patch, color in zip(bp["boxes"], colors):
++                    patch.set_facecolor(color)
++                    patch.set_alpha(0.8)
++                for median in bp["medians"]:
++                    median.set_color("black")
++                    median.set_linewidth(1.2)
++
++            ax.set_ylim(-100, 100)
++            ax.set_xticks(range(1, len(HORIZON_LABELS) + 1))
++            ax.set_xticklabels([str(h) for h in HORIZON_LABELS], fontsize=9)
++            if row_idx == 0:
++                ax.set_title(month, fontsize=12)
++            if col_idx == 0:
++                ax.set_ylabel(f"Group {group}\nRelative Bias %", fontsize=11)
++            if row_idx == 3:
++                ax.set_xlabel("Window (days)", fontsize=10)
++
++    fig.suptitle("Sierra ForeSWE: Daily Relative Bias by Month, Paper-Style Group, and Forecast Horizon", fontsize=15)
++    fig.tight_layout(rect=[0, 0, 1, 0.97])
++    fig.savefig(OUTPUT_PNG, dpi=300, bbox_inches="tight")
++    fig.savefig(OUTPUT_PDF, bbox_inches="tight")
++    plt.close(fig)
++
++
++def main() -> None:
++    FIGURE_DIR.mkdir(parents=True, exist_ok=True)
++
++    info = inspect_source_data()
++    grouping = save_paper_grouping_artifacts()
++    paper_df = grouping["paper_df"]
++    confusion_df = grouping["confusion_df"]
++    group_masks = {group: paper_df["paper_group"].to_numpy(dtype=int) == group for group in [1, 2, 3, 4]}
++    percentile_cuts = np.percentile(paper_df["averaged_yearly_max_swe"].to_numpy(dtype=float), [30, 60, 90])
++    test_dates_by_year = get_test_dates_by_year()
++
++    print("Metadata shape:", info["metadata_shape"])
++    print("Metadata columns:", info["metadata_columns"])
++    print("Station count:", info["station_count"])
++    print("Station order consistent with arrays:", info["station_order_matches"])
++    print("SWE missing values:", info["nan_count"])
++    print("SWE negative values:", info["negative_count"])
++    print("SWE zero values:", info["zero_count"])
++    print("Training water years used for grouping:", TRAINING_WATER_YEAR_START, "to", TRAINING_WATER_YEAR_END)
++    print("Paper-style percentile cuts p30/p60/p90 (mm):", [round(x, 3) for x in percentile_cuts.tolist()])
++    print("Paper-style group counts:", paper_df["paper_group"].value_counts().sort_index().to_dict())
++    print("Paper-style group SWE ranges:")
++    for group in [1, 2, 3, 4]:
++        vals = paper_df.loc[paper_df["paper_group"] == group, "averaged_yearly_max_swe"]
++        print(f"Group {group}: min {vals.min():.3f} max {vals.max():.3f}")
++    print("Plain-average-SWE vs paper-style confusion table:")
++    print(confusion_df.to_string(index=False))
++    print("Minimum actual SWE threshold (mm):", MIN_ACTUAL_SWE_MM)
++
++    plot_values = {(group, month, horizon): [] for group in [1, 2, 3, 4] for month in MONTHS for horizon in HORIZON_LABELS}
++    summary_rows: list[dict[str, float | int | str]] = []
++
++    for year in YEARS:
++        actual, pred = load_year_arrays(year)
++        dates = test_dates_by_year[year]
++        print(f"{year}: actual {actual.shape}, pred {pred.shape}, start {dates.min().date()}, end {dates.max().date()}")
++        print(f"{year} month window counts:", {month: int((dates.month == MONTH_NUMBERS[month]).sum()) for month in MONTHS})
++
++        for month in MONTHS:
++            month_mask = dates.month == MONTH_NUMBERS[month]
++            for group in [1, 2, 3, 4]:
++                station_mask = group_masks[group]
++                for horizon_label, horizon_index in zip(HORIZON_LABELS, HORIZON_INDICES):
++                    actual_slice = actual[month_mask][:, station_mask, horizon_index]
++                    pred_slice = pred[month_mask][:, station_mask, horizon_index]
++                    valid_mask = np.isfinite(actual_slice) & np.isfinite(pred_slice) & (actual_slice > MIN_ACTUAL_SWE_MM)
++                    bias = 100.0 * (pred_slice[valid_mask] - actual_slice[valid_mask]) / actual_slice[valid_mask]
++                    if bias.size:
++                        plot_values[(group, month, horizon_label)].append(bias)
++                    summary_rows.append(
++                        {
++                            "year": year,
++                            "month": month,
++                            "group": f"Group {group}",
++                            "horizon": horizon_label,
++                            "n_samples": int(bias.size),
++                            "mean_bias": float(np.mean(bias)) if bias.size else math.nan,
++                            "median_bias": float(np.median(bias)) if bias.size else math.nan,
++                            "q25_bias": float(np.percentile(bias, 25)) if bias.size else math.nan,
++                            "q75_bias": float(np.percentile(bias, 75)) if bias.size else math.nan,
++                            "min_bias": float(np.min(bias)) if bias.size else math.nan,
++                            "max_bias": float(np.max(bias)) if bias.size else math.nan,
++                        }
++                    )
++
++    make_plot(plot_values)
++    summary_df = pd.DataFrame(summary_rows)
++    summary_df.to_csv(OUTPUT_CSV, index=False)
++
++    print("Saved grouping CSV:", FIGURE_DIR / "sierra_paper_style_station_groups.csv")
++    print("Saved confusion CSV:", FIGURE_DIR / "sierra_grouping_plain_average_swe_vs_paper_style_confusion.csv")
++    print("Saved figure PNG:", OUTPUT_PNG)
++    print("Saved figure PDF:", OUTPUT_PDF)
++    print("Saved summary CSV:", OUTPUT_CSV)
++
++
++if __name__ == "__main__":
++    main()
+*** Add File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/plot_sierra_fig4b_swe_availability_paper_groups.py
++#!/usr/bin/env python3
++"""Create Sierra-only Figure 4(b)-style daily SWE availability plot using paper-style groups."""
++
++from __future__ import annotations
++
++import math
++import os
++
++import numpy as np
++import pandas as pd
++
++os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
++os.environ.setdefault("XDG_CACHE_HOME", "/tmp")
++
++import matplotlib.pyplot as plt
++
++from foreswe_sierra_grouping_utils import (
++    DIAGNOSTICS_DIR,
++    FIGURE_DIR,
++    MONTH_NUMBERS,
++    MONTHS,
++    TRAINING_WATER_YEAR_END,
++    TRAINING_WATER_YEAR_START,
++    YEARS,
++    get_test_dates_by_year,
++    load_year_arrays,
++    save_paper_grouping_artifacts,
++)
++
++
++OUTPUT_PNG = FIGURE_DIR / "sierra_fig4b_daily_swe_availability_paper_groups.png"
++OUTPUT_PDF = FIGURE_DIR / "sierra_fig4b_daily_swe_availability_paper_groups.pdf"
++OUTPUT_CSV = FIGURE_DIR / "sierra_fig4b_swe_summary_paper_groups.csv"
++GROUP_YLIMS = {1: (0, 700), 2: (0, 900), 3: (0, 1600), 4: (0, 3200)}
++
++
++def make_plot(values: dict[tuple[int, str, str], list[np.ndarray]]) -> None:
++    fig, axes = plt.subplots(4, 1, figsize=(13, 16), sharex=True)
++    month_positions = np.arange(len(MONTHS)) * 3.0
++    actual_positions = month_positions - 0.35
++    pred_positions = month_positions + 0.35
++
++    for idx, group in enumerate([1, 2, 3, 4]):
++        ax = axes[idx]
++        actual_data = [np.concatenate(values[(group, month, "Actual")]) for month in MONTHS]
++        pred_data = [np.concatenate(values[(group, month, "Predicted")]) for month in MONTHS]
++
++        bp1 = ax.boxplot(actual_data, positions=actual_positions, widths=0.55, patch_artist=True, showfliers=False)
++        bp2 = ax.boxplot(pred_data, positions=pred_positions, widths=0.55, patch_artist=True, showfliers=False)
++
++        for patch in bp1["boxes"]:
++            patch.set_facecolor("#4C78A8")
++            patch.set_alpha(0.75)
++        for patch in bp2["boxes"]:
++            patch.set_facecolor("#E45756")
++            patch.set_alpha(0.75)
++        for median in bp1["medians"] + bp2["medians"]:
++            median.set_color("black")
++            median.set_linewidth(1.1)
++
++        ax.set_ylim(*GROUP_YLIMS[group])
++        ax.set_ylabel(f"Group {group}\nSWE (mm)", fontsize=11)
++        ax.grid(axis="y", alpha=0.2)
++        if idx == 0:
++            ax.legend([bp1["boxes"][0], bp2["boxes"][0]], ["Actual", "Predicted"], loc="upper left")
++
++    axes[-1].set_xticks(month_positions)
++    axes[-1].set_xticklabels(["Feb", "Mar", "Apr", "May"], fontsize=11)
++    axes[-1].set_xlabel("Month", fontsize=12)
++    fig.suptitle("Sierra ForeSWE: Daily SWE by Month and Paper-Style Group", fontsize=15)
++    fig.tight_layout(rect=[0, 0, 1, 0.97])
++    fig.savefig(OUTPUT_PNG, dpi=300, bbox_inches="tight")
++    fig.savefig(OUTPUT_PDF, bbox_inches="tight")
++    plt.close(fig)
++
++
++def main() -> None:
++    FIGURE_DIR.mkdir(parents=True, exist_ok=True)
++    DIAGNOSTICS_DIR.mkdir(parents=True, exist_ok=True)
++
++    grouping = save_paper_grouping_artifacts()
++    paper_df = grouping["paper_df"]
++    group_masks = {group: paper_df["paper_group"].to_numpy(dtype=int) == group for group in [1, 2, 3, 4]}
++    test_dates_by_year = get_test_dates_by_year()
++
++    print("Training water years used for grouping:", TRAINING_WATER_YEAR_START, "to", TRAINING_WATER_YEAR_END)
++    print("Paper-style group counts:", paper_df["paper_group"].value_counts().sort_index().to_dict())
++
++    values = {(group, month, variable): [] for group in [1, 2, 3, 4] for month in MONTHS for variable in ["Actual", "Predicted"]}
++    summary_rows: list[dict[str, float | int | str]] = []
++
++    for year in YEARS:
++        actual, pred = load_year_arrays(year)
++        dates = test_dates_by_year[year]
++        actual_use = actual[:, :, 0]
++        pred_use = pred[:, :, 0]
++        for month in MONTHS:
++            month_mask = dates.month == MONTH_NUMBERS[month]
++            for group in [1, 2, 3, 4]:
++                station_mask = group_masks[group]
++                actual_vals = actual_use[month_mask][:, station_mask].reshape(-1)
++                pred_vals = pred_use[month_mask][:, station_mask].reshape(-1)
++                actual_vals = actual_vals[np.isfinite(actual_vals)]
++                pred_vals = pred_vals[np.isfinite(pred_vals)]
++                values[(group, month, "Actual")].append(actual_vals)
++                values[(group, month, "Predicted")].append(pred_vals)
++
++                for variable, arr in [("Actual", actual_vals), ("Predicted", pred_vals)]:
++                    summary_rows.append(
++                        {
++                            "year": year,
++                            "month": month,
++                            "group": f"Group {group}",
++                            "variable": variable,
++                            "n_samples": int(arr.size),
++                            "mean_swe": float(np.mean(arr)) if arr.size else math.nan,
++                            "median_swe": float(np.median(arr)) if arr.size else math.nan,
++                            "q25_swe": float(np.percentile(arr, 25)) if arr.size else math.nan,
++                            "q75_swe": float(np.percentile(arr, 75)) if arr.size else math.nan,
++                            "min_swe": float(np.min(arr)) if arr.size else math.nan,
++                            "max_swe": float(np.max(arr)) if arr.size else math.nan,
++                        }
++                    )
++
++    make_plot(values)
++    summary_df = pd.DataFrame(summary_rows)
++    summary_df.to_csv(OUTPUT_CSV, index=False)
++
++    month_group_counts = summary_df[summary_df["variable"] == "Actual"].groupby(["month", "group"])["n_samples"].sum().reset_index()
++    print("Month sample counts by group:")
++    print(month_group_counts.to_string(index=False))
++
++    print("Saved grouping CSV:", FIGURE_DIR / "sierra_paper_style_station_groups.csv")
++    print("Saved figure PNG:", OUTPUT_PNG)
++    print("Saved figure PDF:", OUTPUT_PDF)
++    print("Saved summary CSV:", OUTPUT_CSV)
++
++
++if __name__ == "__main__":
++    main()
+*** End Patch

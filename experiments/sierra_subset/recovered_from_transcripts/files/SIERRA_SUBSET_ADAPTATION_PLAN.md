@@ -1,0 +1,298 @@
+
+# Sierra / Near-Sierra ForeSWE Subset Adaptation Plan
+
+## Scope
+
+- Goal: adapt the released daily ForeSWE station-level task from the full 512-station western U.S. SNOTEL set to a Sierra / near-Sierra subset.
+- This is an audit and preparation step only. No training is run here.
+- The original third-party data and released scripts remain unchanged.
+
+## Selected Geographic Box
+
+- Latitude: `34.5` to `42.5`
+- Longitude: `-124.0` to `-116.0`
+- Longitude normalization rule: if station longitudes are stored in `0..360`, convert to `-180..180` before filtering. In the released metadata, longitudes are already stored in `-180..180`.
+
+## Selected Station Subset
+
+- Selected station count: `43`
+- Source metadata: `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting/data/snotel_location_info_2.csv`
+- Saved station list: `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/sierra_snotel_station_subset.csv`
+- Saved fields:
+  - `original_station_index`
+  - `Station.Id`
+  - `Station Name`
+  - `Latitude`
+  - `normalized_longitude`
+  - `Longitude`
+  - `Elevation`
+
+## Metadata Audit
+
+- Metadata table shape: `512 x 29`
+- Station identifier columns:
+  - `Station.Id`
+  - `Station`
+  - `Station Name`
+- Geographic columns:
+  - `Latitude`
+  - `Longitude`
+- Elevation column:
+  - `Elevation`
+
+## Subset Sanity Check
+
+- State mix in the selected box:
+  - `CA: 25`
+  - `NV: 12`
+  - `OR: 6`
+- Latitude range of selected subset: `38.07298` to `42.43933`
+- Longitude range of selected subset: `-122.85487` to `-116.00517`
+- Interpretation:
+  - The subset clearly captures core Sierra / Tahoe / eastern Sierra stations.
+  - It also includes northern California / southern Oregon and western Nevada stations because the requested first-pass box is intentionally broad.
+  - As a first geographic filter, this looks reasonable for Step 2A. A later refinement pass could tighten the northern and eastern edges if the goal becomes a stricter Sierra-only definition.
+
+## Hard-Coded 512 Assumptions
+
+These are the repo locations found by searching for station-count-sensitive patterns such as `512`, `.reshape(-1,512`, `reshape(512`, `range(512)`, and the distance/angularity shape prints.
+
+### True station-count assumptions that should become dynamic
+
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_daily_gp_model.py:182`
+  - `means = np.concatenate(means, axis = 0).reshape(-1,512,10)`
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_daily_gp_model.py:183`
+  - `low_values = np.concatenate(low_values, axis = 0).reshape(-1,512,10)`
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_daily_gp_model.py:184`
+  - `high_values = np.concatenate(high_values, axis = 0).reshape(-1,512,10)`
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_weekly_gp_model.py:195`
+  - `means = np.concatenate(means, axis = 0).reshape(-1,512,4)`
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_weekly_gp_model.py:196`
+  - `low_values = np.concatenate(low_values, axis = 0).reshape(-1,512,4)`
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_weekly_gp_model.py:197`
+  - `high_values = np.concatenate(high_values, axis = 0).reshape(-1,512,4)`
+- `thirdparties/SWE-Forecasting/raw_gp/gp_model_daily.py:206`
+  - `means = np.concatenate(means, axis = 0).reshape(-1,512,FORECASTING_WINDOW)`
+- `thirdparties/SWE-Forecasting/raw_gp/gp_model_daily.py:207`
+  - `low_values = np.concatenate(low_values, axis = 0).reshape(-1,512,FORECASTING_WINDOW)`
+- `thirdparties/SWE-Forecasting/raw_gp/gp_model_daily.py:208`
+  - `high_values = np.concatenate(high_values, axis = 0).reshape(-1,512,FORECASTING_WINDOW)`
+- `thirdparties/SWE-Forecasting/raw_gp/gp_model_weekly.py:211`
+  - `means = np.concatenate(means, axis = 0).reshape(-1,512,FORECASTING_WINDOW)`
+- `thirdparties/SWE-Forecasting/raw_gp/gp_model_weekly.py:212`
+  - `low_values = np.concatenate(low_values, axis = 0).reshape(-1,512,FORECASTING_WINDOW)`
+- `thirdparties/SWE-Forecasting/raw_gp/gp_model_weekly.py:213`
+  - `high_values = np.concatenate(high_values, axis = 0).reshape(-1,512,FORECASTING_WINDOW)`
+- `thirdparties/SWE-Forecasting/other_comparing_models/forecasting_lstm_model.py:54`
+  - Commented assumption: `#test_indices = [value for value in range(512)]`
+- `thirdparties/SWE-Forecasting/other_comparing_models/forecasting_vs_att_model_daily.py:54`
+  - Commented assumption: `#test_indices = [value for value in range(512)]`
+- `thirdparties/SWE-Forecasting/other_comparing_models/forecasting_vt_att_model_daily.py:54`
+  - Commented assumption: `#test_indices = [value for value in range(512)]`
+
+### Station-count-adjacent assumptions worth updating for subset runs
+
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_att_daily_model.py:48-53`
+  - Fixed list of `102` held-out station indices tied to the original 512-station ordering.
+- `thirdparties/SWE-Forecasting/fore_swe/extended_dl_forecasting.py:137`
+  - Default holdout size is hard-coded as `102` when no `test_indices` are passed.
+- `thirdparties/SWE-Forecasting/fore_swe/extended_dl_forecasting.py:303`
+  - Prints distance matrix shape.
+- `thirdparties/SWE-Forecasting/fore_swe/extended_dl_forecasting.py:335`
+  - Prints angularity matrix shape.
+- `thirdparties/SWE-Forecasting/other_comparing_models/extended_dl_forecasting.py:302`
+  - Prints distance matrix shape.
+- `thirdparties/SWE-Forecasting/other_comparing_models/extended_dl_forecasting.py:334`
+  - Prints angularity matrix shape.
+
+### `512` matches that are not station-count assumptions
+
+These appear to be model hidden dimensions or embedding widths, not the number of stations, and should not be changed for Step 2A just because the station subset is smaller.
+
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_att_daily_model.py:89`
+- `thirdparties/SWE-Forecasting/fore_swe/forecasting_att_weekly_model.py:88`
+- `thirdparties/SWE-Forecasting/fore_swe/custom_encoder_model.py:61`
+- `thirdparties/SWE-Forecasting/transformer_ar/transformer_daily_train.py:59`
+- `thirdparties/SWE-Forecasting/transformer_ar/transformer_daily_test.py:58`
+- `thirdparties/SWE-Forecasting/transformer_ar/transformer_weekly_train.py:59`
+- `thirdparties/SWE-Forecasting/transformer_ar/transformer_weekly_test.py:58`
+- `thirdparties/SWE-Forecasting/other_comparing_models/forecasting_nva_att_model_daily.py:88`
+- `thirdparties/SWE-Forecasting/other_comparing_models/forecasting_nva_att_model_weekly.py:88`
+- `thirdparties/SWE-Forecasting/other_comparing_models/forecasting_lstm_model.py:184`
+- `thirdparties/SWE-Forecasting/other_comparing_models/forecasting_lstm_model_weekly.py:191`
+- `thirdparties/SWE-Forecasting/other_comparing_models/custom_encoder_model.py:61`
+
+## Station-Dependent Data Files
+
+### Station metadata
+
+- `thirdparties/SWE-Forecasting/data/snotel_location_info_2.csv`
+  - Shape: `512 x 29`
+  - Must be subset to the Sierra station rows for an adapted run.
+
+### Daily station-timeseries inputs
+
+All of the following are station-shaped as `Date + 512 station columns` and must be subset to the same station names, in the same order as the subset metadata:
+
+- `thirdparties/SWE-Forecasting/data/all_stations_day_length.csv`
+- `thirdparties/SWE-Forecasting/data/precipitation_info.csv`
+- `thirdparties/SWE-Forecasting/data/rain_info.csv`
+- `thirdparties/SWE-Forecasting/data/rmax_info.csv`
+- `thirdparties/SWE-Forecasting/data/rmin_info.csv`
+- `thirdparties/SWE-Forecasting/data/snow_info.csv`
+- `thirdparties/SWE-Forecasting/data/sph_info.csv`
+- `thirdparties/SWE-Forecasting/data/srad_info.csv`
+- `thirdparties/SWE-Forecasting/data/swe_values.csv`
+- `thirdparties/SWE-Forecasting/data/tb_19_info.csv`
+- `thirdparties/SWE-Forecasting/data/tb_37_info.csv`
+- `thirdparties/SWE-Forecasting/data/tb_diff_info.csv`
+- `thirdparties/SWE-Forecasting/data/tmax_info.csv`
+- `thirdparties/SWE-Forecasting/data/tmin_info.csv`
+- `thirdparties/SWE-Forecasting/data/windspeed_info.csv`
+
+### Distance and angularity matrices
+
+- Not stored as released files in the repo.
+- Computed dynamically from the active metadata in:
+  - `thirdparties/SWE-Forecasting/fore_swe/extended_dl_forecasting.py:339-345`
+  - `thirdparties/SWE-Forecasting/raw_gp/gp_dataloader.py:283-289`
+  - `thirdparties/SWE-Forecasting/transformer_ar/transformer_dl.py:281-287`
+- These must be recomputed from the subset metadata and will naturally become `N_STATIONS x N_STATIONS`.
+
+### In-memory train/test tensors and representations
+
+These are not all checked into the repo, but their shapes depend on station count and therefore must be generated from the subset consistently:
+
+- `model_inputs` and `model_outputs` in `fore_swe/extended_dl_forecasting.py:128-129`
+- Daily attention model test outputs and hidden representations in `fore_swe/forecasting_att_daily_model.py:525-527`, `583-584`
+- GP training inputs and outputs loaded from:
+  - `thirdparties/SWE-Forecasting/fore_swe/forecasting_daily_gp_model.py:46-53`
+
+### Released actual output files
+
+- Present in repo:
+  - `thirdparties/SWE-Forecasting/results/actual/2014_daily_window_actual.pkl`
+  - `thirdparties/SWE-Forecasting/results/actual/2015_daily_window_actual.pkl`
+  - `thirdparties/SWE-Forecasting/results/actual/2016_daily_window_actual.pkl`
+  - `thirdparties/SWE-Forecasting/results/actual/2017_daily_window_actual.pkl`
+  - `thirdparties/SWE-Forecasting/results/actual/2018_daily_window_actual.pkl`
+- These are station-dependent and should not be overwritten.
+- A Sierra subset run should write corresponding files to a separate experiment output tree.
+
+### Prediction output files
+
+The released repo references many prediction artifacts even though they are not all checked in. For the daily ForeSWE path, the relevant output targets include:
+
+- Daily attention outputs in `fore_swe/forecasting_att_daily_model.py`
+  - `results/actual/*.pkl`
+  - `outputs/daily_test*_inputs_for_gp_act.pt`
+- Daily GP outputs in `fore_swe/forecasting_daily_gp_model.py`
+  - `results/predict/*daily_gp*.pkl`
+- Weekly ForeSWE also consumes daily prediction files in `fore_swe/forecasting_att_weekly_model.py:482-486`
+
+For Step 2A, all subset-generated outputs should go to a new experiment-specific location rather than the original `thirdparties/SWE-Forecasting/results` or `thirdparties/SWE-Forecasting/outputs` directories.
+
+## What Must Be Subset Consistently
+
+The following objects must all use the same station subset and the same station ordering:
+
+1. Subset metadata rows from `snotel_location_info_2.csv`
+2. Every daily CSV input column set, keeping `Date` plus the exact selected station columns
+3. The station order in those CSV columns
+4. The station order in prompt generation
+5. The station order in `model_inputs` and `model_outputs`
+6. Recomputed distance matrix
+7. Recomputed angularity matrix
+8. Any explicit train/test station index list
+9. Any reshapes or output tensor assembly that currently assume `512`
+10. All written outputs and GP intermediates
+
+If any one of these uses a different station order or count, the adapted pipeline will silently misalign stations.
+
+## Recommended Minimal Code Modifications
+
+For an adapted copy of the daily ForeSWE pipeline, the smallest safe changes are:
+
+1. Introduce `N_STATIONS` from active metadata, for example:
+   - `N_STATIONS = len(snotel_locations_info)`
+2. Replace hard-coded reshape station dimensions:
+   - `reshape(-1, 512, 10)` -> `reshape(-1, N_STATIONS, 10)`
+   - `reshape(-1, 512, 4)` -> `reshape(-1, N_STATIONS, 4)`
+3. Replace fixed holdout logic:
+   - avoid the original 102-station fixed split list for subset runs
+   - replace default `102` in `random.sample(...)` with a rule derived from `N_STATIONS`, such as a configurable fraction or an explicit subset-specific held-out list
+4. Parameterize data roots:
+   - read from a subset data directory instead of `thirdparties/SWE-Forecasting/data`
+5. Parameterize output roots:
+   - write results and intermediate tensors to an experiment-specific directory
+6. Keep model hidden dimension `512` unchanged unless there is a separate modeling reason to tune architecture width
+
+## Recommended Output Directory Structure
+
+Use a self-contained experiment tree outside the original release, for example:
+
+- `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/`
+- `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/data_subset/`
+- `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/`
+- `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/outputs/`
+- `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/actual/`
+- `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/results/predict/`
+- `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/logs/`
+
+Recommended contents:
+
+- `data_subset/`
+  - subsetted copies of metadata and all station-timeseries CSVs
+- `scripts/`
+  - adapted copies or wrappers used only for the Sierra experiment
+- `outputs/`
+  - `.pt` intermediates and text logs
+- `results/actual/` and `results/predict/`
+  - experiment-specific `.pkl` outputs
+
+## Safest Implementation Strategy
+
+### A. Modify original third-party scripts in place
+
+- Pros:
+  - Minimal file duplication
+- Cons:
+  - Highest risk of contaminating the reproduced released pipeline
+  - Easier to accidentally overwrite original outputs or data assumptions
+  - Harder to compare release behavior versus Sierra-adapted behavior
+
+### B. Copy scripts into the experiment directory and adapt them
+
+- Pros:
+  - Best isolation from the released third-party code and outputs
+  - Easiest to audit, diff, and version separately
+  - Safest for preserving the exact reproduced baseline
+  - Allows minimal targeted edits such as `N_STATIONS`, new data root, and new output root
+- Cons:
+  - Some duplication to maintain
+
+### C. Write wrapper scripts around the original code
+
+- Pros:
+  - Can reduce code duplication if the original code is already well-parameterized
+- Cons:
+  - The released ForeSWE scripts are not parameterized enough for station subset adaptation
+  - Wrappers alone cannot safely fix internal hard-coded reshapes and split assumptions
+  - Usually turns into monkey-patching or brittle environment coupling
+
+### Recommendation
+
+- Recommend `B. Copy scripts into the experiment directory and adapt them`.
+- Reason:
+  - It is the safest way to preserve the released baseline, avoid overwriting third-party data and outputs, and make the Sierra subset changes explicit and reviewable.
+
+## Safest Next Step
+
+Create a Sierra experiment sandbox with:
+
+1. subsetted copies of the metadata and all station-timeseries CSVs
+2. copied daily ForeSWE scripts under `experiments/foreswe_sierra_station/scripts/`
+3. minimal code edits to make station count and paths configurable
+4. a subset-specific train/test station split policy
+
+After that, run only shape/integrity checks on the adapted inputs and scripts before any training.

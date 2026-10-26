@@ -1,0 +1,13 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-15T21:44:03.567Z
+*** Begin Patch
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/SIERRA_THREEWAY_FIG4B_NOTE.md
+@@
+ - PNG:
+   `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/figures/sierra_fig4b_daily_swe_availability_threeway_paper_groups.png`
+-
+-  
+ - PDF:
+   `/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/figures/sierra_fig4b_daily_swe_availability_threeway_paper_groups.pdf`
++
++![Sierra three-way Figure 4b](./figures/sierra_fig4b_daily_swe_availability_threeway_paper_groups.png)
+*** End Patch

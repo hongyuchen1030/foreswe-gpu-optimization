@@ -1,0 +1,125 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-13T23:11:00.900Z
+*** Begin Patch
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_att_daily_model.py
+@@
+ device = torch.device(dev)
+ 
+-baseUrl = os.getenv("BASE_URL", "")
++FSW_ORIG_REPO = os.getenv("FSW_ORIG_REPO", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting")
++FSW_SIERRA_ROOT = os.getenv("FSW_SIERRA_ROOT", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station")
++FSW_DATA_DIR = os.getenv("FSW_DATA_DIR", os.path.join(FSW_SIERRA_ROOT, "data_subset"))
++FSW_OUTPUTS = os.getenv("FSW_OUTPUTS", os.path.join(FSW_SIERRA_ROOT, "outputs"))
++FSW_RESULTS_ACTUAL = os.getenv("FSW_RESULTS_ACTUAL", os.path.join(FSW_SIERRA_ROOT, "results", "actual"))
++FSW_RESULTS_PREDICT = os.getenv("FSW_RESULTS_PREDICT", os.path.join(FSW_SIERRA_ROOT, "results", "predict"))
++FSW_CHECKPOINTS = os.getenv("FSW_CHECKPOINTS", os.path.join(FSW_SIERRA_ROOT, "checkpoints"))
++FSW_EXPECTED_STATIONS = int(os.getenv("FSW_EXPECTED_STATIONS", "43"))
++baseUrl = FSW_SIERRA_ROOT
++
++for path in [FSW_OUTPUTS, FSW_RESULTS_ACTUAL, FSW_RESULTS_PREDICT, FSW_CHECKPOINTS]:
++    os.makedirs(path, exist_ok=True)
+ 
+ 
+ # Specify output file paths
+-output_1 = '{}/outputs/forecasting_modified_daily_att_tr_act_loss.txt'.format(baseUrl)
+-output_2 = '{}/outputs/forecasting_modified_daily_att_ts_act_loss.txt'.format(baseUrl)
++output_1 = '{}/forecasting_modified_daily_att_tr_act_loss.txt'.format(FSW_OUTPUTS)
++output_2 = '{}/forecasting_modified_daily_att_ts_act_loss.txt'.format(FSW_OUTPUTS)
+@@
+-snotel_locations_info = pd.read_csv('{}/data/snotel_location_info_2.csv'.format(baseUrl))
+-
+-test_indices = [43, 66, 338, 463, 115, 105, 83, 306, 481, 21, 185, 136, 110, 406, 408, 132, 
+-                120, 197, 7, 301, 375, 236, 269, 287, 49, 241, 212, 145, 264, 435, 73, 277, 364, 
+-                438, 372, 368, 243, 493, 497, 14, 32, 433, 313, 213, 42, 475, 160, 190, 281, 285, 
+-                316, 461, 154, 424, 310, 340, 179, 167, 193, 466, 56, 158, 365, 492, 432, 415, 68, 
+-                409, 76, 148, 267, 227, 91, 189, 472, 162, 147, 395, 113, 2, 271, 357, 347, 335, 507, 
+-                465, 57, 19, 442, 381, 398, 79, 337, 501, 41, 339, 331, 63, 359, 232, 323, 258]
+-
+-test_indices = sorted(test_indices)
++snotel_locations_info = pd.read_csv('{}/snotel_location_info_2.csv'.format(FSW_DATA_DIR))
++N_STATIONS = len(snotel_locations_info)
++test_indices = []
+ 
+ # Data loader to call all the useful data.
+ dataloader = DL.DataLoader(test_indices = test_indices, temp_window = 7)
+ all_locations_distances, all_locations_angularities = dataloader.getDistanceAndAngularity()
+@@
+ model_inputs, model_outputs = dataloader.getModelInputsAndOutputs()
+ dataloader.completeInputsAndOutputs()
++test_indices = dataloader.getTestingIndices()
+ 
+ training_data_indices = dataloader.getTrainingDataIndices()
+@@
+ train_loc_indices = dataloader.getTrainingIndices()
++
++print("Active data directory", FSW_DATA_DIR)
++print("Active output directory", FSW_OUTPUTS)
++print("Active actual results directory", FSW_RESULTS_ACTUAL)
++print("Active checkpoints directory", FSW_CHECKPOINTS)
++print("Subset station split mode", "deterministic 20 percent sample from subset because test_indices=[] was passed")
++print("N_STATIONS", N_STATIONS)
++print("Metadata shape", snotel_locations_info.shape)
++print("SWE CSV shape", dataloader.swe_values.shape)
++print("Model input shape", model_inputs.shape)
++print("Model output shape", model_outputs.shape)
++print("Distance matrix shape", all_locations_distances.shape)
++print("Angularity matrix shape", all_locations_angularities.shape)
++print("Subset test station count", len(test_indices))
++
++if N_STATIONS != FSW_EXPECTED_STATIONS:
++    raise ValueError("Expected {} stations but found {}".format(FSW_EXPECTED_STATIONS, N_STATIONS))
++
++if model_inputs.shape[1] != FSW_EXPECTED_STATIONS or model_outputs.shape[1] != FSW_EXPECTED_STATIONS:
++    raise ValueError("Model tensors are not using the expected station dimension of {}".format(FSW_EXPECTED_STATIONS))
++
++if all_locations_distances.shape != (FSW_EXPECTED_STATIONS, FSW_EXPECTED_STATIONS):
++    raise ValueError("Distance matrix shape mismatch: {}".format(all_locations_distances.shape))
++
++if all_locations_angularities.shape != (FSW_EXPECTED_STATIONS, FSW_EXPECTED_STATIONS):
++    raise ValueError("Angularity matrix shape mismatch: {}".format(all_locations_angularities.shape))
+@@
+-hasFile = os.path.isfile("{}/checkpoints/forecasting_modified_daily_att_climax_model_gp_act.pt".format(baseUrl))
++hasFile = os.path.isfile("{}/forecasting_modified_daily_att_climax_model_gp_act.pt".format(FSW_CHECKPOINTS))
+@@
+-            checkpoint = torch.load("{}/checkpoints/forecasting_modified_daily_att_climax_model_gp_act.pt".format(baseUrl))
++            checkpoint = torch.load("{}/forecasting_modified_daily_att_climax_model_gp_act.pt".format(FSW_CHECKPOINTS))
+@@
+-                }, "{}/checkpoints/forecasting_modified_daily_att_climax_model_gp_act.pt".format(baseUrl))
++                }, "{}/forecasting_modified_daily_att_climax_model_gp_act.pt".format(FSW_CHECKPOINTS))
+@@
+-hasFile = os.path.isfile("{}/checkpoints/forecasting_modified_daily_att_climax_model_gp_act.pt".format(baseUrl))
++hasFile = os.path.isfile("{}/forecasting_modified_daily_att_climax_model_gp_act.pt".format(FSW_CHECKPOINTS))
+ 
+ if hasFile:
+-    checkpoint = torch.load("{}/checkpoints/forecasting_modified_daily_att_climax_model_gp_act.pt".format(baseUrl))
++    checkpoint = torch.load("{}/forecasting_modified_daily_att_climax_model_gp_act.pt".format(FSW_CHECKPOINTS))
+@@
+-    torch.save(input_learnt_representations, '{}/outputs/forecasting_modified_daily_att_inputs_for_gp_act.pt'.format(baseUrl))
+-    torch.save(predicted_outputs, '{}/outputs/forecasting_modified_daily_att_predicted_outputs_for_gp_act.pt'.format(baseUrl))
+-    torch.save(actual_outputs, '{}/outputs/forecasting_modified_daily_att_outputs_for_gp_act.pt'.format(baseUrl))
++    torch.save(input_learnt_representations, '{}/forecasting_modified_daily_att_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++    torch.save(predicted_outputs, '{}/forecasting_modified_daily_att_predicted_outputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++    torch.save(actual_outputs, '{}/forecasting_modified_daily_att_outputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+@@
+-joblib.dump(daily_window_actual_1, '{}/results/actual/2014_daily_window_actual.pkl'.format(baseUrl))
+-joblib.dump(daily_window_actual_2, '{}/results/actual/2015_daily_window_actual.pkl'.format(baseUrl))
+-joblib.dump(daily_window_actual_3, '{}/results/actual/2016_daily_window_actual.pkl'.format(baseUrl))
+-joblib.dump(daily_window_actual_4, '{}/results/actual/2017_daily_window_actual.pkl'.format(baseUrl))
+-joblib.dump(daily_window_actual_5, '{}/results/actual/2018_daily_window_actual.pkl'.format(baseUrl))
+-
+-torch.save(test_1_final_representations, '{}/outputs/daily_test1_inputs_for_gp_act.pt'.format(baseUrl))
+-torch.save(test_2_final_representations, '{}/outputs/daily_test2_inputs_for_gp_act.pt'.format(baseUrl))
+-torch.save(test_3_final_representations, '{}/outputs/daily_test3_inputs_for_gp_act.pt'.format(baseUrl))
+-torch.save(test_4_final_representations, '{}/outputs/daily_test4_inputs_for_gp_act.pt'.format(baseUrl))
+-torch.save(test_5_final_representations, '{}/outputs/daily_test5_inputs_for_gp_act.pt'.format(baseUrl))
++joblib.dump(daily_window_actual_1, '{}/2014_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++joblib.dump(daily_window_actual_2, '{}/2015_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++joblib.dump(daily_window_actual_3, '{}/2016_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++joblib.dump(daily_window_actual_4, '{}/2017_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++joblib.dump(daily_window_actual_5, '{}/2018_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++
++torch.save(test_1_final_representations, '{}/daily_test1_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++torch.save(test_2_final_representations, '{}/daily_test2_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++torch.save(test_3_final_representations, '{}/daily_test3_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++torch.save(test_4_final_representations, '{}/daily_test4_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++torch.save(test_5_final_representations, '{}/daily_test5_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+*** End Patch

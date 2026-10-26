@@ -1,0 +1,140 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-13T23:11:56.583Z
+*** Begin Patch
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/forecasting_daily_gp_model.py
+@@
+ seed_value = 50
+ torch.manual_seed(seed_value)
+ 
+ # --------------------------------------All Files Import-----------------------------------------
+-baseUrl = os.getenv("BASE_URL", "")
++FSW_ORIG_REPO = os.getenv("FSW_ORIG_REPO", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting")
++FSW_SIERRA_ROOT = os.getenv("FSW_SIERRA_ROOT", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station")
++FSW_DATA_DIR = os.getenv("FSW_DATA_DIR", os.path.join(FSW_SIERRA_ROOT, "data_subset"))
++FSW_OUTPUTS = os.getenv("FSW_OUTPUTS", os.path.join(FSW_SIERRA_ROOT, "outputs"))
++FSW_RESULTS_ACTUAL = os.getenv("FSW_RESULTS_ACTUAL", os.path.join(FSW_SIERRA_ROOT, "results", "actual"))
++FSW_RESULTS_PREDICT = os.getenv("FSW_RESULTS_PREDICT", os.path.join(FSW_SIERRA_ROOT, "results", "predict"))
++FSW_CHECKPOINTS = os.getenv("FSW_CHECKPOINTS", os.path.join(FSW_SIERRA_ROOT, "checkpoints"))
++FSW_EXPECTED_STATIONS = int(os.getenv("FSW_EXPECTED_STATIONS", "43"))
++baseUrl = FSW_SIERRA_ROOT
++
++for path in [FSW_OUTPUTS, FSW_RESULTS_ACTUAL, FSW_RESULTS_PREDICT, FSW_CHECKPOINTS]:
++    os.makedirs(path, exist_ok=True)
++
++N_STATIONS = len(pd.read_csv('{}/snotel_location_info_2.csv'.format(FSW_DATA_DIR)))
++
++if N_STATIONS != FSW_EXPECTED_STATIONS:
++    raise ValueError("Expected {} stations but found {}".format(FSW_EXPECTED_STATIONS, N_STATIONS))
+ 
+-training_inputs = torch.load('{}/outputs/forecasting_modified_daily_att_inputs_for_gp_act.pt'.format(baseUrl))
+-training_outputs = torch.load('{}/outputs/forecasting_modified_daily_att_outputs_for_gp_act.pt'.format(baseUrl))
++training_inputs = torch.load('{}/forecasting_modified_daily_att_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++training_outputs = torch.load('{}/forecasting_modified_daily_att_outputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+ 
+-test_inputs_1 = torch.load('{}/outputs/daily_test1_inputs_for_gp_act.pt'.format(baseUrl))
+-test_inputs_2 = torch.load('{}/outputs/daily_test2_inputs_for_gp_act.pt'.format(baseUrl))
+-test_inputs_3 = torch.load('{}/outputs/daily_test3_inputs_for_gp_act.pt'.format(baseUrl))
+-test_inputs_4 = torch.load('{}/outputs/daily_test4_inputs_for_gp_act.pt'.format(baseUrl))
+-test_inputs_5 = torch.load('{}/outputs/daily_test5_inputs_for_gp_act.pt'.format(baseUrl))
++test_inputs_1 = torch.load('{}/daily_test1_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++test_inputs_2 = torch.load('{}/daily_test2_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++test_inputs_3 = torch.load('{}/daily_test3_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++test_inputs_4 = torch.load('{}/daily_test4_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
++test_inputs_5 = torch.load('{}/daily_test5_inputs_for_gp_act.pt'.format(FSW_OUTPUTS))
+ 
+-test_outputs_1 = joblib.load('{}/results/actual/2014_daily_window_actual.pkl'.format(baseUrl))
+-test_outputs_2 = joblib.load('{}/results/actual/2015_daily_window_actual.pkl'.format(baseUrl))
+-test_outputs_3 = joblib.load('{}/results/actual/2016_daily_window_actual.pkl'.format(baseUrl))
+-test_outputs_4 = joblib.load('{}/results/actual/2017_daily_window_actual.pkl'.format(baseUrl))
+-test_outputs_5 = joblib.load('{}/results/actual/2018_daily_window_actual.pkl'.format(baseUrl))
++test_outputs_1 = joblib.load('{}/2014_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++test_outputs_2 = joblib.load('{}/2015_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++test_outputs_3 = joblib.load('{}/2016_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++test_outputs_4 = joblib.load('{}/2017_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
++test_outputs_5 = joblib.load('{}/2018_daily_window_actual.pkl'.format(FSW_RESULTS_ACTUAL))
+@@
+ print("Training input shape", training_inputs.shape)
+ print("Test shape", test_inputs_1.shape)
++print("Active data directory", FSW_DATA_DIR)
++print("Active output directory", FSW_OUTPUTS)
++print("Active actual results directory", FSW_RESULTS_ACTUAL)
++print("Active predict results directory", FSW_RESULTS_PREDICT)
++print("N_STATIONS", N_STATIONS)
+@@
+-    means = np.concatenate(means, axis = 0).reshape(-1,512,10)
+-    low_values = np.concatenate(low_values, axis = 0).reshape(-1,512,10)
+-    high_values = np.concatenate(high_values, axis = 0).reshape(-1,512,10)
++    means = np.concatenate(means, axis = 0).reshape(-1, N_STATIONS, 10)
++    low_values = np.concatenate(low_values, axis = 0).reshape(-1, N_STATIONS, 10)
++    high_values = np.concatenate(high_values, axis = 0).reshape(-1, N_STATIONS, 10)
+@@
+-joblib.dump(window_means_1, '{}/results/predict/2014_daily_gp_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_means_2, '{}/results/predict/2015_daily_gp_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_means_3, '{}/results/predict/2016_daily_gp_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_means_4, '{}/results/predict/2017_daily_gp_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_means_5, '{}/results/predict/2018_daily_gp_window_predict.pkl'.format(baseUrl))
+-
+-joblib.dump(window_low_values_1, '{}/results/predict/2014_daily_gp_low_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_low_values_2, '{}/results/predict/2015_daily_gp_low_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_low_values_3, '{}/results/predict/2016_daily_gp_low_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_low_values_4, '{}/results/predict/2017_daily_gp_low_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_low_values_5, '{}/results/predict/2018_daily_gp_low_window_predict.pkl'.format(baseUrl))
+-
+-joblib.dump(window_high_values_1, '{}/results/predict/2014_daily_gp_high_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_high_values_2, '{}/results/predict/2015_daily_gp_high_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_high_values_3, '{}/results/predict/2016_daily_gp_high_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_high_values_4, '{}/results/predict/2017_daily_gp_high_window_predict.pkl'.format(baseUrl))
+-joblib.dump(window_high_values_5, '{}/results/predict/2018_daily_gp_high_window_predict.pkl'.format(baseUrl))
+-
+-joblib.dump(means_1, '{}/results/predict/2014_daily_gp_predict.pkl'.format(baseUrl))
+-joblib.dump(means_2, '{}/results/predict/2015_daily_gp_predict.pkl'.format(baseUrl))
+-joblib.dump(means_3, '{}/results/predict/2016_daily_gp_predict.pkl'.format(baseUrl))
+-joblib.dump(means_4, '{}/results/predict/2017_daily_gp_predict.pkl'.format(baseUrl))
+-joblib.dump(means_5, '{}/results/predict/2018_daily_gp_predict.pkl'.format(baseUrl))
+-
+-joblib.dump(low_values_1, '{}/results/predict/2014_daily_gp_lower_predict.pkl'.format(baseUrl))
+-joblib.dump(low_values_2, '{}/results/predict/2015_daily_gp_lower_predict.pkl'.format(baseUrl))
+-joblib.dump(low_values_3, '{}/results/predict/2016_daily_gp_lower_predict.pkl'.format(baseUrl))
+-joblib.dump(low_values_4, '{}/results/predict/2017_daily_gp_lower_predict.pkl'.format(baseUrl))
+-joblib.dump(low_values_5, '{}/results/predict/2018_daily_gp_lower_predict.pkl'.format(baseUrl))
+-
+-joblib.dump(high_values_1, '{}/results/predict/2014_daily_gp_higher_predict.pkl'.format(baseUrl))
+-joblib.dump(high_values_2, '{}/results/predict/2015_daily_gp_higher_predict.pkl'.format(baseUrl))
+-joblib.dump(high_values_3, '{}/results/predict/2016_daily_gp_higher_predict.pkl'.format(baseUrl))
+-joblib.dump(high_values_4, '{}/results/predict/2017_daily_gp_higher_predict.pkl'.format(baseUrl))
+-joblib.dump(high_values_5, '{}/results/predict/2018_daily_gp_higher_predict.pkl'.format(baseUrl))
++joblib.dump(window_means_1, '{}/2014_daily_gp_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_means_2, '{}/2015_daily_gp_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_means_3, '{}/2016_daily_gp_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_means_4, '{}/2017_daily_gp_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_means_5, '{}/2018_daily_gp_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++
++joblib.dump(window_low_values_1, '{}/2014_daily_gp_low_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_low_values_2, '{}/2015_daily_gp_low_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_low_values_3, '{}/2016_daily_gp_low_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_low_values_4, '{}/2017_daily_gp_low_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_low_values_5, '{}/2018_daily_gp_low_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++
++joblib.dump(window_high_values_1, '{}/2014_daily_gp_high_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_high_values_2, '{}/2015_daily_gp_high_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_high_values_3, '{}/2016_daily_gp_high_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_high_values_4, '{}/2017_daily_gp_high_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(window_high_values_5, '{}/2018_daily_gp_high_window_predict.pkl'.format(FSW_RESULTS_PREDICT))
++
++joblib.dump(means_1, '{}/2014_daily_gp_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(means_2, '{}/2015_daily_gp_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(means_3, '{}/2016_daily_gp_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(means_4, '{}/2017_daily_gp_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(means_5, '{}/2018_daily_gp_predict.pkl'.format(FSW_RESULTS_PREDICT))
++
++joblib.dump(low_values_1, '{}/2014_daily_gp_lower_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(low_values_2, '{}/2015_daily_gp_lower_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(low_values_3, '{}/2016_daily_gp_lower_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(low_values_4, '{}/2017_daily_gp_lower_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(low_values_5, '{}/2018_daily_gp_lower_predict.pkl'.format(FSW_RESULTS_PREDICT))
++
++joblib.dump(high_values_1, '{}/2014_daily_gp_higher_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(high_values_2, '{}/2015_daily_gp_higher_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(high_values_3, '{}/2016_daily_gp_higher_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(high_values_4, '{}/2017_daily_gp_higher_predict.pkl'.format(FSW_RESULTS_PREDICT))
++joblib.dump(high_values_5, '{}/2018_daily_gp_higher_predict.pkl'.format(FSW_RESULTS_PREDICT))
+*** End Patch

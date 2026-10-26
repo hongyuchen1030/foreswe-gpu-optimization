@@ -1,0 +1,141 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-15T21:48:34.778Z
+*** Begin Patch
+*** Delete File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/plot_sierra_station_map.py
+*** Add File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/plot_sierra_station_map.py
++#!/usr/bin/env python3
++"""Plot the 43 Sierra / near-Sierra SNOTEL station locations with a U.S. inset."""
++
++from __future__ import annotations
++
++import os
++from pathlib import Path
++
++import pandas as pd
++
++os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
++os.environ.setdefault("XDG_CACHE_HOME", "/tmp")
++
++import matplotlib.pyplot as plt
++from mpl_toolkits.axes_grid1.inset_locator import inset_axes
++
++import cartopy.crs as ccrs
++import cartopy.feature as cfeature
++
++
++REPO_ROOT = Path("/global/homes/h/hyvchen/Snow-Predication-at-Sierra")
++SIERRA_ROOT = REPO_ROOT / "experiments" / "foreswe_sierra_station"
++DATA_PATH = SIERRA_ROOT / "data_subset" / "snotel_location_info_2.csv"
++FIGURE_DIR = SIERRA_ROOT / "figures"
++PNG_PATH = FIGURE_DIR / "sierra_station_locations_map.png"
++PDF_PATH = FIGURE_DIR / "sierra_station_locations_map.pdf"
++
++BOX_LAT_MIN = 34.5
++BOX_LAT_MAX = 42.5
++BOX_LON_MIN = -124.0
++BOX_LON_MAX = -116.0
++
++
++def add_base_features(ax: plt.Axes) -> None:
++    ax.add_feature(cfeature.LAND.with_scale("50m"), facecolor="#F3F1E7", edgecolor="none")
++    ax.add_feature(cfeature.OCEAN.with_scale("50m"), facecolor="#CFE8F7", edgecolor="none")
++    ax.add_feature(cfeature.LAKES.with_scale("50m"), facecolor="#CFE8F7", edgecolor="none")
++    ax.add_feature(cfeature.RIVERS.with_scale("50m"), edgecolor="#B5D4E8", linewidth=0.3)
++    ax.add_feature(cfeature.COASTLINE.with_scale("50m"), edgecolor="#555555", linewidth=0.7)
++    ax.add_feature(cfeature.BORDERS.with_scale("50m"), edgecolor="#777777", linewidth=0.5)
++    ax.add_feature(cfeature.STATES.with_scale("50m"), edgecolor="#7A7A7A", linewidth=0.5, facecolor="none")
++
++
++def main() -> None:
++    FIGURE_DIR.mkdir(parents=True, exist_ok=True)
++
++    df = pd.read_csv(DATA_PATH)
++    counts = df["State.Code"].value_counts().sort_index()
++
++    fig = plt.figure(figsize=(12, 8))
++    proj = ccrs.PlateCarree()
++    ax = plt.axes(projection=proj)
++
++    add_base_features(ax)
++    ax.set_extent([-126.5, -114.0, 33.0, 44.5], crs=proj)
++
++    gl = ax.gridlines(crs=proj, draw_labels=True, linewidth=0.4, color="#9A9A9A", alpha=0.5, linestyle="--")
++    gl.top_labels = False
++    gl.right_labels = False
++    gl.xlabel_style = {"size": 9}
++    gl.ylabel_style = {"size": 9}
++
++    ax.scatter(
++        df["Longitude"],
++        df["Latitude"],
++        s=55,
++        color="#D7263D",
++        edgecolor="#7A0C16",
++        linewidth=0.5,
++        alpha=0.95,
++        transform=proj,
++        zorder=5,
++        label="Sierra subset stations",
++    )
++
++    ax.plot(
++        [BOX_LON_MIN, BOX_LON_MAX, BOX_LON_MAX, BOX_LON_MIN, BOX_LON_MIN],
++        [BOX_LAT_MIN, BOX_LAT_MIN, BOX_LAT_MAX, BOX_LAT_MAX, BOX_LAT_MIN],
++        color="#245C7A",
++        linewidth=1.4,
++        linestyle="--",
++        transform=proj,
++        zorder=4,
++    )
++
++    ax.set_title("Sierra / Near-Sierra SNOTEL Stations (43 Stations)", fontsize=15, pad=10)
++
++    legend = ax.legend(loc="lower left", frameon=True, facecolor="white", edgecolor="#BBBBBB")
++    for text in legend.get_texts():
++        text.set_fontsize(10)
++
++    summary = ", ".join(f"{state}={count}" for state, count in counts.items())
++    ax.text(
++        0.015,
++        0.02,
++        f"State counts: {summary}",
++        transform=ax.transAxes,
++        fontsize=10,
++        bbox={"facecolor": "white", "edgecolor": "#BBBBBB", "boxstyle": "round,pad=0.3", "alpha": 0.95},
++        zorder=10,
++    )
++
++    inset = inset_axes(ax, width="26%", height="26%", loc="lower right", borderpad=1.0, axes_class=type(ax), axes_kwargs={"projection": proj})
++    add_base_features(inset)
++    inset.set_extent([-125, -66, 24, 50], crs=proj)
++    inset.scatter(
++        df["Longitude"],
++        df["Latitude"],
++        s=10,
++        color="#D7263D",
++        edgecolor="none",
++        alpha=0.9,
++        transform=proj,
++        zorder=5,
++    )
++    inset.plot(
++        [BOX_LON_MIN, BOX_LON_MAX, BOX_LON_MAX, BOX_LON_MIN, BOX_LON_MIN],
++        [BOX_LAT_MIN, BOX_LAT_MIN, BOX_LAT_MAX, BOX_LAT_MAX, BOX_LAT_MIN],
++        color="#245C7A",
++        linewidth=1.0,
++        transform=proj,
++        zorder=6,
++    )
++    inset.set_title("CONUS context", fontsize=9, pad=3)
++
++    fig.savefig(PNG_PATH, dpi=300, bbox_inches="tight")
++    fig.savefig(PDF_PATH, bbox_inches="tight")
++    plt.close(fig)
++
++    print("Saved PNG:", PNG_PATH)
++    print("Saved PDF:", PDF_PATH)
++    print("State counts:", counts.to_dict())
++
++
++if __name__ == "__main__":
++    main()
+*** End Patch

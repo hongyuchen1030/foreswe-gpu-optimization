@@ -1,0 +1,52 @@
+# session rollout-2026-05-13T15-52-24-019e238a-91f3-7cf1-9aac-1f0021d11090.jsonl at 2026-05-13T23:10:15.722Z
+*** Begin Patch
+*** Update File: /global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station/scripts/extended_dl_forecasting.py
+@@
+ from sklearn.metrics.pairwise import haversine_distances
+ 
+ from sentence_transformers import SentenceTransformer
+ 
+-baseUrl = os.getenv("BASE_URL", "")
+-baseUrl = os.path.join(baseUrl, "data")
++FSW_ORIG_REPO = os.getenv("FSW_ORIG_REPO", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting")
++FSW_SIERRA_ROOT = os.getenv("FSW_SIERRA_ROOT", "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/experiments/foreswe_sierra_station")
++FSW_DATA_DIR = os.getenv("FSW_DATA_DIR", os.path.join(FSW_SIERRA_ROOT, "data_subset"))
++FSW_EXPECTED_STATIONS = int(os.getenv("FSW_EXPECTED_STATIONS", "43"))
++
++baseUrl = FSW_DATA_DIR
+@@
+     def completeInputsAndOutputs(self):
+         num_of_locations = self.model_inputs.shape[1]
+         
+         if len(self.test_indices) == 0:
+-            self.test_indices = random.sample(range(0, num_of_locations), 102)
++            sample_count = max(1, int(round(0.2 * num_of_locations)))
++            sample_count = min(sample_count, num_of_locations)
++            self.test_indices = sorted(random.Random(50).sample(range(0, num_of_locations), sample_count))
+         
+         self.all_indices = np.arange(0,num_of_locations,1)
+         self.train_indices = list(set(self.all_indices).difference(set(self.test_indices)))
+@@
+     def readAndStoreData(self):
+@@
+         # Loads the locations info.
+         self.snotel_locations_info = pd.read_csv('{}/snotel_location_info_2.csv'.format(baseUrl))
++        self.n_stations = len(self.snotel_locations_info)
++
++        print("Active data directory", baseUrl)
++        print("Metadata shape", self.snotel_locations_info.shape)
++        print("SWE CSV shape", self.swe_values.shape)
++        print("N_STATIONS", self.n_stations)
++
++        if self.n_stations != FSW_EXPECTED_STATIONS:
++            raise ValueError("Expected {} stations but found {}".format(FSW_EXPECTED_STATIONS, self.n_stations))
+@@
+     def __init__(self,test_indices = [],n_hyperplanes = 8, temp_window = 3):
+         self.test_indices = test_indices
+         
+         self.readAndStoreData()
+@@
+         self.year_3 = 2016
+         self.year_4 = 2017
+         self.year_5 = 2018
+*** End Patch
