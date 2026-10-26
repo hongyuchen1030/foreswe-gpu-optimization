@@ -31,12 +31,12 @@ import subprocess
 import sys
 import time
 
-REPO = "/global/homes/h/hyvchen/Snow-Predication-at-Sierra"
-FORE_SWE_DIR = os.path.join(REPO, "thirdparties/SWE-Forecasting/fore_swe")
+REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
+FORE_SWE_DIR = os.path.join(REPO, "fore_swe")
 
 VARIANTS = {
     "planB24": dict(
-        source=os.path.join(REPO, "experiments/foreswe_planB_24week/planB_24week_att_model.py"),
+        source=os.path.join(REPO, "experiments/planB_24week/planB_24week_att_model.py"),
         helpers=("get_inputs", "get_outputs"),
         windows=dict(daily=(30, 1), weekly=(30, 7), yearly=(5, 365)),
         horizon=24, step=7, lr=5e-6,

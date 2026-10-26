@@ -1,0 +1,23 @@
+# CPU-only checks (static validation + unit tests). GPU tests (`-m gpu`) run on Perlmutter:
+#   bash scripts/slurm/run.sh $JOB python -m pytest -m gpu tests
+# Not connected to any remote yet: this file only takes effect if the repo is pushed to GitHub.
+name: ci
+on: [push, pull_request]
+jobs:
+  cpu-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install CPU dependencies
+        run: |
+          pip install --index-url https://download.pytorch.org/whl/cpu torch==2.6.0
+          pip install numpy pytest
+      - name: Byte-compile all Python
+        run: python -m compileall -q foreswe_bench benchmarks tests scripts fore_swe experiments engineering_audit
+      - name: Shell syntax
+        run: for f in fsw_env.sh scripts/*.sh scripts/slurm/*.sh; do bash -n "$f"; done
+      - name: Unit tests (CPU)
+        run: python -m pytest -q -m "not gpu" tests

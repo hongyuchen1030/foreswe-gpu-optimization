@@ -23,3 +23,9 @@ export PYTHONPATH="$FSW_REPO:$FSW_REPO/fore_swe${PYTHONPATH:+:$PYTHONPATH}"
 export TMPDIR="${TMPDIR_OVERRIDE:-/pscratch/sd/h/hyvchen/tmp}"
 export PYTHONUNBUFFERED=1
 mkdir -p "$FSW_RUN_ROOT" "$FSW_CACHE_DIR" "$TMPDIR"
+
+# Optional thin venv (sentence-transformers, gpytorch, hydroeval) created by scripts/setup_venv.sh.
+export FSW_VENV="${FSW_VENV:-$FSW_SCRATCH_ROOT/venv-pytorch2.6.0}"
+if [[ -x "$FSW_VENV/bin/python" ]]; then
+  export PATH="$FSW_VENV/bin:$PATH" VIRTUAL_ENV="$FSW_VENV"
+fi

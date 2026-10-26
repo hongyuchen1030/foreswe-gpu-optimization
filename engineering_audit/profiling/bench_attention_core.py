@@ -14,7 +14,7 @@ import sys
 
 import torch
 
-sys.path.insert(0, "/global/homes/h/hyvchen/Snow-Predication-at-Sierra/thirdparties/SWE-Forecasting/fore_swe")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "fore_swe"))
 from custom_encoder_model import EncoderLayer  # noqa: E402
 
 assert torch.cuda.is_available()

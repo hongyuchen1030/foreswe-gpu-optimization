@@ -1,0 +1,13 @@
+[project]
+name = "foreswe-gpu-optimization"
+version = "0.1.0"
+description = "GPU performance engineering & numerical-accuracy benchmarks for the ForeSWE attention model"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+  "gpu: needs a CUDA GPU (Perlmutter compute node)",
+  "realdata: needs the real-data cache",
+]
