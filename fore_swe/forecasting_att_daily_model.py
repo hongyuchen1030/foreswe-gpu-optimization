@@ -614,6 +614,13 @@ with open(output_2, 'w') as file1:
 
 sys.stdout = original_stdout
 
+
+joblib.dump(daily_window_actual_1, '{}/results/actual/2014_daily_window_actual.pkl'.format(baseUrl))
+joblib.dump(daily_window_actual_2, '{}/results/actual/2015_daily_window_actual.pkl'.format(baseUrl))
+joblib.dump(daily_window_actual_3, '{}/results/actual/2016_daily_window_actual.pkl'.format(baseUrl))
+joblib.dump(daily_window_actual_4, '{}/results/actual/2017_daily_window_actual.pkl'.format(baseUrl))
+joblib.dump(daily_window_actual_5, '{}/results/actual/2018_daily_window_actual.pkl'.format(baseUrl))
+
 torch.save(test_1_final_representations, '{}/outputs/daily_test1_inputs_for_gp_act.pt'.format(baseUrl))
 torch.save(test_2_final_representations, '{}/outputs/daily_test2_inputs_for_gp_act.pt'.format(baseUrl))
 torch.save(test_3_final_representations, '{}/outputs/daily_test3_inputs_for_gp_act.pt'.format(baseUrl))
