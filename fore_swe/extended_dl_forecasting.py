@@ -16,6 +16,19 @@ from sentence_transformers import SentenceTransformer
 baseUrl = os.getenv("BASE_URL", "")
 baseUrl = os.path.join(baseUrl, "data")
 
+
+def pairwise_vector_angle(vectors):
+    """Pairwise angle (radians) between the rows of `vectors`, shape (n, 3) -> (n, n).
+
+    Kahan's formula: theta = 2 * atan2(|| |u| v - |v| u ||, || |u| v + |v| u ||).
+    Unlike arccos(u.v / (|u||v|)), it keeps full relative accuracy when the angle is near 0 or pi.
+    """
+    norms = np.linalg.norm(vectors, axis=1)
+    u_norm_v = norms[:, None, None] * vectors[None, :, :]   # |u| v for u = row i, v = row j
+    v_norm_u = norms[None, :, None] * vectors[:, None, :]   # |v| u
+    return 2.0 * np.arctan2(np.linalg.norm(u_norm_v - v_norm_u, axis=2),
+                            np.linalg.norm(u_norm_v + v_norm_u, axis=2))
+
 class DataLoader:    
     def normalizeCols(self,data, cols):
         temp_df = data.copy(deep = True)
@@ -321,13 +334,7 @@ class DataLoader:
         
         all_locations_coordinates = np.array(all_locations_coordinates)
 
-        dot_product_matrix = np.dot(all_locations_coordinates, all_locations_coordinates.T)
-        magnitudes = np.linalg.norm(all_locations_coordinates,axis = 1)
-
-        magnitude_matrix = np.outer(magnitudes,magnitudes)
-
-        cos_angle = dot_product_matrix/magnitude_matrix
-        angularity_matrix_rad = np.arccos(np.clip(cos_angle, -1.0, 1.0))
+        angularity_matrix_rad = pairwise_vector_angle(all_locations_coordinates)
 
         angle_in_degrees = np.degrees(angularity_matrix_rad)
 
