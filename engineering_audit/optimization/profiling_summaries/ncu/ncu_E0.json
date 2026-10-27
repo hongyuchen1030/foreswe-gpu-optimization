@@ -1,0 +1,137 @@
+{
+ "exp": "E0",
+ "kernels": [
+  {
+   "id": "0",
+   "kernel": "ampere_sgemm_128x128_tn",
+   "duration_ns": 151104.0,
+   "sm_throughput_pct": 70.96,
+   "dram_throughput_pct": 6.31,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 90.28,
+   "achieved_occupancy_pct": 20.14,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "1",
+   "kernel": "ampere_sgemm_128x128_nn",
+   "duration_ns": 253984.0,
+   "sm_throughput_pct": 56.01,
+   "dram_throughput_pct": 10.65,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.78,
+   "achieved_occupancy_pct": 14.49,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "2",
+   "kernel": "ampere_sgemm_128x64_tn",
+   "duration_ns": 761440.0,
+   "sm_throughput_pct": 83.92,
+   "dram_throughput_pct": 7.2,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.29,
+   "achieved_occupancy_pct": 10.65,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "3",
+   "kernel": "ampere_sgemm_128x64_tn",
+   "duration_ns": 510112.0,
+   "sm_throughput_pct": 83.56,
+   "dram_throughput_pct": 6.33,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 92.95,
+   "achieved_occupancy_pct": 10.66,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "4",
+   "kernel": "ampere_sgemm_128x64_tn",
+   "duration_ns": 761888.0,
+   "sm_throughput_pct": 84.02,
+   "dram_throughput_pct": 7.21,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.3,
+   "achieved_occupancy_pct": 10.65,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "5",
+   "kernel": "ampere_sgemm_128x64_tn",
+   "duration_ns": 761184.0,
+   "sm_throughput_pct": 83.96,
+   "dram_throughput_pct": 7.32,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.24,
+   "achieved_occupancy_pct": 10.65,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "6",
+   "kernel": "ampere_sgemm_128x64_tn",
+   "duration_ns": 760992.0,
+   "sm_throughput_pct": 83.97,
+   "dram_throughput_pct": 7.21,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.27,
+   "achieved_occupancy_pct": 10.64,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "7",
+   "kernel": "ampere_sgemm_128x128_tn",
+   "duration_ns": 151904.0,
+   "sm_throughput_pct": 70.6,
+   "dram_throughput_pct": 13.25,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 89.2,
+   "achieved_occupancy_pct": 19.89,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "8",
+   "kernel": "ampere_sgemm_128x128_nn",
+   "duration_ns": 253920.0,
+   "sm_throughput_pct": 56.04,
+   "dram_throughput_pct": 10.64,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.69,
+   "achieved_occupancy_pct": 14.48,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "9",
+   "kernel": "ampere_sgemm_128x64_tn",
+   "duration_ns": 761152.0,
+   "sm_throughput_pct": 83.97,
+   "dram_throughput_pct": 7.18,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.31,
+   "achieved_occupancy_pct": 10.65,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "10",
+   "kernel": "ampere_sgemm_128x64_tn",
+   "duration_ns": 511200.0,
+   "sm_throughput_pct": 83.57,
+   "dram_throughput_pct": 6.39,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.03,
+   "achieved_occupancy_pct": 10.68,
+   "tensor_core_kernel_by_name": false
+  },
+  {
+   "id": "11",
+   "kernel": "ampere_sgemm_128x64_tn",
+   "duration_ns": 761280.0,
+   "sm_throughput_pct": 84.08,
+   "dram_throughput_pct": 7.21,
+   "tensor_pipe_active_pct": 0.0,
+   "fma_pipe_pct": 93.33,
+   "achieved_occupancy_pct": 10.65,
+   "tensor_core_kernel_by_name": false
+  }
+ ]
+}

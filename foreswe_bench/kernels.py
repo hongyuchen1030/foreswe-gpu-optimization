@@ -10,7 +10,7 @@ GEMM_RE = re.compile(r"gemm|gemv|xmma|cutlass|tensorop|dot_kernel|splitKreduce",
 CATEGORIES = [
     ("GEMM (Tensor Core)", lambda n: bool(GEMM_RE.search(n)) and bool(TENSOR_CORE_RE.search(n))),
     ("GEMM (SIMT FP32)", lambda n: bool(GEMM_RE.search(n))),
-    ("AdamW foreach (multi_tensor_apply)", lambda n: "multi_tensor_apply" in n),
+    ("AdamW (multi_tensor_apply: foreach or fused)", lambda n: "multi_tensor_apply" in n),
     ("AdamW fused", lambda n: "fused_adam" in n.lower() or "FusedAdam" in n or "_fused_adamw" in n.lower()),
     ("index gather", lambda n: "index_elementwise" in n or "indexing_backward" in n or "index_put" in n),
     ("softmax", lambda n: "softmax" in n.lower()),

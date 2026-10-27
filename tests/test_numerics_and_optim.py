@@ -41,7 +41,7 @@ def test_kernel_classification():
     assert is_tensor_core_gemm("ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_32x5_tn")
     assert is_tensor_core_gemm("sm80_xmma_gemm_f32f32_tf32f32_f32_tn_n_tilesize128x128x32_stage3_warpsize2x2x1_tensor16x8x8_kernel")
     assert categorize("ampere_sgemm_128x64_tn") == "GEMM (SIMT FP32)"
-    assert categorize("void at::native::(anonymous namespace)::multi_tensor_apply_kernel<...>") .startswith("AdamW foreach")
+    assert categorize("void at::native::(anonymous namespace)::multi_tensor_apply_kernel<...>") .startswith("AdamW (multi_tensor_apply")
 
 
 @pytest.mark.parametrize("impl", ["fused"])

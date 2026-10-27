@@ -1,0 +1,298 @@
+{
+ "env": {
+  "host": "nid003700",
+  "slurm_job_id": "60335651",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "605e65e96b6e618f60e350aeffe72112dabcc9b9",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1140 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-1e5a629d-3408-9c1f-7605-2a847bd551cb"
+ },
+ "data": {
+  "source": "real",
+  "cache": "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/cache/planB24_real_data_cache.pt",
+  "built": {
+   "built_unix": 1793049332.0582087,
+   "build_seconds": 26.181409120559692,
+   "data_dir": "/global/u1/h/hyvchen/foreswe-gpu-optimization/data",
+   "prompt_mode": "sentence-transformer all-MiniLM-L6-v2",
+   "checks_vs_historical_planB": {
+    "model_inputs_shape": true,
+    "planB_train_count": true,
+    "feb1_indices": true
+   }
+  }
+ },
+ "lr": 5e-06,
+ "weight_decay": 0.0001,
+ "one_step": {
+  "params": {
+   "rel_l2": 4.001567758875321e-10,
+   "cosine": 1.0,
+   "ref_l2": 372.5073866913368,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 1.4901161193847656e-08,
+   "bitwise_equal_fraction": 0.9988957477608755,
+   "update_rel_l2": 1.834458764078898e-06,
+   "update_cosine": 0.9999999999983181,
+   "update_max_abs": 1.4901161193847656e-08,
+   "update_ref_l2": 0.0812563155887955
+  },
+  "state": {
+   "exp_avg": {
+    "rel_l2": 3.8315760069282696e-08,
+    "cosine": 1.0,
+    "ref_l2": 58.996882840071905,
+    "nan": 0,
+    "inf": 0,
+    "max_abs": 2.384185791015625e-07
+   },
+   "exp_avg_sq": {
+    "rel_l2": 4.9641881622334284e-08,
+    "cosine": 0.9999999999999994,
+    "ref_l2": 5.40094776947896,
+    "nan": 0,
+    "inf": 0,
+    "max_abs": 1.1920928955078125e-07
+   }
+  },
+  "loss": 208568.75
+ },
+ "shared_gradient_drift": [
+  {
+   "rel_l2": 4.001567758875321e-10,
+   "cosine": 1.0,
+   "ref_l2": 372.5073866913368,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 1.4901161193847656e-08,
+   "bitwise_equal_fraction": 0.9988957477608755,
+   "step": 1
+  },
+  {
+   "rel_l2": 8.41755846978472e-10,
+   "cosine": 1.0,
+   "ref_l2": 372.5074139247201,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 1.4901161193847656e-08,
+   "bitwise_equal_fraction": 0.9979336180817701,
+   "step": 2
+  },
+  {
+   "rel_l2": 1.5736146164356182e-09,
+   "cosine": 1.0000000000000002,
+   "ref_l2": 372.5075742218328,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 1.1920928955078125e-07,
+   "bitwise_equal_fraction": 0.9954206175781791,
+   "step": 5
+  },
+  {
+   "rel_l2": 2.313480394698915e-09,
+   "cosine": 0.9999999999999996,
+   "ref_l2": 372.50805170405613,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 1.1920928955078125e-07,
+   "bitwise_equal_fraction": 0.9916590229177784,
+   "step": 10
+  },
+  {
+   "rel_l2": 3.2827511894385493e-09,
+   "cosine": 1.0000000000000007,
+   "ref_l2": 372.5093927023716,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 1.1920928955078125e-07,
+   "bitwise_equal_fraction": 0.98535918303516,
+   "step": 20
+  },
+  {
+   "rel_l2": 5.001309460316239e-09,
+   "cosine": 1.0000000000000009,
+   "ref_l2": 372.51409879765293,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 1.1920928955078125e-07,
+   "bitwise_equal_fraction": 0.9730662985745522,
+   "step": 50
+  }
+ ],
+ "final_state": {
+  "exp_avg": {
+   "rel_l2": 5.3217846252824734e-08,
+   "cosine": 0.9999999999999991,
+   "ref_l2": 1991.0863780673058,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 3.0517578125e-05
+  },
+  "exp_avg_sq": {
+   "rel_l2": 2.953893415244824e-07,
+   "cosine": 0.9999999999999886,
+   "ref_l2": 8995.20288022134,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 0.0008544921875
+  }
+ },
+ "free_running_drift": [
+  {
+   "rel_l2": 4.001567758875321e-10,
+   "cosine": 1.0,
+   "ref_l2": 372.5073866913368,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 1.4901161193847656e-08,
+   "bitwise_equal_fraction": 0.9988957477608755,
+   "step": 1,
+   "loss_a": 208568.75,
+   "loss_b": 208568.75
+  },
+  {
+   "rel_l2": 5.862820121583594e-08,
+   "cosine": 0.9999999999999988,
+   "ref_l2": 372.50805170405613,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 6.431713700294495e-06,
+   "bitwise_equal_fraction": 0.7614782269712483,
+   "step": 10,
+   "loss_a": 215787.859375,
+   "loss_b": 215787.859375
+  },
+  {
+   "rel_l2": 2.406994790711106e-06,
+   "cosine": 0.9999999999971038,
+   "ref_l2": 372.51409879765293,
+   "nan": 0,
+   "inf": 0,
+   "max_abs": 4.14564274251461e-05,
+   "bitwise_equal_fraction": 0.26063764699972997,
+   "step": 50,
+   "loss_a": 212682.125,
+   "loss_b": 212682.125
+  }
+ ],
+ "timing": {
+  "foreach": {
+   "step_ms": {
+    "median": 27.97056007385254,
+    "mean": 28.026511344909668,
+    "std": 0.22742715141583725,
+    "p10": 27.919052124023438,
+    "p90": 28.078182220458984,
+    "iqr": 0.04403114318847656,
+    "min": 27.894784927368164,
+    "max": 28.95257568359375,
+    "n": 50
+   },
+   "state_gib": 3.1741113662719727,
+   "transient_peak_gib": 1.5870556831359863,
+   "kernel_launches": 175,
+   "distinct_kernels": 1,
+   "top_kernels": [
+    [
+     "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous n",
+     175
+    ]
+   ]
+  },
+  "fused": {
+   "step_ms": {
+    "median": 10.188704013824463,
+    "mean": 10.198511390686035,
+    "std": 0.06126280409877084,
+    "p10": 10.143935680389404,
+    "p90": 10.260092544555665,
+    "iqr": 0.06410408020019531,
+    "min": 10.112863540649414,
+    "max": 10.51632022857666,
+    "n": 50
+   },
+   "state_gib": 3.1742405891418457,
+   "transient_peak_gib": 0.0,
+   "kernel_launches": 26,
+   "distinct_kernels": 1,
+   "top_kernels": [
+    [
+     "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous n",
+     26
+    ]
+   ]
+  },
+  "single_tensor": {
+   "step_ms": {
+    "median": 37.58595085144043,
+    "mean": 37.58872230529785,
+    "std": 0.1279206107701931,
+    "p10": 37.432372665405275,
+    "p90": 37.74083976745605,
+    "iqr": 0.20592117309570312,
+    "min": 37.42067337036133,
+    "max": 37.92863845825195,
+    "n": 50
+   },
+   "state_gib": 3.1741113662719727,
+   "transient_peak_gib": 0.07032394409179688,
+   "kernel_launches": 2168,
+   "distinct_kernels": 7,
+   "top_kernels": [
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, ",
+     542
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::lerp_",
+     271
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::addcmul_cuda_kernel(at::Tens",
+     271
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::sqrt_kernel_cuda(at::TensorI",
+     271
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, ",
+     271
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>",
+     271
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::addcdiv_cuda_kernel(at::Tens",
+     271
+    ]
+   ]
+  }
+ },
+ "algorithm_compare_AdamW_vs_Adam_fused": {
+  "rel_l2": 0.00019522686986727237,
+  "cosine": 0.9999999829792579,
+  "ref_l2": 372.50738669134694,
+  "nan": 0,
+  "inf": 0,
+  "max_abs": 1.0013580322265625e-05,
+  "bitwise_equal_fraction": 0.5418455525697633,
+  "update_rel_l2": 0.8949882890421927,
+  "update_cosine": 0.7068749918708773,
+  "update_max_abs": 1.0013580322265625e-05,
+  "update_ref_l2": 0.08125631586086696
+ }
+}

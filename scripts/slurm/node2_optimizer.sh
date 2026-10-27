@@ -28,8 +28,11 @@ for s in $STAGES; do
       M=gpu__time_duration.sum,sm__throughput.avg.pct_of_peak_sustained_elapsed,dram__throughput.avg.pct_of_peak_sustained_elapsed
       M=$M,sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active,sm__inst_executed_pipe_fma.avg.pct_of_peak_sustained_active
       M=$M,sm__warps_active.avg.pct_of_peak_sustained_active
-      for e in E0 E1 E2; do   # precision decides the GEMM kernels; optimizer kernels are covered by nsys
-        $NCU --target-processes all -k "regex:gemm|xmma|cutlass" --launch-skip 300 --launch-count 12 --metrics "$M" \
+      # precision decides the GEMM kernels; optimizer kernels are covered by nsys. Per-precision name filters
+      # pick the large encoder GEMMs (kernel names taken from the nsys kernel summaries).
+      declare -A KREGEX=([E0]="regex:sgemm_128x64|sgemm_128x128" [E1]="regex:s1688gemm" [E2]="regex:s16816gemm|bf16.*gemm")
+      for e in E0 E1 E2; do
+        $NCU --target-processes all --kernel-name-base demangled -k "${KREGEX[$e]}" --launch-skip 20 --launch-count 12 --metrics "$M" \
           --csv --page raw python -m benchmarks.bench_one --exp $e --warmup 2 --iters 1 --out "$A/ncu/bench_$e.json" \
           > "$A/ncu/ncu_$e.csv" 2> "$A/ncu/ncu_$e.err" || echo "ncu $e failed (see $A/ncu/ncu_$e.err)"
         python -m benchmarks.ncu_summary "$A/ncu/ncu_$e.csv" --exp $e --out "$P/ncu/ncu_$e.json" || true

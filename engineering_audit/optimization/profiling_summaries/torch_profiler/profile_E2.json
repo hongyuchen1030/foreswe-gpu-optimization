@@ -1,0 +1,220 @@
+{
+ "exp": "E2",
+ "precision": "bf16",
+ "optimizer": "foreach",
+ "steps": 3,
+ "env": {
+  "host": "nid003640",
+  "slurm_job_id": "60335641",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "605e65e96b6e618f60e350aeffe72112dabcc9b9",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-4eee3451-0016-758a-56a5-2933bdae43fc"
+ },
+ "gpu_kernel_ms_per_step": 55.64256433333333,
+ "launches_per_step": 1832.0,
+ "tensor_core_share_of_gemm_time": 0.956689899255596,
+ "tensor_core_share_of_gpu_time": 0.17393610657519915,
+ "categories": [
+  [
+   "AdamW foreach (multi_tensor_apply)",
+   26.954239333333256,
+   175.0,
+   48.44176334480329
+  ],
+  [
+   "GEMM (Tensor Core)",
+   9.678251000000042,
+   336.0,
+   17.393610657519915
+  ],
+  [
+   "dtype casts (to/copy)",
+   8.12575833333341,
+   658.0,
+   14.603493621636664
+  ],
+  [
+   "other elementwise",
+   4.14179100000011,
+   320.0,
+   7.443565999561456
+  ],
+  [
+   "index gather",
+   2.5498276666666566,
+   8.0,
+   4.5825128608229
+  ],
+  [
+   "reductions",
+   2.031764333333298,
+   156.0,
+   3.651457041342981
+  ],
+  [
+   "softmax",
+   0.8856049999999935,
+   38.0,
+   1.591596308708334
+  ],
+  [
+   "layer_norm",
+   0.5236749999999932,
+   32.0,
+   0.9411410244554087
+  ],
+  [
+   "GEMM (SIMT FP32)",
+   0.43814199999998343,
+   51.0,
+   0.7874223721524446
+  ],
+  [
+   "memcpy/memset",
+   0.1913789999999309,
+   48.0,
+   0.343943530088679
+  ],
+  [
+   "concat/stack",
+   0.12213166666666378,
+   10.0,
+   0.21949323890793324
+  ]
+ ],
+ "top_kernels": [
+  [
+   "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<1>, at::native::(ano",
+   8.141319666666634,
+   63.0,
+   "AdamW foreach (multi_tensor_apply)"
+  ],
+  [
+   "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<2>, at::native::(ano",
+   6.696350666666554,
+   44.0,
+   "AdamW foreach (multi_tensor_apply)"
+  ],
+  [
+   "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>,",
+   5.253202333333373,
+   23.0,
+   "AdamW foreach (multi_tensor_apply)"
+  ],
+  [
+   "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<3>, at::native::(ano",
+   4.025048333333369,
+   23.0,
+   "AdamW foreach (multi_tensor_apply)"
+  ],
+  [
+   "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const:",
+   3.989137666666624,
+   278.0,
+   "dtype casts (to/copy)"
+  ],
+  [
+   "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::ar",
+   2.975359333333424,
+   297.0,
+   "dtype casts (to/copy)"
+  ],
+  [
+   "void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 1>,",
+   2.838318333333324,
+   22.0,
+   "AdamW foreach (multi_tensor_apply)"
+  ],
+  [
+   "void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<4> >(at:",
+   2.5498276666666566,
+   8.0,
+   "index gather"
+  ],
+  [
+   "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   2.0321143333333325,
+   48.0,
+   "GEMM (Tensor Core)"
+  ],
+  [
+   "ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_64x3_nn",
+   1.6218570000000279,
+   40.0,
+   "GEMM (Tensor Core)"
+  ],
+  [
+   "void at::native::reduce_kernel<128, 4, at::native::ReduceOp<c10::BFloat16, at::native::func_wrapper_t<c10::BFloat16, at::native::sum_functor",
+   1.4316186666666229,
+   101.0,
+   "reductions"
+  ],
+  [
+   "ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_32x5_nt",
+   1.1937513333332852,
+   24.0,
+   "GEMM (Tensor Core)"
+  ],
+  [
+   "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&,",
+   1.0002816666666736,
+   19.0,
+   "other elementwise"
+  ],
+  [
+   "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&):",
+   0.919779333333306,
+   36.0,
+   "dtype casts (to/copy)"
+  ],
+  [
+   "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<flo",
+   0.8521986666666804,
+   27.0,
+   "other elementwise"
+  ],
+  [
+   "void (anonymous namespace)::softmax_warp_backward<float, float, float, 9, false, false>(float*, float const*, float const*, int, int, int, b",
+   0.5966346666666772,
+   16.0,
+   "softmax"
+  ],
+  [
+   "ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_nt",
+   0.5957083333333454,
+   17.0,
+   "GEMM (Tensor Core)"
+  ],
+  [
+   "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::bi",
+   0.5584583333333212,
+   48.0,
+   "other elementwise"
+  ],
+  [
+   "void cutlass::Kernel2<cutlass_75_wmma_tensorop_bf16_s161616gemm_bf16_32x32_32x1_nt_align1>(cutlass_75_wmma_tensorop_bf16_s161616gemm_bf16_32",
+   0.47736266666666294,
+   6.0,
+   "GEMM (Tensor Core)"
+  ],
+  [
+   "ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_32x5_nn",
+   0.4208510000000194,
+   9.0,
+   "GEMM (Tensor Core)"
+  ]
+ ],
+ "chrome_trace": "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/artifacts/torch_traces/trace_E2.json"
+}

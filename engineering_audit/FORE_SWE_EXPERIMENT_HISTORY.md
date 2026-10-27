@@ -4,6 +4,15 @@ Scope: every ForeSWE attention-model run I could identify on Perlmutter, for use
 repository, pscratch, SLURM accounting (`sacct`), run logs and past agent transcripts
 (`~/.codex/sessions/2026/05/*`). Nothing was re-trained or re-run to recover history.
 
+> **Migrated (2026-10-26).** All experiments below now live in this standalone repository. The paths in
+> this document are the historical (legacy) locations, kept for provenance. Mapping:
+> `foreswe_reproduction` → `experiments/original_daily`, `foreswe_weekly_reproduction_full512` →
+> `experiments/original_weekly`, `fig6_weekly_stitching` → `experiments/planA_stitching`,
+> `foreswe_planB_24week` → `experiments/planB_24week`, `foreswe_sierra_station` → `experiments/sierra_subset`,
+> `foreswe_domain_sensitivity` → `experiments/domain_sensitivity`, `foreswe_bias_diagnosis` →
+> `experiments/bias_diagnosis`, `thirdparties/SWE-Forecasting` → repo root.
+> Details: `docs/migration/MIGRATION_PROVENANCE.md`.
+
 Evidence labels used throughout:
 
 - **[V]** verified: read directly from a log, file, `sacct` record or file timestamp (source given).

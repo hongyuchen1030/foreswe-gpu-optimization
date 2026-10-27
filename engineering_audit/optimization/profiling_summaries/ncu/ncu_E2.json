@@ -1,0 +1,137 @@
+{
+ "exp": "E2",
+ "kernels": [
+  {
+   "id": "0",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 57984.0,
+   "sm_throughput_pct": 69.08,
+   "dram_throughput_pct": 27.14,
+   "tensor_pipe_active_pct": 81.16,
+   "fma_pipe_pct": 0.89,
+   "achieved_occupancy_pct": 6.22,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "1",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 57216.0,
+   "sm_throughput_pct": 46.62,
+   "dram_throughput_pct": 31.49,
+   "tensor_pipe_active_pct": 81.91,
+   "fma_pipe_pct": 0.9,
+   "achieved_occupancy_pct": 6.26,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "2",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 42528.0,
+   "sm_throughput_pct": 62.77,
+   "dram_throughput_pct": 40.01,
+   "tensor_pipe_active_pct": 74.89,
+   "fma_pipe_pct": 1.24,
+   "achieved_occupancy_pct": 6.18,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "3",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 59104.0,
+   "sm_throughput_pct": 67.72,
+   "dram_throughput_pct": 44.23,
+   "tensor_pipe_active_pct": 79.57,
+   "fma_pipe_pct": 0.88,
+   "achieved_occupancy_pct": 6.11,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "4",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 59456.0,
+   "sm_throughput_pct": 67.7,
+   "dram_throughput_pct": 44.26,
+   "tensor_pipe_active_pct": 79.57,
+   "fma_pipe_pct": 0.88,
+   "achieved_occupancy_pct": 6.11,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "5",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 58944.0,
+   "sm_throughput_pct": 67.91,
+   "dram_throughput_pct": 44.43,
+   "tensor_pipe_active_pct": 79.47,
+   "fma_pipe_pct": 0.88,
+   "achieved_occupancy_pct": 6.12,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "6",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_32x5_tn",
+   "duration_ns": 25728.0,
+   "sm_throughput_pct": 26.07,
+   "dram_throughput_pct": 35.54,
+   "tensor_pipe_active_pct": 35.63,
+   "fma_pipe_pct": 3.46,
+   "achieved_occupancy_pct": 10.98,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "7",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_32x6_nn",
+   "duration_ns": 24800.0,
+   "sm_throughput_pct": 36.3,
+   "dram_throughput_pct": 43.19,
+   "tensor_pipe_active_pct": 48.81,
+   "fma_pipe_pct": 2.03,
+   "achieved_occupancy_pct": 10.95,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "8",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 58976.0,
+   "sm_throughput_pct": 67.92,
+   "dram_throughput_pct": 44.47,
+   "tensor_pipe_active_pct": 79.87,
+   "fma_pipe_pct": 0.88,
+   "achieved_occupancy_pct": 6.13,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "9",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 57312.0,
+   "sm_throughput_pct": 46.7,
+   "dram_throughput_pct": 31.54,
+   "tensor_pipe_active_pct": 81.99,
+   "fma_pipe_pct": 0.9,
+   "achieved_occupancy_pct": 6.25,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "10",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 42688.0,
+   "sm_throughput_pct": 62.76,
+   "dram_throughput_pct": 38.98,
+   "tensor_pipe_active_pct": 75.08,
+   "fma_pipe_pct": 1.24,
+   "achieved_occupancy_pct": 6.2,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "11",
+   "kernel": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+   "duration_ns": 59136.0,
+   "sm_throughput_pct": 67.87,
+   "dram_throughput_pct": 43.97,
+   "tensor_pipe_active_pct": 79.72,
+   "fma_pipe_pct": 0.88,
+   "achieved_occupancy_pct": 6.12,
+   "tensor_core_kernel_by_name": true
+  }
+ ]
+}

@@ -69,20 +69,17 @@ read-only inputs. `tests/test_repo_hygiene.py` enforces that no runnable code re
 | Result pickles > 1 MiB | legacy `results/{actual,predict}` | 3.7 MB each | historical plots (`scripts/link_legacy_results.sh`) |
 | D2 `data_subset/` | home legacy D2 folder | 326 MB | D2 reruns (builder script not found) |
 | HF sentence-transformer cache | `/pscratch/sd/h/hyvchen/foreswe_model_cache` | small | building station prompts offline |
-| Real-data tensor cache | `$FSW_CACHE_DIR/planB24_real_data_cache.pt` | 0.42 GB | benchmarks; rebuild in ~30 s with `python -m benchmarks.build_data_cache` |
+| Real-data tensor cache | `$FSW_CACHE_DIR/planB24_real_data_cache.pt` | 0.42 GB | benchmarks; rebuild with `python -m benchmarks.build_data_cache` (CPU, on a compute node) |
 | Python venv | `$FSW_SCRATCH_ROOT/venv-pytorch2.6.0` | small | sentence-transformers / gpytorch / hydroeval; rebuild with `scripts/setup_venv.sh` |
 
 All paths are configurable in `configs/external_paths.env`.
 
 ## At-risk artifacts and preservation plan
 
-pscratch purges files not accessed for 8 weeks. Last access times (2026-10-26):
-
-| Checkpoint | Last access | Purge-eligible from |
-|---|---|---|
-| weekly, Sierra-43, D2 | 2026-09-14 | **≈ 2026-11-09** |
-| Plan B | 2026-10-26 (read by this audit) | ≈ 2026-12-21 |
-| daily (pscratch) | read during this work | ≈ 2026-12-21 |
+pscratch purges files not accessed for 8 weeks. Before this work the weekly, Sierra-43 and D2 checkpoints
+had last been read on 2026-09-14 (purge-eligible ≈ 2026-11-09). Computing the SHA-256 checksums on
+2026-10-26 read every checkpoint, so **all six are now purge-eligible from ≈ 2026-12-21**. Reading a file
+only postpones the purge; it does not preserve the file.
 
 The historical env `$SCRATCH/conda_envs/foreswe_repro_att` has already been partially purged.
 
@@ -99,7 +96,8 @@ htar -cvf foreswe_checkpoints_2026-10-26.tar \
 
 Alternative: weights-only copies (dropping the AdamW state) are 1.6–2.3 GB each (~9.6 GB total), which
 would fit in home (40 GB quota, ~15 GB free) but leave little headroom. CFS project `m2637` is 94% full
-and shared, so it was not used. `docs/migration/checkpoint_checksums.tsv` records SHA-256 sums for verification.
+and shared, so it was not used. `docs/migration/checkpoint_checksums.tsv` records size, mtime and SHA-256
+of all six checkpoints (computed 2026-10-26 on a compute node) for verifying any archive copy.
 
 ## Legacy files
 

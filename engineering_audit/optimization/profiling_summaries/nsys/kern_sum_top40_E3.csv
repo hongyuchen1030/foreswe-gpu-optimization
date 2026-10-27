@@ -1,0 +1,40 @@
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Name
+21.9,294245557,473,622083.6,592540.0,395901,1534803,261181.8,ampere_sgemm_128x64_tn
+13.0,174172651,440,395846.9,528283.5,194783,529659,162562.6,ampere_sgemm_128x128_nn
+10.5,140930056,264,533826.0,533947.0,527612,535484,1197.9,ampere_sgemm_128x64_nt
+8.2,109825315,264,416005.0,358669.0,354173,532539,82055.9,ampere_sgemm_128x64_nn
+7.8,104373139,253,412542.1,454205.0,130047,497596,105971.2,"void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::FusedOptimizerTensorListMetadata<(int)4>, at::native::<unnamed>::FusedAdamMathFunctor<float, (int)4, (at::native::ADAM_MODE)1, (bool)0>, const float *, double, double, double, double, double, bool, const float *, const float *>(T1, T2, T3...)"
+6.4,86499149,220,393178.0,195294.0,193054,1517076,472372.7,ampere_sgemm_128x128_nt
+5.3,71144038,275,258705.6,369117.0,40479,374749,148198.9,ampere_sgemm_32x128_nt
+3.9,52793743,143,369187.0,589499.0,13952,592411,280576.4,ampere_sgemm_32x32_sliced1x4_nt
+3.8,51445440,44,1169214.5,1558547.5,4352,1560467,680306.8,ampere_sgemm_128x32_nn
+3.0,40543275,88,460719.0,460732.5,459164,462684,763.1,ampere_sgemm_64x32_sliced1x4_tn
+2.1,28090142,88,319206.2,27344.0,6271,833305,394803.8,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu_index_kernel<void at::native::index_kernel_impl<at::native::OpaqueType<(int)4>>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>)::[lambda(char *, const char *, long) (instance 1)]>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>, const T1 &)::[lambda(int) (instance 1)]>(long, T3)"
+1.8,24213104,1320,18343.3,14447.5,5216,63135,9368.8,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator ()(at::TensorIterator &)::[lambda(float, float) (instance 1)]>, unsigned int, float, (int)4>>(T3)"
+1.6,20811379,176,118246.5,118223.5,116799,119519,486.6,ampere_sgemm_128x128_tn
+1.4,19252270,1309,14707.6,3552.0,2848,159199,29226.9,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 7)]::operator ()() const::[lambda(float) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+1.3,16893429,165,102384.4,101151.0,7424,290333,65555.0,ampere_sgemm_32x32_sliced1x4_tn
+0.9,11457016,649,17653.3,16064.0,4448,113471,22322.6,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<float>, std::array<char *, (unsigned long)3>>(int, T2, T3)"
+0.8,11326685,242,46804.5,50415.5,8288,66144,16049.2,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+0.7,9894932,121,81776.3,89503.0,5248,204126,46959.9,ampere_sgemm_32x32_sliced1x4_nn
+0.7,9480339,297,31920.3,35424.0,2560,39360,10585.2,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float>>, std::array<char *, (unsigned long)3>>(int, T2, T3)"
+0.5,6532936,176,37119.0,37152.0,36128,38272,400.5,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (bool)0>(T2 *, const T1 *, const T1 *, int, int, int, const bool *)"
+0.5,6306071,528,11943.3,6848.0,4736,27360,8577.0,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float>>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+0.4,6023613,901,6685.5,1696.0,1504,37312,10753.9,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<float>, std::array<char *, (unsigned long)1>>(int, T2, T3)"
+0.3,3372011,33,102182.2,102239.0,101087,102752,350.3,ampere_sgemm_128x32_nt
+0.2,3337610,352,9481.8,8592.0,6688,14432,2635.4,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator ()(at::TensorIterator &)::[lambda(float, float) (instance 1)]>, unsigned int, float, (int)4>>(T3)"
+0.2,2972571,286,10393.6,10624.0,8704,13695,1079.9,ampere_sgemm_128x32_tn
+0.2,2971470,176,16883.4,16864.0,14656,19456,1616.0,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool)0>(T2 *, const T1 *, int, int, int, const bool *, int, bool)"
+0.2,2806186,176,15944.2,16000.0,14464,17760,550.7,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float>>, std::array<char *, (unsigned long)2>>(int, T2, T3)"
+0.2,2777701,176,15782.4,15648.0,15007,18656,691.4,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float>(const T1 *, const T1 *, const T2 *, const T2 *, const T1 *, T1 *, int)"
+0.2,2529068,286,8842.9,8832.0,8544,9312,150.6,void cutlass::Kernel2<cutlass_80_simt_sgemm_64x64_8x5_nt_align1>(T1::Params)
+0.2,2304486,66,34916.5,34944.0,30751,39903,3278.9,"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)4, (int)4, (int)1, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)"
+0.2,2095660,66,31752.4,31615.5,30943,32991,508.4,"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, float, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)5, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)"
+0.2,2053421,176,11667.2,11648.0,11392,12160,99.7,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, const T1 *, const T1 *, const T1 *, T2 *, T2 *, T1 *)"
+0.1,1952421,220,8874.6,9760.0,4768,10944,1935.4,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int, (int)1, (int)4, bool>(at::cuda::detail::TensorInfo<const T1, T3>, at::cuda::detail::TensorInfo<T1, T3>, at::cuda::detail::TensorInfo<T6, T3>, T3, T2, at::PhiloxCudaState)"
+0.1,1850799,66,28042.4,27087.5,14495,42656,13337.3,"void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<unnamed>::OpaqueType<(unsigned int)4>, unsigned int, (int)2, (int)128, (int)1>(T1 *, at::native::<unnamed>::CatArrInputTensorMetadata<T1, T2, T4, T5>, at::native::<unnamed>::TensorSizeStride<T2, (unsigned int)4>, int, T2)"
+0.1,1777396,33,53860.5,53760.0,52992,54560,387.9,"void magma_sgemmEx_kernel<float, float, float, (bool)0, (bool)1, (int)6, (int)4, (int)6, (int)3, (int)4>(int, int, int, Tensor, int, Tensor, int, Tensor, int, Tensor, int, int, int, const T1 *, const T1 *, T1, T1, int, cublasLtEpilogue_t, int, const void *, long)"
+0.1,1636119,187,8749.3,8864.0,4640,10399,1390.3,ampere_sgemm_32x128_tn
+0.1,1314839,220,5976.5,6528.0,3104,7328,1325.6,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed>::masked_scale_kernel<bool, float, float>(at::Tensor &, const at::Tensor &, const at::Tensor &, T3)::[lambda(float, bool) (instance 1)], std::array<char *, (unsigned long)3>>(int, T2, T3)"
+0.1,1290037,176,7329.8,7328.0,6848,7968,177.9,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long, long, const T1 *, const T1 *, const T2 *, const T2 *, T1 *, T1 *)"
+0.1,1276569,429,2975.7,3136.0,2592,3232,243.8,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)1, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T5 *, T5 *, const T6 *, const T6 *, const T7 *, const T4 *, T7 *, void *, long, T6 *, int *)"

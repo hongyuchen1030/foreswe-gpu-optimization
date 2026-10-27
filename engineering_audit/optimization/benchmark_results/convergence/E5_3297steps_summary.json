@@ -1,0 +1,33 @@
+{
+ "exp": "E5",
+ "precision": "bf16",
+ "optimizer": "fused",
+ "steps": 3297,
+ "seed": 0,
+ "dropout_seed": 1234,
+ "elapsed_s": 222.54741549491882,
+ "env": {
+  "host": "nid003640",
+  "slurm_job_id": "60335641",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "605e65e96b6e618f60e350aeffe72112dabcc9b9",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-4eee3451-0016-758a-56a5-2933bdae43fc"
+ },
+ "final_loss": 148475.625,
+ "mean_loss_last50": 131988.96345703126,
+ "mean_loss_first50": 217260.32625,
+ "nonfinite_steps": 0,
+ "final_grad_norm": 70479.65625
+}

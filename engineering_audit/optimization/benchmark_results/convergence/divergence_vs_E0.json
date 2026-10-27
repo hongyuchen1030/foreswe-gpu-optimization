@@ -1,0 +1,66 @@
+{
+ "300": {
+  "E0": {
+   "own_precision_vs_E0_rel_l2": 0.0,
+   "fp32_eval_vs_E0_rel_l2": 0.0,
+   "own_precision_vs_E0_max_abs_mm": 0.0,
+   "test_rmse_mm_own_precision": 383.9712829589844
+  },
+  "E1": {
+   "own_precision_vs_E0_rel_l2": 0.00014805812679696828,
+   "fp32_eval_vs_E0_rel_l2": 0.00014687165094073862,
+   "own_precision_vs_E0_max_abs_mm": 0.014434814453125,
+   "test_rmse_mm_own_precision": 383.97076416015625
+  },
+  "E2": {
+   "own_precision_vs_E0_rel_l2": 0.0031790428329259157,
+   "fp32_eval_vs_E0_rel_l2": 0.0023881050292402506,
+   "own_precision_vs_E0_max_abs_mm": 0.5164642333984375,
+   "test_rmse_mm_own_precision": 383.9681091308594
+  },
+  "E3": {
+   "own_precision_vs_E0_rel_l2": 2.438864430587273e-05,
+   "fp32_eval_vs_E0_rel_l2": 2.438864430587273e-05,
+   "own_precision_vs_E0_max_abs_mm": 0.00238037109375,
+   "test_rmse_mm_own_precision": 383.97113037109375
+  },
+  "E4": {
+   "own_precision_vs_E0_rel_l2": 0.00017675016715656966,
+   "fp32_eval_vs_E0_rel_l2": 0.00017859855142887682,
+   "own_precision_vs_E0_max_abs_mm": 0.01702880859375,
+   "test_rmse_mm_own_precision": 383.9707336425781
+  },
+  "E5": {
+   "own_precision_vs_E0_rel_l2": 0.0032559926621615887,
+   "fp32_eval_vs_E0_rel_l2": 0.0024449459742754698,
+   "own_precision_vs_E0_max_abs_mm": 0.537445068359375,
+   "test_rmse_mm_own_precision": 383.96832275390625
+  }
+ },
+ "3297": {
+  "E0": {
+   "own_precision_vs_E0_rel_l2": 0.0,
+   "fp32_eval_vs_E0_rel_l2": 0.0,
+   "own_precision_vs_E0_max_abs_mm": 0.0,
+   "test_rmse_mm_own_precision": 370.4146423339844
+  },
+  "E1": {
+   "own_precision_vs_E0_rel_l2": 0.04822744429111481,
+   "fp32_eval_vs_E0_rel_l2": 0.048247843980789185,
+   "own_precision_vs_E0_max_abs_mm": 31.782485961914062,
+   "test_rmse_mm_own_precision": 370.527099609375
+  },
+  "E4": {
+   "own_precision_vs_E0_rel_l2": 0.027998385950922966,
+   "fp32_eval_vs_E0_rel_l2": 0.028049878776073456,
+   "own_precision_vs_E0_max_abs_mm": 14.546173095703125,
+   "test_rmse_mm_own_precision": 370.560546875
+  },
+  "E5": {
+   "own_precision_vs_E0_rel_l2": 0.02297520823776722,
+   "fp32_eval_vs_E0_rel_l2": 0.022156251594424248,
+   "own_precision_vs_E0_max_abs_mm": 17.75537109375,
+   "test_rmse_mm_own_precision": 370.42694091796875
+  }
+ }
+}

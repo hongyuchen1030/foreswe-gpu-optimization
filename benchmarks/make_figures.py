@@ -177,6 +177,9 @@ def fig_kernels():
     if not files:
         return
     data = {json.load(open(f))["exp"]: json.load(open(f)) for f in files}
+    rename = {"AdamW foreach (multi_tensor_apply)": "AdamW (multi_tensor_apply: foreach or fused)"}
+    for d in data.values():  # summaries written before the category was renamed
+        d["categories"] = [[rename.get(c[0], c[0])] + list(c[1:]) for c in d["categories"]]
     exps = [e for e in EXPS if e in data]
     cats = []
     for e in exps:
@@ -184,9 +187,9 @@ def fig_kernels():
             if c not in cats:
                 cats.append(c)
     cat_col = {"GEMM (Tensor Core)": "#eb6834", "GEMM (SIMT FP32)": "#2a78d6",
-               "AdamW foreach (multi_tensor_apply)": "#6250d6", "AdamW fused": "#9085e9",
+               "AdamW (multi_tensor_apply: foreach or fused)": "#6250d6",
                "dtype casts (to/copy)": "#e34948", "index gather": "#eda100"}
-    fig, ax = plt.subplots(figsize=(7.6, 3.4))
+    fig, ax = plt.subplots(figsize=(8.4, 4.2))
     y = np.arange(len(exps))
     left = np.zeros(len(exps))
     for c in cats:
@@ -201,9 +204,9 @@ def fig_kernels():
             100 * data[e]["tensor_core_share_of_gemm_time"]), va="center", fontsize=7, color=INK)
     ax.set_yticks(y, [label(e) for e in exps])
     ax.invert_yaxis()
-    ax.set_xlim(0, left.max() * 1.6)
+    ax.set_xlim(0, left.max() * 1.9)
     ax.set_xlabel("GPU kernel time per training step (ms), torch.profiler")
-    ax.legend(fontsize=7, loc="lower right")
+    ax.legend(fontsize=7, loc="upper center", bbox_to_anchor=(0.45, -0.2), ncol=3)
     ax.set_title("Kernel-time breakdown and Tensor-Core usage", loc="left", color=INK)
     save(fig, "kernel_breakdown.png")
 

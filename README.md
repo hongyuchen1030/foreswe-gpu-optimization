@@ -1,63 +1,102 @@
-# Attention-based Models for Snow-Water Equivalent Prediction
-## Krishu K Thapa, Supriya Savalkar, Bhupinderjeet Singh, Trong Nghia Hoang, Kirti Rajagopalan, Ananth Kalyanaraman
-### Washington State University, Pullman, WA
+# ForeSWE GPU Optimization
 
+GPU performance engineering and numerical-accuracy benchmarks for **ForeSWE** (Thapa et al., AAAI 2026),
+a 628 M-parameter spatio-temporal attention model for snow-water-equivalent forecasting at 512 SNOTEL
+stations. The model and its forecasting targets are unchanged. This repo measures and explains where the
+GPU time and the numerical error go, and it consolidates every historical ForeSWE experiment.
 
-#### Training Water Years: (1991 - 2014) and Testing Water Years: (2015-2019)
+Upstream: https://github.com/Krishuthapa/SWE-Forecasting. Its history is preserved here (tag
+`upstream-393de07`, branches `upstream-dev`, `upstream-main`), and its README is kept as `README_UPSTREAM.md`.
 
-#### Packages used.
-Model implementation used Pytorch(v2.0.1) (LSTM and Attention models), GPyTorch (v1.12) (Gaussian process) packages. Data processing and visualization used multiple Python packages. We assume conda has been installed on the device running this code.
+## Headline results
 
-#### Running Raw-GP model (after getting inside raw-gp folder)
+A100-SXM4-40GB, PyTorch 2.6.0, Plan B 24-week model, 1 issue date × 512 stations per step, median of 120
+steps. Full tables, variability and method: `engineering_audit/optimization/PRECISION_PERFORMANCE_REPORT.md`.
 
-#### For daily forecasting:
-```
-bash daily_gp_run.sh --base_url /path/to/SWE-Forecasting --env_name <your_choice_conda_env_name>
-```
+| Config | Step ms | Speedup | Fwd / Bwd / Opt ms | Peak VRAM | Output err. vs FP32 | Grad err. vs FP32 |
+|---|---:|---:|---|---:|---:|---:|
+| E0 FP32 + AdamW foreach (production) | 148.2 | 1.00× | 39.7 / 72.7 / 27.0 | 9.11 GiB | – | – |
+| E1 TF32 + foreach | 69.5 | 2.13× | 13.3 / 20.7 / 27.0 | 9.11 GiB | 3.9e-4 | 2.2e-4 |
+| E2 BF16 autocast + foreach | 74.7 | 1.98× | 16.9 / 21.0 / 28.3 | 9.13 GiB | 5.7e-3 | 3.6e-3 |
+| E3 FP32 + AdamW fused | 129.8 | 1.14× | 39.7 / 72.7 / 9.5 | 8.50 GiB | 0 | 0 |
+| **E4 TF32 + fused** | **50.8** | **2.92×** | 13.3 / 20.6 / 9.5 | **8.50 GiB** | 3.9e-4 | 2.2e-4 |
+| E5 BF16 + fused | 56.6 | 2.62× | 16.8 / 20.6 / 10.6 | 9.13 GiB | 5.7e-3 | 3.6e-3 |
 
-#### For weekly forecasting:
-```
-bash weekly_gp_run.sh --base_url /path/to/SWE-Forecasting --env_name <your_choice_conda_env_name>
-```
+- Tensor Cores confirmed by Nsight Compute: 82–85 % tensor-pipe activity on TF32 GEMMs, 80 % on BF16;
+  0 % on FP32.
+- Fused AdamW is 2.75× faster than foreach (28.0 → 10.2 ms, ~75 % of HBM bandwidth) and numerically
+  equivalent (update rel-L2 1.8e-6).
+- After the switch to Tensor Cores the step is **launch/host-bound** (GPU busy 63 % on E4, 50 % on E5).
+- Short-run convergence on real data is unchanged in every configuration.
 
-### Running ForeSWE model (after getting inside raw-gp folder)
-
-#### For training daily spatio-temporal attention model
-
-```
-bash att_daily_run.sh --base_url /path/to/SWE-Forecasting --env_name <your_choice_conda_att_env_name>
-```
-
-After training the spatio-temporal attention model, the representations from the model are further used to train the GP model in the output head and make predictions.
-
-```
-bash daily_foreswe_gp_run.sh --base_url /path/to/SWE-Forecasting --env_name <your_choice_conda_att_env_name>
-```
-
-
-#### For training weekly spatio-temporal attention model
+## Layout
 
 ```
-bash att_weekly_run.sh --base_url /path/to/SWE-Forecasting --env_name <your_choice_conda_att_env_name>
+fore_swe/ raw_gp/ transformer_ar/ other_comparing_models/   upstream ForeSWE source (model logic unchanged)
+data/                         upstream SNOTEL CSVs (632 MB, tracked upstream)
+experiments/                  every historical ForeSWE experiment (verbatim copy + path-only fixes)
+  original_daily/  original_weekly/  planA_stitching/  planB_24week/
+  sierra_subset/ (incl. sources recovered from transcripts)  domain_sensitivity/  bias_diagnosis/
+engineering_audit/            experiment history, rollout audit, first GPU profiling report
+  optimization/               precision + fused-AdamW study: 3 reports, results (JSON/CSV), figures, scripts
+foreswe_bench/                library: verbatim model extraction, data, precision modes, metrics, timing
+benchmarks/                   CLIs: python -m benchmarks.<name>
+tests/                        pytest: CPU unit + repo-hygiene tests, GPU regression tests (-m gpu)
+scripts/                      migration, venv, run dirs, checksums; scripts/slurm/ allocation + node workloads
+configs/external_paths.env    checkpoints, HF cache, external data (all overridable)
+docs/migration/               provenance, file manifests, checksums, checkpoint preservation plan
+docs/legacy/                  earlier ForeSWE design notes
 ```
 
-After training the spatio-temporal attention model, the representations from the model are further used to train the GP model in the output head and make a prediction.
+## Setup on Perlmutter
 
+Never run on a login node; everything executes inside an interactive allocation.
+
+```bash
+cd /global/u1/h/hyvchen/foreswe-gpu-optimization
+JOB=$(bash scripts/slurm/alloc.sh fsw_node1)                          # 1x A100-40GB, <= 4 h
+bash scripts/slurm/run.sh $JOB bash scripts/setup_venv.sh             # once: thin venv over pytorch/2.6.0
+bash scripts/slurm/run.sh $JOB python -m benchmarks.build_data_cache  # once: real-data tensor cache
+bash scripts/slurm/run.sh $JOB python -m pytest tests                 # CPU + GPU tests
+scancel $JOB
 ```
-bash weekly_foreswe_gp_run.sh --base_url /path/to/SWE-Forecasting --env_name <your_choice_conda_att_env_name>
+
+`fsw_env.sh` (sourced by `run.sh`) loads `pytorch/2.6.0`, activates the venv (sentence-transformers,
+gpytorch, hydroeval) and sets every path. New outputs go to `/pscratch/sd/h/hyvchen/foreswe-gpu-optimization`,
+never into the repo or a historical folder.
+
+## Reproducing the study
+
+```bash
+bash engineering_audit/optimization/scripts/reproduce_all.sh   # two allocations, all phases, figures
 ```
 
+or piece by piece (inside an allocation):
 
-### Output folder for predicted files (/outputs/predict/)
-All the prediced SWE values are stored as .pkl files and can be found here corresponding to a model.
+| Command | Measures |
+|---|---|
+| `python -m benchmarks.bench_one --exp E4 --infer --out r.json` | one config: event-timed phases, memory, inference |
+| `python -m benchmarks.bench_matrix --tag mytag --repeats 3` | E0–E5, fresh process per run, rotated order |
+| `python -m benchmarks.numerics_precision` | FP32/TF32/BF16 output, loss and gradient error vs FP32 and FP64 |
+| `python -m benchmarks.error_origin` | error per module and per op, split-GEMM emulation, optimizer absorption |
+| `python -m benchmarks.fused_adamw_study --free-running` | foreach vs fused AdamW: correctness, drift, timing |
+| `python -m benchmarks.convergence --exp E4 --steps 300` | matched-budget training on real data |
+| `python -m benchmarks.profile_config --exp E4` | kernel categories, Tensor-Core share, launches |
+| `python -m benchmarks.summarize_results && python -m benchmarks.make_figures` | final table + figures |
 
-### Output folder for actual files (/outputs/actual/)
-All the actual SWE values are stored as .pkl files and can be found here corresponding to a model.
+## Rerunning the original ForeSWE pipelines
 
-## Citation
+Historical launchers under `experiments/*/slurm` are kept for provenance; they reference the purged conda
+env `foreswe_repro_att`. To rerun an upstream script, give it an isolated run directory:
 
-If you use our idea in your research, please cite:
+```bash
+source fsw_env.sh
+RUN=$(bash scripts/make_run_dir.sh daily_rerun_01)
+BASE_URL=$RUN python -u fore_swe/forecasting_att_daily_model.py
+FSW_PLANB_ROOT=$RUN python -u experiments/planB_24week/planB_24week_att_model.py
+```
 
-Thapa, Krishu K., et al. "ForeSWE: Forecasting Snow-Water Equivalent with an Uncertainty-Aware Attention Model." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 40. No. 46. 2026.
+## Data, checkpoints, large artifacts
 
-
+None are in git. Locations, sizes, SHA-256 sums and a **pscratch preservation plan** (the six historical
+checkpoints are purge-eligible from about 2026-12-21) are in `docs/migration/MIGRATION_PROVENANCE.md`.

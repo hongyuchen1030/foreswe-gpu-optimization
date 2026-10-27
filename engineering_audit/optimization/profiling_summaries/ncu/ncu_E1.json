@@ -1,0 +1,137 @@
+{
+ "exp": "E1",
+ "kernels": [
+  {
+   "id": "0",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(Params)",
+   "duration_ns": 11680.0,
+   "sm_throughput_pct": 8.33,
+   "dram_throughput_pct": 0.41,
+   "tensor_pipe_active_pct": 2.48,
+   "fma_pipe_pct": 6.73,
+   "achieved_occupancy_pct": 6.28,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "1",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(Params)",
+   "duration_ns": 11648.0,
+   "sm_throughput_pct": 8.34,
+   "dram_throughput_pct": 7.89,
+   "tensor_pipe_active_pct": 2.48,
+   "fma_pipe_pct": 6.72,
+   "achieved_occupancy_pct": 6.24,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "2",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(Params)",
+   "duration_ns": 11616.0,
+   "sm_throughput_pct": 8.35,
+   "dram_throughput_pct": 8.28,
+   "tensor_pipe_active_pct": 2.47,
+   "fma_pipe_pct": 6.69,
+   "achieved_occupancy_pct": 6.21,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "3",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(Params)",
+   "duration_ns": 11744.0,
+   "sm_throughput_pct": 8.28,
+   "dram_throughput_pct": 7.29,
+   "tensor_pipe_active_pct": 2.47,
+   "fma_pipe_pct": 6.7,
+   "achieved_occupancy_pct": 6.29,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "4",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(Params)",
+   "duration_ns": 11840.0,
+   "sm_throughput_pct": 8.24,
+   "dram_throughput_pct": 7.63,
+   "tensor_pipe_active_pct": 2.44,
+   "fma_pipe_pct": 6.61,
+   "achieved_occupancy_pct": 6.11,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "5",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(Params)",
+   "duration_ns": 11808.0,
+   "sm_throughput_pct": 8.2,
+   "dram_throughput_pct": 7.31,
+   "tensor_pipe_active_pct": 2.43,
+   "fma_pipe_pct": 6.58,
+   "achieved_occupancy_pct": 6.08,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "6",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(Params)",
+   "duration_ns": 11712.0,
+   "sm_throughput_pct": 8.3,
+   "dram_throughput_pct": 9.05,
+   "tensor_pipe_active_pct": 2.47,
+   "fma_pipe_pct": 6.7,
+   "achieved_occupancy_pct": 6.21,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "7",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(Params)",
+   "duration_ns": 11552.0,
+   "sm_throughput_pct": 8.4,
+   "dram_throughput_pct": 8.65,
+   "tensor_pipe_active_pct": 2.48,
+   "fma_pipe_pct": 6.72,
+   "achieved_occupancy_pct": 6.27,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "8",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(Params)",
+   "duration_ns": 42720.0,
+   "sm_throughput_pct": 20.88,
+   "dram_throughput_pct": 12.05,
+   "tensor_pipe_active_pct": 74.29,
+   "fma_pipe_pct": 22.92,
+   "achieved_occupancy_pct": 6.24,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "9",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_tn_align4>(Params)",
+   "duration_ns": 297440.0,
+   "sm_throughput_pct": 77.68,
+   "dram_throughput_pct": 26.14,
+   "tensor_pipe_active_pct": 81.92,
+   "fma_pipe_pct": 24.21,
+   "achieved_occupancy_pct": 12.46,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "10",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(Params)",
+   "duration_ns": 42592.0,
+   "sm_throughput_pct": 20.92,
+   "dram_throughput_pct": 12.36,
+   "tensor_pipe_active_pct": 74.42,
+   "fma_pipe_pct": 22.97,
+   "achieved_occupancy_pct": 6.24,
+   "tensor_core_kernel_by_name": true
+  },
+  {
+   "id": "11",
+   "kernel": "void Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(Params)",
+   "duration_ns": 108832.0,
+   "sm_throughput_pct": 73.54,
+   "dram_throughput_pct": 37.39,
+   "tensor_pipe_active_pct": 84.86,
+   "fma_pipe_pct": 24.86,
+   "achieved_occupancy_pct": 6.19,
+   "tensor_core_kernel_by_name": true
+  }
+ ]
+}

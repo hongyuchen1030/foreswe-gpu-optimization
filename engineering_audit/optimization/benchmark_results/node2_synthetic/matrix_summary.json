@@ -1,0 +1,303 @@
+{
+ "tag": "node2_synthetic",
+ "data": "synthetic",
+ "repeats": 3,
+ "warmup": 10,
+ "iters": 40,
+ "summary": {
+  "E0": {
+   "exp": "E0",
+   "precision": "fp32",
+   "optimizer": "foreach",
+   "step_ms": {
+    "median": 147.64415952959098,
+    "mean": 148.34467773180222,
+    "std": 3.041872587049198,
+    "p10": 147.00061550247483,
+    "p90": 148.6614459892735,
+    "iqr": 0.895009987289086,
+    "min": 146.72589697875082,
+    "max": 168.83108695037663,
+    "n": 120
+   },
+   "step_ms_repeat_medians": [
+    147.25238448590972,
+    148.21743898210116,
+    147.39672996802256
+   ],
+   "forward_ms": 39.70150375366211,
+   "backward_ms": 72.573486328125,
+   "optimizer_ms": 27.073023796081543,
+   "prep_ms": 7.419392108917236,
+   "peak_allocated_gib": 9.105101108551025,
+   "peak_reserved_gib": 9.87890625,
+   "infer_forward_ms": 39.23200035095215,
+   "infer_step_ms": 46.136796998325735,
+   "infer_peak_allocated_gib": 7.888876438140869,
+   "env": {
+    "host": "nid003700",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_uuid": "GPU-1e5a629d-3408-9c1f-7605-2a847bd551cb",
+    "torch": "2.6.0",
+    "cuda_runtime": "12.4",
+    "driver": "580.178.04",
+    "slurm_job_id": "60335651",
+    "git_commit": "8dc85641e77c1a535a9651b3e1bd72f86b68bafd"
+   },
+   "hosts": [
+    "nid003700"
+   ],
+   "speedup_vs_E0": 1.0,
+   "speedup_vs_E0_repeat_range": [
+    1.0,
+    1.0
+   ],
+   "infer_speedup_vs_E0": 1.0
+  },
+  "E1": {
+   "exp": "E1",
+   "precision": "tf32",
+   "optimizer": "foreach",
+   "step_ms": {
+    "median": 69.308281497797,
+    "mean": 69.76331154777047,
+    "std": 2.2063615875043205,
+    "p10": 68.8877824053634,
+    "p90": 69.83515181345865,
+    "iqr": 0.5724505463149399,
+    "min": 68.64142999984324,
+    "max": 85.8805530006066,
+    "n": 120
+   },
+   "step_ms_repeat_medians": [
+    69.20152599923313,
+    69.62977501098067,
+    69.02691049617715
+   ],
+   "forward_ms": 13.261312007904053,
+   "backward_ms": 20.662736892700195,
+   "optimizer_ms": 27.065343856811523,
+   "prep_ms": 7.812608003616333,
+   "peak_allocated_gib": 9.105101108551025,
+   "peak_reserved_gib": 9.87890625,
+   "infer_forward_ms": 12.049920082092285,
+   "infer_step_ms": 19.828148477245122,
+   "infer_peak_allocated_gib": 7.888876438140869,
+   "env": {
+    "host": "nid003700",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_uuid": "GPU-1e5a629d-3408-9c1f-7605-2a847bd551cb",
+    "torch": "2.6.0",
+    "cuda_runtime": "12.4",
+    "driver": "580.178.04",
+    "slurm_job_id": "60335651",
+    "git_commit": "8dc85641e77c1a535a9651b3e1bd72f86b68bafd"
+   },
+   "hosts": [
+    "nid003700"
+   ],
+   "speedup_vs_E0": 2.130252782768592,
+   "speedup_vs_E0_repeat_range": [
+    2.1278777073144535,
+    2.1353516897759124
+   ],
+   "infer_speedup_vs_E0": 3.2557892569973053
+  },
+  "E2": {
+   "exp": "E2",
+   "precision": "bf16",
+   "optimizer": "foreach",
+   "step_ms": {
+    "median": 74.52972151804715,
+    "mean": 74.59251049197822,
+    "std": 0.7940868312425385,
+    "p10": 74.07959884149022,
+    "p90": 74.76057465537451,
+    "iqr": 0.3476862621027976,
+    "min": 73.57121899258345,
+    "max": 81.24064700677991,
+    "n": 120
+   },
+   "step_ms_repeat_medians": [
+    74.60077150608413,
+    74.49890949646942,
+    74.5191625028383
+   ],
+   "forward_ms": 16.903679847717285,
+   "backward_ms": 20.827808380126953,
+   "optimizer_ms": 28.328447341918945,
+   "prep_ms": 7.946239948272705,
+   "peak_allocated_gib": 9.134294509887695,
+   "peak_reserved_gib": 10.458984375,
+   "infer_forward_ms": 14.21721601486206,
+   "infer_step_ms": 21.677319542504847,
+   "infer_peak_allocated_gib": 8.332451820373535,
+   "env": {
+    "host": "nid003700",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_uuid": "GPU-1e5a629d-3408-9c1f-7605-2a847bd551cb",
+    "torch": "2.6.0",
+    "cuda_runtime": "12.4",
+    "driver": "580.178.04",
+    "slurm_job_id": "60335651",
+    "git_commit": "8dc85641e77c1a535a9651b3e1bd72f86b68bafd"
+   },
+   "hosts": [
+    "nid003700"
+   ],
+   "speedup_vs_E0": 1.9810104817557836,
+   "speedup_vs_E0_repeat_range": [
+    1.9738721398330368,
+    1.989524947195708
+   ],
+   "infer_speedup_vs_E0": 2.7594713557099166
+  },
+  "E3": {
+   "exp": "E3",
+   "precision": "fp32",
+   "optimizer": "fused",
+   "step_ms": {
+    "median": 130.64238301012665,
+    "mean": 130.77525263409674,
+    "std": 1.917862826980603,
+    "p10": 129.7682293690741,
+    "p90": 130.9964180807583,
+    "iqr": 0.9268157591577619,
+    "min": 129.4937760103494,
+    "max": 148.0120990308933,
+    "n": 120
+   },
+   "step_ms_repeat_medians": [
+    130.78078598482534,
+    129.84718452207744,
+    130.81521698040888
+   ],
+   "forward_ms": 39.723520278930664,
+   "backward_ms": 72.75492858886719,
+   "optimizer_ms": 9.480192184448242,
+   "prep_ms": 8.249855995178223,
+   "peak_allocated_gib": 8.498210430145264,
+   "peak_reserved_gib": 9.02734375,
+   "infer_forward_ms": 39.26272010803223,
+   "infer_step_ms": 47.30858298717067,
+   "infer_peak_allocated_gib": 7.889005661010742,
+   "env": {
+    "host": "nid003700",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_uuid": "GPU-1e5a629d-3408-9c1f-7605-2a847bd551cb",
+    "torch": "2.6.0",
+    "cuda_runtime": "12.4",
+    "driver": "580.178.04",
+    "slurm_job_id": "60335651",
+    "git_commit": "8dc85641e77c1a535a9651b3e1bd72f86b68bafd"
+   },
+   "hosts": [
+    "nid003700"
+   ],
+   "speedup_vs_E0": 1.1301398223740793,
+   "speedup_vs_E0_repeat_range": [
+    1.125948153446605,
+    1.1414759551979372
+   ],
+   "infer_speedup_vs_E0": 0.9992175845943544
+  },
+  "E4": {
+   "exp": "E4",
+   "precision": "tf32",
+   "optimizer": "fused",
+   "step_ms": {
+    "median": 52.12498499895446,
+    "mean": 52.18239571986487,
+    "std": 0.9124855689147241,
+    "p10": 51.66937412577681,
+    "p90": 52.35176310525276,
+    "iqr": 0.4539472283795476,
+    "min": 51.381747995037585,
+    "max": 58.36537800496444,
+    "n": 120
+   },
+   "step_ms_repeat_medians": [
+    52.2469510033261,
+    52.16842351364903,
+    51.689133018953726
+   ],
+   "forward_ms": 13.37395191192627,
+   "backward_ms": 20.723584175109863,
+   "optimizer_ms": 9.487871646881104,
+   "prep_ms": 8.05068826675415,
+   "peak_allocated_gib": 8.498210430145264,
+   "peak_reserved_gib": 9.02734375,
+   "infer_forward_ms": 12.083712100982666,
+   "infer_step_ms": 19.947765016695485,
+   "infer_peak_allocated_gib": 7.889005661010742,
+   "env": {
+    "host": "nid003700",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_uuid": "GPU-1e5a629d-3408-9c1f-7605-2a847bd551cb",
+    "torch": "2.6.0",
+    "cuda_runtime": "12.4",
+    "driver": "580.178.04",
+    "slurm_job_id": "60335651",
+    "git_commit": "8dc85641e77c1a535a9651b3e1bd72f86b68bafd"
+   },
+   "hosts": [
+    "nid003700"
+   ],
+   "speedup_vs_E0": 2.832502676644463,
+   "speedup_vs_E0_repeat_range": [
+    2.8183919187271895,
+    2.851599966166469
+   ],
+   "infer_speedup_vs_E0": 3.246684464433884
+  },
+  "E5": {
+   "exp": "E5",
+   "precision": "bf16",
+   "optimizer": "fused",
+   "step_ms": {
+    "median": 56.450192496413365,
+    "mean": 56.79352376561534,
+    "std": 2.0844950612303395,
+    "p10": 56.06246779789217,
+    "p90": 56.685353885404766,
+    "iqr": 0.296517027891241,
+    "min": 55.63895800150931,
+    "max": 74.5119089842774,
+    "n": 120
+   },
+   "step_ms_repeat_medians": [
+    56.40116849099286,
+    56.299956515431404,
+    56.58495600800961
+   ],
+   "forward_ms": 16.881664276123047,
+   "backward_ms": 20.578944206237793,
+   "optimizer_ms": 10.529791831970215,
+   "prep_ms": 7.6912641525268555,
+   "peak_allocated_gib": 9.134301662445068,
+   "peak_reserved_gib": 9.525390625,
+   "infer_forward_ms": 14.214655876159668,
+   "infer_step_ms": 21.87236849567853,
+   "infer_peak_allocated_gib": 8.331604480743408,
+   "env": {
+    "host": "nid003700",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_uuid": "GPU-1e5a629d-3408-9c1f-7605-2a847bd551cb",
+    "torch": "2.6.0",
+    "cuda_runtime": "12.4",
+    "driver": "580.178.04",
+    "slurm_job_id": "60335651",
+    "git_commit": "8dc85641e77c1a535a9651b3e1bd72f86b68bafd"
+   },
+   "hosts": [
+    "nid003700"
+   ],
+   "speedup_vs_E0": 2.615476635247466,
+   "speedup_vs_E0_repeat_range": [
+    2.604874870754667,
+    2.6326386049956514
+   ],
+   "infer_speedup_vs_E0": 2.7599683518720077
+  }
+ }
+}
