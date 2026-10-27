@@ -55,8 +55,9 @@ def main():
     ap.add_argument("--iters", type=int, default=40)
     ap.add_argument("--profile", action="store_true")
     ap.add_argument("--nvtx", action="store_true")
-    ap.add_argument("--attn", default="eager", choices=["eager", "fused"],
-                    help="geo-attention core: production eager or fused Triton prototype")
+    ap.add_argument("--attn", default="eager",
+                    choices=["eager", "fused", "fused_v2_accurate", "fused_v2_fast"],
+                    help="geo-attention core: production eager, original fused prototype, or v2 presets")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
     log = setup_logging()
@@ -70,6 +71,9 @@ def main():
     if a.attn == "fused":
         from foreswe_bench.geo_attention import patch_model
         patch_model(model, "fused")
+    elif a.attn.startswith("fused_v2"):
+        from foreswe_bench import geo_attention_v2
+        geo_attention_v2.patch_model(model, a.attn.replace("fused_v2_", "") + "_experimental")
     mem0 = torch.cuda.memory_allocated()
     seq = ds.train_indices[: 1 + a.warmup + a.iters]
 

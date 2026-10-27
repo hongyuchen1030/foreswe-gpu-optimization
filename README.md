@@ -44,7 +44,10 @@ Details: `engineering_audit/optimization/cuda_graphs/COMPILE_AND_CUDAGRAPH_REPOR
   Inductor removes about 150 kernels by fusion.
 - Fused geo-attention (Triton prototype, `foreswe_bench/geo_attention.py`, opt-in): FP32-accurate
   forward and 9× less memory, but 3.4× slower than eager, and the attention core is only 14–18 % of the step.
-  See `engineering_audit/optimization/fused_attention/`.
+  Tuned v2 (`foreswe_bench/geo_attention_v2.py`): no D-padding, 1.97× faster than the prototype; the
+  saturated-softmax backward error is fixed (FP32 dQ/dK at parity with eager on real layers). It is still
+  2.6× slower than eager, so production attention stays eager.
+  See `engineering_audit/optimization/fused_attention/KERNEL_TUNING_FINAL_REPORT.md`.
 - Station angularity uses Kahan's robust `2·atan2` formula (`pairwise_vector_angle` in
   `fore_swe/extended_dl_forecasting.py`).
 

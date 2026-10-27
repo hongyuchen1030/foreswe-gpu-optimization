@@ -1,0 +1,4473 @@
+{
+ "env": {
+  "host": "nid001493",
+  "slurm_job_id": "60350319",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "1fcf9cf4c7e5da79a016a1fc6611b39adfac726a",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-70c1c726-c096-812d-1a7a-1c36c37658b1"
+ },
+ "best_v2_cfg": {
+  "fwd": [
+   32,
+   64,
+   4,
+   2
+  ],
+  "rows": [
+   32,
+   32,
+   4,
+   1
+  ],
+  "cols": [
+   32,
+   32,
+   8,
+   2
+  ]
+ },
+ "sweep": [
+  {
+   "kernel": "fwd",
+   "cfg": [
+    16,
+    32,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09926787595069786,
+   "fwd_ms": 0.6721599996089935,
+   "bwd_ms": 1.4199680089950562,
+   "fwd_bwd_ms": 1.8715839982032776,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 196,
+     "n_spills": 0,
+     "shared_bytes": 36864,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    16,
+    32,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09921832371177094,
+   "fwd_ms": 0.5066719949245453,
+   "bwd_ms": 1.4985119700431824,
+   "fwd_bwd_ms": 1.7128639817237854,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 153,
+     "n_spills": 0,
+     "shared_bytes": 67840,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    16,
+    32,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.1139898681400223,
+   "fwd_ms": 0.717488020658493,
+   "bwd_ms": 1.4757120013237,
+   "fwd_bwd_ms": 1.8930079936981201,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 128,
+     "n_spills": 2,
+     "shared_bytes": 36864,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.25,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    16,
+    32,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.1139898681400223,
+   "fwd_ms": 0.6129119992256165,
+   "bwd_ms": 1.5084159970283508,
+   "fwd_bwd_ms": 1.7846400141716003,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 105,
+     "n_spills": 0,
+     "shared_bytes": 67840,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.25,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    16,
+    64,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.098755188640578,
+   "fwd_ms": 0.6670719981193542,
+   "bwd_ms": 1.4965600371360779,
+   "fwd_bwd_ms": 1.846623957157135,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 61440,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 64,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    16,
+    64,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09878327705547293,
+   "fwd_ms": 0.5076479911804199,
+   "bwd_ms": 1.4794560074806213,
+   "fwd_bwd_ms": 1.7154880166053772,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 213,
+     "n_spills": 0,
+     "shared_bytes": 123136,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 64,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    16,
+    64,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.098755188640578,
+   "fwd_ms": 0.6827680170536041,
+   "bwd_ms": 1.4834240078926086,
+   "fwd_bwd_ms": 1.874559998512268,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 150,
+     "n_spills": 0,
+     "shared_bytes": 61440,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 64,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    16,
+    64,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09878327705547293,
+   "fwd_ms": 0.5518239736557007,
+   "bwd_ms": 1.5035360455513,
+   "fwd_bwd_ms": 1.723680019378662,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 157,
+     "n_spills": 0,
+     "shared_bytes": 123392,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 64,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    32,
+    32,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09926787595069786,
+   "fwd_ms": 0.6116639971733093,
+   "bwd_ms": 1.5106399655342102,
+   "fwd_bwd_ms": 1.789840042591095,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 49152,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    32,
+    32,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09921832371177094,
+   "fwd_ms": 0.5327360033988953,
+   "bwd_ms": 1.4984639883041382,
+   "fwd_bwd_ms": 1.7077440023422241,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 202,
+     "n_spills": 0,
+     "shared_bytes": 86528,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    32,
+    32,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09926787595069786,
+   "fwd_ms": 0.7492000162601471,
+   "bwd_ms": 1.4919840097427368,
+   "fwd_bwd_ms": 1.9256960153579712,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 6,
+     "shared_bytes": 49152,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    32,
+    32,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09921832371177094,
+   "fwd_ms": 0.5693120062351227,
+   "bwd_ms": 1.4767360091209412,
+   "fwd_bwd_ms": 1.7671359777450562,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 182,
+     "n_spills": 0,
+     "shared_bytes": 86528,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    32,
+    64,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09871679542446817,
+   "fwd_ms": 0.5744960010051727,
+   "bwd_ms": 1.497327983379364,
+   "fwd_bwd_ms": 1.7455520033836365,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    32,
+    64,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.4413120001554489,
+   "bwd_ms": 1.477232038974762,
+   "fwd_bwd_ms": 1.6480160355567932,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    32,
+    64,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.098755188640578,
+   "fwd_ms": 0.5828000009059906,
+   "bwd_ms": 1.474303960800171,
+   "fwd_bwd_ms": 1.7571679949760437,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 10,
+     "shared_bytes": 73728,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    32,
+    64,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09878327705547293,
+   "fwd_ms": 0.46353600919246674,
+   "bwd_ms": 1.4932480454444885,
+   "fwd_bwd_ms": 1.6945440173149109,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 187,
+     "n_spills": 0,
+     "shared_bytes": 148480,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    64,
+    32,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09924584762435168,
+   "fwd_ms": 0.4598719924688339,
+   "bwd_ms": 1.4565120339393616,
+   "fwd_bwd_ms": 1.6900960206985474,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 64,
+     "block_n": 32,
+     "grid": [
+      8,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    64,
+    32,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09924767679836655,
+   "fwd_ms": 0.4578239917755127,
+   "bwd_ms": 1.4620319604873657,
+   "fwd_bwd_ms": 1.6965439915657043,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 6,
+     "shared_bytes": 123904,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 64,
+     "block_n": 32,
+     "grid": [
+      8,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    64,
+    32,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09926787595069786,
+   "fwd_ms": 0.6113120019435883,
+   "bwd_ms": 1.460976004600525,
+   "fwd_bwd_ms": 1.8155999779701233,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 73728,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 64,
+     "block_n": 32,
+     "grid": [
+      8,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    64,
+    32,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09921832371177094,
+   "fwd_ms": 0.5485759973526001,
+   "bwd_ms": 1.4626880288124084,
+   "fwd_bwd_ms": 1.7279680371284485,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 123904,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 64,
+     "block_n": 32,
+     "grid": [
+      8,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    64,
+    64,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09871679542446817,
+   "fwd_ms": 0.6699199974536896,
+   "bwd_ms": 1.461903989315033,
+   "fwd_bwd_ms": 1.857632040977478,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 62,
+     "shared_bytes": 98304,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 64,
+     "block_n": 64,
+     "grid": [
+      8,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    64,
+    64,
+    4,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 196608, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    64,
+    64,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09871679542446817,
+   "fwd_ms": 0.622111976146698,
+   "bwd_ms": 1.4758399724960327,
+   "fwd_bwd_ms": 1.816096007823944,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 24,
+     "shared_bytes": 98304,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 64,
+     "block_n": 64,
+     "grid": [
+      8,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "fwd",
+   "cfg": [
+    64,
+    64,
+    8,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 197632, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    16,
+    32,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.4436799883842468,
+   "bwd_ms": 1.470736026763916,
+   "fwd_bwd_ms": 1.651520013809204,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 142,
+     "n_spills": 0,
+     "shared_bytes": 49152,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 3,
+     "theoretical_occupancy": 0.1875,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 194,
+     "n_spills": 0,
+     "shared_bytes": 49152,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    16,
+    32,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.42180800437927246,
+   "bwd_ms": 1.4142400026321411,
+   "fwd_bwd_ms": 1.6522719860076904,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 76032,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 159,
+     "n_spills": 0,
+     "shared_bytes": 104704,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    16,
+    32,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09955636805551323,
+   "fwd_ms": 0.4230559915304184,
+   "bwd_ms": 1.8295999765396118,
+   "fwd_bwd_ms": 2.0221599340438843,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 144,
+     "n_spills": 0,
+     "shared_bytes": 49152,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 184,
+     "n_spills": 0,
+     "shared_bytes": 49152,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    16,
+    32,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09955636805551323,
+   "fwd_ms": 0.4374080002307892,
+   "bwd_ms": 1.6605280041694641,
+   "fwd_bwd_ms": 1.863327980041504,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 136,
+     "n_spills": 0,
+     "shared_bytes": 75904,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 128,
+     "n_spills": 4,
+     "shared_bytes": 104576,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    16,
+    64,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09873000068369871,
+   "fwd_ms": 0.4224959909915924,
+   "bwd_ms": 1.3750079870224,
+   "fwd_bwd_ms": 1.5562240481376648,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 200,
+     "n_spills": 0,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 64,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 64,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    16,
+    64,
+    4,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 184320, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    16,
+    64,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09873000068369871,
+   "fwd_ms": 0.4223040044307709,
+   "bwd_ms": 1.426192045211792,
+   "fwd_bwd_ms": 1.6786399483680725,
+   "fwd_bwd_peak_extra_mib": 8.19384765625,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 128,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 64,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.25,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 187,
+     "n_spills": 0,
+     "shared_bytes": 73728,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 64,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    16,
+    64,
+    8,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 184576, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    32,
+    32,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.4200640022754669,
+   "bwd_ms": 1.3547360301017761,
+   "fwd_bwd_ms": 1.5608959794044495,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    32,
+    32,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.4535360038280487,
+   "bwd_ms": 1.4003360271453857,
+   "fwd_bwd_ms": 1.5937280058860779,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 193,
+     "n_spills": 0,
+     "shared_bytes": 102912,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 135168,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    32,
+    32,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.436831995844841,
+   "bwd_ms": 1.6609439849853516,
+   "fwd_bwd_ms": 1.8721920251846313,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 73728,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 12,
+     "shared_bytes": 73728,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    32,
+    32,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.4217280000448227,
+   "bwd_ms": 1.4778719544410706,
+   "fwd_bwd_ms": 1.6810240149497986,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 189,
+     "n_spills": 0,
+     "shared_bytes": 102912,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 198,
+     "n_spills": 0,
+     "shared_bytes": 135680,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    32,
+    64,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09872296176114581,
+   "fwd_ms": 0.42630399763584137,
+   "bwd_ms": 1.445039987564087,
+   "fwd_bwd_ms": 1.640351951122284,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 98304,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 18,
+     "shared_bytes": 98304,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    32,
+    64,
+    4,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 221696, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    32,
+    64,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09873000068369871,
+   "fwd_ms": 0.42347200214862823,
+   "bwd_ms": 1.3855199813842773,
+   "fwd_bwd_ms": 1.6164640188217163,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 98304,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 14,
+     "shared_bytes": 98304,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "rows",
+   "cfg": [
+    32,
+    64,
+    8,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 221184, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    16,
+    16,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874392447243681,
+   "fwd_ms": 0.43091200292110443,
+   "bwd_ms": 1.4396160244941711,
+   "fwd_bwd_ms": 1.66457599401474,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 228,
+     "n_spills": 0,
+     "shared_bytes": 61440,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 16,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    16,
+    16,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.42420800030231476,
+   "bwd_ms": 1.3891200423240662,
+   "fwd_bwd_ms": 1.604367971420288,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 168,
+     "n_spills": 2,
+     "shared_bytes": 75776,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 16,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    16,
+    16,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874497527355726,
+   "fwd_ms": 0.42825600504875183,
+   "bwd_ms": 1.7114880084991455,
+   "fwd_bwd_ms": 1.8709920048713684,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 170,
+     "n_spills": 0,
+     "shared_bytes": 61440,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 16,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    16,
+    16,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874497527355726,
+   "fwd_ms": 0.44868800044059753,
+   "bwd_ms": 1.452463984489441,
+   "fwd_bwd_ms": 1.664351999759674,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 128,
+     "n_spills": 0,
+     "shared_bytes": 75776,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 16,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.25,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    16,
+    32,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874392447243681,
+   "fwd_ms": 0.42212800681591034,
+   "bwd_ms": 1.3167040348052979,
+   "fwd_bwd_ms": 1.5137760043144226,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    16,
+    32,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.42081598937511444,
+   "bwd_ms": 1.3276960253715515,
+   "fwd_bwd_ms": 1.558847963809967,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    16,
+    32,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874392447243681,
+   "fwd_ms": 0.4265599995851517,
+   "bwd_ms": 1.4379519820213318,
+   "fwd_bwd_ms": 1.6753279566764832,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 202,
+     "n_spills": 0,
+     "shared_bytes": 73728,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    16,
+    32,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.42056000232696533,
+   "bwd_ms": 1.3682239651679993,
+   "fwd_bwd_ms": 1.6039520502090454,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 178,
+     "n_spills": 0,
+     "shared_bytes": 102400,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 16,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    32,
+    16,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874392447243681,
+   "fwd_ms": 0.44046400487422943,
+   "bwd_ms": 1.536911964416504,
+   "fwd_bwd_ms": 1.7435200214385986,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 16,
+     "shared_bytes": 110592,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 16,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    32,
+    16,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.424575999379158,
+   "bwd_ms": 1.4871999621391296,
+   "fwd_bwd_ms": 1.8044959902763367,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 126976,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 16,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    32,
+    16,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874392447243681,
+   "fwd_ms": 0.4244159907102585,
+   "bwd_ms": 1.4611039757728577,
+   "fwd_bwd_ms": 1.6717600226402283,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 110592,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 16,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    32,
+    16,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.4307520091533661,
+   "bwd_ms": 1.4915039539337158,
+   "fwd_bwd_ms": 1.7249119877815247,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 188,
+     "n_spills": 0,
+     "shared_bytes": 126976,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 16,
+     "grid": [
+      32,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    32,
+    32,
+    4,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874392447243681,
+   "fwd_ms": 0.4467040002346039,
+   "bwd_ms": 1.3661919832229614,
+   "fwd_bwd_ms": 1.6004319787025452,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 32,
+     "shared_bytes": 122880,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    32,
+    32,
+    4,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.4235199987888336,
+   "bwd_ms": 1.323743999004364,
+   "fwd_bwd_ms": 1.550815999507904,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 10,
+     "shared_bytes": 155648,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    32,
+    32,
+    8,
+    1
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.09874392447243681,
+   "fwd_ms": 0.4440319985151291,
+   "bwd_ms": 1.3109920024871826,
+   "fwd_bwd_ms": 1.5187680125236511,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 16,
+     "shared_bytes": 122880,
+     "num_warps": 8,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    32,
+    32,
+    8,
+    2
+   ],
+   "correct": true,
+   "worst_err_ratio": 0.0987456836246858,
+   "fwd_ms": 0.4227519929409027,
+   "bwd_ms": 1.269487977027893,
+   "fwd_bwd_ms": 1.480672001838684,
+   "fwd_bwd_peak_extra_mib": 8.19091796875,
+   "kernels_fwd": 7,
+   "kernels_fwd_bwd": 18,
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 255,
+     "n_spills": 8,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 4,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 255,
+     "n_spills": 2,
+     "shared_bytes": 155648,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    }
+   }
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    64,
+    16,
+    4,
+    1
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 208896, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    64,
+    16,
+    4,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 229376, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    64,
+    16,
+    8,
+    1
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 208896, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    64,
+    16,
+    8,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 229376, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    64,
+    32,
+    4,
+    1
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 221184, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    64,
+    32,
+    4,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 182272, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    64,
+    32,
+    8,
+    1
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 221184, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  },
+  {
+   "kernel": "cols",
+   "cfg": [
+    64,
+    32,
+    8,
+    2
+   ],
+   "error": "OutOfResources: out of resource: shared memory, Required: 182272, Hardware limit: 166912. Reducing block sizes or `num_stages` may help."
+  }
+ ],
+ "final": {
+  "eager": {
+   "tf32": {
+    "fwd_ms": 0.36953601241111755,
+    "bwd_ms": 0.6663680076599121,
+    "fwd_bwd_ms": 1.0875519514083862,
+    "fwd_bwd_peak_extra_mib": 75.99853515625,
+    "kernels_fwd": 16,
+    "kernels_fwd_bwd": 40
+   },
+   "fp32": {
+    "fwd_ms": 0.5828480124473572,
+    "bwd_ms": 1.152735948562622,
+    "fwd_bwd_ms": 1.6599359512329102,
+    "fwd_bwd_peak_extra_mib": 75.99853515625,
+    "kernels_fwd": 16,
+    "kernels_fwd_bwd": 40
+   }
+  },
+  "inductor": {
+   "tf32": {
+    "fwd_ms": 0.218176007270813,
+    "bwd_ms": 0.5463680028915405,
+    "fwd_bwd_ms": 0.8846079707145691,
+    "fwd_bwd_peak_extra_mib": 58.12353515625,
+    "kernels_fwd": 5,
+    "kernels_fwd_bwd": 20
+   },
+   "fp32": {
+    "fwd_ms": 0.45097601413726807,
+    "bwd_ms": 0.9899839758872986,
+    "fwd_bwd_ms": 1.34607994556427,
+    "fwd_bwd_peak_extra_mib": 58.12353515625,
+    "kernels_fwd": 5,
+    "kernels_fwd_bwd": 20
+   }
+  },
+  "triton_v1_padded": {
+   "tf32": {
+    "fwd_ms": 0.8999360203742981,
+    "bwd_ms": 2.458911895751953,
+    "fwd_bwd_ms": 3.101408004760742,
+    "fwd_bwd_peak_extra_mib": 8.16259765625,
+    "kernels_fwd": 7,
+    "kernels_fwd_bwd": 17
+   },
+   "fp32": {
+    "fwd_ms": 2.8984320163726807,
+    "bwd_ms": 24.49977684020996,
+    "fwd_bwd_ms": 26.632448196411133,
+    "fwd_bwd_peak_extra_mib": 8.16259765625,
+    "kernels_fwd": 7,
+    "kernels_fwd_bwd": 17
+   }
+  },
+  "triton_v2_tuned": {
+   "tf32": {
+    "fwd_ms": 0.4338879883289337,
+    "bwd_ms": 1.3324799537658691,
+    "fwd_bwd_ms": 1.5461440086364746,
+    "fwd_bwd_peak_extra_mib": 8.19091796875,
+    "kernels_fwd": 7,
+    "kernels_fwd_bwd": 18
+   },
+   "fp32": {
+    "fwd_ms": 1.4326399564743042,
+    "bwd_ms": 17.605600357055664,
+    "fwd_bwd_ms": 18.535072326660156,
+    "fwd_bwd_peak_extra_mib": 8.19091796875,
+    "kernels_fwd": 7,
+    "kernels_fwd_bwd": 18
+   },
+   "launch_info": {
+    "_fwd_kernel": {
+     "n_regs": 215,
+     "n_spills": 0,
+     "shared_bytes": 147968,
+     "num_warps": 4,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 64,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.0625,
+     "limiter": "shared"
+    },
+    "_bwd_rows_kernel_mode1": {
+     "n_regs": 255,
+     "n_spills": 134,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_rows_kernel_mode2": {
+     "n_regs": 255,
+     "n_spills": 200,
+     "shared_bytes": 73728,
+     "num_warps": 4,
+     "num_stages": 1,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 2,
+     "theoretical_occupancy": 0.125,
+     "limiter": "registers"
+    },
+    "_bwd_cols_kernel": {
+     "n_regs": 32,
+     "n_spills": 1120,
+     "shared_bytes": 116736,
+     "num_warps": 8,
+     "num_stages": 2,
+     "block_m": 32,
+     "block_n": 32,
+     "grid": [
+      16,
+      16
+     ],
+     "blocks_per_sm": 1,
+     "theoretical_occupancy": 0.125,
+     "limiter": "shared"
+    }
+   }
+  }
+ }
+}

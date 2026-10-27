@@ -1,0 +1,166 @@
+{
+ "cfg": "G4",
+ "attn": "fused_v2_fast",
+ "config": {
+  "kind": "compile_graph",
+  "mode": "default",
+  "scope": "model"
+ },
+ "data": "real",
+ "env": {
+  "host": "nid001493",
+  "slurm_job_id": "60350319",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "1fcf9cf4c7e5da79a016a1fc6611b39adfac726a",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-70c1c726-c096-812d-1a7a-1c36c37658b1"
+ },
+ "warmup": 10,
+ "iters": 40,
+ "setup_s": 12.032644730992615,
+ "setup_inner_s": 11.999436907004565,
+ "dynamo_counters": {
+  "frames": {
+   "total": 14,
+   "ok": 13
+  },
+  "inline_call": {
+   "builtin: add [<class 'torch._dynamo.variables.misc.GetAttrVariable'>, <class 'torch._dynamo.variables.constant.ConstantVariable'>] False": 6
+  },
+  "stats": {
+   "calls_captured": 181,
+   "unique_graphs": 7
+  },
+  "inductor": {
+   "pattern_matcher_count": 252,
+   "pattern_matcher_nodes": 316,
+   "extern_calls": 118,
+   "fxgraph_cache_hit": 11,
+   "fxgraph_cache_miss": 1,
+   "triton_bundler_save_kernel": 7,
+   "benchmarking.TritonBenchmarker.benchmark_gpu": 8,
+   "benchmarking.TritonBenchmarker.triton_do_bench": 1
+  },
+  "aot_autograd": {
+   "total": 7,
+   "ok": 7
+  },
+  "unimplemented": {
+   "builtin: add [<class 'torch._dynamo.variables.misc.GetAttrVariable'>, <class 'torch._dynamo.variables.constant.ConstantVariable'>] False": 1
+  },
+  "graph_break": {
+   "builtin: add [<class 'torch._dynamo.variables.misc.GetAttrVariable'>, <class 'torch._dynamo.variables.constant.ConstantVariable'>] False": 5
+  }
+ },
+ "inductor_cache_dir": "/pscratch/sd/h/hyvchen/tmp/torchinductor_hyvchen",
+ "mem_after_setup_gib": 7.544710636138916,
+ "peak_during_setup_gib": 10.125073909759521,
+ "model_gib": 2.735107898712158,
+ "gpu_region": {
+  "event_ms": {
+   "median": 40.130144119262695,
+   "mean": 40.131120681762695,
+   "std": 0.0393657601022533,
+   "p10": 40.084846115112306,
+   "p90": 40.17133979797363,
+   "iqr": 0.047432899475097656,
+   "min": 40.034942626953125,
+   "max": 40.231040954589844,
+   "n": 40
+  },
+  "wall_ms": {
+   "median": 40.15106550650671,
+   "mean": 40.15079767559655,
+   "std": 0.039222563815490705,
+   "p10": 40.103194781113416,
+   "p90": 40.191359707387164,
+   "iqr": 0.047429013648070395,
+   "min": 40.05598701769486,
+   "max": 40.24955100612715,
+   "n": 40
+  },
+  "peak_allocated_gib": 7.544710636138916,
+  "peak_reserved_gib": 11.380859375
+ },
+ "phases_ms": {
+  "replay_fwd_bwd_opt": {
+   "median": 40.13635063171387,
+   "mean": 40.13337230682373,
+   "std": 0.03664491052296545,
+   "p10": 40.099805450439455,
+   "p90": 40.169520950317384,
+   "iqr": 0.0433502197265625,
+   "min": 40.0467529296875,
+   "max": 40.2022705078125,
+   "n": 20
+  }
+ },
+ "end_to_end": {
+  "step_wall_ms": {
+   "median": 48.304023483069614,
+   "mean": 48.30903030378977,
+   "std": 0.06003868241244431,
+   "p10": 48.24846488190815,
+   "p90": 48.36298910086043,
+   "iqr": 0.0666960550006479,
+   "min": 48.22561197215691,
+   "max": 48.52205503266305,
+   "n": 40
+  },
+  "prep_ms": {
+   "median": 8.020976066589355,
+   "mean": 8.028172039985657,
+   "std": 0.033761006921438234,
+   "p10": 8.0122784614563,
+   "p90": 8.039475631713866,
+   "iqr": 0.011087894439697266,
+   "min": 8.009984016418457,
+   "max": 8.227744102478027,
+   "n": 40
+  },
+  "step_after_prep_ms": {
+   "median": 40.25036811828613,
+   "mean": 40.25518636703491,
+   "std": 0.04608310081198386,
+   "p10": 40.200093841552736,
+   "p90": 40.30822601318359,
+   "iqr": 0.06609630584716797,
+   "min": 40.18531036376953,
+   "max": 40.389854431152344,
+   "n": 40
+  },
+  "throughput_issue_dates_per_s": 20.70220921349329,
+  "peak_allocated_gib": 7.9253339767456055,
+  "peak_reserved_gib": 11.380859375,
+  "losses_first_last": [
+   208831.671875,
+   211161.671875
+  ],
+  "loss_finite": true
+ },
+ "inference": {
+  "forward_ms": {
+   "median": 12.665247917175293,
+   "mean": 12.668011212348938,
+   "std": 0.012611243912096193,
+   "p10": 12.657471752166748,
+   "p90": 12.679759883880616,
+   "iqr": 0.008935928344726562,
+   "min": 12.644543647766113,
+   "max": 12.71020793914795,
+   "n": 40
+  },
+  "first_call_s": 5.450239092984702
+ }
+}

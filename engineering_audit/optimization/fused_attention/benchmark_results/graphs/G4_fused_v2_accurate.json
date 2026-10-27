@@ -1,0 +1,165 @@
+{
+ "cfg": "G4",
+ "attn": "fused_v2_accurate",
+ "config": {
+  "kind": "compile_graph",
+  "mode": "default",
+  "scope": "model"
+ },
+ "data": "real",
+ "env": {
+  "host": "nid001493",
+  "slurm_job_id": "60350319",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "1fcf9cf4c7e5da79a016a1fc6611b39adfac726a",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-70c1c726-c096-812d-1a7a-1c36c37658b1"
+ },
+ "warmup": 10,
+ "iters": 40,
+ "setup_s": 28.113754915015306,
+ "setup_inner_s": 27.97473539301427,
+ "dynamo_counters": {
+  "frames": {
+   "total": 14,
+   "ok": 13
+  },
+  "inline_call": {
+   "builtin: add [<class 'torch._dynamo.variables.misc.GetAttrVariable'>, <class 'torch._dynamo.variables.constant.ConstantVariable'>] False": 6
+  },
+  "stats": {
+   "calls_captured": 181,
+   "unique_graphs": 7
+  },
+  "inductor": {
+   "pattern_matcher_count": 252,
+   "pattern_matcher_nodes": 316,
+   "fxgraph_cache_miss": 12,
+   "extern_calls": 118,
+   "triton_bundler_save_kernel": 1393,
+   "benchmarking.TritonBenchmarker.benchmark_gpu": 131,
+   "benchmarking.TritonBenchmarker.triton_do_bench": 1
+  },
+  "aot_autograd": {
+   "total": 7,
+   "ok": 7
+  },
+  "unimplemented": {
+   "builtin: add [<class 'torch._dynamo.variables.misc.GetAttrVariable'>, <class 'torch._dynamo.variables.constant.ConstantVariable'>] False": 1
+  },
+  "graph_break": {
+   "builtin: add [<class 'torch._dynamo.variables.misc.GetAttrVariable'>, <class 'torch._dynamo.variables.constant.ConstantVariable'>] False": 5
+  }
+ },
+ "inductor_cache_dir": "/pscratch/sd/h/hyvchen/tmp/torchinductor_hyvchen",
+ "mem_after_setup_gib": 7.545565128326416,
+ "peak_during_setup_gib": 10.125928401947021,
+ "model_gib": 2.735107898712158,
+ "gpu_region": {
+  "event_ms": {
+   "median": 45.909406661987305,
+   "mean": 45.91552028656006,
+   "std": 0.05895723835995001,
+   "p10": 45.85208396911621,
+   "p90": 45.978850555419925,
+   "iqr": 0.06826210021972656,
+   "min": 45.73283386230469,
+   "max": 46.0445442199707,
+   "n": 40
+  },
+  "wall_ms": {
+   "median": 45.928842009743676,
+   "mean": 45.93553630402312,
+   "std": 0.058794300386915826,
+   "p10": 45.87188575533219,
+   "p90": 45.99877841537818,
+   "iqr": 0.06779796967748553,
+   "min": 45.75153399491683,
+   "max": 46.063576999586076,
+   "n": 40
+  },
+  "peak_allocated_gib": 7.545565128326416,
+  "peak_reserved_gib": 11.521484375
+ },
+ "phases_ms": {
+  "replay_fwd_bwd_opt": {
+   "median": 45.90932846069336,
+   "mean": 45.90796318054199,
+   "std": 0.058419207630653905,
+   "p10": 45.84723663330078,
+   "p90": 45.9746898651123,
+   "iqr": 0.10110282897949219,
+   "min": 45.77552032470703,
+   "max": 45.985023498535156,
+   "n": 20
+  }
+ },
+ "end_to_end": {
+  "step_wall_ms": {
+   "median": 54.03944352292456,
+   "mean": 54.04334395134356,
+   "std": 0.05630391060725565,
+   "p10": 53.967595793074,
+   "p90": 54.118332907091826,
+   "iqr": 0.08323071233462542,
+   "min": 53.9446150069125,
+   "max": 54.158919025212526,
+   "n": 40
+  },
+  "prep_ms": {
+   "median": 7.979935884475708,
+   "mean": 7.978202366828919,
+   "std": 0.010499382539267898,
+   "p10": 7.964060735702515,
+   "p90": 7.989446496963501,
+   "iqr": 0.012664318084716797,
+   "min": 7.947455883026123,
+   "max": 7.993663787841797,
+   "n": 40
+  },
+  "step_after_prep_ms": {
+   "median": 46.03097724914551,
+   "mean": 46.0397144317627,
+   "std": 0.05592289621055883,
+   "p10": 45.96445770263672,
+   "p90": 46.10568389892578,
+   "iqr": 0.08861732482910156,
+   "min": 45.93939208984375,
+   "max": 46.15977478027344,
+   "n": 40
+  },
+  "throughput_issue_dates_per_s": 18.505001806241417,
+  "peak_allocated_gib": 7.9261884689331055,
+  "peak_reserved_gib": 11.521484375,
+  "losses_first_last": [
+   208831.59375,
+   211161.53125
+  ],
+  "loss_finite": true
+ },
+ "inference": {
+  "forward_ms": {
+   "median": 11.282912254333496,
+   "mean": 11.28639359474182,
+   "std": 0.021357242356388882,
+   "p10": 11.278908443450927,
+   "p90": 11.288652992248535,
+   "iqr": 0.005184173583984375,
+   "min": 11.2740478515625,
+   "max": 11.415167808532715,
+   "n": 40
+  },
+  "first_call_s": 10.02960783499293
+ }
+}

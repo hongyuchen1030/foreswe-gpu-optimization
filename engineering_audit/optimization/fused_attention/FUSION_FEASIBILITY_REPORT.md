@@ -96,6 +96,13 @@ The remaining suspects are the online-softmax statistics (m₁, l₁) on extreme
 P₁ at saturation; they are not yet isolated. The defect is real but numerically small against the
 gradients that matter; it must be fixed before any production use.
 
+> **Update (resolved).** The defect was isolated and fixed in `foreswe_bench/geo_attention_v2.py`. The first
+> divergence is the backward's recomputed P₁: FMA contraction of `acc/√d − m₁` left the peak at 1 + 2.4e-4 on
+> saturated rows. The δ₂ shortcut explains the scalar-gradient error, not dQ, which is consistent with the test
+> above. FP32 dQ/dK error is now at parity with eager on real layers 0 and 7. See
+> [SATURATED_SOFTMAX_BACKWARD_DEBUG.md](SATURATED_SOFTMAX_BACKWARD_DEBUG.md) and
+> [KERNEL_TUNING_FINAL_REPORT.md](KERNEL_TUNING_FINAL_REPORT.md). The original prototype is unchanged.
+
 ### Performance
 
 The tile sweep at the production shape (TF32, fwd / fwd+bwd ms) shows the design is shared-memory bound:

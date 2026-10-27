@@ -1,0 +1,156 @@
+{
+ "cfg": "G4",
+ "attn": "eager",
+ "config": {
+  "kind": "compile_graph",
+  "mode": "default",
+  "scope": "model"
+ },
+ "data": "real",
+ "env": {
+  "host": "nid001493",
+  "slurm_job_id": "60350319",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "1fcf9cf4c7e5da79a016a1fc6611b39adfac726a",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-70c1c726-c096-812d-1a7a-1c36c37658b1"
+ },
+ "warmup": 10,
+ "iters": 40,
+ "setup_s": 15.641358835971914,
+ "setup_inner_s": 15.608352419978473,
+ "dynamo_counters": {
+  "frames": {
+   "total": 1,
+   "ok": 1
+  },
+  "inline_call": {},
+  "stats": {
+   "calls_captured": 522,
+   "unique_graphs": 1
+  },
+  "inductor": {
+   "pattern_matcher_count": 918,
+   "pattern_matcher_nodes": 1141,
+   "extern_calls": 349,
+   "fxgraph_cache_hit": 2,
+   "benchmarking.TritonBenchmarker.benchmark_gpu": 14,
+   "benchmarking.TritonBenchmarker.triton_do_bench": 1
+  },
+  "aot_autograd": {
+   "total": 1,
+   "ok": 1
+  }
+ },
+ "inductor_cache_dir": "/pscratch/sd/h/hyvchen/tmp/torchinductor_hyvchen",
+ "mem_after_setup_gib": 7.543741703033447,
+ "peak_during_setup_gib": 9.893664836883545,
+ "model_gib": 2.735107898712158,
+ "gpu_region": {
+  "event_ms": {
+   "median": 32.769887924194336,
+   "mean": 32.73250408172608,
+   "std": 0.10982797032108392,
+   "p10": 32.59106216430664,
+   "p90": 32.85320129394531,
+   "iqr": 0.1976156234741211,
+   "min": 32.548065185546875,
+   "max": 32.90291213989258,
+   "n": 40
+  },
+  "wall_ms": {
+   "median": 32.789134536869824,
+   "mean": 32.75341875560116,
+   "std": 0.10930941393542233,
+   "p10": 32.610456086695194,
+   "p90": 32.87371280603111,
+   "iqr": 0.19615099881775677,
+   "min": 32.567006011959165,
+   "max": 32.92173100635409,
+   "n": 40
+  },
+  "peak_allocated_gib": 7.543741703033447,
+  "peak_reserved_gib": 11.59765625
+ },
+ "phases_ms": {
+  "replay_fwd_bwd_opt": {
+   "median": 32.838287353515625,
+   "mean": 32.81681747436524,
+   "std": 0.08644512007222831,
+   "p10": 32.694567108154295,
+   "p90": 32.899772262573244,
+   "iqr": 0.06337642669677734,
+   "min": 32.59328079223633,
+   "max": 32.90707015991211,
+   "n": 20
+  }
+ },
+ "end_to_end": {
+  "step_wall_ms": {
+   "median": 41.14342152024619,
+   "mean": 41.19321089674486,
+   "std": 0.2106482806350511,
+   "p10": 41.11080851289444,
+   "p90": 41.253123607020825,
+   "iqr": 0.043480293243192136,
+   "min": 41.04586801258847,
+   "max": 42.37133701099083,
+   "n": 40
+  },
+  "prep_ms": {
+   "median": 8.388015747070312,
+   "mean": 8.40986716747284,
+   "std": 0.14891987864060935,
+   "p10": 8.363017177581787,
+   "p90": 8.413190269470215,
+   "iqr": 0.028712034225463867,
+   "min": 8.339520454406738,
+   "max": 9.318431854248047,
+   "n": 40
+  },
+  "step_after_prep_ms": {
+   "median": 32.732351303100586,
+   "mean": 32.75681085586548,
+   "std": 0.09390261429834533,
+   "p10": 32.69969787597656,
+   "p90": 32.856453323364256,
+   "iqr": 0.05148029327392578,
+   "min": 32.62739181518555,
+   "max": 33.12739181518555,
+   "n": 40
+  },
+  "throughput_issue_dates_per_s": 24.305222148525296,
+  "peak_allocated_gib": 7.924365043640137,
+  "peak_reserved_gib": 11.59765625,
+  "losses_first_last": [
+   208830.921875,
+   211160.171875
+  ],
+  "loss_finite": true
+ },
+ "inference": {
+  "forward_ms": {
+   "median": 8.368911743164062,
+   "mean": 8.3489271402359,
+   "std": 0.036507443480807145,
+   "p10": 8.296911907196044,
+   "p90": 8.379180526733398,
+   "iqr": 0.0729522705078125,
+   "min": 8.29315185546875,
+   "max": 8.407808303833008,
+   "n": 40
+  },
+  "first_call_s": 5.224725231004413
+ }
+}
