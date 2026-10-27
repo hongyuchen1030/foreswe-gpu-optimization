@@ -1,0 +1,2268 @@
+track,start_us,dur_us,category,name
+gpu_kernel,280.075,824.766,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,1146.728,8.032,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,1289.384,822.75,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,2152.646,8.032,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,2290.182,822.621,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,3153.059,6.976,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,3291.907,46.272,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,3377.923,6.432,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,5607.741,6.464,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,7451.321,6.4,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,7834.232,8.032,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,7874.327,2.88,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluCUDAKerne"
+gpu_kernel,7936.759,4.8,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,8010.615,15.104,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4>(T1::P
+gpu_kernel,8100.695,28.864,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x128_32x6_tn_align4>(T1::P
+gpu_kernel,8215.191,4.288,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,8253.943,9.855,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,8346.198,3.456,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,8381.942,8.704,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,8468.694,3.456,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,8503.67,10.496,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,8588.886,3.456,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,8624.118,10.72,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,8708.949,3.424,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,8743.637,10.304,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,8827.541,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,8862.741,10.208,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,8947.029,3.296,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,8982.197,10.752,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,9066.868,3.168,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,9101.62,10.464,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,9185.492,3.2,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,9220.212,10.592,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,9304.34,3.296,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,9339.06,9.92,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,9423.252,3.04,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,9458.323,8.896,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,9542.227,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,9577.075,10.304,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,9661.715,3.296,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,9696.307,10.752,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,9740.179,41.984,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,9798.067,23.52,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,9826.259,64.927,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,9892.114,7.328,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,9980.786,32.736,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,10043.634,233.823,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_tn_align4>(T1::
+gpu_kernel,10278.577,86.816,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,10366.513,5.792,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,10373.393,31.264,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,10405.681,3.008,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)4, (bool)0, (bool"
+gpu_kernel,10409.745,31.872,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,10442.577,32.128,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,10476.241,6.72,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,10489.617,4.544,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,10651.216,8.48,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,10690.16,2.88,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluCUDAKerne"
+gpu_kernel,10744.336,4.8,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,10814.448,15.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4>(T1::P
+gpu_kernel,10900.752,28.928,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x128_32x6_tn_align4>(T1::P
+gpu_kernel,11000.016,4.544,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11036.688,12.607,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,11125.871,3.52,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11161.743,10.752,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,11246.671,3.424,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11280.975,10.624,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,11364.783,3.584,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11399.695,12.832,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,11485.134,3.104,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11520.078,10.432,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,11604.59,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11639.95,10.432,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,11725.134,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11760.142,10.336,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,11843.725,3.04,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11878.925,9.632,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,11963.917,3.104,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,11998.829,8.704,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,12082.765,3.2,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,12118.157,10.112,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,12213.037,3.04,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,12248.748,10.176,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,12335.308,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,12371.276,10.496,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,12455.34,3.136,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,12489.708,10.976,GEMM (SIMT FP32),ampere_sgemm_128x32_tn
+gpu_kernel,12532.844,41.824,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,12589.036,23.264,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,12617.58,65.151,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,12683.883,7.36,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,12767.403,32.736,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12828.715,233.087,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_tn_align4>(T1::
+gpu_kernel,13062.986,86.528,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,13150.57,5.792,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,13157.322,31.232,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,13189.642,3.04,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)4, (bool)0, (bool"
+gpu_kernel,13193.738,31.456,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,13226.25,32.032,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13259.786,6.336,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,13270.154,5.024,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,13432.458,8.575,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,13469.129,2.88,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluCUDAKerne"
+gpu_kernel,13522.729,4.832,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,13591.433,15.104,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4>(T1::P
+gpu_kernel,13677.097,29.056,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x128_32x6_tn_align4>(T1::P
+gpu_kernel,13773.897,3.808,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,13809.353,7.968,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,13887.624,3.552,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,13921.576,7.776,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,13996.136,3.52,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14029.288,7.584,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14103.464,3.712,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14136.328,7.648,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14210.216,2.976,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14242.855,7.648,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14317.223,2.944,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14350.311,7.552,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14425.415,2.944,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14458.151,7.584,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14532.039,2.976,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14565.159,7.552,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14638.246,3.04,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14671.59,7.552,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14746.182,2.976,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14779.782,7.52,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14854.63,2.944,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14888.102,7.52,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,14963.11,3.04,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,14995.942,7.776,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,15069.701,2.976,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,15102.085,7.584,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,15140.069,39.072,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,15190.085,23.424,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,15214.405,65.344,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,15280.837,7.328,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,15341.157,32.8,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15392.549,233.439,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_tn_align4>(T1::
+gpu_kernel,15627.012,86.592,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,15714.596,5.728,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,15721.316,31.52,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,15753.892,3.008,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)4, (bool)0, (bool"
+gpu_kernel,15757.828,31.456,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,15790.244,32.095,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15824.035,6.4,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,15831.427,4.768,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,15837.187,9.408,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,15899.811,84.704,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15985.507,84.128,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,16070.595,84.32,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,16156.067,34.624,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,16191.715,14.144,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,16206.787,15.231,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,16223.17,4.0,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,16235.586,2.976,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,16253.154,2.56,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,16272.706,3.36,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,16286.338,2.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,16300.61,2.496,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,16324.866,25.632,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,16351.586,4.768,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,16358.786,50.208,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,16410.146,4.64,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,16415.81,50.432,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,16467.298,18.24,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,16486.53,33.92,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,16521.538,8.896,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,16585.826,85.567,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,16672.929,8.608,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,16682.625,8.704,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,16715.745,11.616,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,16781.665,82.752,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,16865.569,4.8,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::la"
+gpu_kernel,16877.441,58.624,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,16937.121,8.928,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,16954.753,8.288,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,16998.369,11.712,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,17069.728,85.632,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,17156.448,84.032,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,17241.6,83.904,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,17327.168,32.96,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,17361.216,14.56,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,17376.704,15.232,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,17392.96,4.384,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,17398.432,3.008,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,17406.592,2.527,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,17424.287,3.52,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,17438.847,2.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,17451.679,2.464,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,17475.551,26.56,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,17503.199,5.024,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,17509.183,49.824,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,17560.159,4.736,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,17565.951,49.28,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,17616.351,18.016,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,17635.391,31.232,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,17667.647,8.8,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,17729.983,85.951,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,17817.31,8.544,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,17826.974,8.16,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,17856.67,11.776,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,17922.206,82.912,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,18006.206,5.024,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::la"
+gpu_kernel,18013.886,58.272,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,18073.278,8.832,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,18090.686,8.384,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,18133.15,11.584,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,18203.294,85.119,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,18289.405,83.904,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,18374.429,84.032,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,18460.221,33.088,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,18494.461,13.632,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,18509.117,15.2,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,18525.309,4.256,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,18530.589,2.976,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,18545.181,2.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,18564.093,3.52,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,18577.597,2.72,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,18592.093,2.496,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,18615.004,26.08,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,18642.044,4.992,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,18648.892,50.752,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,18700.764,4.672,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,18706.428,49.344,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,18756.796,18.56,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,18776.476,34.368,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,18811.932,8.896,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,18872.316,86.144,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,18960.06,8.736,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,18969.788,8.064,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,18999.995,11.648,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,19065.371,82.752,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,19149.115,5.152,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::la"
+gpu_kernel,19159.003,58.112,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,19218.299,8.992,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,19235.291,8.032,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,19276.987,11.52,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,19345.851,85.439,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,19432.25,84.096,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,19517.306,84.288,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,19603.29,34.208,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,19638.554,14.048,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,19653.626,15.2,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,19669.914,4.256,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,19675.194,3.008,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,19679.77,2.56,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,19697.978,3.392,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,19711.098,2.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,19725.626,2.464,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,19748.186,26.4,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,19775.578,4.768,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,19782.138,49.439,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,19832.697,4.672,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,19838.425,50.112,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,19889.625,17.856,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,19908.633,31.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,19940.825,8.832,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,20005.689,85.696,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,20092.921,8.736,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,20102.617,8.192,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,20130.809,11.808,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,20207.832,82.784,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,20291.736,5.184,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::la"
+gpu_kernel,20305.624,58.496,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,20365.144,9.056,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,20383.032,8.16,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,20427.832,11.84,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,20498.584,85.472,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,20585.08,84.127,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,20670.199,84.096,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,20755.991,32.352,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,20789.335,13.44,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,20803.767,14.784,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,20819.703,4.0,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,20824.695,2.816,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,20836.087,2.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,20854.231,3.392,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,20867.351,2.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,20881.463,2.496,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,20904.279,26.016,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,20931.287,4.736,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,20937.399,49.44,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,20987.798,4.576,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,20993.526,49.248,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,21043.926,18.56,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,21063.446,33.664,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,21098.166,8.928,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,21160.182,86.24,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,21247.798,8.512,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,21257.27,8.064,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,21286.55,11.744,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,21351.894,82.783,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,21435.861,4.896,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::la"
+gpu_kernel,21446.485,58.368,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,21505.877,8.928,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,21522.389,8.32,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,21565.045,11.808,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,21635.381,84.736,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,21721.205,84.447,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,21806.708,84.192,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,21892.532,32.512,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,21925.972,13.312,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,21940.372,14.688,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,21956.372,4.416,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,21961.876,3.008,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,21975.316,2.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,21993.748,3.488,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,22006.836,2.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,22021.524,2.496,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,22044.564,25.824,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,22071.444,4.768,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,22077.908,49.6,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,22128.564,4.768,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,22134.324,49.631,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,22184.979,18.464,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,22204.531,30.624,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,22236.307,8.832,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,22302.035,84.96,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,22388.371,8.48,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,22397.811,8.128,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,22426.067,11.744,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,22490.067,82.56,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,22573.651,4.735,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::la"
+gpu_kernel,22582.482,57.984,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,22641.586,8.896,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,22658.354,8.0,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,22699.506,11.52,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,22770.162,84.96,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,22856.082,83.808,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,22940.914,83.903,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,23026.417,32.544,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,23060.017,14.112,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,23075.217,15.168,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,23091.473,4.32,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,23096.689,2.784,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,23105.585,2.56,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,23123.281,3.488,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,23136.561,2.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,23150.705,2.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,23173.009,26.08,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,23200.113,4.896,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,23206.417,50.112,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,23257.457,4.672,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,23263.153,49.824,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,23313.873,18.176,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,23333.105,31.072,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,23365.233,8.895,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,23429.392,85.76,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,23516.592,8.96,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,23526.544,7.84,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,23556.528,11.68,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,23621.392,82.56,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,23705.104,4.704,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::la"
+gpu_kernel,23715.504,58.367,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,23774.991,9.024,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,23791.087,7.968,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,23833.135,11.648,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,23904.079,85.792,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,23990.799,83.904,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,24075.759,84.608,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,24162.127,33.887,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,24197.102,14.72,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,24212.782,15.456,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,24229.294,4.0,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,24237.006,3.008,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,24254.734,2.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,24272.59,3.456,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOn"
+gpu_kernel,24285.646,2.72,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::reciprocal_ke"
+gpu_kernel,24300.238,2.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,24323.054,26.176,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,24350.286,4.8,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,24356.75,49.952,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,24407.694,4.64,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,24413.422,50.56,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,24464.942,17.76,softmax,"void <unnamed>::softmax_warp_forward<float, float, float, (int)9, (bool)0, (bool"
+gpu_kernel,24483.822,33.664,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,24518.446,8.928,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,24582.893,85.472,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,24669.773,8.8,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,24679.661,7.808,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,24710.093,11.68,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,24775.181,82.72,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,24858.957,5.44,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::la"
+gpu_kernel,24867.117,58.528,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,24926.829,8.992,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,24942.701,7.904,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,24983.052,11.424,layer_norm,"void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, "
+gpu_kernel,25009.548,10.048,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,25075.148,51.136,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x128_32x6_tn_align4>(T1::P
+gpu_kernel,25127.404,3.744,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluCUDAKerne"
+gpu_kernel,25149.772,5.664,other elementwise,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int,"
+gpu_kernel,25206.956,8.384,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4>(T1::Pa
+gpu_kernel,25216.396,3.328,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,25243.34,2.368,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluCUDAKerne"
+gpu_kernel,25290.124,8.096,GEMM (SIMT FP32),ampere_sgemm_32x32_sliced1x4_tn
+gpu_kernel,25317.42,2.08,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluCUDAKerne"
+gpu_kernel,25364.043,5.12,GEMM (SIMT FP32),ampere_sgemm_32x128_tn
+gpu_kernel,25459.819,3.488,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,25474.699,5.536,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,26037.13,1.44,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,26303.657,1.728,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,26330.377,3.136,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,26445.609,5.056,GEMM (SIMT FP32),ampere_sgemm_128x32_nn
+gpu_kernel,26497.929,4.544,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,26506.505,2.144,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26546.505,7.647,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,26645.8,2.144,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluBackwardC"
+gpu_kernel,26726.216,4.096,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,26772.52,4.96,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x10_nt_align4>(T1::P
+gpu_kernel,26781.576,2.912,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26819.208,4.576,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,26916.04,2.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluBackwardC"
+gpu_kernel,26995.239,7.616,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,27041.799,7.36,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x128_32x3_nt_align4>(T1::P
+gpu_kernel,27050.951,3.52,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27088.711,10.88,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,27192.391,3.456,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,27234.183,4.096,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluBackwardC"
+gpu_kernel,27312.999,33.984,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nn_align4>(T1::P
+gpu_kernel,27360.102,35.84,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_16x3_nt_align4>(T1::
+gpu_kernel,27397.478,13.568,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,27533.99,17.12,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,27552.23,7.584,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,27597.99,7.104,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,27656.998,67.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,27725.702,65.279,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,27791.973,25.312,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,27818.245,10.816,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,27830.021,58.4,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,27890.085,65.536,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,27956.677,20.0,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,27977.637,16.416,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,27995.173,15.52,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,28011.781,7.264,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,28020.517,6.368,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,28072.293,83.903,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,28157.86,98.112,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,28256.964,24.704,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,28282.756,38.432,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,28322.276,33.984,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,28357.22,31.168,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,28389.348,37.408,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,28427.716,14.176,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,28442.98,6.848,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,28454.18,7.808,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,28472.932,8.384,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,28498.052,6.528,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,28519.844,7.104,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,28560.291,20.864,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,28582.179,38.208,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,28624.547,13.6,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,28641.539,35.808,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,28678.467,36.576,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,28716.163,15.36,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,28733.027,30.976,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,28764.931,32.512,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,28833.795,11.52,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,28888.547,82.591,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,28973.058,96.928,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29071.042,24.512,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,29096.674,15.904,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,29113.538,88.672,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,29203.202,100.0,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,29304.162,9.344,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,29314.498,15.904,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,29331.362,13.631,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,29345.953,83.36,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,29430.945,96.768,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29528.865,25.184,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,29555.041,16.064,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,29572.001,15.456,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,29588.385,7.328,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,29596.865,6.72,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,29607.937,67.168,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,29676.865,65.727,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29743.584,25.024,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,29769.632,10.336,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,29781.024,58.144,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,29840.672,65.6,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29907.2,17.856,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,29926.112,16.096,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,29943.328,15.488,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,29959.808,7.232,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,29968.0,6.4,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,29975.552,82.752,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,30059.84,96.991,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30157.855,24.384,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,30183.327,41.472,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,30225.791,34.08,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,30261.279,30.88,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,30293.087,37.664,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,30331.839,13.952,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,30346.879,6.848,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,30358.111,7.456,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,30366.687,8.288,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,30375.967,6.496,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,30386.815,6.72,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,30417.151,20.704,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,30439.007,38.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,30481.887,13.216,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,30497.055,35.583,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,30533.63,35.872,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,30570.462,15.872,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,30587.934,31.264,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,30620.318,32.256,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,30691.23,11.52,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,30746.142,83.232,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,30831.006,96.383,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30928.381,24.416,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,30953.917,15.936,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,30970.941,88.448,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,31060.381,99.296,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,31160.733,9.44,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,31171.325,16.256,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,31188.605,13.76,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,31203.485,83.232,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,31288.413,96.959,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,31386.46,24.704,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,31412.284,16.128,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,31429.34,15.552,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,31446.012,7.232,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,31455.1,6.464,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,31466.204,66.656,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,31534.46,65.856,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,31601.34,25.44,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,31627.868,11.008,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,31639.868,58.4,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,31699.676,65.727,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,31766.331,17.888,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,31785.371,16.032,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,31802.491,15.072,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,31818.587,7.36,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,31827.067,6.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,31834.523,83.232,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,31919.419,96.48,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,32016.987,24.832,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,32042.779,41.44,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,32085.339,33.856,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,32120.218,31.776,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,32153.082,36.864,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,32191.098,14.24,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,32206.874,6.848,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,32218.362,7.808,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,32227.258,8.32,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,32236.602,6.56,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,32247.45,7.072,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,32255.642,20.736,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,32277.498,38.304,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,32320.154,13.408,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,32334.618,35.84,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,32371.386,36.608,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,32408.986,15.296,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,32425.242,31.264,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,32457.562,35.072,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,32526.521,11.488,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,32580.857,82.4,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,32665.081,96.672,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,32762.841,25.28,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,32789.145,15.744,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,32805.817,88.32,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,32895.161,99.935,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,32996.152,9.472,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,33006.744,16.224,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,33024.088,13.472,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,33038.584,83.36,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,33123.672,96.96,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,33221.656,24.928,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,33247.704,15.776,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,33264.6,15.328,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,33281.048,7.232,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,33289.304,6.432,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,33299.992,67.167,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,33368.791,65.792,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,33435.511,25.504,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,33461.975,10.72,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,33473.687,58.4,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,33533.623,65.632,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,33600.247,18.432,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,33619.799,16.064,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,33637.015,15.168,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,33653.175,7.136,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,33661.239,6.24,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,33668.471,83.455,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,33753.686,97.088,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,33852.054,24.896,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,33878.07,38.016,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,33917.366,33.728,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,33952.214,31.68,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,33984.886,37.504,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,34023.35,14.24,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,34038.518,6.816,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,34049.494,7.712,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,34058.134,8.352,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,34068.086,6.592,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,34079.03,7.104,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,34087.254,20.352,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,34108.597,38.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,34152.085,13.632,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,34166.677,35.872,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,34203.477,36.64,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,34241.013,15.616,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,34257.621,31.584,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,34290.197,35.904,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,34340.597,11.488,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,34395.957,82.912,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,34480.629,96.191,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,34577.844,24.576,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,34603.476,15.616,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,34620.18,88.768,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,34709.908,99.616,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,34810.644,9.504,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,34821.204,16.0,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,34838.196,13.44,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,34852.724,83.423,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,34937.843,96.544,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,35035.379,24.896,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,35061.299,15.616,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,35077.907,15.392,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,35094.387,7.296,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,35102.643,6.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,35113.395,67.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,35182.163,65.696,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,35248.947,25.504,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,35275.539,10.368,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,35286.963,58.687,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,35347.186,65.536,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,35413.874,18.208,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,35433.042,15.808,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,35449.842,16.256,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,35467.218,7.2,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,35475.346,6.464,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,35482.834,83.296,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,35567.794,96.64,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,35665.49,24.864,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,35691.378,41.823,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,35734.321,33.6,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,35768.913,31.008,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,35800.881,37.344,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,35839.345,14.048,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,35854.481,6.848,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,35865.617,7.712,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,35874.353,8.384,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,35883.729,6.528,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,35894.481,7.104,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,35902.545,20.448,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,35924.017,38.4,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,35966.577,13.536,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,35981.105,35.392,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,36017.489,36.416,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,36054.865,16.192,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,36072.049,31.199,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,36104.208,35.648,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,36167.504,11.552,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,36233.296,82.88,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,36317.776,96.32,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,36415.056,24.096,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,36440.176,16.032,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,36457.168,89.119,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,36547.343,100.352,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,36648.655,9.472,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,36659.215,15.936,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,36676.175,13.504,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,36690.735,83.328,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,36775.727,96.288,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,36872.975,24.671,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,36898.766,15.904,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,36915.63,15.584,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,36932.206,7.232,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,36940.43,6.304,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,36950.926,67.648,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,37020.366,65.536,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,37086.99,24.832,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,37112.846,10.752,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,37124.622,58.016,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,37184.334,65.536,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,37250.83,18.592,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,37270.478,16.0,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,37287.566,15.455,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,37303.917,7.424,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,37312.365,6.752,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,37320.205,82.784,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,37404.717,96.448,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,37502.221,25.216,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,37528.493,38.912,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,37568.557,33.888,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,37603.469,31.552,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,37636.109,37.248,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,37674.477,13.983,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,37689.548,6.752,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,37700.556,7.808,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,37709.356,8.64,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,37718.988,6.464,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,37730.06,7.136,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,37738.252,20.544,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,37759.852,39.232,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,37803.596,14.304,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,37818.924,35.264,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,37855.372,36.48,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,37892.972,15.872,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,37909.868,31.808,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,37942.732,36.064,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,37984.844,11.456,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,38045.516,82.719,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,38130.027,96.768,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,38227.787,25.088,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,38253.835,16.128,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,38270.955,88.352,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,38360.331,100.128,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,38461.547,9.632,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,38472.267,15.999,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,38489.354,14.08,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,38504.554,83.264,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,38589.482,96.512,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,38687.146,25.184,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,38713.322,15.808,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,38730.25,14.944,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,38746.122,7.392,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,38755.242,6.432,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,38766.026,66.944,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,38834.634,66.111,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,38901.705,25.376,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,38928.073,10.304,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,38939.465,58.144,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,38999.241,65.472,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,39065.673,18.432,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,39085.193,15.968,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,39102.185,15.04,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,39118.345,7.072,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,39126.505,6.464,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,39133.929,82.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,39218.377,96.767,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,39316.232,24.96,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,39342.376,38.496,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,39381.8,34.016,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,39416.84,31.2,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,39449.0,37.568,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,39487.496,13.632,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,39502.856,6.976,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,39514.184,7.808,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,39523.08,8.384,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,39532.456,6.56,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,39543.272,7.104,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,39551.336,20.608,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,39573.032,38.528,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,39616.264,13.856,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,39631.272,35.52,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,39667.848,36.927,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,39705.831,15.52,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,39722.375,30.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,39754.343,35.136,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,39814.375,11.552,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,39869.127,82.688,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,39953.447,96.768,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,40051.399,24.927,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,40077.478,16.0,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,40094.598,88.704,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,40184.454,99.584,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,40285.03,9.28,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,40295.302,16.128,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,40312.454,13.376,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,40326.886,83.296,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,40411.942,97.023,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,40510.085,25.056,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,40536.165,15.968,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,40553.125,15.584,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,40569.797,7.232,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,40578.021,6.304,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,40588.421,66.976,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,40657.061,66.048,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,40724.101,24.992,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,40750.149,10.24,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,40761.541,58.4,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,40821.509,65.663,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,40888.132,18.016,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,40907.236,15.552,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,40923.844,15.648,layer_norm,"void at::native::<unnamed>::layer_norm_grad_input_kernel_vectorized<float, float"
+gpu_kernel,40940.58,7.52,other elementwise,"void at::native::<unnamed>::GammaBetaBackwardCUDAKernel_32x32<float, float>(long"
+gpu_kernel,40949.124,9.184,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,40959.3,7.136,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,40967.396,83.808,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,41052.9,96.896,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,41150.884,25.088,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,41176.964,38.688,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,41216.772,33.728,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,41251.62,31.263,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,41283.875,37.248,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,41322.083,13.984,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,41337.219,6.784,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,41348.963,7.488,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,41357.411,8.224,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,41366.723,6.56,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,41377.603,7.104,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,41385.859,20.864,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,41408.323,38.656,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,41451.139,13.568,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,41465.859,35.808,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,41502.595,36.384,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)9, (bool)0, (boo"
+gpu_kernel,41539.971,15.424,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor"
+gpu_kernel,41556.419,31.776,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,41589.283,32.864,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,41645.155,11.36,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,41700.45,83.52,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,41785.602,96.128,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,41882.882,24.96,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,41908.802,15.68,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,41925.506,89.152,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,42015.746,99.327,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,42116.161,9.536,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,42126.817,16.0,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,42143.969,13.536,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,42158.529,83.552,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,42243.809,96.64,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,42341.473,24.48,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,42367.105,15.872,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,42383.905,21.952,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,42406.977,20.128,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,42428.001,12.864,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,42442.017,29.823,GEMM (SIMT FP32),"void gemmk1_kernel<int, float, (int)256, (int)5, (bool)0, (bool)0, (bool)1, (boo"
+gpu_kernel,42472.8,31.328,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,42505.184,2.688,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,42508.992,3.04,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)4, (bool)0, (boo"
+gpu_kernel,42523.648,53.312,GEMM (SIMT FP32),"void magma_sgemmEx_kernel<float, float, float, (bool)0, (bool)1, (int)6, (int)4,"
+gpu_kernel,42577.952,36.992,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,42616.064,3.328,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,42633.184,45.504,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,42694.336,34.784,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,42772.48,36.416,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,42809.984,147.007,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,42958.079,111.68,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,43070.815,88.16,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,43159.999,216.607,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x256_32x3_nn_align4>(T1::
+gpu_kernel,43381.182,242.464,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nt_align4>(T1::
+gpu_kernel,43628.606,58.911,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,43688.637,22.624,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,43712.349,20.0,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,43733.501,12.8,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,43747.261,2.848,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,43751.069,14.24,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,43766.301,8.288,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,43775.709,38.08,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,43814.845,4.544,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,43820.509,7.232,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,43828.829,3.104,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,43832.893,11.936,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,43845.917,3.552,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,43850.557,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,43858.397,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,43862.461,13.376,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,43876.861,3.584,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,43881.469,6.816,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,43889.405,2.912,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,43893.469,13.76,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,43908.221,3.776,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,43913.117,6.816,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,43920.957,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,43924.829,14.048,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,43939.837,2.976,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,43943.805,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,43951.773,2.912,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,43955.837,13.376,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,43970.237,2.976,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,43974.141,6.784,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,43981.885,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,43998.429,14.112,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,44061.372,2.976,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,44086.172,6.784,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,44094.108,2.912,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,44115.356,14.272,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,44185.692,2.944,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,44211.772,6.752,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,44219.644,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,44242.428,13.728,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,44306.588,2.944,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,44331.452,6.976,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,44339.484,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,44360.732,13.792,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,44423.612,2.944,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,44448.443,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,44456.251,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,44477.499,14.24,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,44539.899,2.944,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,44564.539,6.912,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,44572.443,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,44593.563,14.816,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,44655.611,2.976,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,44680.411,7.072,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,44688.539,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,44708.827,14.4,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,44783.835,2.944,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,44810.331,7.008,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,44818.331,2.944,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,44849.018,13.024,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,44941.53,21.728,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x5_nt_align4>(T1::
+gpu_kernel,44965.21,11.712,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,45047.45,12.32,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,45060.762,4.512,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,45080.762,14.048,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nt_align4>(T1::P
+gpu_kernel,45102.714,12.032,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,45161.434,2.976,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,45185.594,3.744,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluBackwardC"
+gpu_kernel,45230.426,6.944,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,45238.458,2.815,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,45258.393,14.08,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,45380.825,21.76,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,45407.513,19.936,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,45430.009,12.352,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,45512.505,29.28,GEMM (SIMT FP32),"void gemmk1_kernel<int, float, (int)256, (int)5, (bool)0, (bool)0, (bool)1, (boo"
+gpu_kernel,45542.937,31.52,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,45575.993,2.816,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,45584.697,3.008,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)4, (bool)0, (boo"
+gpu_kernel,45623.993,53.567,GEMM (SIMT FP32),"void magma_sgemmEx_kernel<float, float, float, (bool)0, (bool)1, (int)6, (int)4,"
+gpu_kernel,45678.552,37.408,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,45716.92,3.456,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,45731.192,45.472,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,45790.008,34.88,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,45869.496,36.512,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,45907.0,147.871,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,46055.959,112.352,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,46169.303,87.168,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,46258.231,216.543,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x256_32x3_nn_align4>(T1::
+gpu_kernel,46479.638,243.392,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nt_align4>(T1::
+gpu_kernel,46727.67,59.072,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,46787.734,22.56,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,46811.254,19.968,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,46832.277,12.832,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,46846.101,2.88,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,46850.005,14.784,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,46865.813,8.48,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,46875.445,38.272,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,46914.773,4.416,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,46920.309,7.136,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,46928.501,3.168,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,46932.693,12.0,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,46945.621,3.68,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,46950.261,7.104,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,46958.453,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,46962.645,13.856,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,46977.493,3.616,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,46982.133,6.944,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,46990.069,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,46994.133,13.504,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47008.629,3.584,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47013.269,7.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47021.461,3.104,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47025.621,14.176,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47040.853,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47045.077,6.912,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47053.013,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47057.077,13.408,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47071.509,3.136,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47087.029,6.976,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47095.061,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47115.797,13.792,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47178.517,3.136,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47203.381,6.944,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47211.349,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47232.308,14.848,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47294.74,3.104,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47319.412,6.976,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47327.38,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47348.308,14.464,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47411.092,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47435.796,7.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47443.796,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47464.596,14.752,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47527.092,3.136,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47551.636,7.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47559.732,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47581.46,14.368,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47654.803,3.232,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47680.819,7.104,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47689.043,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47710.899,13.536,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47774.995,3.168,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47799.731,7.072,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47807.763,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47828.563,13.728,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,47891.219,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,47915.859,7.392,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,47924.243,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,47944.691,13.056,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,48029.874,21.344,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x5_nt_align4>(T1::
+gpu_kernel,48052.69,11.712,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,48133.81,12.224,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,48147.026,4.448,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,48166.578,13.92,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nt_align4>(T1::P
+gpu_kernel,48207.25,12.096,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,48269.97,3.008,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,48295.186,3.68,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluBackwardC"
+gpu_kernel,48341.426,6.944,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,48349.49,2.816,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,48369.778,13.952,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,48491.249,21.824,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,48517.937,20.288,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,48539.537,12.192,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,48622.257,29.664,GEMM (SIMT FP32),"void gemmk1_kernel<int, float, (int)256, (int)5, (bool)0, (bool)0, (bool)1, (boo"
+gpu_kernel,48652.849,32.032,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,48685.809,2.912,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor"
+gpu_kernel,48692.817,2.944,softmax,"void <unnamed>::softmax_warp_backward<float, float, float, (int)4, (bool)0, (boo"
+gpu_kernel,48732.049,53.664,GEMM (SIMT FP32),"void magma_sgemmEx_kernel<float, float, float, (bool)0, (bool)1, (int)6, (int)4,"
+gpu_kernel,48786.705,36.415,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,48824.272,3.488,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor"
+gpu_kernel,48839.376,45.44,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,48898.288,35.264,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,48977.616,35.968,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,49014.544,147.264,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,49162.896,111.807,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_a"
+gpu_kernel,49275.695,86.4,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,49363.119,216.672,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x256_32x3_nn_align4>(T1::
+gpu_kernel,49584.271,242.943,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nt_align4>(T1::
+gpu_kernel,49832.238,59.904,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,49893.23,22.528,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,49916.75,20.128,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,49937.934,12.768,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,49951.822,2.848,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,49955.662,14.528,concat/stack,void at::native::<unnamed>::CatArrayBatchedCopy_aligned16_contig<at::native::<un
+gpu_kernel,49971.15,8.256,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,49980.398,37.663,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50019.053,4.608,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50024.749,7.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50032.909,3.2,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50037.197,12.0,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50050.285,3.52,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50054.925,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50062.861,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50067.149,13.888,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50082.157,3.616,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50086.701,6.912,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50094.573,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50098.637,13.44,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50113.069,3.488,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50117.645,6.912,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50125.517,3.104,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50129.805,13.824,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50144.749,3.104,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50148.877,6.912,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50156.781,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50160.813,13.632,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50175.469,3.104,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50195.245,6.976,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50203.341,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50234.157,14.496,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50301.709,3.104,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50327.693,7.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50335.693,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50357.997,14.432,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50420.364,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50445.228,7.104,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50453.292,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50474.828,13.824,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50537.612,3.072,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50562.252,6.976,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50570.22,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50591.308,14.688,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50652.396,3.168,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50676.908,7.008,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50684.908,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50706.764,14.4,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50768.876,3.104,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50793.164,7.36,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50801.452,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50823.371,13.664,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,50896.715,3.136,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,50922.763,7.328,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,50931.115,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,50953.579,13.12,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,51017.451,3.104,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,51041.803,7.328,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,51050.251,3.136,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,51071.051,13.152,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,51154.923,20.992,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x5_nt_align4>(T1::
+gpu_kernel,51177.643,11.776,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,51258.442,12.288,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,51271.754,4.448,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,51290.538,13.92,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nt_align4>(T1::P
+gpu_kernel,51311.946,12.192,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,51370.058,2.944,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed"
+gpu_kernel,51394.154,3.872,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluBackwardC"
+gpu_kernel,51438.986,6.944,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,51447.082,2.816,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,51467.05,14.048,reductions,"void at::native::reduce_kernel<(int)128, (int)4, at::native::ReduceOp<float, at:"
+gpu_kernel,52914.406,3.488,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Ten
+gpu_kernel,52925.35,3.232,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Ten
+gpu_kernel,52932.326,3.04,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Ten
+gpu_kernel,53023.942,151.04,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,53176.006,130.815,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,53307.973,153.376,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,53462.469,445.503,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,53909.124,454.239,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,54364.323,444.35,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,54809.729,463.711,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,55274.4,459.743,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,55735.263,448.447,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,56184.798,453.567,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,56639.517,454.879,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,57095.42,454.207,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,57550.587,451.518,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,58003.097,457.823,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,58462.008,476.191,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,58939.255,441.599,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,59381.942,456.959,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,59839.893,451.487,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,60292.5,450.719,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,60744.371,473.566,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,61218.929,447.263,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,61667.216,460.415,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,62128.751,349.759,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_memcpy,231.851,1.248,memcpy,
+gpu_memcpy,1106.249,1.055,memcpy,
+gpu_memcpy,1250.664,1.344,memcpy,
+gpu_memcpy,2113.702,1.088,memcpy,
+gpu_memcpy,2252.934,1.344,memcpy,
+gpu_memcpy,3114.371,1.056,memcpy,
+gpu_memcpy,3253.603,1.344,memcpy,
+gpu_memcpy,3339.651,1.056,memcpy,
+gpu_memcpy,5540.477,41.056,memcpy,
+gpu_memcpy,7385.945,41.44,memcpy,
+gpu_memcpy,7510.84,3.488,memcpy,
+gpu_memcpy,7547.416,3.584,memcpy,
+gpu_memcpy,7580.28,2.624,memcpy,
+gpu_memcpy,7612.184,1.984,memcpy,
+gpu_memcpy,42730.08,41.28,memcpy,
+gpu_memcpy,45826.008,42.4,memcpy,
+gpu_memcpy,48934.672,42.016,memcpy,
+gpu_memcpy,62486.35,1.6,memcpy,
+host_api,219.775,10.991,cudaMemcpyAsync,
+host_api,231.177,6.393,cudaStreamSynchronize,
+host_api,267.217,13.276,cudaLaunchKernel,
+host_api,309.138,8.927,cudaMemcpyAsync,
+host_api,318.416,793.354,cudaStreamSynchronize,
+host_api,1136.528,9.669,cudaLaunchKernel,
+host_api,1240.459,9.007,cudaMemcpyAsync,
+host_api,1249.797,6.573,cudaStreamSynchronize,
+host_api,1278.843,10.33,cudaLaunchKernel,
+host_api,1313.981,7.555,cudaMemcpyAsync,
+host_api,1321.856,797.242,cudaStreamSynchronize,
+host_api,2142.433,9.539,cudaLaunchKernel,
+host_api,2243.238,8.496,cudaMemcpyAsync,
+host_api,2252.055,6.603,cudaStreamSynchronize,
+host_api,2279.949,9.819,cudaLaunchKernel,
+host_api,2312.061,7.535,cudaMemcpyAsync,
+host_api,2319.896,799.667,cudaStreamSynchronize,
+host_api,3142.737,9.529,cudaLaunchKernel,
+host_api,3243.873,8.396,cudaMemcpyAsync,
+host_api,3252.61,6.563,cudaStreamSynchronize,
+host_api,3281.305,10.16,cudaLaunchKernel,
+host_api,3315.992,8.096,cudaMemcpyAsync,
+host_api,3324.399,20.88,cudaStreamSynchronize,
+host_api,3368.244,9.398,cudaLaunchKernel,
+host_api,5480.729,60.807,cudaMemcpyAsync,
+host_api,5542.297,45.459,cudaStreamSynchronize,
+host_api,5595.761,12.424,cudaLaunchKernel,
+host_api,7329.684,57.18,cudaMemcpyAsync,
+host_api,7387.476,45.698,cudaStreamSynchronize,
+host_api,7439.827,11.292,cudaLaunchKernel,
+host_api,7494.903,15.751,cudaMemcpyAsync,
+host_api,7535.772,11.112,cudaMemcpyAsync,
+host_api,7568.366,11.031,cudaMemcpyAsync,
+host_api,7600.548,10.871,cudaMemcpyAsync,
+host_api,7821.425,13.436,cuLaunchKernel,
+host_api,7864.488,9.578,cudaLaunchKernel,
+host_api,7926.278,9.939,cudaLaunchKernel,
+host_api,8000.471,9.809,cuLaunchKernel,
+host_api,8090.475,10.14,cuLaunchKernel,
+host_api,8201.891,13.676,cudaLaunchKernel,
+host_api,8244.743,8.647,cudaLaunchKernel,
+host_api,8333.946,12.304,cudaLaunchKernel,
+host_api,8372.941,8.437,cudaLaunchKernel,
+host_api,8456.733,11.903,cudaLaunchKernel,
+host_api,8495.027,7.745,cudaLaunchKernel,
+host_api,8576.936,12.023,cudaLaunchKernel,
+host_api,8615.631,7.925,cudaLaunchKernel,
+host_api,8697.038,12.003,cudaLaunchKernel,
+host_api,8735.362,7.164,cudaLaunchKernel,
+host_api,8815.627,11.913,cudaLaunchKernel,
+host_api,8854.032,8.055,cudaLaunchKernel,
+host_api,8935.389,11.612,cudaLaunchKernel,
+host_api,8973.623,7.644,cudaLaunchKernel,
+host_api,9054.89,12.053,cudaLaunchKernel,
+host_api,9093.344,7.555,cudaLaunchKernel,
+host_api,9173.499,11.893,cudaLaunchKernel,
+host_api,9211.763,7.465,cudaLaunchKernel,
+host_api,9292.339,12.023,cudaLaunchKernel,
+host_api,9330.393,8.105,cudaLaunchKernel,
+host_api,9411.66,11.472,cudaLaunchKernel,
+host_api,9449.693,7.715,cudaLaunchKernel,
+host_api,9530.309,11.974,cudaLaunchKernel,
+host_api,9568.844,7.614,cudaLaunchKernel,
+host_api,9649.931,11.803,cudaLaunchKernel,
+host_api,9687.904,7.424,cudaLaunchKernel,
+host_api,9730.286,9.579,cudaLaunchKernel,
+host_api,9787.527,9.598,cudaLaunchKernel,
+host_api,9816.543,8.155,cudaLaunchKernel,
+host_api,9841.531,7.405,cudaLaunchKernel,
+host_api,9969.519,11.201,cuLaunchKernel,
+host_api,10034.184,8.827,cuLaunchKernel,
+host_api,10099.38,11.271,cudaLaunchKernel,
+host_api,10184.344,11.102,cudaLaunchKernel,
+host_api,10235.673,9.499,cudaLaunchKernel,
+host_api,10264.118,7.565,cudaLaunchKernel,
+host_api,10302.332,8.547,cudaLaunchKernel,
+host_api,10373.73,9.949,cuLaunchKernel,
+host_api,10422.595,10.099,cudaLaunchKernel,
+host_api,10479.675,9.879,cudaLaunchKernel,
+host_api,10639.745,11.913,cuLaunchKernel,
+host_api,10680.313,9.268,cudaLaunchKernel,
+host_api,10734.969,9.047,cudaLaunchKernel,
+host_api,10804.804,9.468,cuLaunchKernel,
+host_api,10890.84,9.829,cuLaunchKernel,
+host_api,10987.267,12.965,cudaLaunchKernel,
+host_api,11028.426,8.096,cudaLaunchKernel,
+host_api,11114.262,11.903,cudaLaunchKernel,
+host_api,11152.706,8.247,cudaLaunchKernel,
+host_api,11233.974,12.223,cudaLaunchKernel,
+host_api,11272.899,7.845,cudaLaunchKernel,
+host_api,11353.224,11.402,cudaLaunchKernel,
+host_api,11391.078,7.875,cudaLaunchKernel,
+host_api,11473.026,12.043,cudaLaunchKernel,
+host_api,11511.48,7.956,cudaLaunchKernel,
+host_api,11592.657,11.873,cudaLaunchKernel,
+host_api,11631.082,8.216,cudaLaunchKernel,
+host_api,11713.14,12.044,cudaLaunchKernel,
+host_api,11751.615,7.875,cudaLaunchKernel,
+host_api,11832.271,11.382,cudaLaunchKernel,
+host_api,11870.194,8.046,cudaLaunchKernel,
+host_api,11951.581,12.064,cudaLaunchKernel,
+host_api,11990.346,7.916,cudaLaunchKernel,
+host_api,12071.002,11.813,cudaLaunchKernel,
+host_api,12109.617,7.885,cudaLaunchKernel,
+host_api,12199.661,13.025,cudaLaunchKernel,
+host_api,12240.39,7.675,cudaLaunchKernel,
+host_api,12323.45,11.833,cudaLaunchKernel,
+host_api,12362.125,8.376,cudaLaunchKernel,
+host_api,12443.312,11.663,cudaLaunchKernel,
+host_api,12481.195,7.856,cudaLaunchKernel,
+host_api,12523.047,9.257,cudaLaunchKernel,
+host_api,12578.794,9.699,cudaLaunchKernel,
+host_api,12607.45,8.225,cudaLaunchKernel,
+host_api,12632.839,7.414,cudaLaunchKernel,
+host_api,12756.167,10.972,cuLaunchKernel,
+host_api,12818.498,8.817,cuLaunchKernel,
+host_api,12882.231,11.683,cudaLaunchKernel,
+host_api,12967.376,11.141,cudaLaunchKernel,
+host_api,13017.603,9.518,cudaLaunchKernel,
+host_api,13046.088,7.795,cudaLaunchKernel,
+host_api,13084.522,8.356,cudaLaunchKernel,
+host_api,13156.231,9.709,cuLaunchKernel,
+host_api,13203.733,9.909,cudaLaunchKernel,
+host_api,13259.911,9.809,cudaLaunchKernel,
+host_api,13420.452,11.853,cuLaunchKernel,
+host_api,13459.477,9.118,cudaLaunchKernel,
+host_api,13513.602,8.957,cudaLaunchKernel,
+host_api,13581.583,9.479,cuLaunchKernel,
+host_api,13666.608,10.099,cuLaunchKernel,
+host_api,13761.762,11.833,cudaLaunchKernel,
+host_api,13802.421,5.871,cuLaunchKernel,
+host_api,13876.985,10.48,cudaLaunchKernel,
+host_api,13914.638,5.61,cuLaunchKernel,
+host_api,13985.484,10.44,cudaLaunchKernel,
+host_api,14022.676,5.301,cuLaunchKernel,
+host_api,14092.682,10.099,cudaLaunchKernel,
+host_api,14129.503,5.441,cuLaunchKernel,
+host_api,14199.909,9.979,cudaLaunchKernel,
+host_api,14236.189,5.411,cuLaunchKernel,
+host_api,14306.716,10.189,cudaLaunchKernel,
+host_api,14343.436,5.401,cuLaunchKernel,
+host_api,14414.584,10.12,cudaLaunchKernel,
+host_api,14451.395,5.361,cuLaunchKernel,
+host_api,14521.721,10.01,cudaLaunchKernel,
+host_api,14558.312,5.461,cuLaunchKernel,
+host_api,14627.957,10.31,cudaLaunchKernel,
+host_api,14664.848,5.501,cuLaunchKernel,
+host_api,14735.575,10.43,cudaLaunchKernel,
+host_api,14773.218,5.62,cuLaunchKernel,
+host_api,14844.395,10.31,cudaLaunchKernel,
+host_api,14881.477,5.31,cuLaunchKernel,
+host_api,14951.933,10.471,cudaLaunchKernel,
+host_api,14989.285,5.551,cuLaunchKernel,
+host_api,15059.301,10.059,cudaLaunchKernel,
+host_api,15095.822,5.4,cuLaunchKernel,
+host_api,15131.561,7.564,cudaLaunchKernel,
+host_api,15181.227,7.755,cudaLaunchKernel,
+host_api,15205.684,5.891,cudaLaunchKernel,
+host_api,15225.993,5.601,cudaLaunchKernel,
+host_api,15331.066,9.439,cuLaunchKernel,
+host_api,15383.718,7.154,cuLaunchKernel,
+host_api,15438.775,9.538,cudaLaunchKernel,
+host_api,15510.954,9.689,cudaLaunchKernel,
+host_api,15554.368,7.575,cudaLaunchKernel,
+host_api,15577.794,5.911,cudaLaunchKernel,
+host_api,15608.202,6.212,cudaLaunchKernel,
+host_api,15669.2,8.186,cuLaunchKernel,
+host_api,15711.101,7.866,cudaLaunchKernel,
+host_api,15759.886,7.905,cudaLaunchKernel,
+host_api,15818.018,8.206,cudaLaunchKernel,
+host_api,15890.488,8.627,cuLaunchKernel,
+host_api,15965.854,8.677,cuLaunchKernel,
+host_api,16038.244,8.436,cuLaunchKernel,
+host_api,16111.906,8.697,cuLaunchKernel,
+host_api,16148.958,7.645,cudaLaunchKernel,
+host_api,16173.025,16.051,cudaLaunchKernel,
+host_api,16209.786,6.572,cudaLaunchKernel,
+host_api,16228.923,5.26,cudaLaunchKernel,
+host_api,16246.747,5.15,cudaLaunchKernel,
+host_api,16265.994,5.521,cudaLaunchKernel,
+host_api,16280.202,4.699,cudaLaunchKernel,
+host_api,16294.569,4.97,cudaLaunchKernel,
+host_api,16317.664,6.062,cudaLaunchKernel,
+host_api,16335.9,5.31,cudaLaunchKernel,
+host_api,16352.311,4.85,cudaLaunchKernel,
+host_api,16372.36,5.511,cudaLaunchKernel,
+host_api,16387.74,4.719,cudaLaunchKernel,
+host_api,16406.937,5.4,cudaLaunchKernel,
+host_api,16461.592,7.796,cuLaunchKernel,
+host_api,16507.411,8.086,cudaLaunchKernel,
+host_api,16576.926,8.336,cuLaunchKernel,
+host_api,16638.875,8.517,cudaLaunchKernel,
+host_api,16664.916,5.41,cudaLaunchKernel,
+host_api,16707.448,7.434,cudaLaunchKernel,
+host_api,16772.814,8.046,cuLaunchKernel,
+host_api,16808.944,7.635,cudaLaunchKernel,
+host_api,16868.81,7.795,cuLaunchKernel,
+host_api,16922.835,7.704,cudaLaunchKernel,
+host_api,16948.274,5.31,cudaLaunchKernel,
+host_api,16990.355,7.114,cudaLaunchKernel,
+host_api,17060.771,8.016,cuLaunchKernel,
+host_api,17135.576,8.587,cuLaunchKernel,
+host_api,17206.192,8.356,cuLaunchKernel,
+host_api,17279.053,8.056,cuLaunchKernel,
+host_api,17315.995,7.584,cudaLaunchKernel,
+host_api,17339.891,5.781,cudaLaunchKernel,
+host_api,17363.988,6.241,cudaLaunchKernel,
+host_api,17381.992,5.17,cudaLaunchKernel,
+host_api,17399.686,5.161,cudaLaunchKernel,
+host_api,17417.962,5.18,cudaLaunchKernel,
+host_api,17431.688,4.579,cudaLaunchKernel,
+host_api,17445.706,4.859,cudaLaunchKernel,
+host_api,17467.628,5.711,cudaLaunchKernel,
+host_api,17485.432,5.21,cudaLaunchKernel,
+host_api,17502.255,4.859,cudaLaunchKernel,
+host_api,17521.682,5.221,cudaLaunchKernel,
+host_api,17536.611,4.389,cudaLaunchKernel,
+host_api,17554.285,5.21,cudaLaunchKernel,
+host_api,17607.789,7.485,cuLaunchKernel,
+host_api,17652.966,7.796,cudaLaunchKernel,
+host_api,17721.198,8.056,cuLaunchKernel,
+host_api,17782.286,8.387,cudaLaunchKernel,
+host_api,17808.016,5.531,cudaLaunchKernel,
+host_api,17848.655,7.043,cudaLaunchKernel,
+host_api,17913.059,7.826,cuLaunchKernel,
+host_api,17947.215,6.964,cudaLaunchKernel,
+host_api,18005.107,7.956,cuLaunchKernel,
+host_api,18058.911,8.026,cudaLaunchKernel,
+host_api,18083.91,5.5,cudaLaunchKernel,
+host_api,18125.24,6.993,cudaLaunchKernel,
+host_api,18194.413,8.236,cuLaunchKernel,
+host_api,18267.735,8.677,cuLaunchKernel,
+host_api,18339.263,8.387,cuLaunchKernel,
+host_api,18410.421,8.076,cuLaunchKernel,
+host_api,18447.533,7.384,cudaLaunchKernel,
+host_api,18471.279,5.701,cudaLaunchKernel,
+host_api,18495.465,6.313,cudaLaunchKernel,
+host_api,18513.731,10.971,cudaLaunchKernel,
+host_api,18538.348,5.471,cudaLaunchKernel,
+host_api,18557.686,5.12,cudaLaunchKernel,
+host_api,18571.543,4.418,cudaLaunchKernel,
+host_api,18586.051,4.809,cudaLaunchKernel,
+host_api,18608.093,5.711,cudaLaunchKernel,
+host_api,18625.687,5.351,cudaLaunchKernel,
+host_api,18642.279,4.99,cudaLaunchKernel,
+host_api,18661.446,5.401,cudaLaunchKernel,
+host_api,18676.786,4.619,cudaLaunchKernel,
+host_api,18696.084,5.29,cudaLaunchKernel,
+host_api,18749.387,7.554,cuLaunchKernel,
+host_api,18794.464,7.995,cudaLaunchKernel,
+host_api,18863.587,8.066,cuLaunchKernel,
+host_api,18924.375,8.416,cudaLaunchKernel,
+host_api,18950.536,5.52,cudaLaunchKernel,
+host_api,18992.346,6.793,cudaLaunchKernel,
+host_api,19056.48,7.976,cuLaunchKernel,
+host_api,19091.228,7.163,cudaLaunchKernel,
+host_api,19149.871,8.026,cuLaunchKernel,
+host_api,19204.186,7.705,cudaLaunchKernel,
+host_api,19228.714,5.46,cudaLaunchKernel,
+host_api,19268.821,6.923,cudaLaunchKernel,
+host_api,19336.532,8.256,cuLaunchKernel,
+host_api,19408.992,8.176,cuLaunchKernel,
+host_api,19479.769,7.835,cuLaunchKernel,
+host_api,19551.658,8.015,cuLaunchKernel,
+host_api,19588.489,7.415,cudaLaunchKernel,
+host_api,19612.786,5.701,cudaLaunchKernel,
+host_api,19637.414,6.212,cudaLaunchKernel,
+host_api,19655.158,4.919,cudaLaunchKernel,
+host_api,19672.792,5.611,cudaLaunchKernel,
+host_api,19691.408,5.29,cudaLaunchKernel,
+host_api,19705.105,4.619,cudaLaunchKernel,
+host_api,19719.552,4.77,cudaLaunchKernel,
+host_api,19741.114,5.731,cudaLaunchKernel,
+host_api,19758.779,5.39,cudaLaunchKernel,
+host_api,19775.761,5.0,cudaLaunchKernel,
+host_api,19795.69,5.601,cudaLaunchKernel,
+host_api,19811.57,4.72,cudaLaunchKernel,
+host_api,19830.718,5.25,cudaLaunchKernel,
+host_api,19883.77,7.264,cuLaunchKernel,
+host_api,19927.785,7.986,cudaLaunchKernel,
+host_api,19996.578,8.567,cuLaunchKernel,
+host_api,20055.953,8.406,cudaLaunchKernel,
+host_api,20081.803,5.451,cudaLaunchKernel,
+host_api,20122.762,7.154,cudaLaunchKernel,
+host_api,20197.998,9.027,cuLaunchKernel,
+host_api,20236.773,7.504,cudaLaunchKernel,
+host_api,20296.989,7.865,cuLaunchKernel,
+host_api,20350.973,7.936,cudaLaunchKernel,
+host_api,20376.253,5.48,cudaLaunchKernel,
+host_api,20419.526,7.314,cudaLaunchKernel,
+host_api,20489.311,8.296,cuLaunchKernel,
+host_api,20563.174,8.566,cuLaunchKernel,
+host_api,20634.352,8.055,cuLaunchKernel,
+host_api,20708.064,7.755,cuLaunchKernel,
+host_api,20744.134,7.394,cudaLaunchKernel,
+host_api,20768.631,5.621,cudaLaunchKernel,
+host_api,20793.229,6.372,cudaLaunchKernel,
+host_api,20811.454,4.959,cudaLaunchKernel,
+host_api,20829.318,5.491,cudaLaunchKernel,
+host_api,20847.764,5.21,cudaLaunchKernel,
+host_api,20861.26,4.529,cudaLaunchKernel,
+host_api,20875.478,4.759,cudaLaunchKernel,
+host_api,20897.33,5.811,cudaLaunchKernel,
+host_api,20914.614,5.19,cudaLaunchKernel,
+host_api,20930.855,4.96,cudaLaunchKernel,
+host_api,20950.443,5.571,cudaLaunchKernel,
+host_api,20965.883,4.639,cudaLaunchKernel,
+host_api,20984.759,5.361,cudaLaunchKernel,
+host_api,21038.102,7.515,cuLaunchKernel,
+host_api,21082.348,8.196,cudaLaunchKernel,
+host_api,21151.201,8.256,cuLaunchKernel,
+host_api,21210.996,8.236,cudaLaunchKernel,
+host_api,21236.346,5.27,cudaLaunchKernel,
+host_api,21278.297,7.123,cudaLaunchKernel,
+host_api,21343.283,7.744,cuLaunchKernel,
+host_api,21378.671,7.454,cudaLaunchKernel,
+host_api,21437.405,8.175,cuLaunchKernel,
+host_api,21491.369,7.835,cudaLaunchKernel,
+host_api,21515.726,5.51,cudaLaunchKernel,
+host_api,21557.186,7.024,cudaLaunchKernel,
+host_api,21625.939,8.567,cuLaunchKernel,
+host_api,21700.113,8.786,cuLaunchKernel,
+host_api,21771.39,8.276,cuLaunchKernel,
+host_api,21845.103,8.226,cuLaunchKernel,
+host_api,21882.675,7.675,cudaLaunchKernel,
+host_api,21907.514,5.821,cudaLaunchKernel,
+host_api,21932.502,6.402,cudaLaunchKernel,
+host_api,21950.737,4.899,cudaLaunchKernel,
+host_api,21968.391,5.21,cudaLaunchKernel,
+host_api,21986.877,5.661,cudaLaunchKernel,
+host_api,22000.814,4.579,cudaLaunchKernel,
+host_api,22015.442,4.81,cudaLaunchKernel,
+host_api,22037.455,5.661,cudaLaunchKernel,
+host_api,22055.219,5.1,cudaLaunchKernel,
+host_api,22071.631,5.019,cudaLaunchKernel,
+host_api,22091.469,5.671,cudaLaunchKernel,
+host_api,22107.18,4.709,cudaLaunchKernel,
+host_api,22126.467,5.47,cudaLaunchKernel,
+host_api,22180.301,7.564,cuLaunchKernel,
+host_api,22225.037,8.016,cudaLaunchKernel,
+host_api,22292.959,7.995,cuLaunchKernel,
+host_api,22351.823,8.135,cudaLaunchKernel,
+host_api,22377.051,5.481,cudaLaunchKernel,
+host_api,22417.981,7.033,cudaLaunchKernel,
+host_api,22481.273,7.615,cuLaunchKernel,
+host_api,22515.259,6.993,cudaLaunchKernel,
+host_api,22573.471,7.875,cuLaunchKernel,
+host_api,22627.366,7.674,cudaLaunchKernel,
+host_api,22651.633,5.4,cudaLaunchKernel,
+host_api,22691.78,6.873,cudaLaunchKernel,
+host_api,22760.984,8.176,cuLaunchKernel,
+host_api,22833.674,8.336,cuLaunchKernel,
+host_api,22904.221,8.056,cuLaunchKernel,
+host_api,22976.441,8.075,cuLaunchKernel,
+host_api,23012.47,7.735,cudaLaunchKernel,
+host_api,23037.088,6.062,cudaLaunchKernel,
+host_api,23062.116,6.322,cudaLaunchKernel,
+host_api,23080.482,5.039,cudaLaunchKernel,
+host_api,23098.998,4.899,cudaLaunchKernel,
+host_api,23116.772,5.26,cudaLaunchKernel,
+host_api,23130.418,4.529,cudaLaunchKernel,
+host_api,23144.686,4.669,cudaLaunchKernel,
+host_api,23166.167,5.581,cudaLaunchKernel,
+host_api,23183.09,5.361,cudaLaunchKernel,
+host_api,23200.183,4.84,cudaLaunchKernel,
+host_api,23219.711,5.601,cudaLaunchKernel,
+host_api,23235.502,4.618,cudaLaunchKernel,
+host_api,23254.408,5.19,cudaLaunchKernel,
+host_api,23307.23,7.565,cuLaunchKernel,
+host_api,23352.137,8.146,cudaLaunchKernel,
+host_api,23420.539,8.166,cuLaunchKernel,
+host_api,23480.986,8.507,cudaLaunchKernel,
+host_api,23506.966,5.431,cudaLaunchKernel,
+host_api,23548.587,7.164,cudaLaunchKernel,
+host_api,23612.721,7.875,cuLaunchKernel,
+host_api,23648.069,6.893,cudaLaunchKernel,
+host_api,23706.963,7.895,cuLaunchKernel,
+host_api,23760.216,7.775,cudaLaunchKernel,
+host_api,23784.854,5.42,cudaLaunchKernel,
+host_api,23825.632,6.994,cudaLaunchKernel,
+host_api,23894.846,8.216,cuLaunchKernel,
+host_api,23968.869,8.387,cuLaunchKernel,
+host_api,24040.508,8.056,cuLaunchKernel,
+host_api,24113.319,7.935,cuLaunchKernel,
+host_api,24150.0,7.855,cudaLaunchKernel,
+host_api,24183.014,7.023,cudaLaunchKernel,
+host_api,24211.589,6.583,cudaLaunchKernel,
+host_api,24230.526,5.31,cudaLaunchKernel,
+host_api,24248.53,5.0,cudaLaunchKernel,
+host_api,24266.445,5.21,cudaLaunchKernel,
+host_api,24279.901,4.609,cudaLaunchKernel,
+host_api,24294.509,4.73,cudaLaunchKernel,
+host_api,24316.071,5.651,cudaLaunchKernel,
+host_api,24333.865,5.251,cudaLaunchKernel,
+host_api,24350.387,4.89,cudaLaunchKernel,
+host_api,24370.035,5.501,cudaLaunchKernel,
+host_api,24385.385,4.789,cudaLaunchKernel,
+host_api,24405.293,5.671,cudaLaunchKernel,
+host_api,24459.959,7.445,cuLaunchKernel,
+host_api,24505.117,7.764,cudaLaunchKernel,
+host_api,24574.27,8.106,cuLaunchKernel,
+host_api,24634.857,8.006,cudaLaunchKernel,
+host_api,24660.166,5.501,cudaLaunchKernel,
+host_api,24702.268,7.364,cudaLaunchKernel,
+host_api,24766.702,7.715,cuLaunchKernel,
+host_api,24801.009,7.154,cudaLaunchKernel,
+host_api,24858.42,7.995,cuLaunchKernel,
+host_api,24911.823,7.905,cudaLaunchKernel,
+host_api,24935.899,5.391,cudaLaunchKernel,
+host_api,24975.526,7.274,cudaLaunchKernel,
+host_api,25002.388,5.972,cudaLaunchKernel,
+host_api,25066.472,8.496,cuLaunchKernel,
+host_api,25098.814,7.094,cudaLaunchKernel,
+host_api,25142.349,6.793,cudaLaunchKernel,
+host_api,25198.688,7.755,cuLaunchKernel,
+host_api,25207.635,4.619,cudaLaunchKernel,
+host_api,25236.14,6.182,cudaLaunchKernel,
+host_api,25281.778,7.755,cudaLaunchKernel,
+host_api,25310.023,6.282,cudaLaunchKernel,
+host_api,25356.232,7.465,cudaLaunchKernel,
+host_api,25449.352,10.411,cudaLaunchKernel,
+host_api,25468.68,5.07,cudaLaunchKernel,
+host_api,26025.406,12.524,cudaLaunchKernel,
+host_api,26272.925,33.084,cudaLaunchKernel,
+host_api,26322.08,8.076,cudaLaunchKernel,
+host_api,26432.554,13.967,cudaLaunchKernel,
+host_api,26488.883,8.987,cuLaunchKernel,
+host_api,26499.022,7.224,cudaLaunchKernel,
+host_api,26536.304,10.3,cudaLaunchKernel,
+host_api,26633.793,12.725,cudaLaunchKernel,
+host_api,26714.739,11.453,cuLaunchKernel,
+host_api,26763.143,8.827,cuLaunchKernel,
+host_api,26773.733,7.335,cudaLaunchKernel,
+host_api,26809.282,9.799,cudaLaunchKernel,
+host_api,26903.905,12.524,cudaLaunchKernel,
+host_api,26983.89,11.803,cuLaunchKernel,
+host_api,27032.945,8.777,cuLaunchKernel,
+host_api,27043.365,7.344,cudaLaunchKernel,
+host_api,27079.535,9.328,cudaLaunchKernel,
+host_api,27178.987,13.837,cudaLaunchKernel,
+host_api,27224.716,8.837,cudaLaunchKernel,
+host_api,27301.604,11.613,cuLaunchKernel,
+host_api,27351.02,8.666,cuLaunchKernel,
+host_api,27385.947,10.13,cudaLaunchKernel,
+host_api,27520.728,13.336,cudaLaunchKernel,
+host_api,27535.727,7.184,cudaLaunchKernel,
+host_api,27590.513,6.783,cudaLaunchKernel,
+host_api,27649.467,6.743,cuLaunchKernel,
+host_api,27678.864,5.641,cuLaunchKernel,
+host_api,27700.315,5.912,cudaLaunchKernel,
+host_api,27763.107,8.025,cudaLaunchKernel,
+host_api,27816.4,7.664,cuLaunchKernel,
+host_api,27844.775,5.069,cuLaunchKernel,
+host_api,27865.144,6.002,cudaLaunchKernel,
+host_api,27921.182,7.856,cudaLaunchKernel,
+host_api,27957.883,5.701,cudaLaunchKernel,
+host_api,27964.466,3.817,cudaLaunchKernel,
+host_api,28011.848,7.103,cudaLaunchKernel,
+host_api,28064.68,6.973,cuLaunchKernel,
+host_api,28093.516,5.43,cuLaunchKernel,
+host_api,28114.376,6.202,cudaLaunchKernel,
+host_api,28233.155,9.619,cuLaunchKernel,
+host_api,28263.634,5.451,cuLaunchKernel,
+host_api,28327.859,8.135,cudaLaunchKernel,
+host_api,28340.283,4.148,cudaLaunchKernel,
+host_api,28370.01,6.783,cudaLaunchKernel,
+host_api,28397.634,5.941,cudaLaunchKernel,
+host_api,28422.592,5.1,cudaLaunchKernel,
+host_api,28464.693,7.755,cudaLaunchKernel,
+host_api,28491.305,5.871,cudaLaunchKernel,
+host_api,28513.868,4.93,cudaLaunchKernel,
+host_api,28552.673,7.154,cudaLaunchKernel,
+host_api,28567.152,4.238,cudaLaunchKernel,
+host_api,28589.565,4.779,cudaLaunchKernel,
+host_api,28632.678,7.395,cudaLaunchKernel,
+host_api,28643.74,4.128,cudaLaunchKernel,
+host_api,28669.209,6.212,cudaLaunchKernel,
+host_api,28722.993,7.184,cuLaunchKernel,
+host_api,28750.666,5.09,cuLaunchKernel,
+host_api,28825.16,8.136,cudaLaunchKernel,
+host_api,28880.367,7.154,cuLaunchKernel,
+host_api,28908.822,5.421,cuLaunchKernel,
+host_api,28930.113,6.002,cudaLaunchKernel,
+host_api,28983.226,7.414,cudaLaunchKernel,
+host_api,29050.466,7.755,cuLaunchKernel,
+host_api,29078.801,5.1,cuLaunchKernel,
+host_api,29100.182,5.901,cudaLaunchKernel,
+host_api,29151.612,7.434,cudaLaunchKernel,
+host_api,29189.685,7.164,cudaLaunchKernel,
+host_api,29244.451,12.424,cuLaunchKernel,
+host_api,29278.958,5.19,cuLaunchKernel,
+host_api,29299.818,5.972,cudaLaunchKernel,
+host_api,29356.778,7.364,cudaLaunchKernel,
+host_api,29391.475,5.421,cudaLaunchKernel,
+host_api,29397.838,3.817,cudaLaunchKernel,
+host_api,29447.173,7.254,cudaLaunchKernel,
+host_api,29507.31,6.422,cuLaunchKernel,
+host_api,29543.269,7.705,cuLaunchKernel,
+host_api,29569.65,6.272,cudaLaunchKernel,
+host_api,29636.429,8.096,cudaLaunchKernel,
+host_api,29690.624,6.953,cuLaunchKernel,
+host_api,29718.017,5.01,cuLaunchKernel,
+host_api,29737.956,5.941,cudaLaunchKernel,
+host_api,29793.292,7.395,cudaLaunchKernel,
+host_api,29830.604,5.742,cudaLaunchKernel,
+host_api,29837.237,3.828,cudaLaunchKernel,
+host_api,29885.521,7.083,cudaLaunchKernel,
+host_api,29939.215,7.234,cuLaunchKernel,
+host_api,29968.321,5.24,cuLaunchKernel,
+host_api,29989.091,5.982,cudaLaunchKernel,
+host_api,30095.537,8.657,cuLaunchKernel,
+host_api,30124.914,5.06,cuLaunchKernel,
+host_api,30188.236,7.926,cudaLaunchKernel,
+host_api,30200.33,3.957,cudaLaunchKernel,
+host_api,30228.915,6.563,cudaLaunchKernel,
+host_api,30255.165,5.932,cudaLaunchKernel,
+host_api,30279.853,5.1,cudaLaunchKernel,
+host_api,30321.785,7.875,cudaLaunchKernel,
+host_api,30348.877,5.831,cudaLaunchKernel,
+host_api,30370.839,4.87,cudaLaunchKernel,
+host_api,30409.203,7.054,cudaLaunchKernel,
+host_api,30423.221,4.528,cudaLaunchKernel,
+host_api,30445.634,4.859,cudaLaunchKernel,
+host_api,30487.936,8.366,cudaLaunchKernel,
+host_api,30499.939,3.967,cudaLaunchKernel,
+host_api,30525.278,6.012,cudaLaunchKernel,
+host_api,30579.092,7.384,cuLaunchKernel,
+host_api,30607.387,5.089,cuLaunchKernel,
+host_api,30682.071,7.986,cudaLaunchKernel,
+host_api,30737.939,7.294,cuLaunchKernel,
+host_api,30766.254,5.27,cuLaunchKernel,
+host_api,30787.004,6.102,cudaLaunchKernel,
+host_api,30839.826,7.084,cudaLaunchKernel,
+host_api,30907.046,7.785,cuLaunchKernel,
+host_api,30935.652,5.019,cuLaunchKernel,
+host_api,30957.043,6.042,cudaLaunchKernel,
+host_api,31009.154,7.214,cudaLaunchKernel,
+host_api,31047.388,7.073,cudaLaunchKernel,
+host_api,31101.192,7.053,cuLaunchKernel,
+host_api,31128.775,5.21,cuLaunchKernel,
+host_api,31149.225,5.981,cudaLaunchKernel,
+host_api,31204.421,7.525,cudaLaunchKernel,
+host_api,31239.148,5.531,cudaLaunchKernel,
+host_api,31245.601,3.647,cudaLaunchKernel,
+host_api,31294.535,7.054,cudaLaunchKernel,
+host_api,31354.291,6.523,cuLaunchKernel,
+host_api,31383.578,5.22,cuLaunchKernel,
+host_api,31405.059,6.102,cudaLaunchKernel,
+host_api,31467.951,7.905,cudaLaunchKernel,
+host_api,31520.953,7.134,cuLaunchKernel,
+host_api,31548.567,5.15,cuLaunchKernel,
+host_api,31568.375,5.771,cudaLaunchKernel,
+host_api,31622.079,7.214,cudaLaunchKernel,
+host_api,31657.347,5.611,cudaLaunchKernel,
+host_api,31663.809,3.527,cudaLaunchKernel,
+host_api,31712.303,7.094,cudaLaunchKernel,
+host_api,31765.657,7.223,cuLaunchKernel,
+host_api,31794.072,5.059,cuLaunchKernel,
+host_api,31814.701,6.232,cudaLaunchKernel,
+host_api,31921.087,8.577,cuLaunchKernel,
+host_api,31949.793,5.019,cuLaunchKernel,
+host_api,32011.592,8.246,cudaLaunchKernel,
+host_api,32024.146,4.219,cudaLaunchKernel,
+host_api,32053.222,6.563,cudaLaunchKernel,
+host_api,32079.564,6.091,cudaLaunchKernel,
+host_api,32103.63,5.18,cudaLaunchKernel,
+host_api,32144.89,7.775,cudaLaunchKernel,
+host_api,32171.591,14.849,cudaLaunchKernel,
+host_api,32205.958,5.23,cudaLaunchKernel,
+host_api,32246.326,7.174,cudaLaunchKernel,
+host_api,32260.603,4.119,cudaLaunchKernel,
+host_api,32281.955,4.95,cudaLaunchKernel,
+host_api,32324.257,7.434,cudaLaunchKernel,
+host_api,32335.388,3.968,cudaLaunchKernel,
+host_api,32360.647,5.961,cudaLaunchKernel,
+host_api,32413.94,7.404,cuLaunchKernel,
+host_api,32442.255,5.04,cuLaunchKernel,
+host_api,32516.899,8.376,cudaLaunchKernel,
+host_api,32572.707,7.174,cuLaunchKernel,
+host_api,32600.992,5.531,cuLaunchKernel,
+host_api,32622.453,6.232,cudaLaunchKernel,
+host_api,32674.925,7.194,cudaLaunchKernel,
+host_api,32741.293,7.635,cuLaunchKernel,
+host_api,32769.758,4.879,cuLaunchKernel,
+host_api,32791.44,6.242,cudaLaunchKernel,
+host_api,32842.499,7.314,cudaLaunchKernel,
+host_api,32880.412,7.324,cudaLaunchKernel,
+host_api,32935.078,7.083,cuLaunchKernel,
+host_api,32962.701,5.11,cuLaunchKernel,
+host_api,32982.88,6.082,cudaLaunchKernel,
+host_api,33038.758,7.625,cudaLaunchKernel,
+host_api,33074.127,5.44,cudaLaunchKernel,
+host_api,33080.439,3.707,cudaLaunchKernel,
+host_api,33128.452,7.023,cudaLaunchKernel,
+host_api,33188.748,6.643,cuLaunchKernel,
+host_api,33218.025,5.12,cuLaunchKernel,
+host_api,33239.256,5.801,cudaLaunchKernel,
+host_api,33301.977,7.846,cudaLaunchKernel,
+host_api,33353.958,7.194,cuLaunchKernel,
+host_api,33381.461,4.99,cuLaunchKernel,
+host_api,33401.219,5.691,cudaLaunchKernel,
+host_api,33455.033,7.585,cudaLaunchKernel,
+host_api,33490.632,5.781,cudaLaunchKernel,
+host_api,33497.305,3.637,cudaLaunchKernel,
+host_api,33545.699,7.023,cudaLaunchKernel,
+host_api,33598.551,6.963,cuLaunchKernel,
+host_api,33626.515,5.24,cuLaunchKernel,
+host_api,33647.095,5.971,cudaLaunchKernel,
+host_api,33752.989,8.316,cuLaunchKernel,
+host_api,33781.244,5.01,cuLaunchKernel,
+host_api,33844.096,7.985,cudaLaunchKernel,
+host_api,33856.209,4.118,cudaLaunchKernel,
+host_api,33884.944,6.503,cudaLaunchKernel,
+host_api,33911.246,5.781,cudaLaunchKernel,
+host_api,33935.021,4.9,cudaLaunchKernel,
+host_api,33976.191,7.745,cudaLaunchKernel,
+host_api,34002.642,5.741,cudaLaunchKernel,
+host_api,34024.284,4.759,cudaLaunchKernel,
+host_api,34062.588,7.154,cudaLaunchKernel,
+host_api,34076.746,4.298,cudaLaunchKernel,
+host_api,34098.297,4.92,cudaLaunchKernel,
+host_api,34140.87,7.354,cudaLaunchKernel,
+host_api,34151.911,4.168,cudaLaunchKernel,
+host_api,34177.32,5.761,cudaLaunchKernel,
+host_api,34230.423,7.374,cuLaunchKernel,
+host_api,34258.337,5.139,cuLaunchKernel,
+host_api,34331.869,8.196,cudaLaunchKernel,
+host_api,34387.667,7.284,cuLaunchKernel,
+host_api,34416.042,5.29,cuLaunchKernel,
+host_api,34437.042,5.992,cudaLaunchKernel,
+host_api,34488.883,7.254,cudaLaunchKernel,
+host_api,34555.381,7.625,cuLaunchKernel,
+host_api,34583.696,5.08,cuLaunchKernel,
+host_api,34605.468,6.112,cudaLaunchKernel,
+host_api,34656.968,7.153,cudaLaunchKernel,
+host_api,34694.811,7.144,cudaLaunchKernel,
+host_api,34748.685,7.144,cuLaunchKernel,
+host_api,34776.499,5.009,cuLaunchKernel,
+host_api,34796.828,5.681,cudaLaunchKernel,
+host_api,34852.155,7.585,cudaLaunchKernel,
+host_api,34894.567,7.865,cudaLaunchKernel,
+host_api,34903.304,3.928,cudaLaunchKernel,
+host_api,34956.016,7.314,cudaLaunchKernel,
+host_api,35016.833,6.854,cuLaunchKernel,
+host_api,35046.721,5.01,cuLaunchKernel,
+host_api,35067.722,5.921,cudaLaunchKernel,
+host_api,35131.014,7.906,cudaLaunchKernel,
+host_api,35183.315,6.994,cuLaunchKernel,
+host_api,35210.458,4.959,cuLaunchKernel,
+host_api,35230.667,5.721,cudaLaunchKernel,
+host_api,35284.631,7.475,cudaLaunchKernel,
+host_api,35320.451,5.61,cudaLaunchKernel,
+host_api,35326.963,3.627,cudaLaunchKernel,
+host_api,35373.543,6.873,cudaLaunchKernel,
+host_api,35425.814,7.114,cuLaunchKernel,
+host_api,35453.758,5.14,cuLaunchKernel,
+host_api,35474.228,6.052,cudaLaunchKernel,
+host_api,35580.884,8.447,cuLaunchKernel,
+host_api,35609.84,5.15,cuLaunchKernel,
+host_api,35671.309,7.805,cudaLaunchKernel,
+host_api,35683.342,4.178,cudaLaunchKernel,
+host_api,35712.048,6.763,cudaLaunchKernel,
+host_api,35738.78,5.841,cudaLaunchKernel,
+host_api,35762.796,5.04,cudaLaunchKernel,
+host_api,35804.166,7.675,cudaLaunchKernel,
+host_api,35830.867,5.691,cudaLaunchKernel,
+host_api,35852.289,4.609,cudaLaunchKernel,
+host_api,35890.523,7.484,cudaLaunchKernel,
+host_api,35905.091,4.198,cudaLaunchKernel,
+host_api,35926.042,4.799,cudaLaunchKernel,
+host_api,35967.301,7.535,cudaLaunchKernel,
+host_api,35978.493,3.807,cudaLaunchKernel,
+host_api,36003.0,6.102,cudaLaunchKernel,
+host_api,36056.584,7.154,cuLaunchKernel,
+host_api,36084.217,5.221,cuLaunchKernel,
+host_api,36158.511,8.216,cudaLaunchKernel,
+host_api,36224.399,7.885,cuLaunchKernel,
+host_api,36253.825,5.461,cuLaunchKernel,
+host_api,36275.327,6.172,cudaLaunchKernel,
+host_api,36327.668,7.114,cudaLaunchKernel,
+host_api,36394.668,7.534,cuLaunchKernel,
+host_api,36422.782,5.09,cuLaunchKernel,
+host_api,36443.512,5.932,cudaLaunchKernel,
+host_api,36494.902,8.105,cudaLaunchKernel,
+host_api,36533.145,7.575,cudaLaunchKernel,
+host_api,36587.781,7.344,cuLaunchKernel,
+host_api,36615.876,4.859,cuLaunchKernel,
+host_api,36635.784,5.901,cudaLaunchKernel,
+host_api,36690.49,7.444,cudaLaunchKernel,
+host_api,36726.579,5.561,cudaLaunchKernel,
+host_api,36733.042,3.808,cudaLaunchKernel,
+host_api,36780.875,7.194,cudaLaunchKernel,
+host_api,36841.091,6.513,cuLaunchKernel,
+host_api,36870.288,5.129,cuLaunchKernel,
+host_api,36891.549,5.821,cudaLaunchKernel,
+host_api,36953.468,10.0,cudaLaunchKernel,
+host_api,37008.154,7.134,cuLaunchKernel,
+host_api,37036.068,5.17,cuLaunchKernel,
+host_api,37056.437,5.742,cudaLaunchKernel,
+host_api,37110.822,7.094,cudaLaunchKernel,
+host_api,37146.442,5.51,cudaLaunchKernel,
+host_api,37152.834,3.807,cudaLaunchKernel,
+host_api,37199.344,6.923,cudaLaunchKernel,
+host_api,37251.184,6.833,cuLaunchKernel,
+host_api,37278.898,4.779,cuLaunchKernel,
+host_api,37298.876,5.691,cudaLaunchKernel,
+host_api,37403.869,8.176,cuLaunchKernel,
+host_api,37431.984,4.949,cuLaunchKernel,
+host_api,37493.002,7.734,cudaLaunchKernel,
+host_api,37505.005,3.947,cudaLaunchKernel,
+host_api,37534.442,6.402,cudaLaunchKernel,
+host_api,37560.041,5.681,cudaLaunchKernel,
+host_api,37583.456,4.74,cudaLaunchKernel,
+host_api,37624.396,7.574,cudaLaunchKernel,
+host_api,37650.296,6.012,cudaLaunchKernel,
+host_api,37672.368,4.94,cudaLaunchKernel,
+host_api,37710.161,7.265,cudaLaunchKernel,
+host_api,37724.479,4.068,cudaLaunchKernel,
+host_api,37745.801,4.578,cudaLaunchKernel,
+host_api,37786.399,7.344,cudaLaunchKernel,
+host_api,37797.43,4.138,cudaLaunchKernel,
+host_api,37822.108,5.952,cudaLaunchKernel,
+host_api,37874.94,6.964,cuLaunchKernel,
+host_api,37902.293,4.819,cuLaunchKernel,
+host_api,37976.106,7.995,cudaLaunchKernel,
+host_api,38032.034,12.825,cuLaunchKernel,
+host_api,38067.563,5.631,cuLaunchKernel,
+host_api,38089.695,6.473,cudaLaunchKernel,
+host_api,38143.359,7.244,cudaLaunchKernel,
+host_api,38210.158,7.845,cuLaunchKernel,
+host_api,38238.593,5.13,cuLaunchKernel,
+host_api,38259.363,6.002,cudaLaunchKernel,
+host_api,38310.332,6.984,cudaLaunchKernel,
+host_api,38347.394,7.043,cudaLaunchKernel,
+host_api,38400.657,24.317,cuLaunchKernel,
+host_api,38445.694,4.95,cuLaunchKernel,
+host_api,38466.143,6.012,cudaLaunchKernel,
+host_api,38522.312,8.326,cudaLaunchKernel,
+host_api,38557.52,5.531,cudaLaunchKernel,
+host_api,38563.993,3.727,cudaLaunchKernel,
+host_api,38611.043,6.884,cudaLaunchKernel,
+host_api,38671.23,6.653,cuLaunchKernel,
+host_api,38700.627,4.999,cuLaunchKernel,
+host_api,38721.688,5.951,cudaLaunchKernel,
+host_api,38784.509,7.785,cudaLaunchKernel,
+host_api,38836.56,7.364,cuLaunchKernel,
+host_api,38864.504,5.019,cuLaunchKernel,
+host_api,38884.693,5.811,cudaLaunchKernel,
+host_api,38938.938,7.384,cudaLaunchKernel,
+host_api,38973.685,5.811,cudaLaunchKernel,
+host_api,38980.388,3.767,cudaLaunchKernel,
+host_api,39027.208,7.034,cudaLaunchKernel,
+host_api,39080.05,7.185,cuLaunchKernel,
+host_api,39108.115,4.979,cuLaunchKernel,
+host_api,39128.314,6.312,cudaLaunchKernel,
+host_api,39234.68,8.696,cuLaunchKernel,
+host_api,39263.816,4.879,cuLaunchKernel,
+host_api,39324.183,7.775,cudaLaunchKernel,
+host_api,39336.216,4.148,cudaLaunchKernel,
+host_api,39364.23,6.402,cudaLaunchKernel,
+host_api,39390.04,5.941,cudaLaunchKernel,
+host_api,39414.036,4.89,cudaLaunchKernel,
+host_api,39455.086,7.705,cudaLaunchKernel,
+host_api,39481.096,5.711,cudaLaunchKernel,
+host_api,39502.918,4.779,cudaLaunchKernel,
+host_api,39541.222,7.154,cudaLaunchKernel,
+host_api,39555.059,4.148,cudaLaunchKernel,
+host_api,39575.659,4.639,cudaLaunchKernel,
+host_api,39616.127,7.204,cudaLaunchKernel,
+host_api,39627.028,4.208,cudaLaunchKernel,
+host_api,39651.265,5.651,cudaLaunchKernel,
+host_api,39703.987,7.495,cuLaunchKernel,
+host_api,39731.881,5.17,cuLaunchKernel,
+host_api,39805.724,8.386,cudaLaunchKernel,
+host_api,39861.091,7.194,cuLaunchKernel,
+host_api,39889.426,5.28,cuLaunchKernel,
+host_api,39910.837,6.022,cudaLaunchKernel,
+host_api,39962.788,7.083,cudaLaunchKernel,
+host_api,40028.705,7.334,cuLaunchKernel,
+host_api,40056.278,5.22,cuLaunchKernel,
+host_api,40077.459,5.902,cudaLaunchKernel,
+host_api,40128.859,7.244,cudaLaunchKernel,
+host_api,40166.161,7.083,cudaLaunchKernel,
+host_api,40228.912,7.915,cuLaunchKernel,
+host_api,40257.457,4.84,cuLaunchKernel,
+host_api,40277.797,6.242,cudaLaunchKernel,
+host_api,40332.843,7.695,cudaLaunchKernel,
+host_api,40368.031,5.631,cudaLaunchKernel,
+host_api,40374.604,3.857,cudaLaunchKernel,
+host_api,40421.524,6.844,cudaLaunchKernel,
+host_api,40481.06,6.823,cuLaunchKernel,
+host_api,40510.376,5.221,cuLaunchKernel,
+host_api,40532.249,6.232,cudaLaunchKernel,
+host_api,40594.499,7.845,cudaLaunchKernel,
+host_api,40646.379,7.034,cuLaunchKernel,
+host_api,40674.344,5.36,cuLaunchKernel,
+host_api,40695.084,5.921,cudaLaunchKernel,
+host_api,40748.747,7.295,cudaLaunchKernel,
+host_api,40783.284,5.862,cudaLaunchKernel,
+host_api,40790.017,3.657,cudaLaunchKernel,
+host_api,40829.874,6.984,cudaLaunchKernel,
+host_api,40856.626,5.601,cudaLaunchKernel,
+host_api,40908.206,6.953,cuLaunchKernel,
+host_api,40936.079,5.07,cuLaunchKernel,
+host_api,40956.178,6.413,cudaLaunchKernel,
+host_api,41062.995,8.566,cuLaunchKernel,
+host_api,41092.051,5.13,cuLaunchKernel,
+host_api,41152.729,7.724,cudaLaunchKernel,
+host_api,41164.652,4.097,cudaLaunchKernel,
+host_api,41192.125,6.562,cudaLaunchKernel,
+host_api,41218.536,5.871,cudaLaunchKernel,
+host_api,41242.222,5.35,cudaLaunchKernel,
+host_api,41284.112,7.876,cudaLaunchKernel,
+host_api,41310.423,5.671,cudaLaunchKernel,
+host_api,41332.136,4.929,cudaLaunchKernel,
+host_api,41370.58,7.384,cudaLaunchKernel,
+host_api,41384.697,4.358,cudaLaunchKernel,
+host_api,41405.948,4.649,cudaLaunchKernel,
+host_api,41446.196,7.024,cudaLaunchKernel,
+host_api,41456.797,3.897,cudaLaunchKernel,
+host_api,41480.592,5.942,cudaLaunchKernel,
+host_api,41533.605,7.925,cuLaunchKernel,
+host_api,41562.13,4.789,cuLaunchKernel,
+host_api,41635.793,8.326,cudaLaunchKernel,
+host_api,41692.312,7.414,cuLaunchKernel,
+host_api,41720.997,5.441,cuLaunchKernel,
+host_api,41742.689,5.912,cudaLaunchKernel,
+host_api,41794.209,7.134,cudaLaunchKernel,
+host_api,41860.998,7.444,cuLaunchKernel,
+host_api,41888.601,5.09,cuLaunchKernel,
+host_api,41909.592,5.941,cudaLaunchKernel,
+host_api,41960.741,7.324,cudaLaunchKernel,
+host_api,41998.253,7.285,cudaLaunchKernel,
+host_api,42052.729,7.104,cuLaunchKernel,
+host_api,42080.322,4.97,cuLaunchKernel,
+host_api,42100.631,5.682,cudaLaunchKernel,
+host_api,42155.457,7.565,cudaLaunchKernel,
+host_api,42268.767,8.717,cuLaunchKernel,
+host_api,42298.424,5.3,cuLaunchKernel,
+host_api,42319.926,6.222,cudaLaunchKernel,
+host_api,42402.205,9.067,cudaLaunchKernel,
+host_api,42429.738,5.661,cudaLaunchKernel,
+host_api,42466.439,6.853,cudaLaunchKernel,
+host_api,42477.27,3.857,cudaLaunchKernel,
+host_api,42515.293,7.485,cudaLaunchKernel,
+host_api,42540.232,5.731,cudaLaunchKernel,
+host_api,42584.577,8.146,cudaLaunchKernel,
+host_api,42624.795,7.484,cudaLaunchKernel,
+host_api,42685.012,7.764,cudaLaunchKernel,
+host_api,42700.531,12.154,cudaMemcpyAsync,
+host_api,42733.826,6.633,cudaLaunchKernel,
+host_api,42748.194,4.468,cudaLaunchKernel,
+host_api,42762.602,4.468,cudaLaunchKernel,
+host_api,42819.542,8.296,cudaLaunchKernel,
+host_api,42878.075,7.615,cuLaunchKernel,
+host_api,42914.305,5.22,cuLaunchKernel,
+host_api,42944.884,5.882,cudaLaunchKernel,
+host_api,43019.749,7.695,cuLaunchKernel,
+host_api,43048.294,5.25,cuLaunchKernel,
+host_api,43068.483,5.942,cudaLaunchKernel,
+host_api,43119.421,7.776,cudaLaunchKernel,
+host_api,43153.878,8.346,cudaLaunchKernel,
+host_api,43199.376,7.615,cudaLaunchKernel,
+host_api,43246.738,7.875,cudaLaunchKernel,
+host_api,43342.433,9.609,cudaLaunchKernel,
+host_api,43374.846,5.059,cuLaunchKernel,
+host_api,43380.877,4.549,cudaLaunchKernel,
+host_api,43405.846,6.111,cudaLaunchKernel,
+host_api,43468.908,8.175,cudaLaunchKernel,
+host_api,43496.882,4.779,cuLaunchKernel,
+host_api,43502.492,4.038,cudaLaunchKernel,
+host_api,43525.547,5.982,cudaLaunchKernel,
+host_api,43587.386,7.906,cudaLaunchKernel,
+host_api,43614.839,4.649,cuLaunchKernel,
+host_api,43620.31,3.968,cudaLaunchKernel,
+host_api,43642.713,5.631,cudaLaunchKernel,
+host_api,43703.261,7.845,cudaLaunchKernel,
+host_api,43730.594,4.929,cuLaunchKernel,
+host_api,43736.445,3.957,cudaLaunchKernel,
+host_api,43758.778,5.911,cudaLaunchKernel,
+host_api,43819.906,7.956,cudaLaunchKernel,
+host_api,43846.939,4.779,cuLaunchKernel,
+host_api,43852.609,3.968,cudaLaunchKernel,
+host_api,43875.173,5.551,cudaLaunchKernel,
+host_api,43935.48,8.065,cudaLaunchKernel,
+host_api,43963.143,4.629,cuLaunchKernel,
+host_api,43968.704,4.088,cudaLaunchKernel,
+host_api,43991.618,5.741,cudaLaunchKernel,
+host_api,44052.656,7.876,cudaLaunchKernel,
+host_api,44080.099,4.689,cuLaunchKernel,
+host_api,44085.65,4.328,cudaLaunchKernel,
+host_api,44108.564,5.601,cudaLaunchKernel,
+host_api,44169.452,15.721,cudaLaunchKernel,
+host_api,44205.562,4.779,cuLaunchKernel,
+host_api,44211.253,4.399,cudaLaunchKernel,
+host_api,44235.6,5.581,cudaLaunchKernel,
+host_api,44297.72,8.086,cudaLaunchKernel,
+host_api,44325.213,4.88,cuLaunchKernel,
+host_api,44330.944,4.219,cudaLaunchKernel,
+host_api,44353.889,5.55,cudaLaunchKernel,
+host_api,44414.897,7.905,cudaLaunchKernel,
+host_api,44442.49,4.629,cuLaunchKernel,
+host_api,44447.93,4.359,cudaLaunchKernel,
+host_api,44470.645,5.651,cudaLaunchKernel,
+host_api,44531.091,7.896,cudaLaunchKernel,
+host_api,44558.444,4.689,cuLaunchKernel,
+host_api,44564.035,4.569,cudaLaunchKernel,
+host_api,44586.799,5.471,cudaLaunchKernel,
+host_api,44646.875,7.895,cudaLaunchKernel,
+host_api,44674.428,4.609,cuLaunchKernel,
+host_api,44679.919,4.098,cudaLaunchKernel,
+host_api,44702.222,5.29,cudaLaunchKernel,
+host_api,44774.352,8.877,cudaLaunchKernel,
+host_api,44804.32,4.659,cuLaunchKernel,
+host_api,44809.841,4.298,cudaLaunchKernel,
+host_api,44839.217,8.958,cudaLaunchKernel,
+host_api,44932.648,8.366,cuLaunchKernel,
+host_api,44957.526,6.242,cudaLaunchKernel,
+host_api,45038.863,7.645,cuLaunchKernel,
+host_api,45047.52,4.469,cudaLaunchKernel,
+host_api,45074.773,5.039,cuLaunchKernel,
+host_api,45095.152,5.952,cudaLaunchKernel,
+host_api,45152.172,7.806,cudaLaunchKernel,
+host_api,45178.293,5.631,cudaLaunchKernel,
+host_api,45222.438,6.944,cuLaunchKernel,
+host_api,45230.323,4.429,cudaLaunchKernel,
+host_api,45251.454,5.511,cudaLaunchKernel,
+host_api,45371.797,8.627,cuLaunchKernel,
+host_api,45401.194,5.4,cuLaunchKernel,
+host_api,45422.074,6.232,cudaLaunchKernel,
+host_api,45502.981,8.646,cudaLaunchKernel,
+host_api,45530.344,5.671,cudaLaunchKernel,
+host_api,45567.305,7.334,cudaLaunchKernel,
+host_api,45578.787,4.058,cudaLaunchKernel,
+host_api,45615.999,7.214,cudaLaunchKernel,
+host_api,45640.296,5.491,cudaLaunchKernel,
+host_api,45683.099,7.835,cudaLaunchKernel,
+host_api,45722.816,7.534,cudaLaunchKernel,
+host_api,45781.71,7.394,cudaLaunchKernel,
+host_api,45796.739,11.091,cudaMemcpyAsync,
+host_api,45828.26,6.342,cudaLaunchKernel,
+host_api,45842.016,6.273,cudaLaunchKernel,
+host_api,45858.709,4.638,cudaLaunchKernel,
+host_api,45915.088,8.095,cudaLaunchKernel,
+host_api,45972.859,19.087,cuLaunchKernel,
+host_api,46024.089,5.41,cuLaunchKernel,
+host_api,46054.668,5.811,cudaLaunchKernel,
+host_api,46130.023,7.685,cuLaunchKernel,
+host_api,46158.338,4.86,cuLaunchKernel,
+host_api,46178.046,5.841,cudaLaunchKernel,
+host_api,46227.762,7.615,cudaLaunchKernel,
+host_api,46261.548,6.382,cudaLaunchKernel,
+host_api,46304.27,7.224,cudaLaunchKernel,
+host_api,46350.52,7.544,cudaLaunchKernel,
+host_api,46440.574,9.368,cudaLaunchKernel,
+host_api,46472.425,4.83,cuLaunchKernel,
+host_api,46478.267,4.168,cudaLaunchKernel,
+host_api,46503.175,6.021,cudaLaunchKernel,
+host_api,46567.409,8.226,cudaLaunchKernel,
+host_api,46595.543,4.68,cuLaunchKernel,
+host_api,46601.064,3.797,cudaLaunchKernel,
+host_api,46623.437,5.611,cudaLaunchKernel,
+host_api,46684.045,7.825,cudaLaunchKernel,
+host_api,46711.578,4.579,cuLaunchKernel,
+host_api,46716.988,3.908,cudaLaunchKernel,
+host_api,46739.392,5.591,cudaLaunchKernel,
+host_api,46799.688,7.856,cudaLaunchKernel,
+host_api,46827.091,4.509,cuLaunchKernel,
+host_api,46832.441,3.898,cudaLaunchKernel,
+host_api,46854.945,11.162,cudaLaunchKernel,
+host_api,46932.405,9.198,cudaLaunchKernel,
+host_api,46962.283,4.759,cuLaunchKernel,
+host_api,46967.843,3.828,cudaLaunchKernel,
+host_api,46991.709,5.902,cudaLaunchKernel,
+host_api,47053.499,7.845,cudaLaunchKernel,
+host_api,47080.822,4.96,cuLaunchKernel,
+host_api,47086.573,3.927,cudaLaunchKernel,
+host_api,47108.966,5.491,cudaLaunchKernel,
+host_api,47169.684,8.015,cudaLaunchKernel,
+host_api,47197.247,4.839,cuLaunchKernel,
+host_api,47202.958,4.168,cudaLaunchKernel,
+host_api,47225.542,5.51,cudaLaunchKernel,
+host_api,47285.958,7.946,cudaLaunchKernel,
+host_api,47313.442,4.609,cuLaunchKernel,
+host_api,47318.872,4.379,cudaLaunchKernel,
+host_api,47341.446,5.601,cudaLaunchKernel,
+host_api,47402.294,7.915,cudaLaunchKernel,
+host_api,47429.817,4.599,cuLaunchKernel,
+host_api,47435.217,4.389,cudaLaunchKernel,
+host_api,47457.851,5.45,cudaLaunchKernel,
+host_api,47518.428,7.905,cudaLaunchKernel,
+host_api,47545.771,4.589,cuLaunchKernel,
+host_api,47551.161,4.97,cudaLaunchKernel,
+host_api,47574.627,5.52,cudaLaunchKernel,
+host_api,47645.243,8.988,cudaLaunchKernel,
+host_api,47674.45,4.859,cuLaunchKernel,
+host_api,47680.131,4.178,cudaLaunchKernel,
+host_api,47703.927,5.671,cudaLaunchKernel,
+host_api,47766.057,8.206,cudaLaunchKernel,
+host_api,47793.69,4.539,cuLaunchKernel,
+host_api,47799.061,4.178,cudaLaunchKernel,
+host_api,47821.645,5.65,cudaLaunchKernel,
+host_api,47882.352,7.965,cudaLaunchKernel,
+host_api,47909.745,4.739,cuLaunchKernel,
+host_api,47915.275,4.048,cudaLaunchKernel,
+host_api,47937.829,5.561,cudaLaunchKernel,
+host_api,48021.11,7.956,cuLaunchKernel,
+host_api,48044.536,6.061,cudaLaunchKernel,
+host_api,48125.151,7.575,cuLaunchKernel,
+host_api,48133.678,4.398,cudaLaunchKernel,
+host_api,48160.42,4.779,cuLaunchKernel,
+host_api,48198.393,7.996,cudaLaunchKernel,
+host_api,48261.094,7.996,cudaLaunchKernel,
+host_api,48288.377,5.521,cudaLaunchKernel,
+host_api,48333.604,6.793,cuLaunchKernel,
+host_api,48341.359,4.289,cudaLaunchKernel,
+host_api,48362.721,5.581,cudaLaunchKernel,
+host_api,48481.781,8.747,cuLaunchKernel,
+host_api,48511.468,5.201,cuLaunchKernel,
+host_api,48532.489,6.332,cudaLaunchKernel,
+host_api,48613.055,8.276,cudaLaunchKernel,
+host_api,48639.907,5.671,cudaLaunchKernel,
+host_api,48676.107,6.983,cudaLaunchKernel,
+host_api,48687.178,4.088,cudaLaunchKernel,
+host_api,48723.909,6.954,cudaLaunchKernel,
+host_api,48748.918,5.54,cudaLaunchKernel,
+host_api,48791.87,7.585,cudaLaunchKernel,
+host_api,48830.786,7.675,cudaLaunchKernel,
+host_api,48889.72,7.424,cudaLaunchKernel,
+host_api,48904.519,10.901,cudaMemcpyAsync,
+host_api,48935.659,6.232,cudaLaunchKernel,
+host_api,48949.275,4.749,cudaLaunchKernel,
+host_api,48963.793,4.729,cudaLaunchKernel,
+host_api,49019.831,8.056,cudaLaunchKernel,
+host_api,49077.032,7.475,cuLaunchKernel,
+host_api,49112.891,5.12,cuLaunchKernel,
+host_api,49142.439,5.801,cudaLaunchKernel,
+host_api,49224.086,9.469,cuLaunchKernel,
+host_api,49257.441,9.358,cuLaunchKernel,
+host_api,49284.794,6.593,cudaLaunchKernel,
+host_api,49336.734,7.705,cudaLaunchKernel,
+host_api,49370.429,6.483,cudaLaunchKernel,
+host_api,49413.312,7.695,cudaLaunchKernel,
+host_api,49461.465,7.826,cudaLaunchKernel,
+host_api,49555.046,9.439,cudaLaunchKernel,
+host_api,49587.469,5.07,cuLaunchKernel,
+host_api,49593.471,4.178,cudaLaunchKernel,
+host_api,49618.188,6.072,cudaLaunchKernel,
+host_api,49690.558,9.569,cudaLaunchKernel,
+host_api,49721.178,4.618,cuLaunchKernel,
+host_api,49726.648,4.028,cudaLaunchKernel,
+host_api,49750.985,5.731,cudaLaunchKernel,
+host_api,49813.456,7.976,cudaLaunchKernel,
+host_api,49840.869,4.639,cuLaunchKernel,
+host_api,49846.41,3.897,cudaLaunchKernel,
+host_api,49868.753,5.691,cudaLaunchKernel,
+host_api,49929.12,7.915,cudaLaunchKernel,
+host_api,49956.713,4.649,cuLaunchKernel,
+host_api,49962.234,3.877,cudaLaunchKernel,
+host_api,49984.637,6.082,cudaLaunchKernel,
+host_api,50045.846,7.875,cudaLaunchKernel,
+host_api,50073.419,4.509,cuLaunchKernel,
+host_api,50078.819,3.787,cudaLaunchKernel,
+host_api,50101.413,5.641,cudaLaunchKernel,
+host_api,50161.309,8.045,cudaLaunchKernel,
+host_api,50189.132,4.84,cuLaunchKernel,
+host_api,50194.774,4.047,cudaLaunchKernel,
+host_api,50217.607,15.731,cudaLaunchKernel,
+host_api,50292.422,8.487,cudaLaunchKernel,
+host_api,50321.568,4.89,cuLaunchKernel,
+host_api,50327.31,4.248,cudaLaunchKernel,
+host_api,50350.855,5.852,cudaLaunchKernel,
+host_api,50411.623,7.925,cudaLaunchKernel,
+host_api,50439.136,4.819,cuLaunchKernel,
+host_api,50444.777,4.458,cudaLaunchKernel,
+host_api,50468.002,5.621,cudaLaunchKernel,
+host_api,50528.94,7.895,cudaLaunchKernel,
+host_api,50556.363,4.608,cuLaunchKernel,
+host_api,50561.883,4.118,cudaLaunchKernel,
+host_api,50584.277,5.721,cudaLaunchKernel,
+host_api,50643.702,7.795,cudaLaunchKernel,
+host_api,50670.904,4.599,cuLaunchKernel,
+host_api,50676.395,4.248,cudaLaunchKernel,
+host_api,50699.539,5.872,cudaLaunchKernel,
+host_api,50760.047,7.634,cudaLaunchKernel,
+host_api,50787.51,4.729,cuLaunchKernel,
+host_api,50793.1,4.239,cudaLaunchKernel,
+host_api,50815.985,5.681,cudaLaunchKernel,
+host_api,50887.142,8.957,cudaLaunchKernel,
+host_api,50916.75,4.598,cuLaunchKernel,
+host_api,50922.19,4.288,cudaLaunchKernel,
+host_api,50946.377,5.661,cudaLaunchKernel,
+host_api,51008.477,7.985,cudaLaunchKernel,
+host_api,51035.98,4.489,cuLaunchKernel,
+host_api,51041.38,4.108,cudaLaunchKernel,
+host_api,51063.934,5.501,cudaLaunchKernel,
+host_api,51146.043,8.005,cuLaunchKernel,
+host_api,51169.759,5.841,cudaLaunchKernel,
+host_api,51249.483,7.665,cuLaunchKernel,
+host_api,51258.13,4.358,cudaLaunchKernel,
+host_api,51284.501,4.779,cuLaunchKernel,
+host_api,51304.76,6.012,cudaLaunchKernel,
+host_api,51361.159,8.216,cudaLaunchKernel,
+host_api,51387.65,5.601,cudaLaunchKernel,
+host_api,51431.385,6.753,cuLaunchKernel,
+host_api,51439.1,4.378,cudaLaunchKernel,
+host_api,51460.201,5.78,cudaLaunchKernel,
+host_api,52899.784,15.68,cudaLaunchKernel,
+host_api,52918.711,5.069,cudaLaunchKernel,
+host_api,52925.654,4.529,cudaLaunchKernel,
+host_api,53016.279,6.523,cudaLaunchKernel,
+host_api,53028.082,4.509,cudaLaunchKernel,
+host_api,53038.492,4.108,cudaLaunchKernel,
+host_api,53045.516,3.867,cudaLaunchKernel,
+host_api,53051.307,3.707,cudaLaunchKernel,
+host_api,53058.01,3.727,cudaLaunchKernel,
+host_api,53063.561,3.567,cudaLaunchKernel,
+host_api,53070.274,3.667,cudaLaunchKernel,
+host_api,53075.825,3.596,cudaLaunchKernel,
+host_api,53081.375,3.888,cudaLaunchKernel,
+host_api,53088.189,3.677,cudaLaunchKernel,
+host_api,53093.599,3.547,cudaLaunchKernel,
+host_api,53100.101,3.507,cudaLaunchKernel,
+host_api,53105.452,3.497,cudaLaunchKernel,
+host_api,53111.143,3.557,cudaLaunchKernel,
+host_api,53117.535,3.527,cudaLaunchKernel,
+host_api,53123.026,3.567,cudaLaunchKernel,
+host_api,53129.739,3.867,cudaLaunchKernel,
+host_api,53135.5,3.547,cudaLaunchKernel,
+host_api,53141.301,3.547,cudaLaunchKernel,
+host_api,53147.693,3.457,cudaLaunchKernel,
+host_api,53153.234,3.527,cudaLaunchKernel,
+host_api,53160.128,3.607,cudaLaunchKernel,
+host_api,53247.246,11.873,cudaMemcpyAsync,
+host_api,53259.57,9235.038,cudaStreamSynchronize,
+host_api,63002.791,5.681,cudaDeviceSynchronize,
+host_api,63040.854,2.345,cudaDeviceSynchronize,
+nvtx,0.0,7646.036,train/prep,
+nvtx,7686.374,55272.301,train/step,
+nvtx,7688.888,17799.149,train/forward,
+nvtx,25491.805,501.399,train/zero_grad,
+nvtx,25995.328,25777.908,train/backward,
+nvtx,51779.027,1452.99,train/optimizer,

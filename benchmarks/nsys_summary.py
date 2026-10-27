@@ -45,16 +45,26 @@ def main():
     copies = q("SELECT start, end, bytes, copyKind FROM CUPTI_ACTIVITY_KIND_MEMCPY")
     sets = q("SELECT start, end FROM CUPTI_ACTIVITY_KIND_MEMSET")
     starts = sorted(s for s, e, n in nvtx if n == "train/prep")
+    try:  # host-side CUDA runtime/driver API calls (launch submissions vs graph launches)
+        api = [(s, strings.get(n, "?")) for s, n in q("SELECT start, nameId FROM CUPTI_ACTIVITY_KIND_RUNTIME")]
+    except sqlite3.OperationalError:
+        api = []
     steps = []
     for s, e in zip(starts[:-1], starts[1:]):
         ks = [(a_, b_, n) for a_, b_, n in kern if a_ >= s and b_ <= e]
+        calls = [n for t, n in api if s <= t < e]
         cs = [(a_, b_, by, k) for a_, b_, by, k in copies if a_ >= s and b_ <= e]
         busy = union_len([(x, y) for x, y, _ in ks] + [(x, y) for x, y, _, _ in cs] +
                          [(x, y) for x, y in sets if x >= s and y <= e])
         gemm = sum(b_ - a_ for a_, b_, n in ks if categorize(n).startswith("GEMM"))
         tc = sum(b_ - a_ for a_, b_, n in ks if is_tensor_core_gemm(n))
         rec = dict(window_ms=(e - s) / 1e6, gpu_busy_ms=busy / 1e6, busy_pct=100 * busy / (e - s),
-                   kernels=len(ks), gemm_ms=gemm / 1e6, tensor_core_gemm_ms=tc / 1e6)
+                   kernels=len(ks), gemm_ms=gemm / 1e6, tensor_core_gemm_ms=tc / 1e6,
+                   triton_kernels=sum(1 for _, _, n in ks if n.startswith("triton_")),
+                   api_kernel_launches=sum(1 for n in calls if "LaunchKernel" in n),
+                   api_graph_launches=sum(1 for n in calls if "GraphLaunch" in n),
+                   api_memcpy_calls=sum(1 for n in calls if "Memcpy" in n),
+                   api_sync_calls=sum(1 for n in calls if "Synchronize" in n))
         for kind in ("H2D", "D2H", "D2D"):
             sel = [(a_, b_, by) for a_, b_, by, k in cs if COPY_KIND.get(k) == kind]
             rec[kind + "_bytes"] = int(sum(by for _, _, by in sel))

@@ -1,0 +1,8 @@
+block_m,block_n,num_warps,fwd_ms,fwd_bwd_ms,note
+32,32,4,1.040,11.251,
+32,32,8,1.540,11.844,
+64,32,8,,,out of shared memory (172032 > 166912 bytes)
+16,32,4,0.771,2.981,selected default
+32,16,4,1.105,22.299,
+64,64,8,,,out of shared memory (196608 > 166912 bytes)
+16,16,4,0.950,3.018,

@@ -1,0 +1,155 @@
+{
+ "cfg": "G4",
+ "config": {
+  "kind": "compile_graph",
+  "mode": "default",
+  "scope": "model"
+ },
+ "data": "synthetic",
+ "env": {
+  "host": "nid001409",
+  "slurm_job_id": "60347489",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "bf3d5e142c240d23961c9cc8ea5306d8fe20adf8",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-c6cbf0c9-babd-9965-38ee-9adf642172e6"
+ },
+ "warmup": 10,
+ "iters": 40,
+ "setup_s": 15.080564514035359,
+ "setup_inner_s": 15.046352527977433,
+ "dynamo_counters": {
+  "frames": {
+   "total": 1,
+   "ok": 1
+  },
+  "inline_call": {},
+  "stats": {
+   "calls_captured": 522,
+   "unique_graphs": 1
+  },
+  "inductor": {
+   "pattern_matcher_count": 918,
+   "pattern_matcher_nodes": 1141,
+   "extern_calls": 349,
+   "fxgraph_cache_hit": 2,
+   "benchmarking.TritonBenchmarker.benchmark_gpu": 14,
+   "benchmarking.TritonBenchmarker.triton_do_bench": 1
+  },
+  "aot_autograd": {
+   "total": 1,
+   "ok": 1
+  }
+ },
+ "inductor_cache_dir": "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/inductor_cache/nodeA/G4",
+ "mem_after_setup_gib": 7.543741703033447,
+ "peak_during_setup_gib": 9.893664836883545,
+ "model_gib": 2.735107898712158,
+ "gpu_region": {
+  "event_ms": {
+   "median": 32.55324935913086,
+   "mean": 32.58372173309326,
+   "std": 0.07997862039324488,
+   "p10": 32.518096923828125,
+   "p90": 32.74121513366699,
+   "iqr": 0.05810260772705078,
+   "min": 32.47769546508789,
+   "max": 32.766849517822266,
+   "n": 40
+  },
+  "wall_ms": {
+   "median": 32.57312800269574,
+   "mean": 32.60296155203832,
+   "std": 0.07952893242864296,
+   "p10": 32.53845639992505,
+   "p90": 32.759297714801505,
+   "iqr": 0.05745571979787201,
+   "min": 32.49651996884495,
+   "max": 32.78605901869014,
+   "n": 40
+  },
+  "peak_allocated_gib": 7.543741703033447,
+  "peak_reserved_gib": 11.59765625
+ },
+ "phases_ms": {
+  "replay_fwd_bwd_opt": {
+   "median": 32.557376861572266,
+   "mean": 32.61271858215332,
+   "std": 0.09708771454629883,
+   "p10": 32.52337913513183,
+   "p90": 32.74313240051269,
+   "iqr": 0.1833362579345703,
+   "min": 32.490142822265625,
+   "max": 32.77724838256836,
+   "n": 20
+  }
+ },
+ "end_to_end": {
+  "step_wall_ms": {
+   "median": 40.33982448163442,
+   "mean": 40.3382941003656,
+   "std": 0.03203383538709508,
+   "p10": 40.29935104190372,
+   "p90": 40.37590638035908,
+   "iqr": 0.0393512164009735,
+   "min": 40.25743901729584,
+   "max": 40.39877199102193,
+   "n": 40
+  },
+  "prep_ms": {
+   "median": 7.6625120639801025,
+   "mean": 7.665849614143371,
+   "std": 0.019452190985281666,
+   "p10": 7.649069023132324,
+   "p90": 7.687097549438477,
+   "iqr": 0.015223979949951172,
+   "min": 7.629536151885986,
+   "max": 7.723519802093506,
+   "n": 40
+  },
+  "step_after_prep_ms": {
+   "median": 32.65127944946289,
+   "mean": 32.64636573791504,
+   "std": 0.02540366344247371,
+   "p10": 32.61076316833496,
+   "p90": 32.67094039916992,
+   "iqr": 0.03089618682861328,
+   "min": 32.59036636352539,
+   "max": 32.70393753051758,
+   "n": 40
+  },
+  "throughput_issue_dates_per_s": 24.7893988843524,
+  "peak_allocated_gib": 7.924365043640137,
+  "peak_reserved_gib": 11.59765625,
+  "losses_first_last": [
+   334142.71875,
+   333379.65625
+  ],
+  "loss_finite": true
+ },
+ "inference": {
+  "forward_ms": {
+   "median": 8.27455997467041,
+   "mean": 8.259465599060059,
+   "std": 0.030572813396495455,
+   "p10": 8.206976318359375,
+   "p90": 8.283542728424072,
+   "iqr": 0.03944039344787598,
+   "min": 8.202719688415527,
+   "max": 8.293536186218262,
+   "n": 40
+  },
+  "first_call_s": 5.0974682059604675
+ }
+}

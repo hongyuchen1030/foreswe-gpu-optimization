@@ -29,6 +29,25 @@ steps. Full tables, variability and method: `engineering_audit/optimization/PREC
 - After the switch to Tensor Cores the step is **launch/host-bound** (GPU busy 63 % on E4, 50 % on E5).
 - Short-run convergence on real data is unchanged in every configuration.
 
+### torch.compile and CUDA Graphs on top of E4
+
+Details: `engineering_audit/optimization/cuda_graphs/COMPILE_AND_CUDAGRAPH_REPORT.md`.
+
+| Config (TF32 + fused AdamW) | Step ms | vs E4 eager | vs FP32 baseline | GPU busy | Compile / capture | Error vs E4 eager |
+|---|---:|---:|---:|---:|---:|---|
+| G0 E4 eager (re-measured) | 50.78 | 1.00× | 2.92× | 64 % | – | – |
+| G3 manual full-step CUDA graph | 43.94 | 1.16× | 3.37× | 86 % | 0.5 s | bitwise identical |
+| G2 `torch.compile(mode="reduce-overhead")` | 41.09 | 1.24× | 3.61× | 83 % | 47 s cold / 17 s warm | out 5e-5, grad 3e-4 |
+| **G4 Inductor kernels inside a manual graph** | **40.05** | **1.27×** | **3.70×** | **87 %** | 46 s / 15 s | out 5e-5, grad 3e-4 |
+
+- CUDA graphs cut host launches from 1,106 to 13 per step while executing the same 1,108 kernels;
+  Inductor removes about 150 kernels by fusion.
+- Fused geo-attention (Triton prototype, `foreswe_bench/geo_attention.py`, opt-in): FP32-accurate
+  forward and 9× less memory, but 3.4× slower than eager, and the attention core is only 14–18 % of the step.
+  See `engineering_audit/optimization/fused_attention/`.
+- Station angularity uses Kahan's robust `2·atan2` formula (`pairwise_vector_angle` in
+  `fore_swe/extended_dl_forecasting.py`).
+
 ## Layout
 
 ```
@@ -83,6 +102,9 @@ or piece by piece (inside an allocation):
 | `python -m benchmarks.convergence --exp E4 --steps 300` | matched-budget training on real data |
 | `python -m benchmarks.profile_config --exp E4` | kernel categories, Tensor-Core share, launches |
 | `python -m benchmarks.summarize_results && python -m benchmarks.make_figures` | final table + figures |
+| `python -m benchmarks.graph_matrix --tag t --cfgs G0 G1 G2 G3 G4` | torch.compile / CUDA-graph matrix (both timing scopes) |
+| `python -m benchmarks.graph_correctness` | graph/compile vs eager: outputs, grads, updates, graph-safety checks |
+| `python -m benchmarks.attention_study` | geo-attention core: eager vs Inductor vs fused Triton, accuracy + latency |
 
 ## Rerunning the original ForeSWE pipelines
 

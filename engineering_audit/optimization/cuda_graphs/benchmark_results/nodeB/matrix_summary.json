@@ -1,0 +1,95 @@
+{
+ "tag": "nodeB",
+ "summary": {
+  "G0": {
+   "cfg": "G0",
+   "n_runs": 3,
+   "e2e_ms": 50.548147497465834,
+   "e2e_ms_repeat_medians": [
+    50.548147497465834,
+    50.72284649941139,
+    50.13738450361416
+   ],
+   "e2e_iqr_ms": 0.1875464804470539,
+   "prep_ms": 7.129503965377808,
+   "step_after_prep_ms": 43.35272026062012,
+   "gpu_region_ms": 41.05678367614746,
+   "gpu_region_wall_ms": 41.07925351127051,
+   "infer_ms": 11.931536197662354,
+   "peak_alloc_gib": 8.514167308807373,
+   "peak_reserved_gib": 9.068359375,
+   "setup_s_cold": 0.0003897539572790265,
+   "setup_s_warm": [
+    0.00040318904211744666,
+    0.0027304200339131057
+   ],
+   "phases_ms": {
+    "forward": 11.763311862945557,
+    "backward": 19.779647827148438,
+    "optimizer": 9.454879760742188
+   },
+   "profiler_counts": {
+    "steps": 3,
+    "host_api_calls_per_step": {
+     "cudaMemcpyAsync": 18.0,
+     "cudaLaunchKernel": 805.0,
+     "cuLaunchKernel": 301.0
+    },
+    "host_kernel_launch_calls_per_step": 1106.0,
+    "graph_launches_per_step": 0.0,
+    "device_kernels_seen_by_profiler_per_step": 1162.0,
+    "triton_kernels_per_step": 0.0,
+    "note": "kernels executed inside CUDA graphs may be invisible to torch.profiler; nsys --cuda-graph-trace=node is authoritative"
+   },
+   "dynamo_counters": {},
+   "gpu": "NVIDIA A100-SXM4-40GB",
+   "host": "nid001556",
+   "speedup_e2e_vs_G0": 1.0,
+   "speedup_gpu_region_vs_G0": 1.0
+  },
+  "G3": {
+   "cfg": "G3",
+   "n_runs": 3,
+   "e2e_ms": 44.56151800695807,
+   "e2e_ms_repeat_medians": [
+    43.561898986808956,
+    44.56151800695807,
+    44.96010599541478
+   ],
+   "e2e_iqr_ms": 0.03144852234981954,
+   "prep_ms": 7.560912132263184,
+   "step_after_prep_ms": 36.9598388671875,
+   "gpu_region_ms": 36.86212730407715,
+   "gpu_region_wall_ms": 36.88090047216974,
+   "infer_ms": 8.797327995300293,
+   "peak_alloc_gib": 7.924365043640137,
+   "peak_reserved_gib": 11.107421875,
+   "setup_s_cold": 0.5992618689779192,
+   "setup_s_warm": [
+    0.4894499480142258,
+    0.46247981599299237
+   ],
+   "phases_ms": {
+    "replay_fwd_bwd_opt": 36.80462455749512
+   },
+   "profiler_counts": {
+    "steps": 3,
+    "host_api_calls_per_step": {
+     "cudaMemcpyAsync": 22.0,
+     "cudaLaunchKernel": 12.0,
+     "cudaGraphLaunch": 1.0
+    },
+    "host_kernel_launch_calls_per_step": 12.0,
+    "graph_launches_per_step": 1.0,
+    "device_kernels_seen_by_profiler_per_step": 1171.0,
+    "triton_kernels_per_step": 0.0,
+    "note": "kernels executed inside CUDA graphs may be invisible to torch.profiler; nsys --cuda-graph-trace=node is authoritative"
+   },
+   "dynamo_counters": {},
+   "gpu": "NVIDIA A100-SXM4-40GB",
+   "host": "nid001556",
+   "speedup_e2e_vs_G0": 1.134345277231646,
+   "speedup_gpu_region_vs_G0": 1.1137931171868738
+  }
+ }
+}

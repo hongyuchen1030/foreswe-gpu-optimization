@@ -1,0 +1,180 @@
+{
+ "cfg": "G2L",
+ "config": {
+  "kind": "compile",
+  "mode": "reduce-overhead",
+  "scope": "layers"
+ },
+ "data": "synthetic",
+ "env": {
+  "host": "nid001409",
+  "slurm_job_id": "60347489",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "bf3d5e142c240d23961c9cc8ea5306d8fe20adf8",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-c6cbf0c9-babd-9965-38ee-9adf642172e6"
+ },
+ "warmup": 10,
+ "iters": 40,
+ "setup_s": 8.11889985500602,
+ "setup_inner_s": 8.085593941970728,
+ "dynamo_counters": {
+  "frames": {
+   "total": 1,
+   "ok": 1
+  },
+  "inline_call": {},
+  "stats": {
+   "calls_captured": 37,
+   "unique_graphs": 1
+  },
+  "inductor": {
+   "pattern_matcher_count": 76,
+   "pattern_matcher_nodes": 94,
+   "extern_calls": 25,
+   "fxgraph_cache_hit": 1,
+   "benchmarking.TritonBenchmarker.benchmark_gpu": 8,
+   "benchmarking.TritonBenchmarker.triton_do_bench": 1,
+   "fxgraph_cache_miss": 1,
+   "triton_bundler_save_kernel": 140,
+   "cudagraph_recorded_non_static_inputs": 18
+  },
+  "aot_autograd": {
+   "total": 1,
+   "ok": 1
+  }
+ },
+ "inductor_cache_dir": "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/inductor_cache/nodeA/G2L",
+ "mem_after_setup_gib": 6.026930332183838,
+ "peak_during_setup_gib": 10.2271146774292,
+ "model_gib": 2.735107898712158,
+ "gpu_region": {
+  "event_ms": {
+   "median": 37.147247314453125,
+   "mean": 37.222005462646486,
+   "std": 0.14816087604169498,
+   "p10": 37.106933975219725,
+   "p90": 37.43275451660156,
+   "iqr": 0.14180660247802734,
+   "min": 37.07350540161133,
+   "max": 37.758846282958984,
+   "n": 40
+  },
+  "wall_ms": {
+   "median": 37.17202600091696,
+   "mean": 37.24711422837572,
+   "std": 0.14849642031179255,
+   "p10": 37.131436221534386,
+   "p90": 37.457476439885795,
+   "iqr": 0.14261498290579766,
+   "min": 37.09749202243984,
+   "max": 37.78539097402245,
+   "n": 40
+  },
+  "peak_allocated_gib": 6.387831211090088,
+  "peak_reserved_gib": 10.83984375
+ },
+ "phases_ms": {
+  "forward": {
+   "median": 10.367056369781494,
+   "mean": 10.418409585952759,
+   "std": 0.1001607972446941,
+   "p10": 10.33422679901123,
+   "p90": 10.530742168426514,
+   "iqr": 0.13316845893859863,
+   "min": 10.320927619934082,
+   "max": 10.707263946533203,
+   "n": 20
+  },
+  "backward": {
+   "median": 17.300975799560547,
+   "mean": 17.30587043762207,
+   "std": 0.017594937849980084,
+   "p10": 17.293545722961426,
+   "p90": 17.313500022888185,
+   "iqr": 0.014640331268310547,
+   "min": 17.29212760925293,
+   "max": 17.37353515625,
+   "n": 20
+  },
+  "optimizer": {
+   "median": 9.474416255950928,
+   "mean": 9.47370400428772,
+   "std": 0.021482202226579105,
+   "p10": 9.44795560836792,
+   "p90": 9.493615818023681,
+   "iqr": 0.03189587593078613,
+   "min": 9.439295768737793,
+   "max": 9.519231796264648,
+   "n": 20
+  }
+ },
+ "end_to_end": {
+  "step_wall_ms": {
+   "median": 46.34867754066363,
+   "mean": 46.3624433541554,
+   "std": 0.0868810365565244,
+   "p10": 46.31305544171482,
+   "p90": 46.39741076389328,
+   "iqr": 0.039098013075999916,
+   "min": 46.259119000751525,
+   "max": 46.85116303153336,
+   "n": 40
+  },
+  "prep_ms": {
+   "median": 7.812352180480957,
+   "mean": 7.823939204216003,
+   "std": 0.053983547653415474,
+   "p10": 7.802841711044311,
+   "p90": 7.835250997543335,
+   "iqr": 0.014256119728088379,
+   "min": 7.796383857727051,
+   "max": 8.14896011352539,
+   "n": 40
+  },
+  "step_after_prep_ms": {
+   "median": 38.510719299316406,
+   "mean": 38.50932140350342,
+   "std": 0.042483077922924266,
+   "p10": 38.46554069519043,
+   "p90": 38.5488166809082,
+   "iqr": 0.037994384765625,
+   "min": 38.42995071411133,
+   "max": 38.67350387573242,
+   "n": 40
+  },
+  "throughput_issue_dates_per_s": 21.575588626507376,
+  "peak_allocated_gib": 6.409808158874512,
+  "peak_reserved_gib": 10.83984375,
+  "losses_first_last": [
+   334142.1875,
+   333377.6875
+  ],
+  "loss_finite": true
+ },
+ "inference": {
+  "forward_ms": {
+   "median": 10.61675214767456,
+   "mean": 10.66733522415161,
+   "std": 0.10461267961550624,
+   "p10": 10.591465950012207,
+   "p90": 10.819398784637452,
+   "iqr": 0.07703232765197754,
+   "min": 10.577247619628906,
+   "max": 10.999808311462402,
+   "n": 40
+  },
+  "first_call_s": 0.7044207999715582
+ }
+}

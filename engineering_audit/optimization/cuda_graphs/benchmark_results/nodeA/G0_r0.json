@@ -1,0 +1,167 @@
+{
+ "cfg": "G0",
+ "config": {
+  "kind": "eager",
+  "capturable": false
+ },
+ "data": "synthetic",
+ "env": {
+  "host": "nid001409",
+  "slurm_job_id": "60347489",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "bf3d5e142c240d23961c9cc8ea5306d8fe20adf8",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-c6cbf0c9-babd-9965-38ee-9adf642172e6"
+ },
+ "warmup": 10,
+ "iters": 40,
+ "setup_s": 0.00042253697756677866,
+ "setup_inner_s": 0.0,
+ "dynamo_counters": {},
+ "inductor_cache_dir": "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/inductor_cache/nodeA/G0",
+ "mem_after_setup_gib": 2.7506604194641113,
+ "peak_during_setup_gib": 2.7506604194641113,
+ "model_gib": 2.735107898712158,
+ "gpu_region": {
+  "event_ms": {
+   "median": 40.99839973449707,
+   "mean": 41.01671600341797,
+   "std": 0.17831017294071255,
+   "p10": 40.84247360229492,
+   "p90": 41.19351234436035,
+   "iqr": 0.2094736099243164,
+   "min": 40.79129409790039,
+   "max": 41.72857666015625,
+   "n": 40
+  },
+  "wall_ms": {
+   "median": 41.02012698422186,
+   "mean": 41.039589772117324,
+   "std": 0.17860523785563187,
+   "p10": 40.8648430777248,
+   "p90": 41.21555607416667,
+   "iqr": 0.21232524886727333,
+   "min": 40.81339301774278,
+   "max": 41.753279976546764,
+   "n": 40
+  },
+  "peak_allocated_gib": 8.507592678070068,
+  "peak_reserved_gib": 8.69140625
+ },
+ "phases_ms": {
+  "forward": {
+   "median": 11.773024082183838,
+   "mean": 11.813544130325317,
+   "std": 0.14135439554770665,
+   "p10": 11.714832305908203,
+   "p90": 11.899760150909424,
+   "iqr": 0.15988802909851074,
+   "min": 11.701024055480957,
+   "max": 12.31993579864502,
+   "n": 20
+  },
+  "backward": {
+   "median": 19.733407974243164,
+   "mean": 19.78850402832031,
+   "std": 0.16704983642593196,
+   "p10": 19.628182029724123,
+   "p90": 20.04793357849121,
+   "iqr": 0.1717681884765625,
+   "min": 19.608991622924805,
+   "max": 20.170976638793945,
+   "n": 20
+  },
+  "optimizer": {
+   "median": 9.446048259735107,
+   "mean": 9.445163202285766,
+   "std": 0.016131180865333317,
+   "p10": 9.427644443511962,
+   "p90": 9.467200088500977,
+   "iqr": 0.019832372665405273,
+   "min": 9.414400100708008,
+   "max": 9.479455947875977,
+   "n": 20
+  }
+ },
+ "end_to_end": {
+  "step_wall_ms": {
+   "median": 50.776421470800415,
+   "mean": 50.80518309841864,
+   "std": 0.360906329792464,
+   "p10": 50.54239161545411,
+   "p90": 50.88266858365387,
+   "iqr": 0.17381850921083242,
+   "min": 50.49919098382816,
+   "max": 52.83314100233838,
+   "n": 40
+  },
+  "prep_ms": {
+   "median": 7.403487920761108,
+   "mean": 7.4102231621742245,
+   "std": 0.07088322373869185,
+   "p10": 7.36974401473999,
+   "p90": 7.423536157608032,
+   "iqr": 0.037072062492370605,
+   "min": 7.34611177444458,
+   "max": 7.823808193206787,
+   "n": 40
+  },
+  "step_after_prep_ms": {
+   "median": 43.35427284240723,
+   "mean": 43.368505764007566,
+   "std": 0.2972107389776448,
+   "p10": 43.139509963989255,
+   "p90": 43.455244827270505,
+   "iqr": 0.1610403060913086,
+   "min": 43.07942581176758,
+   "max": 44.982112884521484,
+   "n": 40
+  },
+  "throughput_issue_dates_per_s": 19.69418031113244,
+  "peak_allocated_gib": 8.514167308807373,
+  "peak_reserved_gib": 9.068359375,
+  "losses_first_last": [
+   334142.625,
+   333379.9375
+  ],
+  "loss_finite": true
+ },
+ "inference": {
+  "forward_ms": {
+   "median": 11.93179178237915,
+   "mean": 11.9776615858078,
+   "std": 0.09115207551211732,
+   "p10": 11.90990047454834,
+   "p90": 12.10463638305664,
+   "iqr": 0.14167189598083496,
+   "min": 11.899007797241211,
+   "max": 12.235391616821289,
+   "n": 40
+  },
+  "first_call_s": 0.014133895048871636
+ },
+ "profiler_counts": {
+  "steps": 3,
+  "host_api_calls_per_step": {
+   "cudaMemcpyAsync": 18.0,
+   "cudaLaunchKernel": 805.0,
+   "cuLaunchKernel": 301.0
+  },
+  "host_kernel_launch_calls_per_step": 1106.0,
+  "graph_launches_per_step": 0.0,
+  "device_kernels_seen_by_profiler_per_step": 1162.0,
+  "triton_kernels_per_step": 0.0,
+  "note": "kernels executed inside CUDA graphs may be invisible to torch.profiler; nsys --cuda-graph-trace=node is authoritative"
+ }
+}

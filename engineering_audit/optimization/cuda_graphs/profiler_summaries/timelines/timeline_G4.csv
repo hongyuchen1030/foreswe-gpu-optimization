@@ -1,0 +1,1031 @@
+track,start_us,dur_us,category,name
+gpu_kernel,346.867,824.189,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,1212.656,7.872,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,1455.663,823.069,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,2319.339,7.872,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,2457.771,822.94,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,3320.583,7.04,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,3459.879,46.399,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,3545.03,6.496,index gather,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu"
+gpu_kernel,5484.702,6.656,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,7220.855,6.304,dtype casts (to/copy),"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,7590.614,1.44,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<l"
+gpu_kernel,7602.454,1.408,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<l"
+gpu_kernel,8075.54,8.576,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,8084.628,3.296,other elementwise,void at::native::<unnamed>::distribution_elementwise_grid_stride_kernel<unsigned
+gpu_kernel,8087.956,31.488,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_tn_align4>(T1::P
+gpu_kernel,8119.956,2.848,other elementwise,triton_poi_fused_addmm_0
+gpu_kernel,8122.836,2.24,other elementwise,triton_poi_fused_addmm_1
+gpu_kernel,8125.108,2.111,other elementwise,triton_poi_fused_addmm_2
+gpu_kernel,8127.283,2.24,other elementwise,triton_poi_fused_addmm_3
+gpu_kernel,8129.587,2.08,other elementwise,triton_poi_fused_addmm_4
+gpu_kernel,8131.699,1.952,other elementwise,triton_poi_fused_addmm_5
+gpu_kernel,8133.683,1.92,other elementwise,triton_poi_fused_addmm_6
+gpu_kernel,8135.635,1.823,other elementwise,triton_poi_fused_addmm_7
+gpu_kernel,8137.459,1.824,other elementwise,triton_poi_fused_addmm_8
+gpu_kernel,8139.315,1.856,other elementwise,triton_poi_fused_addmm_9
+gpu_kernel,8141.203,1.824,other elementwise,triton_poi_fused_addmm_10
+gpu_kernel,8143.059,1.792,other elementwise,triton_poi_fused_addmm_11
+gpu_kernel,8144.883,1.792,other elementwise,triton_poi_fused_addmm_12
+gpu_kernel,8146.739,7.36,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,8154.323,27.648,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_tn_align4>(T1::P
+gpu_kernel,8182.067,2.976,other elementwise,triton_poi_fused_addmm_0
+gpu_kernel,8185.075,2.208,other elementwise,triton_poi_fused_addmm_1
+gpu_kernel,8187.315,2.112,other elementwise,triton_poi_fused_addmm_2
+gpu_kernel,8189.459,2.239,other elementwise,triton_poi_fused_addmm_3
+gpu_kernel,8191.699,1.92,other elementwise,triton_poi_fused_addmm_4
+gpu_kernel,8193.651,1.856,other elementwise,triton_poi_fused_addmm_5
+gpu_kernel,8195.539,1.856,other elementwise,triton_poi_fused_addmm_6
+gpu_kernel,8197.459,1.792,other elementwise,triton_poi_fused_addmm_7
+gpu_kernel,8199.283,1.792,other elementwise,triton_poi_fused_addmm_8
+gpu_kernel,8201.107,1.824,other elementwise,triton_poi_fused_addmm_9
+gpu_kernel,8202.963,1.792,other elementwise,triton_poi_fused_addmm_10
+gpu_kernel,8204.787,1.824,other elementwise,triton_poi_fused_addmm_11
+gpu_kernel,8206.643,1.824,other elementwise,triton_poi_fused_addmm_12
+gpu_kernel,8208.499,7.296,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align1>(T1::P
+gpu_kernel,8216.051,27.744,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_tn_align4>(T1::P
+gpu_kernel,8243.923,2.112,other elementwise,triton_poi_fused_addmm_13
+gpu_kernel,8246.099,1.952,other elementwise,triton_poi_fused_addmm_14
+gpu_kernel,8248.115,1.92,other elementwise,triton_poi_fused_addmm_15
+gpu_kernel,8250.099,1.92,other elementwise,triton_poi_fused_addmm_16
+gpu_kernel,8252.083,1.568,other elementwise,triton_poi_fused_addmm_17
+gpu_kernel,8253.715,1.696,other elementwise,triton_poi_fused_addmm_18
+gpu_kernel,8255.507,1.536,other elementwise,triton_poi_fused_addmm_19
+gpu_kernel,8257.107,1.536,other elementwise,triton_poi_fused_addmm_20
+gpu_kernel,8258.707,1.568,other elementwise,triton_poi_fused_addmm_21
+gpu_kernel,8260.339,1.536,other elementwise,triton_poi_fused_addmm_22
+gpu_kernel,8261.939,1.536,other elementwise,triton_poi_fused_addmm_23
+gpu_kernel,8263.539,1.536,other elementwise,triton_poi_fused_addmm_24
+gpu_kernel,8265.139,1.536,other elementwise,triton_poi_fused_addmm_25
+gpu_kernel,8266.739,5.28,other elementwise,triton_poi_fused_gelu_native_dropout_26
+gpu_kernel,8272.083,4.96,other elementwise,triton_poi_fused_gelu_native_dropout_27
+gpu_kernel,8277.107,4.416,other elementwise,triton_poi_fused_gelu_native_dropout_26
+gpu_kernel,8281.587,10.88,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8292.531,10.88,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8303.475,11.136,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8314.675,11.2,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8325.939,10.976,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8336.979,10.816,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8347.859,11.712,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8359.635,11.359,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8371.026,8.768,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8379.858,8.704,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8388.626,8.896,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8397.586,11.232,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8408.882,11.2,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8420.114,13.984,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8434.162,11.295,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8445.458,11.423,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8456.882,14.207,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8471.09,11.295,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8482.386,11.232,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8493.65,11.519,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8505.17,14.144,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8519.346,8.896,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8528.274,9.248,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8537.554,11.071,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8548.626,11.424,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8560.082,11.264,GEMM (SIMT FP32),ampere_sgemm_32x128_tt
+gpu_kernel,8571.378,7.648,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8579.538,7.168,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8586.802,7.136,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8594.034,7.36,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8601.458,7.264,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8608.786,7.135,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8615.985,7.296,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8623.377,7.136,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8630.577,7.264,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8637.937,7.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8645.201,7.136,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8652.401,7.168,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8659.665,7.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_16x6_tt_align1>(T1::P
+gpu_kernel,8667.249,13.056,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_tn_align4>(T1::P
+gpu_kernel,8680.337,5.216,other elementwise,triton_poi_fused_add_28
+gpu_kernel,8685.585,12.544,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_tn_align4>(T1::P
+gpu_kernel,8698.225,4.928,other elementwise,triton_poi_fused_add_28
+gpu_kernel,8703.185,12.608,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_tn_align4>(T1::P
+gpu_kernel,8715.857,4.736,other elementwise,triton_poi_fused_add_28
+gpu_kernel,8720.625,23.52,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4>(T1::Pa
+gpu_kernel,8744.177,23.904,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4>(T1::Pa
+gpu_kernel,8768.145,23.552,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4>(T1::Pa
+gpu_kernel,8791.761,34.624,other elementwise,triton_poi_fused_add_repeat_29
+gpu_kernel,8826.289,40.927,other elementwise,triton_poi_fused_add_repeat_29
+gpu_kernel,8866.992,40.608,other elementwise,triton_poi_fused_add_repeat_29
+gpu_kernel,8907.408,5.152,other elementwise,triton_poi_fused_mul_30
+gpu_kernel,8912.432,4.864,other elementwise,triton_poi_fused_mul_30
+gpu_kernel,8917.36,4.8,other elementwise,triton_poi_fused_mul_30
+gpu_kernel,8922.224,40.928,other elementwise,triton_poi_fused_view_31
+gpu_kernel,8963.024,40.896,other elementwise,triton_poi_fused_view_31
+gpu_kernel,9003.824,42.912,other elementwise,triton_poi_fused_view_31
+gpu_kernel,9046.64,228.799,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_tn_align4>(T1::
+gpu_kernel,9275.311,227.647,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_tn_align4>(T1::
+gpu_kernel,9502.83,227.775,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_tn_align4>(T1::
+gpu_kernel,9730.509,75.776,other elementwise,triton_poi_fused_clone_32
+gpu_kernel,9806.157,81.087,other elementwise,triton_poi_fused_clone_32
+gpu_kernel,9887.116,82.176,other elementwise,triton_poi_fused_clone_32
+gpu_kernel,9969.164,44.0,other elementwise,triton_poi_fused_bmm_33
+gpu_kernel,10013.036,27.552,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,10040.396,36.479,other elementwise,triton_poi_fused_bmm_34
+gpu_kernel,10076.555,41.664,other elementwise,triton_poi_fused_bmm_34
+gpu_kernel,10118.091,41.6,other elementwise,triton_poi_fused_bmm_33
+gpu_kernel,10159.563,42.624,other elementwise,triton_poi_fused_bmm_33
+gpu_kernel,10202.091,27.872,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,10229.835,34.88,other elementwise,triton_poi_fused_bmm_34
+gpu_kernel,10264.587,40.544,other elementwise,triton_poi_fused_bmm_34
+gpu_kernel,10305.003,43.583,other elementwise,triton_poi_fused_bmm_33
+gpu_kernel,10348.458,42.368,other elementwise,triton_poi_fused_bmm_33
+gpu_kernel,10390.698,27.168,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,10417.77,36.416,other elementwise,triton_poi_fused_bmm_34
+gpu_kernel,10454.058,42.048,other elementwise,triton_poi_fused_bmm_34
+gpu_kernel,10495.978,43.424,other elementwise,triton_poi_fused_bmm_33
+gpu_kernel,10539.274,3.424,softmax,triton_per_fused__softmax_35
+gpu_kernel,10542.538,40.063,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,10582.665,3.296,softmax,triton_per_fused__softmax_35
+gpu_kernel,10585.609,34.272,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,10619.945,3.04,softmax,triton_per_fused__softmax_35
+gpu_kernel,10623.017,33.408,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,10656.265,23.968,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4>(T1::Pa
+gpu_kernel,10680.009,23.776,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4>(T1::Pa
+gpu_kernel,10703.817,23.776,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4>(T1::Pa
+gpu_kernel,10727.657,9.088,other elementwise,triton_poi_fused_cat_36
+gpu_kernel,10736.777,83.711,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,10820.744,83.136,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,10903.72,83.296,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,10986.888,32.224,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,11018.984,11.68,softmax,triton_per_fused__softmax_37
+gpu_kernel,11030.504,25.183,softmax,triton_poi_fused__softmax_add_mul_reciprocal_38
+gpu_kernel,11055.527,29.28,softmax,triton_red_fused__softmax_39
+gpu_kernel,11084.647,33.344,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,11117.831,5.536,other elementwise,triton_poi_fused_clone_40
+gpu_kernel,11123.207,85.12,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,11208.615,21.408,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_41
+gpu_kernel,11229.863,81.631,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,11311.334,5.888,other elementwise,triton_poi_fused_relu_threshold_backward_42
+gpu_kernel,11317.062,57.088,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,11373.99,23.52,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,11397.254,84.992,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,11482.118,83.039,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,11565.061,83.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,11648.549,32.032,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,11680.357,11.552,softmax,triton_per_fused__softmax_37
+gpu_kernel,11691.749,24.928,softmax,triton_poi_fused__softmax_add_mul_reciprocal_38
+gpu_kernel,11716.517,29.76,softmax,triton_red_fused__softmax_39
+gpu_kernel,11746.117,32.703,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,11778.724,5.952,other elementwise,triton_poi_fused_clone_40
+gpu_kernel,11784.548,84.384,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,11868.708,23.68,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,11892.26,81.376,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,11973.508,6.048,other elementwise,triton_poi_fused_relu_threshold_backward_42
+gpu_kernel,11979.46,57.631,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12036.963,23.584,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,12060.419,84.832,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12145.539,83.488,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12228.963,83.679,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12312.578,32.352,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,12344.834,11.456,softmax,triton_per_fused__softmax_37
+gpu_kernel,12356.194,26.528,softmax,triton_poi_fused__softmax_add_mul_reciprocal_38
+gpu_kernel,12382.626,29.6,softmax,triton_red_fused__softmax_39
+gpu_kernel,12412.13,33.024,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,12445.058,6.016,other elementwise,triton_poi_fused_clone_40
+gpu_kernel,12450.818,85.087,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12535.809,23.84,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,12559.553,81.312,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12640.737,6.208,other elementwise,triton_poi_fused_relu_threshold_backward_42
+gpu_kernel,12646.817,57.504,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12704.193,23.776,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,12727.873,85.087,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12813.248,83.456,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12896.608,83.424,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,12980.32,33.151,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,13013.183,11.52,softmax,triton_per_fused__softmax_37
+gpu_kernel,13024.575,27.072,softmax,triton_poi_fused__softmax_add_mul_reciprocal_38
+gpu_kernel,13051.423,30.016,softmax,triton_red_fused__softmax_39
+gpu_kernel,13081.311,32.928,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,13114.143,5.952,other elementwise,triton_poi_fused_clone_40
+gpu_kernel,13119.967,84.8,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13204.607,23.552,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,13227.999,81.599,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13309.438,6.464,other elementwise,triton_poi_fused_relu_threshold_backward_42
+gpu_kernel,13315.582,57.696,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13373.118,23.616,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,13396.606,85.152,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13482.014,83.615,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13565.533,83.712,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13649.117,33.152,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,13682.141,11.52,softmax,triton_per_fused__softmax_37
+gpu_kernel,13693.501,26.72,softmax,triton_poi_fused__softmax_add_mul_reciprocal_38
+gpu_kernel,13720.061,30.207,softmax,triton_red_fused__softmax_39
+gpu_kernel,13750.108,33.184,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,13783.164,5.888,other elementwise,triton_poi_fused_clone_40
+gpu_kernel,13788.892,84.896,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13873.66,23.488,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,13897.02,81.503,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,13978.363,6.432,other elementwise,triton_poi_fused_relu_threshold_backward_42
+gpu_kernel,13984.667,57.536,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14042.043,23.936,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,14065.819,85.184,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14151.259,83.647,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14234.778,83.712,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14318.394,32.928,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,14351.194,11.616,softmax,triton_per_fused__softmax_37
+gpu_kernel,14362.682,26.368,softmax,triton_poi_fused__softmax_add_mul_reciprocal_38
+gpu_kernel,14388.89,29.92,softmax,triton_red_fused__softmax_39
+gpu_kernel,14418.682,33.088,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,14451.61,5.919,other elementwise,triton_poi_fused_clone_40
+gpu_kernel,14457.369,84.896,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14542.105,23.68,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,14565.657,81.376,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14646.937,6.144,other elementwise,triton_poi_fused_relu_threshold_backward_42
+gpu_kernel,14652.953,57.471,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14710.296,23.84,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,14734.008,85.376,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14819.672,83.392,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14902.968,83.455,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,14986.359,32.928,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,15019.159,11.648,softmax,triton_per_fused__softmax_37
+gpu_kernel,15030.711,26.752,softmax,triton_poi_fused__softmax_add_mul_reciprocal_38
+gpu_kernel,15057.335,30.496,softmax,triton_red_fused__softmax_39
+gpu_kernel,15087.703,30.368,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,15117.943,5.92,other elementwise,triton_poi_fused_clone_40
+gpu_kernel,15123.767,85.151,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15208.63,23.776,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,15232.31,81.376,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15313.558,6.272,other elementwise,triton_poi_fused_relu_threshold_backward_42
+gpu_kernel,15319.702,57.536,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15377.11,23.488,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,15400.47,85.343,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15486.133,83.296,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15569.333,83.616,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15652.853,33.023,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,15685.78,11.52,softmax,triton_per_fused__softmax_37
+gpu_kernel,15697.172,26.272,softmax,triton_poi_fused__softmax_add_mul_reciprocal_38
+gpu_kernel,15723.316,29.92,softmax,triton_red_fused__softmax_39
+gpu_kernel,15753.108,32.8,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,15785.78,5.984,other elementwise,triton_poi_fused_clone_40
+gpu_kernel,15791.668,84.832,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15876.372,24.096,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,15900.372,81.535,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,15981.779,6.656,other elementwise,triton_poi_fused_relu_threshold_backward_42
+gpu_kernel,15988.179,57.632,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_tn_align4>(T1::
+gpu_kernel,16045.683,27.584,layer_norm,triton_red_fused_add_native_dropout_native_layer_norm_native_layer_norm_backward
+gpu_kernel,16073.107,50.56,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x128_32x6_tn_align4>(T1::P
+gpu_kernel,16123.507,7.04,other elementwise,triton_poi_fused_gelu_native_dropout_45
+gpu_kernel,16130.387,7.872,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4>(T1::Pa
+gpu_kernel,16138.291,3.04,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,16141.395,2.016,other elementwise,triton_poi_fused_gelu_46
+gpu_kernel,16143.443,7.552,GEMM (SIMT FP32),ampere_sgemm_32x32_sliced1x4_tn
+gpu_kernel,16151.027,1.664,other elementwise,triton_poi_fused_gelu_47
+gpu_kernel,16152.723,4.8,GEMM (SIMT FP32),ampere_sgemm_32x128_tn
+gpu_kernel,16157.587,2.783,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,16160.371,4.383,reductions,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at:"
+gpu_kernel,16164.818,1.248,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,16166.098,1.376,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,16167.538,2.432,other elementwise,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kerne"
+gpu_kernel,16170.002,1.376,other elementwise,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<f"
+gpu_kernel,16171.442,2.88,other elementwise,triton_red_fused_sum_0
+gpu_kernel,16174.354,1.6,other elementwise,triton_per_fused_sum_1
+gpu_kernel,16176.018,3.936,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,16179.986,1.952,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,16181.97,4.384,GEMM (SIMT FP32),ampere_sgemm_128x32_nn
+gpu_kernel,16186.386,1.728,other elementwise,triton_poi_fused_add_gelu_gelu_backward_2
+gpu_kernel,16188.178,4.384,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x10_nt_align4>(T1::P
+gpu_kernel,16192.594,2.528,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,16195.154,2.112,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16197.298,2.112,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16199.442,2.048,other elementwise,triton_poi_fused_mm_4
+gpu_kernel,16201.522,1.92,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16203.474,1.632,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16205.138,1.664,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16206.834,1.632,other elementwise,triton_poi_fused_mm_4
+gpu_kernel,16208.498,1.632,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16210.162,1.632,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16211.858,1.6,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16213.522,1.6,other elementwise,triton_poi_fused_mm_4
+gpu_kernel,16215.186,1.632,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16216.882,1.6,other elementwise,triton_poi_fused_mm_3
+gpu_kernel,16218.546,3.04,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16221.65,2.24,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16223.954,2.144,other elementwise,triton_poi_fused_mm_6
+gpu_kernel,16226.162,2.08,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16228.306,1.632,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16230.002,1.664,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16231.73,1.664,other elementwise,triton_poi_fused_mm_6
+gpu_kernel,16233.458,1.632,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16235.186,1.632,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16236.882,1.664,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16238.61,1.664,other elementwise,triton_poi_fused_mm_6
+gpu_kernel,16240.338,1.664,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16242.066,1.664,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16243.794,3.04,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16246.898,2.176,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16249.138,2.208,other elementwise,triton_poi_fused_mm_6
+gpu_kernel,16251.41,2.08,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16253.554,1.664,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16255.282,1.664,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16257.01,1.632,other elementwise,triton_poi_fused_mm_6
+gpu_kernel,16258.738,1.632,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16260.466,1.632,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16262.162,1.664,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16263.89,1.664,other elementwise,triton_poi_fused_mm_6
+gpu_kernel,16265.618,1.696,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16267.378,1.632,other elementwise,triton_poi_fused_mm_5
+gpu_kernel,16269.106,2.368,other elementwise,triton_red_fused_sum_7
+gpu_kernel,16271.538,1.568,other elementwise,triton_per_fused_sum_8
+gpu_kernel,16273.138,3.52,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,16276.722,2.048,other elementwise,triton_poi_fused_gelu_gelu_backward_9
+gpu_kernel,16278.802,6.847,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x128_32x3_nt_align4>(T1::P
+gpu_kernel,16285.65,3.072,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,16288.754,2.656,other elementwise,triton_red_fused_sum_10
+gpu_kernel,16291.442,2.176,other elementwise,triton_per_fused_sum_11
+gpu_kernel,16293.65,7.168,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,16300.882,3.968,other elementwise,triton_poi_fused_gelu_gelu_backward_native_dropout_backward_12
+gpu_kernel,16304.882,3.136,other elementwise,triton_red_fused_sum_13
+gpu_kernel,16308.05,2.144,other elementwise,triton_per_fused_sum_14
+gpu_kernel,16310.258,33.184,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nn_align4>(T1::P
+gpu_kernel,16343.89,36.416,layer_norm,triton_per_fused_native_layer_norm_backward_15
+gpu_kernel,16380.178,36.479,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_16x3_nt_align4>(T1::
+gpu_kernel,16416.529,20.896,layer_norm,triton_red_fused_native_dropout_backward_native_layer_norm_backward_16
+gpu_kernel,16445.009,67.872,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,16512.913,5.088,other elementwise,triton_poi_fused_threshold_backward_17
+gpu_kernel,16518.065,57.344,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,16575.313,54.112,layer_norm,triton_per_fused_add_native_layer_norm_backward_18
+gpu_kernel,16629.297,16.768,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_19
+gpu_kernel,16645.905,83.103,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,16728.88,6.208,other elementwise,triton_red_fused_sum_20
+gpu_kernel,16734.928,2.208,other elementwise,triton_per_fused_sum_21
+gpu_kernel,16737.168,7.2,other elementwise,triton_red_fused_sum_22
+gpu_kernel,16744.432,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,16746.64,6.24,other elementwise,triton_red_fused_sum_22
+gpu_kernel,16752.912,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,16755.088,29.76,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,16784.72,5.824,other elementwise,triton_poi_fused_view_24
+gpu_kernel,16790.384,82.816,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,16873.456,6.24,other elementwise,triton_red_fused_sum_22
+gpu_kernel,16879.568,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,16881.776,33.087,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,16914.767,48.576,softmax,triton_per_fused__softmax__softmax_backward_data_div_mul_sum_25
+gpu_kernel,16963.215,34.048,softmax,triton_per_fused__softmax_backward_data_sum_26
+gpu_kernel,16997.135,2.56,softmax,triton_red_fused__softmax__softmax_backward_data_mul_sum_27
+gpu_kernel,16999.567,31.584,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,17031.023,87.744,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,17118.543,31.807,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,17150.222,5.792,other elementwise,triton_poi_fused_view_24
+gpu_kernel,17155.918,82.56,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,17238.414,7.04,other elementwise,triton_per_fused_sum_28
+gpu_kernel,17245.358,90.112,layer_norm,triton_per_fused_add_native_layer_norm_backward_29
+gpu_kernel,17335.342,22.88,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_30
+gpu_kernel,17365.134,66.399,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,17431.661,5.088,other elementwise,triton_poi_fused_threshold_backward_17
+gpu_kernel,17436.813,57.152,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,17493.869,54.944,layer_norm,triton_per_fused_add_native_layer_norm_backward_18
+gpu_kernel,17548.493,16.64,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_19
+gpu_kernel,17565.005,82.847,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,17647.788,6.272,other elementwise,triton_red_fused_sum_20
+gpu_kernel,17653.964,2.144,other elementwise,triton_per_fused_sum_21
+gpu_kernel,17656.172,7.36,other elementwise,triton_red_fused_sum_22
+gpu_kernel,17663.596,2.112,other elementwise,triton_per_fused_sum_23
+gpu_kernel,17665.772,7.2,other elementwise,triton_red_fused_sum_22
+gpu_kernel,17673.068,2.08,other elementwise,triton_per_fused_sum_23
+gpu_kernel,17675.212,6.144,other elementwise,triton_red_fused_sum_22
+gpu_kernel,17681.42,2.08,other elementwise,triton_per_fused_sum_23
+gpu_kernel,17683.564,29.536,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,17713.004,5.792,other elementwise,triton_poi_fused_view_24
+gpu_kernel,17718.668,82.784,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,17801.772,6.304,other elementwise,triton_red_fused_sum_22
+gpu_kernel,17807.948,2.176,other elementwise,triton_per_fused_sum_23
+gpu_kernel,17810.188,33.184,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,17843.212,48.927,softmax,triton_per_fused__softmax__softmax_backward_data_div_mul_sum_25
+gpu_kernel,17891.979,34.56,softmax,triton_per_fused__softmax_backward_data_sum_26
+gpu_kernel,17926.411,9.088,other elementwise,triton_per_fused_add_mul_reciprocal_sum_31
+gpu_kernel,17935.243,2.496,softmax,triton_red_fused__softmax__softmax_backward_data_mul_sum_27
+gpu_kernel,17937.771,1.792,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,17939.595,1.696,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,17941.323,1.76,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,17943.115,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,17944.843,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,17946.539,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,17948.235,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,17949.931,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,17951.627,30.688,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,17982.155,88.064,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,18069.931,34.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,18104.651,6.111,other elementwise,triton_poi_fused_view_24
+gpu_kernel,18110.602,82.688,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,18193.13,7.008,other elementwise,triton_per_fused_sum_28
+gpu_kernel,18199.978,89.632,layer_norm,triton_per_fused_add_native_layer_norm_backward_29
+gpu_kernel,18289.45,22.56,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_30
+gpu_kernel,18318.954,66.687,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,18385.705,5.184,other elementwise,triton_poi_fused_threshold_backward_17
+gpu_kernel,18390.761,57.248,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,18447.913,54.592,layer_norm,triton_per_fused_add_native_layer_norm_backward_18
+gpu_kernel,18502.377,16.256,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_19
+gpu_kernel,18518.665,82.783,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,18601.352,6.208,other elementwise,triton_red_fused_sum_20
+gpu_kernel,18607.432,2.176,other elementwise,triton_per_fused_sum_21
+gpu_kernel,18609.672,7.296,other elementwise,triton_red_fused_sum_22
+gpu_kernel,18617.0,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,18619.208,7.2,other elementwise,triton_red_fused_sum_22
+gpu_kernel,18626.472,2.08,other elementwise,triton_per_fused_sum_23
+gpu_kernel,18628.648,6.176,other elementwise,triton_red_fused_sum_22
+gpu_kernel,18634.888,2.112,other elementwise,triton_per_fused_sum_23
+gpu_kernel,18637.064,29.536,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,18666.472,5.728,other elementwise,triton_poi_fused_view_24
+gpu_kernel,18672.072,82.72,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,18755.08,6.272,other elementwise,triton_red_fused_sum_22
+gpu_kernel,18761.256,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,18763.464,33.12,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,18796.456,48.735,softmax,triton_per_fused__softmax__softmax_backward_data_div_mul_sum_25
+gpu_kernel,18845.095,34.304,softmax,triton_per_fused__softmax_backward_data_sum_26
+gpu_kernel,18879.303,2.624,softmax,triton_red_fused__softmax__softmax_backward_data_mul_sum_27
+gpu_kernel,18881.831,31.52,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,18913.223,87.488,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,19000.615,34.88,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,19035.367,5.792,other elementwise,triton_poi_fused_view_24
+gpu_kernel,19041.063,82.591,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,19124.006,6.432,other elementwise,triton_per_fused_sum_28
+gpu_kernel,19130.342,89.6,layer_norm,triton_per_fused_add_native_layer_norm_backward_29
+gpu_kernel,19219.814,22.272,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_30
+gpu_kernel,19249.414,66.528,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,19316.038,5.216,other elementwise,triton_poi_fused_threshold_backward_17
+gpu_kernel,19321.126,57.311,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,19378.373,53.664,layer_norm,triton_per_fused_add_native_layer_norm_backward_18
+gpu_kernel,19431.941,16.576,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_19
+gpu_kernel,19448.389,82.944,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,19531.269,6.304,other elementwise,triton_red_fused_sum_20
+gpu_kernel,19537.445,2.144,other elementwise,triton_per_fused_sum_21
+gpu_kernel,19539.685,7.264,other elementwise,triton_red_fused_sum_22
+gpu_kernel,19547.045,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,19549.253,7.424,other elementwise,triton_red_fused_sum_22
+gpu_kernel,19556.741,2.112,other elementwise,triton_per_fused_sum_23
+gpu_kernel,19558.885,6.144,other elementwise,triton_red_fused_sum_22
+gpu_kernel,19565.061,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,19567.237,29.695,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,19596.772,5.92,other elementwise,triton_poi_fused_view_24
+gpu_kernel,19602.532,82.592,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,19685.412,6.272,other elementwise,triton_red_fused_sum_22
+gpu_kernel,19691.524,2.176,other elementwise,triton_per_fused_sum_23
+gpu_kernel,19693.764,33.696,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,19727.332,49.408,softmax,triton_per_fused__softmax__softmax_backward_data_div_mul_sum_25
+gpu_kernel,19776.612,35.104,softmax,triton_per_fused__softmax_backward_data_sum_26
+gpu_kernel,19811.556,9.023,other elementwise,triton_per_fused_add_mul_reciprocal_sum_31
+gpu_kernel,19820.419,2.528,softmax,triton_red_fused__softmax__softmax_backward_data_mul_sum_27
+gpu_kernel,19822.979,1.696,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,19824.707,1.76,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,19826.499,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,19828.195,1.792,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,19830.019,1.696,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,19831.747,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,19833.443,1.632,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,19835.139,1.632,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,19836.803,30.368,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,19867.043,87.84,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,19954.755,35.328,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,19989.955,5.984,other elementwise,triton_poi_fused_view_24
+gpu_kernel,19995.779,82.911,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,20079.202,6.336,other elementwise,triton_per_fused_sum_28
+gpu_kernel,20085.41,88.64,layer_norm,triton_per_fused_add_native_layer_norm_backward_29
+gpu_kernel,20173.89,22.592,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_30
+gpu_kernel,20203.586,66.592,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,20270.242,4.992,other elementwise,triton_poi_fused_threshold_backward_17
+gpu_kernel,20275.298,57.087,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,20332.321,53.216,layer_norm,triton_per_fused_add_native_layer_norm_backward_18
+gpu_kernel,20385.409,16.672,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_19
+gpu_kernel,20401.953,83.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,20484.929,6.24,other elementwise,triton_red_fused_sum_20
+gpu_kernel,20491.073,2.144,other elementwise,triton_per_fused_sum_21
+gpu_kernel,20493.281,7.168,other elementwise,triton_red_fused_sum_22
+gpu_kernel,20500.513,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,20502.721,7.296,other elementwise,triton_red_fused_sum_22
+gpu_kernel,20510.081,2.112,other elementwise,triton_per_fused_sum_23
+gpu_kernel,20512.257,6.4,other elementwise,triton_red_fused_sum_22
+gpu_kernel,20518.721,2.08,other elementwise,triton_per_fused_sum_23
+gpu_kernel,20520.865,29.727,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,20550.464,5.856,other elementwise,triton_poi_fused_view_24
+gpu_kernel,20556.192,82.784,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,20639.264,6.368,other elementwise,triton_red_fused_sum_22
+gpu_kernel,20645.44,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,20647.648,33.312,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,20680.864,48.576,softmax,triton_per_fused__softmax__softmax_backward_data_div_mul_sum_25
+gpu_kernel,20729.312,34.752,softmax,triton_per_fused__softmax_backward_data_sum_26
+gpu_kernel,20763.936,2.688,softmax,triton_red_fused__softmax__softmax_backward_data_mul_sum_27
+gpu_kernel,20766.496,31.135,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,20797.535,87.872,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,20885.279,35.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,20920.351,5.92,other elementwise,triton_poi_fused_view_24
+gpu_kernel,20926.175,82.528,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,21008.639,6.88,other elementwise,triton_per_fused_sum_28
+gpu_kernel,21015.391,89.311,layer_norm,triton_per_fused_add_native_layer_norm_backward_29
+gpu_kernel,21104.574,22.464,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_30
+gpu_kernel,21134.43,66.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,21201.406,5.056,other elementwise,triton_poi_fused_threshold_backward_17
+gpu_kernel,21206.526,57.312,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,21263.774,53.535,layer_norm,triton_per_fused_add_native_layer_norm_backward_18
+gpu_kernel,21317.181,16.384,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_19
+gpu_kernel,21333.469,82.944,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,21416.349,6.336,other elementwise,triton_red_fused_sum_20
+gpu_kernel,21422.589,2.144,other elementwise,triton_per_fused_sum_21
+gpu_kernel,21424.797,7.328,other elementwise,triton_red_fused_sum_22
+gpu_kernel,21432.189,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,21434.397,7.264,other elementwise,triton_red_fused_sum_22
+gpu_kernel,21441.725,2.112,other elementwise,triton_per_fused_sum_23
+gpu_kernel,21443.901,6.208,other elementwise,triton_red_fused_sum_22
+gpu_kernel,21450.173,2.08,other elementwise,triton_per_fused_sum_23
+gpu_kernel,21452.349,29.696,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,21481.917,5.76,other elementwise,triton_poi_fused_view_24
+gpu_kernel,21487.549,82.463,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,21570.332,5.952,other elementwise,triton_red_fused_sum_22
+gpu_kernel,21576.188,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,21578.396,33.248,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,21611.548,49.344,softmax,triton_per_fused__softmax__softmax_backward_data_div_mul_sum_25
+gpu_kernel,21660.796,34.496,softmax,triton_per_fused__softmax_backward_data_sum_26
+gpu_kernel,21695.164,8.992,other elementwise,triton_per_fused_add_mul_reciprocal_sum_31
+gpu_kernel,21704.06,2.464,softmax,triton_red_fused__softmax__softmax_backward_data_mul_sum_27
+gpu_kernel,21706.62,1.76,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,21708.444,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,21710.14,1.792,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,21711.964,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,21713.692,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,21715.42,1.632,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,21717.116,1.632,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,21718.812,1.632,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,21720.508,30.496,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,21750.844,88.031,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,21838.715,35.136,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,21873.723,5.952,other elementwise,triton_poi_fused_view_24
+gpu_kernel,21879.515,82.592,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,21962.011,7.04,other elementwise,triton_per_fused_sum_28
+gpu_kernel,21968.923,88.575,layer_norm,triton_per_fused_add_native_layer_norm_backward_29
+gpu_kernel,22057.338,22.112,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_30
+gpu_kernel,22087.13,67.296,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,22154.458,5.088,other elementwise,triton_poi_fused_threshold_backward_17
+gpu_kernel,22159.578,57.248,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,22216.73,53.471,layer_norm,triton_per_fused_add_native_layer_norm_backward_18
+gpu_kernel,22270.041,17.6,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_19
+gpu_kernel,22287.481,82.976,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,22370.361,6.272,other elementwise,triton_red_fused_sum_20
+gpu_kernel,22376.505,2.176,other elementwise,triton_per_fused_sum_21
+gpu_kernel,22378.745,7.328,other elementwise,triton_red_fused_sum_22
+gpu_kernel,22386.105,2.176,other elementwise,triton_per_fused_sum_23
+gpu_kernel,22388.313,7.104,other elementwise,triton_red_fused_sum_22
+gpu_kernel,22395.449,2.112,other elementwise,triton_per_fused_sum_23
+gpu_kernel,22397.593,6.144,other elementwise,triton_red_fused_sum_22
+gpu_kernel,22403.769,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,22405.945,29.504,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,22435.321,5.312,other elementwise,triton_poi_fused_view_24
+gpu_kernel,22440.473,82.911,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,22523.544,6.304,other elementwise,triton_red_fused_sum_22
+gpu_kernel,22529.688,2.208,other elementwise,triton_per_fused_sum_23
+gpu_kernel,22531.928,33.344,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,22565.112,48.576,softmax,triton_per_fused__softmax__softmax_backward_data_div_mul_sum_25
+gpu_kernel,22613.56,34.464,softmax,triton_per_fused__softmax_backward_data_sum_26
+gpu_kernel,22647.768,2.592,softmax,triton_red_fused__softmax__softmax_backward_data_mul_sum_27
+gpu_kernel,22650.232,31.552,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,22681.656,87.199,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,22768.759,31.712,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,22800.375,5.504,other elementwise,triton_poi_fused_view_24
+gpu_kernel,22805.751,81.984,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,22888.055,6.88,other elementwise,triton_per_fused_sum_28
+gpu_kernel,22894.807,88.223,layer_norm,triton_per_fused_add_native_layer_norm_backward_29
+gpu_kernel,22982.934,22.688,layer_norm,triton_red_fused_add_native_dropout_backward_native_layer_norm_backward_30
+gpu_kernel,23012.502,66.784,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x5_nn_align4>(T1::
+gpu_kernel,23079.414,4.672,other elementwise,triton_poi_fused_threshold_backward_17
+gpu_kernel,23084.15,56.576,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,23140.662,5.664,other elementwise,triton_red_fused_sum_20
+gpu_kernel,23146.198,2.176,other elementwise,triton_per_fused_sum_21
+gpu_kernel,23148.438,7.584,other elementwise,triton_red_fused_sum_22
+gpu_kernel,23156.086,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,23158.294,7.104,other elementwise,triton_red_fused_sum_22
+gpu_kernel,23165.494,2.08,other elementwise,triton_per_fused_sum_23
+gpu_kernel,23167.638,26.144,layer_norm,triton_red_fused_add_native_dropout_native_dropout_backward_native_layer_norm_na
+gpu_kernel,23193.686,82.751,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,23276.725,55.2,layer_norm,triton_per_fused_add_native_layer_norm_backward_18
+gpu_kernel,23331.829,8.704,other elementwise,triton_red_fused_sum_22
+gpu_kernel,23340.597,2.144,other elementwise,triton_per_fused_sum_23
+gpu_kernel,23342.805,30.24,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,23372.949,5.184,other elementwise,triton_poi_fused_view_24
+gpu_kernel,23378.005,81.76,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,23460.053,6.272,other elementwise,triton_red_fused_sum_22
+gpu_kernel,23466.229,2.143,other elementwise,triton_per_fused_sum_23
+gpu_kernel,23468.436,33.28,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_16x4_tn_align4>(T1::P
+gpu_kernel,23501.62,48.672,softmax,triton_per_fused__softmax__softmax_backward_data_div_mul_sum_25
+gpu_kernel,23550.004,33.92,softmax,triton_per_fused__softmax_backward_data_sum_26
+gpu_kernel,23583.796,9.024,other elementwise,triton_per_fused_add_mul_reciprocal_sum_31
+gpu_kernel,23592.692,2.56,softmax,triton_red_fused__softmax__softmax_backward_data_mul_sum_27
+gpu_kernel,23595.284,1.696,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,23597.012,1.76,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,23598.804,1.696,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,23600.532,1.76,other elementwise,triton_per_fused_add_mul_reciprocal_sum_32
+gpu_kernel,23602.356,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,23604.084,1.632,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,23605.748,1.664,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,23607.444,1.632,other elementwise,triton_per_fused_add_mul_reciprocal_sum_33
+gpu_kernel,23609.108,30.464,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align4>(T1::Pa
+gpu_kernel,23639.412,87.487,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nt_align4>(T1::
+gpu_kernel,23726.739,35.264,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nn_align4>(T1::Pa
+gpu_kernel,23761.747,5.472,other elementwise,triton_poi_fused_view_24
+gpu_kernel,23767.091,82.016,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x3_nn_align4>(T1::
+gpu_kernel,23849.363,21.44,other elementwise,triton_poi_fused_add_35
+gpu_kernel,23870.675,21.44,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,23891.987,30.24,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,23922.259,21.12,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,23943.411,28.991,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,23972.434,21.312,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,23993.778,29.6,GEMM (SIMT FP32),"std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, "
+gpu_kernel,24023.41,2.848,softmax,triton_per_fused__softmax_backward_data_36
+gpu_kernel,24026.29,34.56,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,24060.914,2.848,other elementwise,triton_poi_fused_view_37
+gpu_kernel,24063.794,21.152,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,24084.978,4.128,other elementwise,triton_poi_fused_add_38
+gpu_kernel,24089.138,11.712,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,24100.882,4.128,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,24105.042,3.712,other elementwise,triton_poi_fused_gelu_gelu_backward_native_dropout_backward_39
+gpu_kernel,24108.786,6.4,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,24115.218,2.368,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,24117.618,3.008,other elementwise,triton_red_fused_sum_40
+gpu_kernel,24120.658,2.08,other elementwise,triton_per_fused_sum_41
+gpu_kernel,24122.802,3.04,softmax,triton_per_fused__softmax_backward_data_36
+gpu_kernel,24125.906,35.36,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,24161.33,2.816,other elementwise,triton_poi_fused_view_37
+gpu_kernel,24164.21,21.216,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,24185.522,4.064,other elementwise,triton_poi_fused_add_42
+gpu_kernel,24189.682,11.519,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,24201.265,4.064,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,24205.425,3.744,other elementwise,triton_poi_fused_gelu_gelu_backward_native_dropout_backward_39
+gpu_kernel,24209.233,6.304,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,24215.633,2.304,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,24218.001,2.976,other elementwise,triton_red_fused_sum_40
+gpu_kernel,24221.041,2.08,other elementwise,triton_per_fused_sum_41
+gpu_kernel,24223.217,3.04,softmax,triton_per_fused__softmax_backward_data_36
+gpu_kernel,24226.321,35.296,GEMM (SIMT FP32),"void gemv2N_kernel<int, int, float, float, float, float, (int)128, (int)2, (int)"
+gpu_kernel,24261.681,2.88,other elementwise,triton_poi_fused_view_37
+gpu_kernel,24264.625,21.152,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,24285.873,4.128,other elementwise,triton_poi_fused_add_43
+gpu_kernel,24290.065,11.84,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nn_align4>(T1::P
+gpu_kernel,24301.969,4.096,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,24306.129,3.68,other elementwise,triton_poi_fused_gelu_gelu_backward_native_dropout_backward_39
+gpu_kernel,24309.873,6.336,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_nt_align1>(T1::Pa
+gpu_kernel,24316.273,2.304,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,24318.641,2.976,other elementwise,triton_red_fused_sum_40
+gpu_kernel,24321.681,2.112,other elementwise,triton_per_fused_sum_41
+gpu_kernel,24323.857,7.168,other elementwise,triton_per_fused_sum_28
+gpu_kernel,24331.089,5.344,other elementwise,triton_red_fused_sum_44
+gpu_kernel,24336.497,2.144,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24338.705,5.184,other elementwise,triton_red_fused_sum_13
+gpu_kernel,24343.953,2.144,other elementwise,triton_per_fused_cat_sum_45
+gpu_kernel,24346.161,19.008,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,24365.233,5.568,other elementwise,triton_red_fused_sum_46
+gpu_kernel,24370.865,2.176,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24373.073,5.312,other elementwise,triton_red_fused_sum_13
+gpu_kernel,24378.417,2.144,other elementwise,triton_per_fused_cat_sum_45
+gpu_kernel,24380.593,19.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,24399.665,5.44,other elementwise,triton_red_fused_sum_47
+gpu_kernel,24405.137,2.176,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24407.345,5.344,other elementwise,triton_red_fused_sum_13
+gpu_kernel,24412.721,2.144,other elementwise,triton_per_fused_cat_sum_45
+gpu_kernel,24414.897,19.008,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,24433.969,5.088,other elementwise,triton_red_fused_sum_48
+gpu_kernel,24439.089,2.175,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24441.265,2.111,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24443.408,5.216,other elementwise,triton_red_fused_sum_48
+gpu_kernel,24448.656,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24450.768,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24452.88,5.056,other elementwise,triton_red_fused_sum_48
+gpu_kernel,24458.0,2.079,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24460.08,2.112,other elementwise,triton_per_fused_sum_14
+gpu_kernel,24462.224,7.904,other elementwise,triton_red_fused_sum_22
+gpu_kernel,24470.16,2.176,other elementwise,triton_per_fused_sum_23
+gpu_kernel,24472.4,13.6,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nt_align4>(T1::P
+gpu_kernel,24486.032,13.376,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nt_align4>(T1::P
+gpu_kernel,24499.44,13.216,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x64_32x6_nt_align4>(T1::P
+gpu_kernel,24512.688,19.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,24531.92,19.455,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,24551.376,19.456,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x64_32x3_nt_align4>(T1::P
+gpu_kernel,24570.864,21.504,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x5_nt_align4>(T1::
+gpu_kernel,24592.4,20.32,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x5_nt_align4>(T1::
+gpu_kernel,24612.752,21.12,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_32x5_nt_align4>(T1::
+gpu_kernel,24633.904,65.727,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,24699.311,68.064,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,24767.215,67.232,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,24834.287,66.656,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,24900.815,66.719,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,24967.406,66.368,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25033.678,67.648,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25101.198,67.424,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25168.494,67.711,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25236.077,68.032,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25303.981,67.872,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25371.597,67.775,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25439.244,68.192,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25507.308,67.488,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25574.7,67.584,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25642.156,67.487,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,25709.515,30.752,GEMM (SIMT FP32),"void gemmk1_kernel<int, float, (int)256, (int)5, (bool)0, (bool)0, (bool)1, (boo"
+gpu_kernel,25740.171,53.344,GEMM (SIMT FP32),"void magma_sgemmEx_kernel<float, float, float, (bool)0, (bool)1, (int)6, (int)4,"
+gpu_kernel,25793.419,80.192,other elementwise,triton_poi_fused_clone_49
+gpu_kernel,25880.683,244.479,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nt_align4>(T1::
+gpu_kernel,26125.098,37.983,other elementwise,triton_red_fused_sum_50
+gpu_kernel,26162.953,214.464,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x256_32x3_nn_align4>(T1::
+gpu_kernel,26377.353,3.04,other elementwise,triton_per_fused_cat_sum_51
+gpu_kernel,26380.297,6.176,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26386.537,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26389.321,5.823,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26395.208,2.56,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26397.832,5.792,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26403.72,2.56,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26406.344,5.728,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26412.136,2.56,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26414.76,5.728,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26420.552,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26423.208,5.824,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26429.096,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26431.72,6.432,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26438.184,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26440.808,6.624,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26447.464,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26450.088,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26456.968,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26459.592,6.624,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26466.248,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26468.872,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26475.752,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26478.376,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26485.256,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26487.88,7.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,26495.112,2.592,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,26497.736,4.768,other elementwise,triton_red_fused_sum_52
+gpu_kernel,26502.568,2.144,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26504.776,4.416,other elementwise,triton_red_fused_sum_53
+gpu_kernel,26509.256,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26511.368,4.096,other elementwise,triton_red_fused_sum_54
+gpu_kernel,26515.496,2.112,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26517.64,4.032,other elementwise,triton_red_fused_sum_55
+gpu_kernel,26521.736,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26523.848,4.032,other elementwise,triton_red_fused_sum_56
+gpu_kernel,26527.912,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26530.024,3.84,other elementwise,triton_red_fused_sum_57
+gpu_kernel,26533.896,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26536.008,3.808,other elementwise,triton_red_fused_sum_58
+gpu_kernel,26539.848,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26541.96,3.296,other elementwise,triton_red_fused_sum_59
+gpu_kernel,26545.288,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26547.432,3.2,other elementwise,triton_red_fused_sum_60
+gpu_kernel,26550.664,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26552.808,3.168,other elementwise,triton_red_fused_sum_61
+gpu_kernel,26556.072,2.016,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26558.184,3.168,other elementwise,triton_red_fused_sum_62
+gpu_kernel,26561.416,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26563.528,3.168,other elementwise,triton_red_fused_sum_63
+gpu_kernel,26566.792,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26568.904,3.168,other elementwise,triton_red_fused_sum_13
+gpu_kernel,26572.104,12.384,other elementwise,triton_red_fused_sum_64
+gpu_kernel,26584.552,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,26586.696,29.376,GEMM (SIMT FP32),"void gemmk1_kernel<int, float, (int)256, (int)5, (bool)0, (bool)0, (bool)1, (boo"
+gpu_kernel,26615.912,53.375,GEMM (SIMT FP32),"void magma_sgemmEx_kernel<float, float, float, (bool)0, (bool)1, (int)6, (int)4,"
+gpu_kernel,26669.159,80.352,other elementwise,triton_poi_fused_clone_49
+gpu_kernel,26756.551,243.711,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nt_align4>(T1::
+gpu_kernel,27000.198,37.76,other elementwise,triton_red_fused_sum_50
+gpu_kernel,27037.83,212.671,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x256_32x3_nn_align4>(T1::
+gpu_kernel,27250.437,3.168,other elementwise,triton_per_fused_cat_sum_51
+gpu_kernel,27253.413,3.264,other elementwise,triton_red_fused_sum_52
+gpu_kernel,27256.741,2.144,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27258.949,3.2,other elementwise,triton_red_fused_sum_53
+gpu_kernel,27262.213,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27264.325,3.168,other elementwise,triton_red_fused_sum_54
+gpu_kernel,27267.557,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27269.669,3.232,other elementwise,triton_red_fused_sum_55
+gpu_kernel,27272.965,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27275.109,3.2,other elementwise,triton_red_fused_sum_56
+gpu_kernel,27278.373,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27280.485,3.232,other elementwise,triton_red_fused_sum_57
+gpu_kernel,27283.781,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27285.893,4.64,other elementwise,triton_red_fused_sum_58
+gpu_kernel,27290.597,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27292.741,4.8,other elementwise,triton_red_fused_sum_59
+gpu_kernel,27297.573,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27299.717,4.8,other elementwise,triton_red_fused_sum_60
+gpu_kernel,27304.549,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27306.661,4.704,other elementwise,triton_red_fused_sum_61
+gpu_kernel,27311.429,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27313.541,4.832,other elementwise,triton_red_fused_sum_62
+gpu_kernel,27318.405,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27320.549,4.864,other elementwise,triton_red_fused_sum_63
+gpu_kernel,27325.445,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27327.557,4.832,other elementwise,triton_red_fused_sum_13
+gpu_kernel,27332.453,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,27334.565,14.208,other elementwise,triton_red_fused_sum_64
+gpu_kernel,27348.805,6.56,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27355.397,2.848,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27358.309,6.271,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27364.612,2.72,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27367.364,6.24,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27373.636,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27376.356,6.24,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27382.628,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27385.348,6.24,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27391.62,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27394.34,6.272,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27400.644,2.72,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27403.396,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27410.276,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27412.996,6.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27419.876,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27422.596,7.008,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27429.636,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27432.356,7.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27439.588,2.656,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27442.308,7.232,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27449.604,2.656,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27452.324,7.328,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27459.716,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27462.468,7.392,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,27469.924,2.656,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,27472.644,29.792,GEMM (SIMT FP32),"void gemmk1_kernel<int, float, (int)256, (int)5, (bool)0, (bool)0, (bool)1, (boo"
+gpu_kernel,27502.34,53.504,GEMM (SIMT FP32),"void magma_sgemmEx_kernel<float, float, float, (bool)0, (bool)1, (int)6, (int)4,"
+gpu_kernel,27555.748,80.351,other elementwise,triton_poi_fused_clone_49
+gpu_kernel,27643.203,245.183,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nt_align4>(T1::
+gpu_kernel,27888.322,38.016,other elementwise,triton_red_fused_sum_50
+gpu_kernel,27926.242,215.007,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x256_32x3_nn_align4>(T1::
+gpu_kernel,28141.121,3.136,other elementwise,triton_per_fused_cat_sum_51
+gpu_kernel,28144.129,3.264,other elementwise,triton_red_fused_sum_52
+gpu_kernel,28147.457,2.144,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28149.665,3.232,other elementwise,triton_red_fused_sum_53
+gpu_kernel,28152.961,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28155.073,3.2,other elementwise,triton_red_fused_sum_54
+gpu_kernel,28158.369,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28160.481,3.2,other elementwise,triton_red_fused_sum_55
+gpu_kernel,28163.745,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28165.889,3.2,other elementwise,triton_red_fused_sum_56
+gpu_kernel,28169.185,2.016,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28171.297,3.136,other elementwise,triton_red_fused_sum_57
+gpu_kernel,28174.497,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28176.641,4.64,other elementwise,triton_red_fused_sum_58
+gpu_kernel,28181.345,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28183.457,4.768,other elementwise,triton_red_fused_sum_59
+gpu_kernel,28188.289,2.048,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28190.401,4.736,other elementwise,triton_red_fused_sum_60
+gpu_kernel,28195.201,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28197.313,4.896,other elementwise,triton_red_fused_sum_61
+gpu_kernel,28202.241,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28204.353,4.832,other elementwise,triton_red_fused_sum_62
+gpu_kernel,28209.217,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28211.361,4.832,other elementwise,triton_red_fused_sum_63
+gpu_kernel,28216.225,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28218.369,4.8,other elementwise,triton_red_fused_sum_13
+gpu_kernel,28223.233,2.08,other elementwise,triton_per_fused_sum_14
+gpu_kernel,28225.345,13.824,other elementwise,triton_red_fused_sum_64
+gpu_kernel,28239.201,6.592,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28245.825,2.848,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28248.705,6.239,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28254.945,2.72,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28257.697,6.272,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28264.001,2.719,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28266.721,6.24,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28272.993,2.719,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28275.713,6.24,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28281.985,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28284.705,6.336,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28291.073,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28293.793,6.816,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28300.673,2.72,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28303.425,6.816,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28310.273,2.72,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28313.025,6.88,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28319.937,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28322.657,7.328,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28330.017,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28332.737,7.359,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28340.128,2.72,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28342.88,7.392,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28350.336,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28353.088,7.2,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_64x64_16x6_tt_align1>(T1::Pa
+gpu_kernel,28360.352,2.688,GEMM (SIMT FP32),"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, f"
+gpu_kernel,28363.104,97.632,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,28460.608,98.176,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,28558.656,98.687,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,28657.215,98.4,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,28755.519,98.591,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,28853.982,98.688,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,28952.542,98.112,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29050.558,98.495,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29148.925,98.752,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29247.549,101.535,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,29348.988,97.76,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29446.62,98.752,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29545.244,102.207,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,29647.355,98.016,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29745.147,98.751,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,29843.802,101.504,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,29945.178,97.983,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30043.033,99.04,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30141.945,102.72,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,30244.601,97.567,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30342.072,98.432,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30440.408,101.951,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,30542.231,98.048,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30640.151,98.848,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30738.839,101.951,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,30840.726,97.952,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,30938.55,98.815,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,31037.269,101.696,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,31138.901,97.856,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,31236.597,98.943,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,31335.412,102.24,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_256x128_32x3_nn_align4>(T1::
+gpu_kernel,31437.556,96.063,GEMM (Tensor Core),void cutlass::Kernel2<cutlass_80_tensorop_s1688gemm_128x128_16x4_nt_align4>(T1::
+gpu_kernel,31533.491,2.816,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Ten
+gpu_kernel,31536.179,2.528,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Ten
+gpu_kernel,31538.739,2.208,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Ten
+gpu_kernel,31540.979,155.616,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,31696.435,133.791,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,31830.098,154.208,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,31984.178,442.814,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,32426.832,452.766,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,32879.438,443.55,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,33322.796,449.95,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,33772.586,468.446,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,34240.872,452.734,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,34693.446,455.807,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,35149.093,448.798,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,35597.763,453.438,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,36051.041,447.646,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,36498.527,455.23,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,36953.597,478.014,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,37431.451,454.59,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,37885.881,446.654,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,38332.375,453.503,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,38785.718,458.494,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,39243.892,474.814,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,39718.546,440.574,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,40158.96,455.806,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_kernel,40614.606,350.367,AdamW (multi_tensor_apply: foreach or fused),void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::Fus
+gpu_memcpy,298.932,1.248,memcpy,
+gpu_memcpy,1172.432,1.024,memcpy,
+gpu_memcpy,1416.431,1.344,memcpy,
+gpu_memcpy,2280.3,1.055,memcpy,
+gpu_memcpy,2420.427,1.344,memcpy,
+gpu_memcpy,3282.119,1.024,memcpy,
+gpu_memcpy,3422.343,1.312,memcpy,
+gpu_memcpy,3507.75,1.056,memcpy,
+gpu_memcpy,5416.575,41.439,memcpy,
+gpu_memcpy,7155.031,41.024,memcpy,
+gpu_memcpy,7280.151,3.552,memcpy,
+gpu_memcpy,7316.855,3.552,memcpy,
+gpu_memcpy,7349.431,2.656,memcpy,
+gpu_memcpy,7380.599,1.952,memcpy,
+gpu_memcpy,7475.03,2.4,memcpy,
+gpu_memcpy,7493.782,2.4,memcpy,
+gpu_memcpy,7508.726,2.208,memcpy,
+gpu_memcpy,7523.158,5.984,memcpy,
+gpu_memcpy,7537.398,2.528,memcpy,
+gpu_memcpy,7552.054,2.496,memcpy,
+gpu_memcpy,7567.222,1.952,memcpy,
+gpu_memcpy,40969.517,1.6,memcpy,
+host_api,286.103,11.593,cudaMemcpyAsync,
+host_api,298.257,6.322,cudaStreamSynchronize,
+host_api,333.204,14.408,cudaLaunchKernel,
+host_api,377.379,8.507,cudaMemcpyAsync,
+host_api,386.367,791.53,cudaStreamSynchronize,
+host_api,1201.984,10.43,cudaLaunchKernel,
+host_api,1406.419,8.937,cudaMemcpyAsync,
+host_api,1415.817,6.313,cudaStreamSynchronize,
+host_api,1444.643,10.921,cudaLaunchKernel,
+host_api,1481.204,7.725,cudaMemcpyAsync,
+host_api,1489.369,796.22,cudaStreamSynchronize,
+host_api,2308.673,9.98,cudaLaunchKernel,
+host_api,2410.691,8.546,cudaMemcpyAsync,
+host_api,2419.638,6.362,cudaStreamSynchronize,
+host_api,2447.071,10.691,cudaLaunchKernel,
+host_api,2481.187,7.986,cudaMemcpyAsync,
+host_api,2489.573,798.113,cudaStreamSynchronize,
+host_api,3310.37,9.97,cudaLaunchKernel,
+host_api,3412.818,8.226,cudaMemcpyAsync,
+host_api,3421.485,6.623,cudaStreamSynchronize,
+host_api,3449.138,10.38,cudaLaunchKernel,
+host_api,3484.477,8.136,cudaMemcpyAsync,
+host_api,3493.033,19.688,cudaStreamSynchronize,
+host_api,3534.824,9.859,cudaLaunchKernel,
+host_api,5356.476,60.778,cudaMemcpyAsync,
+host_api,5418.045,46.48,cudaStreamSynchronize,
+host_api,5472.34,12.845,cudaLaunchKernel,
+host_api,7098.975,56.91,cudaMemcpyAsync,
+host_api,7156.646,45.338,cudaStreamSynchronize,
+host_api,7209.038,11.262,cudaLaunchKernel,
+host_api,7265.146,14.819,cudaMemcpyAsync,
+host_api,7305.384,11.001,cudaMemcpyAsync,
+host_api,7337.837,10.891,cudaMemcpyAsync,
+host_api,7369.879,9.919,cudaMemcpyAsync,
+host_api,7461.035,13.616,cudaMemcpyAsync,
+host_api,7483.929,8.717,cudaMemcpyAsync,
+host_api,7499.459,7.976,cudaMemcpyAsync,
+host_api,7514.077,8.006,cudaMemcpyAsync,
+host_api,7528.646,7.634,cudaMemcpyAsync,
+host_api,7542.913,8.126,cudaMemcpyAsync,
+host_api,7557.481,8.507,cudaMemcpyAsync,
+host_api,7581.678,8.978,cudaLaunchKernel,
+host_api,7595.395,6.011,cudaLaunchKernel,
+host_api,7606.055,1276.368,cudaGraphLaunch,
+host_api,8895.779,9.388,cudaMemcpyAsync,
+host_api,8905.738,32072.198,cudaStreamSynchronize,
+host_api,41029.286,7.334,cudaDeviceSynchronize,
+host_api,41068.521,3.798,cudaDeviceSynchronize,
+nvtx,0.0,7411.78,train/prep,
+nvtx,7451.436,33533.624,train/step,

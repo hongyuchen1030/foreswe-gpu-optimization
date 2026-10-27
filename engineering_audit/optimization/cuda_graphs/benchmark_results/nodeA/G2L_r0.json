@@ -1,0 +1,193 @@
+{
+ "cfg": "G2L",
+ "config": {
+  "kind": "compile",
+  "mode": "reduce-overhead",
+  "scope": "layers"
+ },
+ "data": "synthetic",
+ "env": {
+  "host": "nid001409",
+  "slurm_job_id": "60347489",
+  "python": "3.12.9",
+  "torch": "2.6.0",
+  "cuda_runtime": "12.4",
+  "cudnn": 90500,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_mem_gib": 39.4925537109375,
+  "sm_count": 108,
+  "cuda_launch_blocking": "unset",
+  "git_commit": "bf3d5e142c240d23961c9cc8ea5306d8fe20adf8",
+  "git_dirty": true,
+  "driver": "580.178.04",
+  "max_sm_clock": "1410 MHz",
+  "sm_clock_at_start": "1410 MHz",
+  "power_limit": "400.00 W",
+  "gpu_uuid": "GPU-c6cbf0c9-babd-9965-38ee-9adf642172e6"
+ },
+ "warmup": 10,
+ "iters": 40,
+ "setup_s": 16.762472590024117,
+ "setup_inner_s": 16.72896266396856,
+ "dynamo_counters": {
+  "frames": {
+   "total": 1,
+   "ok": 1
+  },
+  "inline_call": {},
+  "stats": {
+   "calls_captured": 37,
+   "unique_graphs": 1
+  },
+  "inductor": {
+   "pattern_matcher_count": 76,
+   "pattern_matcher_nodes": 94,
+   "fxgraph_cache_miss": 2,
+   "extern_calls": 25,
+   "triton_bundler_save_kernel": 350,
+   "benchmarking.TritonBenchmarker.benchmark_gpu": 39,
+   "benchmarking.TritonBenchmarker.triton_do_bench": 1,
+   "cudagraph_recorded_non_static_inputs": 18
+  },
+  "aot_autograd": {
+   "total": 1,
+   "ok": 1
+  }
+ },
+ "inductor_cache_dir": "/pscratch/sd/h/hyvchen/foreswe-gpu-optimization/inductor_cache/nodeA/G2L",
+ "mem_after_setup_gib": 6.026930332183838,
+ "peak_during_setup_gib": 10.2268705368042,
+ "model_gib": 2.735107898712158,
+ "gpu_region": {
+  "event_ms": {
+   "median": 37.35678291320801,
+   "mean": 37.389570236206055,
+   "std": 0.24528814257922457,
+   "p10": 37.23264007568359,
+   "p90": 37.49715042114258,
+   "iqr": 0.1656627655029297,
+   "min": 37.1893424987793,
+   "max": 38.740352630615234,
+   "n": 40
+  },
+  "wall_ms": {
+   "median": 37.39637753460556,
+   "mean": 37.419298650638666,
+   "std": 0.24753671792070864,
+   "p10": 37.25986629142426,
+   "p90": 37.521713570458815,
+   "iqr": 0.16018202586565167,
+   "min": 37.215476972050965,
+   "max": 38.78934896783903,
+   "n": 40
+  },
+  "peak_allocated_gib": 6.387831211090088,
+  "peak_reserved_gib": 10.86328125
+ },
+ "phases_ms": {
+  "forward": {
+   "median": 10.483232021331787,
+   "mean": 10.527031993865966,
+   "std": 0.09992563852663461,
+   "p10": 10.429747200012207,
+   "p90": 10.638185596466064,
+   "iqr": 0.16103196144104004,
+   "min": 10.419903755187988,
+   "max": 10.760031700134277,
+   "n": 20
+  },
+  "backward": {
+   "median": 17.31324863433838,
+   "mean": 17.31371831893921,
+   "std": 0.004280435000647055,
+   "p10": 17.308275604248045,
+   "p90": 17.31844120025635,
+   "iqr": 0.005983829498291016,
+   "min": 17.305503845214844,
+   "max": 17.320831298828125,
+   "n": 20
+  },
+  "optimizer": {
+   "median": 9.484079837799072,
+   "mean": 9.487088012695313,
+   "std": 0.017336953833158343,
+   "p10": 9.466684436798095,
+   "p90": 9.50821132659912,
+   "iqr": 0.021088361740112305,
+   "min": 9.46009635925293,
+   "max": 9.527487754821777,
+   "n": 20
+  }
+ },
+ "end_to_end": {
+  "step_wall_ms": {
+   "median": 46.44901899155229,
+   "mean": 46.44767070421949,
+   "std": 0.032276987155353654,
+   "p10": 46.4090442226734,
+   "p90": 46.48688973393291,
+   "iqr": 0.042894986108876765,
+   "min": 46.39436799334362,
+   "max": 46.52967001311481,
+   "n": 40
+  },
+  "prep_ms": {
+   "median": 7.771888017654419,
+   "mean": 7.774239981174469,
+   "std": 0.016961599117222347,
+   "p10": 7.75949764251709,
+   "p90": 7.789248037338257,
+   "iqr": 0.015935897827148438,
+   "min": 7.753280162811279,
+   "max": 7.853663921356201,
+   "n": 40
+  },
+  "step_after_prep_ms": {
+   "median": 38.640159606933594,
+   "mean": 38.64380960464477,
+   "std": 0.027081353573662977,
+   "p10": 38.61419868469238,
+   "p90": 38.68520278930664,
+   "iqr": 0.0377044677734375,
+   "min": 38.588417053222656,
+   "max": 38.702239990234375,
+   "n": 40
+  },
+  "throughput_issue_dates_per_s": 21.52897998086613,
+  "peak_allocated_gib": 6.409808158874512,
+  "peak_reserved_gib": 10.86328125,
+  "losses_first_last": [
+   334142.1875,
+   333377.6875
+  ],
+  "loss_finite": true
+ },
+ "inference": {
+  "forward_ms": {
+   "median": 10.640192031860352,
+   "mean": 10.659211158752441,
+   "std": 0.0633523945513333,
+   "p10": 10.627811241149903,
+   "p90": 10.668406677246093,
+   "iqr": 0.019927978515625,
+   "min": 10.621376037597656,
+   "max": 10.895872116088867,
+   "n": 40
+  },
+  "first_call_s": 2.810270697984379
+ },
+ "profiler_counts": {
+  "steps": 3,
+  "host_api_calls_per_step": {
+   "cudaMemcpyAsync": 18.0,
+   "cudaLaunchKernel": 406.0,
+   "cuLaunchKernel": 109.0,
+   "cudaGraphLaunch": 16.0
+  },
+  "host_kernel_launch_calls_per_step": 515.0,
+  "graph_launches_per_step": 16.0,
+  "device_kernels_seen_by_profiler_per_step": 1019.0,
+  "triton_kernels_per_step": 272.0,
+  "note": "kernels executed inside CUDA graphs may be invisible to torch.profiler; nsys --cuda-graph-trace=node is authoritative"
+ }
+}
